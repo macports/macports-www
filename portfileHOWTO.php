@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.10 2003/03/17 06:05:47 fkr Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.11 2003/03/17 18:25:56 fkr Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -64,6 +64,7 @@ DarwinPorts performs several basic predefined tasks, these are:
 The first step is to choose a piece of software to bring to port.  For this example, we'll be porting ircII, a popular internet relay chat client.  We can start with a simple Portfile describing the basic attributes of ircII such as its name, version, and the site where we can download the sources.  Create a working directory named <tt>ircii</tt> and inside it create a file named <tt>Portfile</tt> with the following contents:
 </p>
 <pre><tt>
+# &#36;Id: &#36;
 PortSystem 1.0
 name            ircii
 version         20020912
@@ -77,7 +78,7 @@ homepage        http://www.eterna.com.au/ircii/
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailed description of the Software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  To refer to the main website of the software, the <tt>homepage</tt> key is used. DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
+A Portfile consists of key/value pairs. Every Portfile starts with <tt># &#36;Id: &#36;</tt> which is a commented out RCS Id tag. Following the RCS Id tag comes the <tt>PortSystem</tt> declaration. Currently the only valid declaration is <tt>PortSystem 1.0</tt>. The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailed description of the Software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  To refer to the main website of the software, the <tt>homepage</tt> key is used. DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
 At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
@@ -254,6 +255,7 @@ Appendix
 The following is a complete listing of the ircII Portfile:
 </p>
 <pre><tt>
+# &#36;Id: &#36;
 PortSystem 1.0
 name            ircii
 version         20020912
