@@ -2,7 +2,7 @@
 
 //
 // File     : variants.php
-// Version  : $Id: variants.php,v 1.1 2003/01/09 12:24:06 matt Exp $
+// Version  : $Id: variants.php,v 1.2 2003/01/12 00:25:32 matt Exp $
 // Location : /projects/darwinports/variants.php
 //
 
@@ -95,7 +95,7 @@ Un Portfile peut contenir un set par défaut de variantes, qui sera sélectionné l
 default_variants    +x11 +kde
 </tt></pre>
 <p>
-Cela indique que les variantes <tt>x11</tt> et <tt>kde</tt> seront prises en compte à moins que l'utilisateur ait spécifié <tt>-kde -x11</tt> à la ligne de commande.
+Cela indique que les variantes <tt>x11</tt> et <tt>kde</tt> seront prises en compte à moins que l'utilisateur n'ait spécifié <tt>-kde -x11</tt> à la ligne de commande.
 </p>
 <h3>
 <a name="implicit_variants"></a>Variantes implicites

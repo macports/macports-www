@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.3 2003/01/09 11:05:13 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.4 2003/01/12 00:24:22 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -33,7 +33,7 @@ Commencer
 Pour pouvoir travailler avec DarwinPorts, vous devrez le télécharger et l'installer sur votre système. La <a href="http://opendarwin.org/projects/darwinports/fr/">page d'accueil</a> du projet DarwinPorts décrit comment se le procurer et l'installer.
 </p>
 <p>
-Comme vous vous intéressez à l'écriture d'un Portfile, changeons quelques options de configuration qui vous aidera au déboguage. Éditez le fichier <tt>/etc/ports/ports.conf</tt> afin que les changements suivants y soient incorporés (vous devrez passer par <tt>sudo</tt> pour pouvoir éditer ce fichier) :
+Comme vous vous intéressez à l'écriture d'un Portfile, changeons quelques options de configuration qui vous aideront au déboguage. Éditez le fichier <tt>/etc/ports/ports.conf</tt> afin que les changements suivants y soient incorporés (vous devrez passer par <tt>sudo</tt> pour pouvoir éditer ce fichier) :
 </p>
 <pre><tt>
 ports_debug     yes
@@ -188,9 +188,9 @@ En utilisant le format unidiff, nous allons comparer la liste des fichiers exist
   sed -e 's|^\+/opt/local/*||g' > contents
 </tt></pre>
 <p>
-Maintenant que nous avons un fichier contents dans notre répertoire hébergeant notre port, nous devrions l'éditer afin de débuter avec <tt>contents {</tt> et de terminer avec un <tt>}</tt>. (C'est important de noter que tout autre processus utilisant la hiérarchie <tt>${prefix}</tt> peut interférer avec l'efficacité de la commande <tt>find</tt>. Vous devriez vérifier le fichier <tt>contents</tt> résultant afin de voir si tout les fichiers apparaissent à leur place, spécialement les fichiers temporaires de DarwinPorts comme <tt>/var/db/receipts/ircii-20020912.tmp</tt>.)
+Maintenant que nous avons un fichier contents dans notre répertoire hébergeant notre port, nous devrons l'éditer afin de débuter avec <tt>contents {</tt> et de terminer avec un <tt>}</tt>. (C'est important de noter que tout autre processus utilisant la hiérarchie <tt>${prefix}</tt> peut interférer avec l'efficacité de la commande <tt>find</tt>. Vous devriez vérifier le fichier <tt>contents</tt> résultant afin de voir si tout les fichiers apparaissent à leur place, spécialement les fichiers temporaires de DarwinPorts comme <tt>/var/db/receipts/ircii-20020912.tmp</tt>.)
 Il est également important de s'assurer que dans le fichier contents les répertoires soient listés <i>après</i> les fichiers qui les contiennent afin que le processus de désinstallation fonctionne correctement.
-Ensuite nous devrions éditer le Portfile afin d'inclure notre fichier contents :
+Ensuite nous devrons éditer le Portfile afin d'inclure notre fichier contents :
 </p>
 <pre><tt>
 include contents
