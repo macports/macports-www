@@ -7,7 +7,7 @@
 
     <div id="content">
 	
-		<h2 class="hdr">Nouvelles archivées</h2>
+		<h2 class="hdr">Dépêches archivées</h2>
      <?php
 		if (isset($_GET['id'])) {
 			print_headline();
