@@ -2,7 +2,7 @@
 
 //
 // File     : x11.php
-// Version  : $Id: x11.php,v 1.2 2003/01/23 17:46:28 matt Exp $
+// Version  : $Id: x11.php,v 1.3 2003/02/15 04:56:23 matt Exp $
 // Location : /projects/darwinports/en/x11.php
 //
 
@@ -20,6 +20,10 @@ Les paquets X11 suivants pour Mac OS X ont été réalisés grâce à l'infrastructure
 <br><br>
 DarwinPorts est un logiciel de compilation, d'installation et de création de paquet publié sous licence BSD, conçu pour faire partie du projet OpenDarwin. Principalement écrit en TCL, DarwinPorts a été pensé pour être aisément étendu et intégré à d'autres applications, ainsi qu'être porté sur une multitude d'architectures. Le développement de DarwinPorts est actif et est actuellement supporté sur Mac OS x 10.2 et Darwin 6.0.2. Pour plus d'informations concernant DarwinPorts, reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/fr/">page d'accueil</a> du projet.
 </p>
+<p>
+Le logiciel <a href="http://www.opendarwin.org/projects/darwinports/packages/Applications/UnInstaller.dmg">UnInstaller</a> pour DarwinPorts peut être utilisé pour effacer ces paquets de votre système.
+</p>
+
 <p align=right><strong>Suggestions </strong>: <a href=mailto:dp-feedback@opendarwin.org>dp-feedback@opendarwin.org</a></p>
 
 <p>
