@@ -1,7 +1,7 @@
 	<div id="nav">
 	
 		<div id="logo">
-			<a href="/" title="DarwinPorts"><img src="/img/dp.jpg"
+			<a href="/es/" title="DarwinPorts"><img src="/img/dp.jpg"
 				alt="DarwinPorts" /></a>
 		</div>
 		
