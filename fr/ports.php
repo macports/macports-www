@@ -10,7 +10,7 @@
 
 	<p>
 	Ce formulaire vous permet de rechercher un logiciel particulier dans l'index de DarwinPorts.<br />
-	<i>Derni&eagrave;re mise &agrave; jour de l'index : </i>
+	<i>Derni&egrave;re mise &agrave; jour de l'index : </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
@@ -33,7 +33,7 @@
 				</select>
 			</td>
 			<td><input type="text" name="substr" size="40" /></td>
-			<td><input type="submit" name="Search" /></td>
+			<td><input type="submit" name="Search" value="Rechercher" /></td>
 		</tr>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
