@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.9 2003/04/20 17:57:09 matt Exp $
+// Version  : $Id: index.php,v 1.10 2003/04/21 14:09:02 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -35,7 +35,7 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p>
 Nombre de ports ont déjà été créés et rendent le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/fr/ports.php">logiciels disponibles</a> ici.
 </p>
-<p>Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">Ports Manager.app</a>, est disponible et son développement est actuellement actif. En voici une <a href="http://www.opendarwin.org/~fkr/portmanager.png">capture d'écran</a>.
+<p>Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">Ports Manager.app</a>, est disponible et son développement est actuellement actif. En voici une <a href="http://www.opendarwin.org/~fkr/portsmanager.png">capture d'écran</a>.
 </p>
 <p>
 Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
