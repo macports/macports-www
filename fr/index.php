@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.10 2003/04/21 14:09:02 matt Exp $
+// Version  : $Id: index.php,v 1.11 2003/05/05 17:20:15 landonf Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -60,7 +60,7 @@ Utilisez les commandes suivantes pour récupérer Ports Manager.app depuis le serv
 <p>
 <pre>
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
-cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-cocoa
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P PortsManager
 </pre>
 
 Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; vu qu'il n'y pas de mot de passe. Le dépôt du CVS peut être examiné via <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.
