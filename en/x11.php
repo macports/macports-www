@@ -2,7 +2,7 @@
 
 //
 // File     : x11.php
-// Version  : $Id: x11.php,v 1.1 2003/01/13 19:10:02 matt Exp $
+// Version  : $Id: x11.php,v 1.2 2003/01/13 19:20:33 matt Exp $
 // Location : /projects/darwinports/en/x11.php
 //
 
@@ -33,7 +33,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Description</strong>: GTK+, or the Gimp ToolKit, is a library for GUIs creating for the X Window System.
 <br>
-<strong>Download</strong>: <a href="packages/usr/gtk.dmg">gtk.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/gtk.dmg">gtk.dmg</a>
 </p>
 <hr>
 
@@ -44,7 +44,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Description</strong>: This is GTK+ version 2.0.9. GTK+, or the Gimp ToolKit, is a library for creating GUIs for the X Windows System.
 <br>
-<strong>Download</strong>: <a href="packages/usr/gtk2.dmg">gtk2.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/gtk2.dmg">gtk2.dmg</a>
 </p>
 <hr>
 <p>
@@ -54,7 +54,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Description</strong>: TrollTech's C++ toolkit for writing cross-platform GUI applications.
 <br>
-<strong>Download</strong>: <a href="packages/usr/qt3.dmg">qt3.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/qt3.dmg">qt3.dmg</a>
 </p>
 <hr>
 <p>
@@ -64,7 +64,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Description</strong>: The Open Group's full version of Motif based on the original OSF sources.
 <br>
-<strong>Download</strong>: <a href="packages/usr/openMotif.dmg">openMotif.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/openMotif.dmg">openMotif.dmg</a>
 </p>
 <hr>
 <p>
@@ -80,7 +80,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Depends</strong>: <a href=#gtk>gtk</a>
 <br>
-<strong>Download</strong>: <a href="packages/usr/gimp.dmg">gimp.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/gimp.dmg">gimp.dmg</a>
 <br>
 <strong>Note</strong>: A new package was posted at Jan 8th, 03:04 GMT. This update fixes jpeg support and can be installed over a previously installed copy of The Gimp.
 </p>
@@ -94,7 +94,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Depends</strong>: <a href=#gtk>gtk</a>
 <br>
-<strong>Download</strong>: <a href="packages/usr/xchat.dmg">xchat.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/xchat.dmg">xchat.dmg</a>
 </p>
 <hr>
 <br>
@@ -106,7 +106,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Depends</strong>: <a href=#gtk>gtk</a>
 <br>
-<strong>Download</strong>: <a href="packages/usr/vim.dmg">vim.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/vim.dmg">vim.dmg</a>
 </p>
 <hr>
 <p>
@@ -116,7 +116,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Description</strong>: Rxvt is an xterm replacement with a smaller memory footprint
 <br>
-<strong>Download</strong>: <a href="packages/usr/rxvt.dmg">rxvt.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/rxvt.dmg">rxvt.dmg</a>
 <p>
 <hr>
 <br>
@@ -128,7 +128,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Depends</strong>: <a href=#qt3>qt3</a>
 <br>
-<strong>Download</strong>: <a href="packages/usr/qthello.dmg">qthello.dmg</a>
+<strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/qthello.dmg">qthello.dmg</a>
 </p>
 
 <!--</td></tr>
