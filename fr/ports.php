@@ -208,3 +208,7 @@
 	}
 ?>
 	</dl>
+	</div>
+<?php
+  print_footer();
+?>
