@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.8 2003/04/17 10:02:35 fkr Exp $
+// Version  : $Id: index.php,v 1.9 2003/04/20 17:57:09 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -35,7 +35,7 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p>
 Nombre de ports ont déjà été créés et rendent le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/fr/ports.php">logiciels disponibles</a> ici.
 </p>
-<p>Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">PortManager.app</a>, est disponible et son développement est actuellement actif. En voici une <a href="http://www.opendarwin.org/~fkr/portmanager.png">copie d'écran</a>.
+<p>Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">Ports Manager.app</a>, est disponible et son développement est actuellement actif. En voici une <a href="http://www.opendarwin.org/~fkr/portmanager.png">capture d'écran</a>.
 </p>
 <p>
 Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
@@ -44,7 +44,7 @@ Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="h
 <p><strong>Récupérer le projet depuis CVS</strong></p>
 
 <p>
-Utilisez les commandes suivantes pour récupérer le projet depuis le serveur CVS d'OpenDarwin (requis pour DarwinPorts.app) :
+Utilisez les commandes suivantes pour récupérer le projet depuis le serveur CVS d'OpenDarwin (requis pour Ports Manager.app) :
 </p>
 
 <p>
@@ -54,7 +54,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 </pre>
 
 <p>
-Utilisez les commandes suivantes pour récupérer DarwinPorts.app depuis le serveur CVS d'OpenDarwin :
+Utilisez les commandes suivantes pour récupérer Ports Manager.app depuis le serveur CVS d'OpenDarwin :
 </p>
 
 <p>
@@ -64,6 +64,10 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-co
 </pre>
 
 Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; vu qu'il n'y pas de mot de passe. Le dépôt du CVS peut être examiné via <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.
+</p>
+
+<p>
+Afin d'installer et d'utiliser DarwinPorts, les <a href="http://developer.apple.com/tools">outils développeurs</a> de Mac OS X.
 </p>
 
 <p><strong>Listes de diffusion et canaux IRC du projet</strong></p>
