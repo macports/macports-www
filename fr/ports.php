@@ -2,7 +2,7 @@
 	require_once("$DOCUMENT_ROOT/en/includes/od_lib.inc.php");
 	require_once("$DOCUMENT_ROOT/includes/od_db.inc.php");
 
-	od_print_header("DarwinPorts Portfiles", "fr", "iso-8859-1", "", 0);
+	od_print_header("Portfiles DarwinPorts", "fr", "iso-8859-1", "", 0);
 ?>
 	<center>
 	<h1>Portfiles DarwinPorts</h1>

@@ -2,16 +2,16 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.2 2003/01/08 14:17:05 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.3 2003/01/09 11:05:13 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
 	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
-	od_print_header("How to Write a DarwinPorts Portfile", "fr", "iso-8859-1", "", 0);
+	od_print_header("Comment écrire un Portfile pour DarwinPorts", "fr", "iso-8859-1", "", 0);
 ?>
 
 <h2>
-Comment écrire un Portfile pour Darwinports
+Comment écrire un Portfile pour DarwinPorts
 </h2>
 <pre><tt>
 Kevin Van Vechten | <a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>
