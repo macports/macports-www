@@ -2,6 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
+    print_header('Available Ports', 'iso-8859-1');
 ?>
 	<center>
 	<h1>DarwinPorts Portfiles</h1>
