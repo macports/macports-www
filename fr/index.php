@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.15 2003/10/06 15:53:34 fkr Exp $
+// Version  : $Id: index.php,v 1.16 2003/10/12 03:37:32 fkr Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -28,7 +28,7 @@
 Le projet DarwinPorts a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/fr/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/fr/portfileHOWTO.php">Portfile HOWTO</a>.  
 </p>
 <p>
-Le <a href="http://www.opendarwin.org/~wbb4/guide/">guide d'utilisation DarwinPorts</a> est une excellente référence sur les concepts ainsi que la syntaxe de DarwinPorts. (Notez que ce travail est en cours de progression, donc n'hésitez pas à nous faire parvenir vos suggestions et rapports de bogues via le module doc de DarwinPorts sur <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.)
+Le <a href="http://www.opendarwin.org/projects/darwinports/guide/">guide d'utilisation DarwinPorts</a> est une excellente référence sur les concepts ainsi que la syntaxe de DarwinPorts. (Notez que ce travail est en cours de progression, donc n'hésitez pas à nous faire parvenir vos suggestions et rapports de bogues via le module doc de DarwinPorts sur <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.)
 </p>
 
 <p><strong>Statut du Projet</strong></p>
