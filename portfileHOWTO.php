@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.1 2002/10/04 01:22:18 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.2 2002/10/04 01:48:58 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -39,6 +39,7 @@ Since you're interested in writing a Portfile, let's change some configuration o
 ports_debug     yes
 ports_verbose   yes
 </tt></pre>
+<p>
 This will display useful debugging messages that are usually suppressed while running DarwinPorts.
 </p>
 <p>
@@ -50,7 +51,7 @@ DarwinPorts performs several basic predefined tasks, these are:
 <li><a href="#checksum">Verifying the Downloaded File</a></li>
 <li><a href="#extract">Extracting the Sources into a Working Directory</a></li>
 <li><a href="#configure">Running a Configure Script</a></li>
-<li><a href="#build">Building the Sources</a><li>
+<li><a href="#build">Building the Sources</a></li>
 <li><a href="#install">Installing the Finished Product on the System</a></li>
 </ul>
 <a name="advancedtoc"></a><h4>Advanced Topics</h4>
@@ -135,11 +136,12 @@ Which should display the following output:
 <pre><tt>
 DEBUG: Skipping completed com.apple.main (ircii)
 DEBUG: Skipping completed com.apple.fetch (ircii)
-DEBUG: Skipping completed com.apple.checksum (ircii)
+DEBUG: Executing com.apple.checksum (ircii)
+--->  Checksum OK for ircii-20020912.tar.gz
 DEBUG: Executing com.apple.extract (ircii)
 --->  Extracting for ircii-20020912
 --->  Extracting ircii-20020912.tar.gz ... DEBUG: Assembled command: 'cd /Users/
-kevin/opendarwin/proj/darwinports/dports/irc/ircii/work && gzip -dc /opt/local/
+kevin/opendarwin/proj/darwinports/dports/irc/ircii/work &amp;&amp; gzip -dc /opt/local/
 var/db/dports/distfiles/ircii-20020912.tar.gz | tar -xf -'
 Done
 </tt></pre>
@@ -247,11 +249,11 @@ Since Darwin 6.0 has ipv6, it would be possible to configure with the <tt>--with
 configure.args      --disable-ipv6
 
 variant ipv6 {
-    configure.args  --enable-ipv6
+    configure.args-append  --enable-ipv6
 }
 </tt></pre>
 <p>
-Now the default build will not include ipv6 support, but if the ipv6 variant is requested, ircII will have it.  You can specify the ipv6 variant in the following way:
+Now the default build will not include ipv6 support, but if the ipv6 variant is requested, ircII will have it.  Options by themselves should be thought of as an assignment operator.  Since variants may be used in combination with one another, it's good practice to only append to options instead of overwrite them.  All options may be suffixed with <tt>-append</tt> or <tt>-delete</tt> to append or delete one term from the list.  You can specify building with the ipv6 variant in the following way:
 </p>
 <pre><tt>
 % port build +ipv6
