@@ -2,7 +2,7 @@
 
 //
 // File     : x11.php
-// Version  : $Id: x11.php,v 1.6 2003/02/20 04:05:59 kevin Exp $
+// Version  : $Id: x11.php,v 1.7 2003/03/23 19:22:52 fkr Exp $
 // Location : /projects/darwinports/en/x11.php
 //
 
@@ -16,7 +16,7 @@
 The X11 packages for Mac OS X previously available here have been removed.  Instead please use the newly released binary packages available via WebDAV at <a href="http://packages.opendarwin.org/">http://packages.opendarwin.org/</a>.  Please view the <a href="http://packages.opendarwin.org/README.txt">README</a> for more information.
 </p>
 <p>
-The DarwinPorts <a href="http://packages.opendarwin.org/Applications/UnInstaller.dmg">UnInstaller</a> may be used to remove any packages installed on your system previously downloaded from this page.  You may wish to do this before installing the new packages, since they install into different locations (/opt/local instead of /usr/local).  This UnInstaller is capapble of removing the new packges as well.
+The DarwinPorts <a href="http://packages.opendarwin.org/Applications/UnInstaller.dmg">UnInstaller</a> may be used to remove any packages installed on your system previously downloaded from this page.  You may wish to do this before installing the new packages, since they install into different locations (/opt/local instead of /usr/local).  This UnInstaller is capable of removing the new packages as well.
 </p>
 <br />
 <br />
