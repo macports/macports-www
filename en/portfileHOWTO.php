@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.2 2002/10/04 01:48:58 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.3 2002/10/04 01:58:30 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -126,7 +126,7 @@ Now that we have a checksum and can verify our sources, we can proceed to extrac
 </p>
 <pre><tt>
 % port extract
-</pre></tt>
+</tt></pre>
 <p>
 Which should display the following output:
 </p>
@@ -158,6 +158,7 @@ ircII's standard set of options looks fine for a base install on Darwin, so we'l
 <h3>
 <a name="build"></a>Building the Sources
 </h3>
+<p>
 To build, type the following:
 </p>
 <pre><tt>
@@ -165,11 +166,12 @@ To build, type the following:
 </tt></pre>
 <p>
 By default, the build phase executes the makefile using GNU make.  (This can be changed with the <tt>make/build.type</tt> option.)  The above step has starting compiling the sources, when it finishes we'll be ready to install the software.  
-
+</p>
 
 <h3>
 <a name="install"></a>Installing the Finished Product on the System
 </h3>
+<p>
 Portfiles are required to have a <tt>contents</tt> option which specifies which files are installed.  DarwinPorts uses this information to catalog what files belong to which piece of software so they may be later uninstalled.  Each parameter to <tt>contents</tt> is a path to a file.  All paths are relative to the <tt>${prefix}</tt> variable.  As a convenient way to determine exactly what files are installed as part of ircII, let's use the find command to compose a manifest of the files in the <tt>${prefix}</tt> tree.  After installing we'll re-run the find command, and use the differences to generate our contents list.
 </p>
 <p>
@@ -187,6 +189,7 @@ Using the unidiff format, we'll compare the list of existing files with the new 
 </tt></pre>
 <p>
 Now that we have a contents file in our port directory, we should edit it to begin with <tt>contents {</tt> and end with a closing <tt>}</tt>.  (It is important to note that any other process using the <tt>${prefix}</tt> tree may interfere with the accuracy of the <tt>find</tt> command.  You should audit the resulting <tt>contents</tt> file to look for any files that appear out of place, specifically some DarwinPorts temporary files such as <tt>/var/db/dports/receipts/ircii-20020912.tmp</tt>.)  Next we should edit the Portfile to include our contents file:
+</p>
 <pre><tt>
 include contents
 </tt></pre>
