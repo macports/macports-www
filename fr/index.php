@@ -23,8 +23,7 @@
 	lisez s'il vous pla&icirc;t la section <a href="/fr/getdp/">R&eacute;cup&eacute;rer DarwinPorts</a>
 	de ce site. Assurez-vous au pr&eacute;alable d'avoir jet&eacute; un oeil sur la
 	<a href="/docs/">documentation</a>; si vous avez des questions ou bien des probl&egrave;mes
-	li&eacute;s &agrave; l'installation/utilisation, vous pouvez vous <a
-	href="/help/">demander de l'aide</a>.</p>
+	li&eacute;s &agrave; l'installation/utilisation, vous pouvez <a href="/fr/help/">demander de l'aide</a>.</p>
 
 	  <p>Les rapports de bogues, demandes d'ajout de fonctionnalit&eacute;s et les
 	nouveaux ports devront &ecirc;tre soumis &agrave; <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
