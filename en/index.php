@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.10 2002/10/04 01:46:52 landonf Exp $
+// Version  : $Id: index.php,v 1.11 2002/10/04 06:58:40 kevin Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -30,9 +30,9 @@ The DarwinPorts project aims to provide a large amount of software ports that ma
 <p><strong>Project Status</strong></p>
 
 <p>
-Still progressing towards initial release on September 25th, 2002.
 A number of ports are done and the system is reasonably usable as
-a <i>BETA</i> for anyone who's interested.
+a <i>BETA</i> for anyone who's interested.  
+You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/ports.php">available software</a> here.
 
 </p>
 
