@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.3 2004/01/08 21:29:36 mij Exp $
+# $Id: functions.inc,v 1.4 2004/10/10 17:04:08 wbb4 Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -49,7 +49,7 @@ function create_rss() {
     while($row = mysql_fetch_object($result)) {
       $rss .= "    <item>\n";
       $rss .= "      <title>$row->title</title>\n";
-      $rss .= "      <link>http://darwinports.opendarwin.org/archives/$row->id.php</link>\n";
+      $rss .= "      <link>http://darwinports.opendarwin.org/archives.php?id=$row->id</link>\n";
 
       $desc_query = "SELECT SUBSTRING_INDEX(news, ' ', 26) FROM headlines WHERE id=$row->id";
       $desc_result = mysql_query($desc_query);
@@ -58,7 +58,7 @@ function create_rss() {
       $description = $desc_row[0];
 
       $rss .= "      <description><![CDATA[$description...</p>]]></description>\n";
-      $rss .= "      <guid isPermaLink=\"true\">http://darwinports.opendarwin.org/archives/$row->id.php</guid>\n";
+      $rss .= "      <guid isPermaLink=\"true\">http://darwinports.opendarwin.org/archives.php?id=$row->id</guid>\n";
       $rss .= "      <content:encoded><![CDATA[$row->news]]></content:encoded>\n";
       $rss .= "    </item>\n";
     }
@@ -245,12 +245,36 @@ function print_all_headlines() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives/$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
     }
   }
   else {
     echo "<p>No headlines are available.</p>\n\n";
   }
 }
+
+######################################################################
+
+# print a list of all existing headlines without the admin foobage
+# (this is cheap and could be better)
+function print_all_headlines_nonadmin() {
+  global $connect;
+
+  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
+  $result = mysql_query($query) or die("Error: $query.");
+  if(!$result) {
+    die("Error: $result.");
+  }
+  if(mysql_num_rows($result) > 0) {
+    while($row = mysql_fetch_object($result)) {
+      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+    }
+  }
+  else {
+    echo "<p>No headlines are available.</p>\n\n";
+  }
+}
+
+
 
 ?>

@@ -33,6 +33,9 @@
 	<?php
 	  print_headlines();
 	?>
+
+		<p>You can also browser our <a href="archives.php">news archives</a>.</p>
+	
       </div>
     </div>
   </div>
