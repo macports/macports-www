@@ -2,7 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/fr/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
-	print_header('Ports Disponibles', 'iso-8859-1');
+	print_header('Ports Disponibles', 'utf-8');
 ?>
 	<center>
 	<h1>Portfiles DarwinPorts</h1>
@@ -10,7 +10,7 @@
 
 	<p>
 	Ce formulaire vous permet de rechercher un logiciel particulier dans l'index de DarwinPorts.<br />
-	<i>Derni&egrave;re mise &agrave; jour de l'index : </i>
+	<i>Dernière mise à jour de l'index : </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
@@ -28,7 +28,7 @@
 				<select name="by">
 				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>Nom du logiciel</option>
 				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
-				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>Cat&eacute;gorie</option>
+				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>Catégorie</option>
 				<option value="maintainer"<? if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Mainteneur</option>
 				</select>
 			</td>
@@ -52,7 +52,7 @@
 			if (!$by || (!$substr && $by != "all")) {
 		?>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
-		<tr><th colspan="4" align="left">Afficher par cat&eacute;gorie :</th></tr>
+		<tr><th colspan="4" align="left">Afficher par catégorie :</th></tr>
 		<?
 				$query = "SELECT DISTINCT category FROM darwinports.categories ORDER BY category";
 				$result = mysql_query($query);
@@ -100,7 +100,7 @@
 		if($result) {
 ?>
 	<p>
-	<i><?= mysql_num_rows($result); ?> Portfile<? if (mysql_num_rows($result) != 1) { echo "s"; } ?> s&eacute;lectionn&eacute;<? if (mysql_num_rows($result) != 1) { echo "s"; } ?></i>
+	<i><?= mysql_num_rows($result); ?> Portfile<? if (mysql_num_rows($result) != 1) { echo "s"; } ?> sélectionné<? if (mysql_num_rows($result) != 1) { echo "s"; } ?></i>
 	</p>
 	<dl>
 <?		
@@ -134,7 +134,7 @@
 				if ($nresult) {
 ?>
 	<br />
-	<i>Cat&eacute;gorie(s) :</i>
+	<i>Catégorie(s) :</i>
 <?
 					$primary = 1;
 					while ( $nrow = mysql_fetch_assoc($nresult) ) {
@@ -169,7 +169,7 @@
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
 	<br />
-	<i>D&eacute;pendance(s) :</i>
+	<i>Dépendance(s) :</i>
 <?
 					while ( $nrow = mysql_fetch_array($nresult) ) {
 						// lib:libpng.3:libpng -> libpng

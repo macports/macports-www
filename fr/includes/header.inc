@@ -19,10 +19,10 @@
 	      echo "<li><a href=\"/fr/\" title=\"Accueil DarwinPorts\">Accueil DarwinPorts</a></li>\n";
 	    }
 	    if($PHP_SELF == $getdp) {
-	      echo "<li class=\"selected\"><a href=\"/fr/getdp/\" title=\"R&eacute;cup&eacute;rer DarwinPorts\">R&eacute;cup&eacute;rer DarwinPorts</a></li>\n";
+	      echo "<li class=\"selected\"><a href=\"/fr/getdp/\" title=\"Récupérer DarwinPorts\">Récupérer DarwinPorts</a></li>\n";
 	    }
 	    else {
-	      echo "<li><a href=\"/fr/getdp/\" title=\"R&eacute;cup&eacute;rer DarwinPorts\">R&eacute;cup&eacute;rer DarwinPorts</a></li>\n";
+	      echo "<li><a href=\"/fr/getdp/\" title=\"Récupérer DarwinPorts\">Récupérer DarwinPorts</a></li>\n";
 	    }
 	  ?>
 	    <li class="last"><a href="http://www.opendarwin.org/bugzilla/" title="Bugzilla">Bugzilla</a></li>
