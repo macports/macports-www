@@ -2,13 +2,13 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/it/includes/common.inc");
     include_once("$DOCUMENT_ROOT/it/includes/functions.inc");
-    print_header('Home di DarwinPorts', 'iso-8859-1');
+    print_header('Home di DarwinPorts', 'utf-8');
   ?>
 
     <div id="content">
       <h2 class="hdr">Introduzione a DarwinPorts</h2>
 
-      <p>L'obiettivo principale del progetto DarwinPorts e&grave; di fornire
+      <p>L'obiettivo principale del progetto DarwinPorts è di fornire
 	un metodo semplice per l'installazione di vario software open-source
 	su sistemi Darwin, Mac OS X, FreeBSD o Linux.</p>
 
@@ -24,7 +24,7 @@
 	la <a href="/docs/">documentazione</a> disponibile e se hai domande o 
 	incorri in un problema puoi sempre <a href="/it/help/">richiedere aiuto</a>.</p>
 
-      <p>Segnalazioni di bug, richieste di nuove funzionalita&grave; e di nuovi 
+      <p>Segnalazioni di bug, richieste di nuove funzionalità e di nuovi 
 	ports devono essere inviate tramite <a href="http://www.opendarwin.org/bugzilla/">
 	Bugzilla</a>.</p>
 

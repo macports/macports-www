@@ -2,7 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/it/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
-    print_header('Ports Disponibili', 'iso-8859-1');
+    print_header('Ports Disponibili', 'utf-8');
 ?>
 	<center>
 	<h1>Portfiles di DarwinPorts</h1>
@@ -33,7 +33,7 @@
 				</select>
 			</td>
 			<td><input type="text" name="substr" size="40" /></td>
-			<td><input type="submit" name="Search" /></td>
+			<td><input type="submit" name="Cerca" /></td>
 		</tr>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
