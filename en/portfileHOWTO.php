@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.5 2002/10/05 01:14:22 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.6 2002/10/05 18:38:29 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -15,7 +15,7 @@ How to Write a DarwinPorts Portfile
 </h2>
 <pre><tt>
 Kevin Van Vechten | <a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>
-3-Oct-2002
+5-Oct-2002
 </tt></pre>
 <h3>
 Abstract
@@ -33,7 +33,7 @@ Getting Started
 In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/">homepage</a> describes how to get and install it.
 </p>
 <p>
-Since you're interested in writing a Portfile, let's change some configuration options that will help in debugging as we go.  Edit the file <tt>/etc/ports/ports.conf</tt> to contain the following:
+Since you're interested in writing a Portfile, let's change some configuration options that will help in debugging as we go.  Edit the file <tt>/etc/ports/ports.conf</tt> to contain the following (you'll likely have to use <tt>sudo</tt> to edit this file):
 </p>
 <pre><tt>
 ports_debug     yes
@@ -56,7 +56,7 @@ DarwinPorts performs several basic predefined tasks, these are:
 </ul>
 <a name="advancedtoc"></a><h4>Advanced Topics</h4>
 <ul>
-<li><a href="#targets">Overridding Targets</a></li>
+<li><a href="#targets">Overriding Targets</a></li>
 <li><a href="#variants">Portfile Variants</a></li>
 </ul>
 <a name="appendixtoc"></a><h4>Appendix</h4>
@@ -80,16 +80,16 @@ maintainers     kevin@opendarwin.org
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-The <tt>portname</tt> and <tt>portversion</tt> options describe the name and version of the software, the <tt>categories</tt> option is a list of the logical categories to which the software belongs, this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> option should contain your email address, and the <tt>master_sites</tt> option should contain a list of sites where the distribution sources may be downloaded.
+A Portfile consists of key/value pairs.  The <tt>portname</tt> and <tt>portversion</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address, and the <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
-At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the port version to the portname and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
+At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>portversion</tt> to the <tt>portname</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
 </p>
 <pre><tt>
 % port checksum
 </tt></pre>
 <p>
-Which should give the following output:
+The <tt>port</tt> command operates on the <tt>Portfile</tt> in the current working directory.  You should see the following output:
 </p>
 <!--
 .........|.........|.........|.........|.........|.........|.........|.........|
@@ -239,7 +239,7 @@ post-configure {
 }
 </tt></pre>
 <p>
-This example replaces the occurance of <tt>change.this.to.a.server</tt> with <tt>irc.openprojects.net</tt> in the config.h file that was generated during the preceding <tt>configure</tt> phase.  Note this is a somewhat contrived example, since the same could have been accomplished by specifying <tt>--with-default-server=irc.openprojects.net</tt> in <tt>configure.args</tt>, but the approach is generally useful when such configure arguments aren't present.
+This example replaces the occurrence of <tt>change.this.to.a.server</tt> with <tt>irc.openprojects.net</tt> in the config.h file that was generated during the preceding <tt>configure</tt> phase.  Note this is a somewhat contrived example, since the same could have been accomplished by specifying <tt>--with-default-server=irc.openprojects.net</tt> in <tt>configure.args</tt>, but the approach is generally useful when such configure arguments aren't present.
 </p> 
 
 <h3>
