@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.1 2003/11/23 06:18:43 matt Exp $
+# $Id: functions.inc,v 1.2 2003/11/24 04:05:24 matt Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -90,7 +90,7 @@ function print_headlines() {
     }
   }
   else {
-    echo "<p>No headlines are available at this time.</p>\n";
+    echo "<p>Aucunes d&eacute;p&ecirc;ches &agrave; ce jour.</p>\n";
   }
 }
 
@@ -114,8 +114,8 @@ function print_headline() {
     echo "$row->news\n\n";
   }
   else {
-    echo "<h2 class=\"hdr\">Error!</h2>\n";
-    echo "<p>The requested headline could not be found.  It is either not in the database, or an error has occurred.</p>\n";
+    echo "<h2 class=\"hdr\">Erreur !</h2>\n";
+	echo "<p>La dépêche désirée n'a put être trouvée. Soit elle ne figure pas dans la base de données, soit une erreur est survenue.</p>\n";
   }
 }
 
@@ -126,12 +126,12 @@ function print_add_headline() {
   global $PHP_SELF, $connect;
 
   if(!$_POST['submit']) {
-    echo "<p>Use the form below to add project news.</p>\n\n";
+    echo "<p>Utilisez le formulaire ci-dessous pour ajouter une dépêche liée au projet.</p>\n\n";
     echo "<form action=\"$PHP_SELF\" method=\"post\">\n";
     echo "<p>Title:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
-    echo "<p>News:</p>\n";
+    echo "<p>Dépêche :</p>\n";
     echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\"></textarea></p>\n";
-    echo "<p><input type=\"submit\" name=\"submit\" value=\"Submit\" /></p>\n";
+    echo "<p><input type=\"submit\" name=\"submit\" value=\"Soumettre\" /></p>\n";
     echo "</form>\n\n";
   }
   else {
@@ -153,11 +153,11 @@ function print_add_headline() {
       if(!$result) {
 	die("Error: $result.");
       }
-      echo "<p>The addition was successful.  You can either <a href=\"list.php\">list all existing headlines, <a href=\"add.php\">add another headline</a>, or <a href=\"/\">return to the DarwinPorts site</a>.</p>\n\n";
+	  echo "<p>La dépêche a été ajoutée. Vous pouvez <a href="\list.php\">lister</a> toutes les dépêches, <a href=\"add.php\">ajouter une autre dépêche</a>, ou <a href=\"/fr/\">retourner sur le site de DarwinPorts</a>.</p>\n\n";
       create_rss();
     }
     else {
-      echo "<p>The following errors have occurred:</p>\n\n";
+      echo "<p>Les erreurs suivantes sont survenues :</p>\n\n";
       echo "<ul>\n";
       for($x=0; $x<sizeof($errorList); $x++) {
 	echo "<li>$errorList[$x]</li>\n";
@@ -182,18 +182,18 @@ function print_edit_headline($id) {
     }
     if(mysql_num_rows($result) > 0) {
       $row = mysql_fetch_object($result);
-      echo "<p>Use the form below to edit project news.</p>\n\n";
+      echo "<p>Utilisez le formulaire ci-dessous pour éditer les dépêches du projet.</p>\n\n";
       echo "<form action=\"$PHP_SELF?id=$id\" method=\"post\">\n";
       echo "<p>Title:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
-      echo "<p>News:</p>\n";
+      echo "<p>Dépêche :</p>\n";
       echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\">";
       echo htmlentities($row->news);
       echo "</textarea></p>\n";
-      echo "<p><input type=\"submit\" name=\"submit\" value=\"Edit\" /></p>\n";
+      echo "<p><input type=\"submit\" name=\"submit\" value=\"Éditer\" /></p>\n";
       echo "</form>\n\n";
     }
     else {
-      echo "<p>The requested news headline could not be found.  It is either not in the database, or an error has occurred.  Please try again.</p>\n\n";
+      echo "<p>La dépêche désirée n'a put être trouvée. Soit elle ne figure pas dans la base de données, soit une erreur est survenue. Réessayez.</p>\n\n";
     }
   }
   else {
@@ -216,11 +216,11 @@ function print_edit_headline($id) {
       if(!$result) {
 	die("Error: $result.");
       }
-      echo "<p>The update was successful.  You can either <a href=\"list.php\">list all existing headlines, <a href=\"add.php\">add another headline</a>, or <a href=\"/\">return to the DarwinPorts site</a>.</p>\n\n";
+      echo "<p>La dépêche a été mise à jour. Vous pouvez <a href="\list.php\">lister</a> toutes les dépêches, <a href=\"add.php\">ajouter une autre dépêche</a>, ou <a href=\"/fr/\">retourner sur le site de DarwinPorts</a>.</p>\n\n";
       create_rss();
     }
     else {
-      echo "<p>The following errors have occurred:</p>\n\n";
+      echo "<p>Les erreurs suivantes sont survenues :</p>\n\n";
       echo "<ul>\n";
       for($x=0; $x<sizeof($errorList); $x++) {
 	echo "<li>$errorList[$x]</li>\n";
@@ -236,7 +236,7 @@ function print_edit_headline($id) {
 function print_all_headlines() {
   global $connect;
 
-  echo "<p>Below is a list of all existing news headlines.  They can be viewed, edited, or deleted from this interface.  Alternatively, you can also <a href=\"add.php\">add news</a>.</p>\n\n";
+  echo "<p>Voici ci-dessous la liste de toutes les dépêches existantes. Elles peuvent être visualisées, éditées, ou effacées depuis cette interface. Vous pouvez également <a href=\"add.php\">ajouter une dépêche</a>.</p>\n\n";
 
   $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY timestamp DESC";
   $result = mysql_query($query) or die("Error: $query.");
@@ -245,11 +245,11 @@ function print_all_headlines() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives/$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+      echo "<p><a href=\"/archives/$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">éditer</a></p>\n\n";
     }
   }
   else {
-    echo "<p>No headlines are available.</p>\n\n";
+    echo "<p>Aucunes dépêches disponibles.</p>\n\n";
   }
 }
 
