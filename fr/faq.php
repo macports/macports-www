@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.8 2003/04/17 23:25:37 matt Exp $
+// Version  : $Id: faq.php,v 1.9 2003/04/20 17:50:05 matt Exp $
 // Location : /projects/darwinports/fr/faq.php
 //
 
@@ -33,7 +33,7 @@ Une description de DarwinPorts est plus compréhensible en utilisant une comparai
 <p><strong>Comment est constituée l'implémentation de DarwinPorts ?</strong></p>
 
 <p>
-Le système DarwinPorts est pratiquement tout écrit en Tcl et a été pensé pour être intégré dans d'autres applications, comme par exemple dans le framework Cocoa <a href="http://www.opendarwin.org/projects/dp-cocoa/">dp-cocoa</a> ainsi que dans ce logiciel de navigation Cocoa (basé sur dp-cocoa) appelé <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">PortManager.app</a>, ou bien dans une application contrôlée via une interface web. Il a été prévu pour être très extensible depuis ses tous premiers débuts, il est composé de telle manière qu'un changement de conception et/ou d'infrastructure peut être opéré indépendamment des ports, signifiant que si le système évolue, les choses anciennes ne seront pas affectées. 
+Le système DarwinPorts est pratiquement tout écrit en Tcl et a été pensé pour être intégré dans d'autres applications, comme par exemple dans le framework Cocoa <a href="http://www.opendarwin.org/projects/dp-cocoa/">dp-cocoa</a> ainsi que dans ce logiciel de navigation Cocoa (basé sur dp-cocoa) appelé <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">Ports Manager.app</a>, ou bien dans une application contrôlée via une interface web. Il a été prévu pour être très extensible depuis ses tous premiers débuts, il est composé de telle manière qu'un changement de conception et/ou d'infrastructure peut être opéré indépendamment des ports, signifiant que si le système évolue, les choses anciennes ne seront pas affectées. 
 </p>
 
 <p>
