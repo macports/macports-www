@@ -1,0 +1,215 @@
+/*
+  $Id: dp.css,v 1.1 2003/11/19 01:59:06 mij Exp $
+*/
+
+* {
+	font-family: Georgia, "New Century Schoolbook", "Times New Roman", Times, serif;
+}
+
+body {
+	background: #e3f1c7;
+	width: 720px;
+	margin: 15px auto 15px auto;
+	font-size: 12px;
+}
+
+a:link {
+	color: #669;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px dotted #c63;
+}
+
+a:visited {
+	color: #888;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px dotted #669;
+}
+
+a:hover {
+	color: #c63;
+	text-decoration: none;
+	font-weight: bold;
+	border-bottom: 1px dotted #369;
+}
+
+img, a img {
+	border: none;
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 22px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+h3 {
+	font-size: 18px;
+}
+
+h4 {
+	font-size: 16px;
+}
+
+h5 {
+	font-size: 14px;
+}
+
+h6 {
+	font-size: 13px;
+}
+
+br {
+	clear: both;
+}
+
+p {
+	margin: 10px 0 1em 0;
+	line-height: 16px;
+}
+
+input, textarea {
+	font-family: Courier, "Courier New", monospace;
+}
+
+kbd {
+	color: #c63;
+	font-family: Courier, "Courier New", monospace;
+}
+
+pre {
+	color:  #369;
+	font-family: Courier, "Courier New", monospace;
+	margin-left: 20px;
+}
+
+#nav {
+	height: 76px;
+	padding: 0;
+	font-size: 10px;
+}
+
+#logo {
+	background: #fff;
+	float: left;
+	display: inline;
+	width: 400px;
+	height: 75px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+#logo a {
+	border: none;
+}
+
+#nav #l {
+	width: 150px;
+	height: 75px;
+	float: left;
+	border: 1px solid #bbb;
+}
+
+#nav #r {
+	width: 150px;
+	height: 75px;
+	float: left;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+}
+
+#nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#nav li a {
+	background: #fff;
+	display: block;
+	text-decoration: none;
+	line-height: 20px;
+	padding: 2px;
+	border-bottom: 1px solid #bbb;
+}
+
+#nav li a:visited {
+	color: #999;
+	text-decoration: none;
+}
+
+#nav li a:hover {
+	background: #d8e6e7;
+	color: #888;
+}
+
+#nav li.last a {
+	border: none;
+	display: block;
+	line-height: 21px;
+}
+
+#nav li.selected a {
+	background: #f3f3f3;
+	color: #c63;
+}
+
+#nav li.sellast a {
+	background: #f3f3f3;
+	color: #c63;
+	border: none;
+	display: block;
+	line-height: 21px;
+}
+
+#main {
+	background: #fff;
+	width: 702px;
+	border-right: 1px solid #bbb;
+	border-left: 1px solid #bbb;
+	padding-bottom: 100px;
+}
+
+#content {
+	width: 80%; 
+	margin: 10px 0 0 0;
+	padding: 5px 20px;
+}
+
+#news {
+	margin: 10px 0 0 0;
+	padding: 5px 0 0 0;
+}
+
+#footer {
+	width: 692px;
+	background: #fff;
+	border: 1px solid #bbb;
+	text-align: right;
+	font-size: 10px;
+	padding: 5px;
+}
+
+.hdr {
+	color: #669;
+	margin: 0;
+	padding: 10px 0 0 0;
+	border-bottom: 1px solid #bbb;
+}
+
+.subhdr {
+	color: #879880;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+.date {
+	color: #999;
+	margin: 0 auto;
+	padding: 0;
+}
