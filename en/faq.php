@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.1 2002/09/25 10:52:13 jkh Exp $
+// Version  : $Id: faq.php,v 1.2 2002/09/25 23:02:53 jkh Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -118,6 +118,17 @@ generate the packages for each release of the OS or the individual
 ports, and developers who are modifying system libraries or playing
 with different ways of building a given piece of software may find a
 canned binary package to be insufficient for their needs. </p>
+
+<p><strong>Why does darwinports install everything into /opt/local by default?</strong></p>
+
+<p>First, this location can be set to anything you like by editing
+/etc/ports/ports.conf so nothing is fixed in place.  Even the basic
+darwinports infrastructure, which installs into /opt/local by default,
+can be installed elsewhere by overriding the value of PREFIX on the
+command line (see the README file for details).  Second, we had to
+pick SOME location for things to install into so that they would not
+collide with system components or things already installed in /usr/local,
+so we elected to loosely follow Sun's convention and go with /opt/local.</p>
 
 <p><strong>OK, so how do I start playing with it then?</strong></p>
 
