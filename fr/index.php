@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.3 2003/01/08 13:14:17 matt Exp $
+// Version  : $Id: index.php,v 1.4 2003/01/09 11:06:44 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -33,7 +33,7 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p><strong>Statut du Projet</strong></p>
 
 <p>
-Nombre de ports ont été créés et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">logiciels disponibles</a> ici.
+Nombre de ports ont été créés et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/fr/ports.php">logiciels disponibles</a> ici.
 </p>
 <p>
 Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée DarwinPorts.app, est disponible et son développement est actuellement actif. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Copie d'écran.</a>
