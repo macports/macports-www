@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.4 2003/01/09 11:06:44 matt Exp $
+// Version  : $Id: index.php,v 1.5 2003/01/12 00:23:29 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-Le projet Darwinports a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/fr/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/fr/portfileHOWTO.php">Portfile HOWTO</a>.  
+Le projet DarwinPorts a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/fr/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/fr/portfileHOWTO.php">Portfile HOWTO</a>.  
 </p>
 <p>
 Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation DarwinPorts</a> est une excellente référence sur les concepts ainsi que la syntaxe de DarwinPorts. (Notez que ce travail est en cours de progression, donc n'hésitez pas à nous faire parvenir vos suggestions et rapports de bogues via le module doc de DarwinPorts sur <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.)
@@ -33,10 +33,10 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p><strong>Statut du Projet</strong></p>
 
 <p>
-Nombre de ports ont été créés et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/fr/ports.php">logiciels disponibles</a> ici.
+Nombre de ports ont déjà été créés et rendent le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/fr/ports.php">logiciels disponibles</a> ici.
 </p>
 <p>
-Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée DarwinPorts.app, est disponible et son développement est actuellement actif. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Copie d'écran.</a>
+Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée DarwinPorts.app, est disponible et son développement est actuellement actif. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Copie d'écran</a>.
 </p>
 <p>
 Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.

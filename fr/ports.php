@@ -9,7 +9,7 @@
 	</center>
 
 	<p>
-	Cette page vous permet de rechercher dans l'index actuel des ports DarwinPorts. <br />
+	Cette page vous permet de faire une recherche dans l'index actuel des ports DarwinPorts. <br />
 	<i>Dernière mise-à-jour de l'index : </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
