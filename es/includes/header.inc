@@ -20,9 +20,9 @@
 						echo "<li><a href=\"/es/\" title=\"Home de DarwinPorts\">Home de DarwinPorts</a></li>\n";
 					}
 					if ($PHP_SELF == $getdp) {
-						echo "<li class=\"selected\"><a href=\"/es/getdp/\" title=\"Obtenci髇 de DarwinPorts\">Obtenci髇 de DarwinPorts</a></li>\n";
+						echo "<li class=\"selected\"><a href=\"/es/getdp/\" title=\"Obtenci贸n de DarwinPorts\">Obtenci贸n de DarwinPorts</a></li>\n";
 					} else {
-						echo "<li><a href=\"/es/getdp/\" title=\"Obtenci髇 de DarwinPorts\">Obtenci髇 de DarwinPorts</a></li>\n";
+						echo "<li><a href=\"/es/getdp/\" title=\"Obtenci贸n de DarwinPorts\">Obtenci贸n de DarwinPorts</a></li>\n";
 					}
 				?>
 				<li class="last"><a href="http://www.opendarwin.org/bugzilla/" title="Bugzilla">Bugzilla</a></li>
@@ -31,7 +31,7 @@
 		
 		<div id="r">
 			<ul>
-				<li><a href="/docs/" title="Documentaci髇">Documentaci髇</a></li>
+				<li><a href="/docs/" title="Documentaci贸n">Documentaci贸n</a></li>
 				<?php
 					if ($PHP_SELF == $ports) {
 						echo "<li class=\"selected\"><a href=\"/es/ports/\" title=\"Portes Disponibles\">Portes Disponibles</a></li>\n";
@@ -39,9 +39,9 @@
 						echo "<li><a href=\"/es/ports/\" title=\"Portes Disponibles\">Portes Disponibles</a></li>\n";
 					}
 					if ($PHP_SELF == $help) {
-						echo "<li class=\"selected\"><a href=\"/es/help/\" title=\"Obtenci髇 de Ayuda\">Obtenci髇 de Ayuda</a></li>\n";
+						echo "<li class=\"selected\"><a href=\"/es/help/\" title=\"Obtenci贸n de Ayuda\">Obtenci贸n de Ayuda</a></li>\n";
 					} else {
-						echo "<li class=\"last\"><a href=\"/es/help/\" title=\"Obtenci髇 de Ayuda\">Obtenci髇 de Ayuda</a></li>\n";
+						echo "<li class=\"last\"><a href=\"/es/help/\" title=\"Obtenci贸n de Ayuda\">Obtenci贸n de Ayuda</a></li>\n";
 					}
 				?>
 			</ul>

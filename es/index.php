@@ -2,27 +2,27 @@
 		$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 		include_once("$DOCUMENT_ROOT/es/includes/common.inc");
 		include_once("$DOCUMENT_ROOT/es/includes/functions.inc");
-		print_header('Home de DarwinPorts', 'iso-8859-1');
+		print_header('Home de DarwinPorts', 'utf-8');
 	?>
 
 		<div id="content">
-			<h2 class="hdr">Introducci髇 a DarwinPorts</h2>
+			<h2 class="hdr">Introducci贸n a DarwinPorts</h2>
 
 			<p>El objetivo principal del proyecto DarwinPorts es proveer una forma
-			sencilla de instalar varios productos de c骴igo abierto en un sistema
+			sencilla de instalar varios productos de c贸digo abierto en un sistema
 			Darwin, Mac OS X, FreeBSD o Linux.</p>
 
 			<p>En la actualidad hay unos cuantos cientos de <a href="/es/ports/">portes</a>
-			completados y usables, mientras que m醩 son agregados regularmente. Usted
-			puede conocer sobre los portes recientemente a馻didos al susbcribirse a la
+			completados y usables, mientras que m谩s son agregados regularmente. Usted
+			puede conocer sobre los portes recientemente a帽adidos al susbcribirse a la
 			lista de correo <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.</p>
 
-			<p>Para m醩 informaci髇 sobre la obtenci髇 e instalaci髇 de DarwinPorts, por
-			favor refi閞ase la secci髇 <a href="/es/getdp/">Obtenci髇 de DarwinPorts</a>
-			de esta p醙ina. Tambi閚 aseg鷕ese de revisar la <a href="/docs/">documentaci髇</a>
-			y si tiene preguntas o sufre de alg鷑 problema, puede <a href="/es/help/">buscar ayuda</a>.</p>
+			<p>Para m谩s informaci贸n sobre la obtenci贸n e instalaci贸n de DarwinPorts, por
+			favor refi茅rase la secci贸n <a href="/es/getdp/">Obtenci贸n de DarwinPorts</a>
+			de esta p谩gina. Tambi茅n aseg煤rese de revisar la <a href="/docs/">documentaci贸n</a>
+			y si tiene preguntas o sufre de alg煤n problema, puede <a href="/es/help/">buscar ayuda</a>.</p>
 
-			<p>Reportes de "bugs", peticiones de funcionalidad y nuevos portes deber韆n ser
+			<p>Reportes de "bugs", peticiones de funcionalidad y nuevos portes deber铆an ser
 			introducidos en <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
 
 		<div id="news">

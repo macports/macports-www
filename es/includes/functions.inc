@@ -1,6 +1,6 @@
 	<?php
 
-# $Id: functions.inc,v 1.1 2004/04/21 23:44:59 matt Exp $
+# $Id: functions.inc,v 1.2 2004/09/14 18:05:17 matt Exp $
 # Copyright (c) 2004, OpenDarwin
 
 ###############################################################################
@@ -38,20 +38,20 @@
 			$rss .= "  xmlns:content=\"http://purl.org/rss/1.0/modules/content/\">\n\n";
 			
 			$rss .= "  <channel>\n";
-			$rss .= "	<title>Noticias del Proyecto DarwinPorts</title>\n";
+			$rss .= "	<title>DarwinPorts Project News</title>\n";
 			$rss .= "	<link>http://darwinports.opendarwin.org/</link>\n";
-			$rss .= "	<description>Noticias del Proyecto DarwinPorts1</description>\n";
-			$rss .= "	<dc:language>es</dc:language>\n";
+			$rss .= "	<description>DarwinPorts Project News</description>\n";
+			$rss .= "	<dc:language>en-us</dc:language>\n";
 			$rss .= "	<dc:creator>Jim Mock (mij@opendarwin.org)</dc:creator>\n";
 			$rss .= "	<dc:rights>Copyright 2002-2003</dc:rights>\n";
 			$rss .= "	<dc:date>$rssdate</dc:date>\n";
-			$rss .= "	<admin:errorReportsTo rdf:resource=\"mialto:mij@opendarwin.org\" />\n";
+			$rss .= "	<admin:errorReportsTo rdf:resource=\"mailto:mij@opendarwin.org\" />\n";
 			
 			if (mysql_num_rows($result) > 0) {
 				while ($row = mysql_fetch_objects($result)) {
 					$rss .= "	<item>\n";
 					$rss .= "		<title>$row->title</title>\n";
-					$rss .= "		<link>http://darwinports.opedarwin.org/archives/$row->id.php</link>\n";
+					$rss .= "		<link>http://darwinports.opendarwin.org/archives/$row->id.php</link>\n";
 					
 					$desc_query = "SELECT SUBSTRING_INDEX(news, ' ',26) FROM headlines WHERE id=$row->id";
 					$desc_result = mysql_query($desc_query);
@@ -60,7 +60,7 @@
 					$description = $desc_row[0];
 					
 					$rss .= "		<description><![CDATA[$description...</p>]]></description>\n";
-					$rss .= "		<guid isPermaLink=\"true\">http://darwinprots.opendarwin.org/archives/$row->id.php</guid>\n";
+					$rss .= "		<guid isPermaLink=\"true\">http://darwinports.opendarwin.org/archives/$row->id.php</guid>\n";
 					$rss .= "		<content:encoded><![CDATA[$row-news]]></content:encoded>\n";
 					$rss .= "	<item>\n";
 				}
@@ -129,9 +129,9 @@
 			global $PHP_SELF, $connect;
 			
 			if (!$_POST['submit']) {
-				echo "<p>Utilice el formulario que se presenta abajo para aÒadir noticias del proyecto.</p>\n\n";
+				echo "<p>Utilice el formulario que se presenta abajo para añadir noticias del proyecto.</p>\n\n";
 				echo "<form action=\"$PHP_SELF\" method=\"post\">\n";
-				echo "<p>TÌtulo:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
+				echo "<p>Título:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
 				echo "<p>Noticias:</p>\n";
 				echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\"></textarea></p>\n";
 				echo "<p><input type=\"submit\" name=\"submit\" value=\"Remitir\" /></p>\n";
@@ -155,7 +155,7 @@
 					if (!$result) {
 						die("Error: $result.");
 					}
-					echo "<p>La entrada fue aÒadida exitosamente. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">aÒadir otro titular</a> o <a href=\"/\">volver a la p·gina principal de DarwinPorts</a>.</p>\n\n";
+					echo "<p>La entrada fue añadida exitosamente. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">añadir otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
 					create_rss();
 				} else {
 					echo "<p>Han ocurrido los siguientes errores:</p>\n\n";
@@ -215,7 +215,7 @@
 					if (!$result) {
 						die("Error: $result.");
 					}
-					echo "<p>El update fue exitoso. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">aÒadir otro titular</a> o <a href=\"/\">volver a la p·gina principal de DarwinPorts</a>.</p>\n\n";
+					echo "<p>El update fue exitoso. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">añadir otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
 					create_rss();
 				} else {
 					echo "<p>Han ocurrido los siguientes errores:</p>\n\n";
@@ -235,7 +235,7 @@
 		function print_all_headlines() {
 			global $connect;
 			
-			echo "<p>Abajo se muestra una lista de todos los titulares existentes. Pueden ser leÌdos, editados o borrados desde esta interface. Adem·s, Usted tambiÈn puede <a href=\"add.php\">aÒadir noticias al proyecto</a>.</p>\n\n";
+			echo "<p>Abajo se muestra una lista de todos los titulares existentes. Pueden ser leídos, editados o borrados desde esta interface. Además, Usted también puede <a href=\"add.php\">añadir noticias al proyecto</a>.</p>\n\n";
 			$query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
 			$result = mysql_query($query) or die("Error: $query.");
 			if (!$result) {
