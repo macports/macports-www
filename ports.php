@@ -53,7 +53,7 @@
 	<dl>
 <?
 	if ($by && ($substr || $by == "all")) {
-		$query = "SELECT name,description,maintainer FROM darwinports.portfiles p, darwinports.maintainers m, darwinports.categories c WHERE p.name=m.portfile AND p.name=c.portfile AND m.is_primary=1";
+		$query = "SELECT DISTINCT name,path,version,description,maintainer FROM darwinports.portfiles p, darwinports.maintainers m, darwinports.categories c WHERE p.name=m.portfile AND p.name=c.portfile AND m.is_primary=1";
 		if ($by == "name") {
 			$query = $query . " AND p.name LIKE '%" . addslashes($substr) . "%'";
 		}
@@ -61,17 +61,34 @@
 			$query = $query . " AND p.description LIKE '%" . addslashes($substr) . "%'";
 		}
 		if ($by == "cat") {
-			$query = $query . " AND c.category LIKE '%" . addslashes($substr) . "%'";
+			$query = $query . " AND c.category='" . addslashes($substr) . "'";
 		}
 		$query = $query . " ORDER BY name";
 		$result = mysql_query($query);
 		if($result) {
 			while( $row = mysql_fetch_assoc($result) ) {
 ?>
-	<dt><b><?= $row['name']; ?></b></dt>
+	<dt><b><a href="http://www.opendarwin.org/projects/darwinports/darwinports/dports/<?= $row['path']; ?>/Portfile"><?= $row['name']; ?></a></b> <?= $row['version']; ?></dt>
 	<dd>
 	<?= $row['description']; ?><br />
 	<i>Maintained by:</i> <a href="mailto:<?= $row['maintainer']; ?>"><?= $row['maintainer']; ?></a><br />
+	<i>Categories:</i> 
+	<?
+				$nquery = "SELECT category FROM darwinports.categories WHERE portfile='" . $row['name'] . "' ORDER BY is_primary DESC, category";
+				$nresult = mysql_query($nquery);
+				if ($nresult) {
+					$primary = 1;
+					while ( $nrow = mysql_fetch_assoc($nresult) ) {
+						if ($primary) { echo "<b>"; }
+					?>
+						<a href="<?= $PHP_SELF; ?>?by=cat&substr=<?= $nrow['category']; ?>"><?= $nrow['category']; ?></a>
+					<?
+						if ($primary) { echo "</b>"; }
+						$primary = 0;
+					}
+				}
+	?>
+	<br />
 	</dd>
 	<br />
 <?	
