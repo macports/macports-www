@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.4 2003/01/12 00:24:22 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.5 2003/01/15 01:02:11 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -33,14 +33,7 @@ Commencer
 Pour pouvoir travailler avec DarwinPorts, vous devrez le télécharger et l'installer sur votre système. La <a href="http://opendarwin.org/projects/darwinports/fr/">page d'accueil</a> du projet DarwinPorts décrit comment se le procurer et l'installer.
 </p>
 <p>
-Comme vous vous intéressez à l'écriture d'un Portfile, changeons quelques options de configuration qui vous aideront au déboguage. Éditez le fichier <tt>/etc/ports/ports.conf</tt> afin que les changements suivants y soient incorporés (vous devrez passer par <tt>sudo</tt> pour pouvoir éditer ce fichier) :
-</p>
-<pre><tt>
-ports_debug     yes
-ports_verbose   yes
-</tt></pre>
-<p>
-Cela affichera des messages utiles pour le déboguage qui sont normalement omis lors de l'utilisation de DarwinPorts.
+Comme vous vous intéressez à l'écriture d'un Portfile, vous devriez invoquer la commande <tt>port</tt> avec l'option <tt>v</tt> (mode verbeux) et l'option <tt>d</tt> (mode déboguage). Cela affichera des messages utile au déboguage qui sont normalement omis lors de l'exécution de DarwinPorts. 
 </p>
 <p>
 DarwinPorts effectuera plusieurs tâches basiques prédéfinies, qui sont :
@@ -73,14 +66,18 @@ La première chose à faire est de choisir un logiciel à porter. Pour cet exemple,
 </p>
 <pre><tt>
 PortSystem 1.0
-name            ircii
-version         20020912
-categories      irc
-maintainers     kevin@opendarwin.org
-master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
+name            	ircii
+version         	20020912
+categories      	irc
+maintainers     	kevin@opendarwin.org
+description			an IRC and ICB client
+long_description	The ircII program is a full screen, termcap based interface to Internet Relay \
+					Chat. It gives full access to all the normal IRC functions, plus a variety \
+					of additionnal options.
+master_sites    	ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-Un Portfile consiste en une suite de paires de type clé/valeur. Les clés <tt>name</tt> et <tt>version</tt> décrivent le nom et la version du logiciel. La clé <tt>categories</tt> est une liste des catégories auquel le logiciel peut appartenir de façon logique; c'est utilisé dans un but d'organisation. La première entrée dans <tt>categories</tt> devrait correspondre au nom du répertoire où doit résider le répertoire du port. La clé <tt>maintainers</tt> devrait, elle, contenir votre adresse email et la clé <tt>master_sites</tt> devrait quant à elle contenir une liste des sites où télécharger les sources. DarwinPorts utilise les termes "clés" et "options" indifféremment comme la plupart des clés sont utilisées comme des options d'une tâche particulière dans le processus du portage.
+Un Portfile consiste en une suite de paires de type clé/valeur. Les clés <tt>name</tt> et <tt>version</tt> décrivent le nom et la version du logiciel. La clé <tt>categories</tt> est une liste des catégories auquel le logiciel peut appartenir de façon logique; c'est utilisé dans un but d'organisation. La première entrée dans <tt>categories</tt> devrait correspondre au nom du répertoire où doit résider le répertoire du port. La clé <tt>maintainers</tt> devrait, elle, contenir votre adresse email. <tt>description</tt> affiche une brève description du port, alors que <tt>long_description</tt> affiche une complète description du port. La clé <tt>master_sites</tt> devrait quant à elle contenir une liste des sites où télécharger les sources. DarwinPorts utilise les termes "clés" et "options" indifféremment comme la plupart des clés sont utilisées comme des options d'une tâche particulière dans le processus du portage.
 </p>
 <p>
 Arrivé à ce point, le Portfile est assez complet pour permettre le téléchargement d'ircII. Par défaut, DarwinPorts ajoutera <tt>version</tt> à <tt>name</tt> et considérera que les sources sont au format <tt>.tar.gz</tt>. Depuis votre répertoire de travail, exécutez la commande suivante :
@@ -287,14 +284,18 @@ Ce qui suit est le listage complet du Portfile d'ircII :
 </p>
 <pre><tt>
 PortSystem 1.0
-name            ircii
-version         20020912
-categories      irc
-maintainers     kevin@opendarwin.org
-master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
-checksums       md5 2ae68c015698f58763a113e9bc6852cc
-configure.args  --disable-ipv6
-include         contents
+name            	ircii
+version         	20020912
+categories      	irc
+maintainers     	kevin@opendarwin.org
+description			an IRC and ICB client
+long_description	The ircII program is a full screen, termcap based interface to Internet Relay \
+					Chat. It gives full access to all the normal IRC functions, plus a variety \
+					of additionnal options.
+master_sites    	ftp://ircftp.au.eterna.com.au/pub/ircII/
+checksums       	md5 2ae68c015698f58763a113e9bc6852cc
+configure.args  	--disable-ipv6
+include         	contents
 
 post-configure {
         reinplace "s|change.this.to.a.server|irc.openprojects.net|g" \
