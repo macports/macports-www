@@ -1,6 +1,6 @@
 <?php
 
-# $Id: common.inc,v 1.1 2003/11/19 01:59:08 mij Exp $
+# $Id: common.inc,v 1.2 2004/10/27 05:28:17 wbb4 Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -24,6 +24,8 @@ function print_header($title, $encoding) {
 
   <body>
 
+  <?php check_referer(); ?>
+  
   <div id="main">
 
 <?php
@@ -41,4 +43,23 @@ function print_footer() {
   echo "  </body>\n";
   echo "</html>\n";
 }
+
+###################################################################### 
+function check_referer() {
+	global $_SERVER;
+	if (preg_match("/darwinports.com/", $_SERVER['HTTP_REFERER'])) {
+?>
+	<div class="referer_box">
+		<h1>The Official DarwinPorts Web Site</h1>
+		
+		<p>You have arrived at the <b>Official DarwinPorts Web Site</b> from <i>darwinports.com</i>.</p>
+	  
+		<p><i>darwinports.com</i> <b>is not the official DarwinPorts Web Site</b>, nor is it a mirror of the <i>Official DarwinPorts Web Site</i>.  There is <b>no relationship</b> between the <i>DarwinPorts Project</i> and <i>darwinports.com</i>.</p>
+
+		<p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not maintained by the <i>DarwinPorts Project</i>.  For the most accurate information about DarwinPorts, please bookmark this site, <a href="http://darwinports.opendarwin.org">http://darwinports.opendarwin.org</a>.</p>
+	</div>
+
+<?php
+	}
+}	
 ?>
