@@ -2,15 +2,12 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.6 2002/09/25 23:45:10 jkh Exp $
+// Version  : $Id: index.php,v 1.7 2002/09/26 03:03:38 kevin Exp $
 // Location : /projects/darwinports/index.php
 //
 
-require_once("$DOCUMENT_ROOT/includes/config.inc.php");
-require_once("$DOCUMENT_ROOT/includes/dbconnect.inc.php");
-
-include("$DOCUMENT_ROOT/header.html");
-
+	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
+	od_print_header("DarwinPorts", "en", "iso-8859-1", "");
 ?>
 
 <center>
@@ -23,7 +20,7 @@ include("$DOCUMENT_ROOT/header.html");
 <i>Project Leads: </i>
 <a href="mailto:landonf@opendarwin.org">Landon Fuller</a>, 
 <a href="mailto:jkh@opendarwin.org">Jordan Hubbard</a>,
-<a href="mailto:kevin@opendarwin.org">Kevin van Vechten</a>
+<a href="mailto:kevin@opendarwin.org">Kevin Van Vechten</a>
 </p>
 
 <p>
@@ -76,7 +73,7 @@ We are looking for people who would like to help to make this project a success.
 </p>
 
 <p>
-All contributions are very much welcomed. If have you are interested then can either send an e-mail to the project owner or join the project with <a href="/joinproject.php">this</a> form.
+All contributions are very much welcomed. If have you are interested then can either send an e-mail to the project owner or join the project with <a href="/en/joinproject.php">this</a> form.
 </p>
 
 </td></tr>
@@ -84,4 +81,6 @@ All contributions are very much welcomed. If have you are interested then can ei
 </center>
 
 
-<? include("$DOCUMENT_ROOT/footer.html"); ?>
+<? 
+	od_print_footer("en"); 
+?>

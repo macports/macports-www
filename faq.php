@@ -2,17 +2,12 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.2 2002/09/25 23:02:53 jkh Exp $
+// Version  : $Id: faq.php,v 1.3 2002/09/26 03:03:38 kevin Exp $
 // Location : /projects/darwinports/faq.php
 //
 
-// I have no idea if this is actually needed, but everything else seems to
-// include it.
-require_once("$DOCUMENT_ROOT/includes/config.inc.php");
-require_once("$DOCUMENT_ROOT/includes/dbconnect.inc.php");
-
-include("$DOCUMENT_ROOT/header.html");
-
+	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
+	od_print_header("DarwinPorts FAQ", "en", "iso-8859-1", "");
 ?>
 
 <center>
@@ -143,4 +138,6 @@ installation and basic usage instructions</p>
 </center>
 
 
-<? include("$DOCUMENT_ROOT/footer.html"); ?>
+<? 
+	od_print_footer("en"); 
+?>
