@@ -203,7 +203,7 @@
 <?	
 			} 
 		} else {
-			echo "An Error Occurred. (501)";
+			echo "Une erreur est survenue. (501)";
 		}
 	}
 ?>
