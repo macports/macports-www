@@ -1,4 +1,4 @@
 AuthName "DP Site Administration"
 AuthType Basic
-AuthUserFile /Users/mij/.htpasswd
+AuthUserFile /var/db/darwinports/dpadmin-htpasswd
 require valid-user
