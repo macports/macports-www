@@ -2,3 +2,8 @@
     Order allow,deny
     Deny from all
 </Files>
+<Files Portfile>
+    Action process-portfile /emit_portfile.php
+    SetHandler process-portfile
+</Files>
+
