@@ -9,10 +9,10 @@
       <h2 class="hdr">Introduction à DarwinPorts</h2>
 
 	<p>Le principal objectif du projet DarwinPorts est de fournir un moyen
-	simple pour l'installation de divers logiciels open-source sur des systèmes
-	tel que Darwin, Mac OS X, FreeBSD ou Linux.</p>
+	simple pour l'installation de divers logiciels open-source sur les systèmes basés sur 
+	Darwin (Mac OS X, OpenDarwin)</p>
 	
-	<p>Il n'y a actuellement qu'une centaine de <a href="/fr/ports/">ports</a>
+	<p>Il y a actuellement environ 2400 <a href="/fr/ports/">ports</a>
 	opérationnels et disponibles, mais d'autres seront bientôt ajoutés régulièrement.
 	Vous pouvez prendre connaissance des ports récemment ajoutés en souscrivant
 	à la liste de discussion <a
