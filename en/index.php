@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.1 2002/09/10 22:40:09 bbraun Exp $
+// Version  : $Id: index.php,v 1.2 2002/09/10 23:04:04 bbraun Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -47,8 +47,8 @@ Use the following commands to get the project from the OpenDarwin CVS server:
 
 <p>
 <pre>
-cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/darwinports login
-cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/darwinports co -P darwinports
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P proj/darwinports
 </pre>
 
 When the server asks you for a password you can simply hit return; the password is empty.
