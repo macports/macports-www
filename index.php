@@ -16,9 +16,8 @@
 	href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
-	mailing list, or by using our <a href="/dp_commits.xml">RSS feed of
-	recent commits</a>.</p>
-
+	mailing list.</p>
+	
       <p>For more information on obtaining and installing DarwinPorts,
 	please see the <a href="/getdp/">Get DarwinPorts</a> section of the
 	site.  Also be sure to check out <a href="/docs/">documentation</a>,
