@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.23 2003/08/06 18:34:27 landonf Exp $
+// Version  : $Id: index.php,v 1.24 2003/10/06 15:53:32 fkr Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -28,7 +28,7 @@
 The DarwinPorts project aims to provide a large amount of software ports that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/en/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">Portfile HOWTO</a>.
 </p>
 <p>
-The <a href="http://darwinports.gene-hacker.net/docs/guide/">DarwinPorts User Guide</a> is an excellent reference on DarwinPorts syntax and concepts.  (Note it is a work in progress, so please feel free to make suggestions and report bugs in the doc component of the DarwinPorts <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a> product.)
+The <a href="http://www.opendarwin.org/~wbb4/guide/">DarwinPorts User Guide</a> is an excellent reference on DarwinPorts syntax and concepts.  (Note it is a work in progress, so please feel free to make suggestions and report bugs in the doc component of the DarwinPorts <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a> product.)
 </p>
 
 <p><strong>Project Status</strong></p>
