@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.12 2003/01/13 17:42:01 fkr Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.13 2003/03/31 16:56:03 fkr Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -14,8 +14,8 @@
 How to Write a DarwinPorts Portfile
 </h2>
 <pre><tt>
-Kevin Van Vechten | <a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>
-8-Oct-2002
+Kevin Van Vechten (<a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>), Felix Kronlage (<a href="mailto:fkr@opendarwin.org">fkr@opendarwin.org</a>)
+15-Mar-2003
 </tt></pre>
 <h3>
 Abstract
@@ -30,7 +30,7 @@ This article describes the construction of a simple Portfile, and explores a few
 Getting Started
 </h3>
 <p>
-In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/en/">homepage</a> describes how to get and install it.
+In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/">homepage</a> describes how to get and install it.
 </p>
 <p>
 Since you're interested in writing a Portfile, you should invoke the <tt>port</tt> command with the <tt>-v</tt> (verbose output) and the <tt>-d</tt> (debugging output) switches. This will display useful debugging messages that are usually suppressed while running DarwinPorts.
@@ -55,7 +55,6 @@ DarwinPorts performs several basic predefined tasks, these are:
 <a name="appendixtoc"></a><h4>Appendix</h4>
 <ul>
 <li><a href="#portfilelist">Portfile Listing</a></li>
-<li><a href="#contentslist">Contents Listing</a></li>
 </ul>
 
 <h3>
@@ -65,6 +64,7 @@ DarwinPorts performs several basic predefined tasks, these are:
 The first step is to choose a piece of software to bring to port.  For this example, we'll be porting ircII, a popular internet relay chat client.  We can start with a simple Portfile describing the basic attributes of ircII such as its name, version, and the site where we can download the sources.  Create a working directory named <tt>ircii</tt> and inside it create a file named <tt>Portfile</tt> with the following contents:
 </p>
 <pre><tt>
+# &#36;Id: &#36;
 PortSystem 1.0
 name            ircii
 version         20020912
@@ -74,10 +74,11 @@ description     an IRC and ICB client
 long_description        The ircII program is a full screen, termcap based interface to Internet Relay \
                         Chat. It gives full access to all of the normal IRC functions, plus a variety \
                         of additional options.
+homepage        http://www.eterna.com.au/ircii/
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailed description of the software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
+A Portfile consists of key/value pairs. Every Portfile starts with <tt># &#36;Id: &#36;</tt> which is a commented out RCS Id tag. Following the RCS Id tag comes the <tt>PortSystem</tt> declaration. Currently the only valid declaration is <tt>PortSystem 1.0</tt>. The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailed description of the Software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  To refer to the main website of the software, the <tt>homepage</tt> key is used. DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
 At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
@@ -168,42 +169,12 @@ By default, the build phase executes the system's make(1) utility.  (This can be
 <h3>
 <a name="install"></a>Installing the Finished Product on the System
 </h3>
-<p>
-Portfiles are required to have a <tt>contents</tt> option which specifies which files are installed.  DarwinPorts uses this information to catalog what files belong to which piece of software so they may be later uninstalled.  Each parameter to <tt>contents</tt> is a path to a file.  All paths are relative to the <tt>${prefix}</tt> variable.  As a convenient way to determine exactly what files are installed as part of ircII, let's use the find command to compose a manifest of the files in the <tt>${prefix}</tt> tree.  After installing we'll re-run the find command, and use the differences to generate our contents list.
+<p>The former method of including a <tt>contents</tt> list has been made obsolete by the <tt>destroot</tt> mechanism. With <tt>destroot</tt> the software is installed into a directory-tree below in the <tt>work</tt> directory. While some software (like ircII) does not require any special tweaks to be installed into the <tt>destroot</tt>, others (like <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/net/ncftp/">ncftp</a>) need the <tt>install.destroot</tt> option in order to correctly install into the <tt>destroot</tt>.
 </p>
-<p>
-Using the unidiff format, we'll compare the list of existing files with the new list of files, only paying attention to the lines that were added.  Since the contents paths are supposed to be relative to <tt>${prefix}</tt>, we'll pipe through <tt>sed</tt> and delete the prefix (<tt>/opt/local/</tt>), storing the result in a file named <tt>contents</tt> in our port directory.  We can do this with the following commands:
-</p>
-<!--
-.........|.........|.........|.........|.........|.........|.........|.........|
--->
 <pre><tt>
-% find /opt/local > /tmp/existing.files
-% sudo port install
-% find /opt/local > /tmp/more.files
-% diff -u /tmp/existing.files /tmp/more.files | grep ^\+\/ | \
-  sed -e 's|^\+/opt/local/*||g' > contents
+install.destroot        mandir=${destroot}${prefix}/man prefix=${destroot}${prefix}
 </tt></pre>
-<p>
-Now that we have a contents file in our port directory, we should edit it to begin with <tt>contents {</tt> and end with a closing <tt>}</tt>.  (It is important to note that any other process using the <tt>${prefix}</tt> tree may interfere with the accuracy of the <tt>find</tt> command.  You should audit the resulting <tt>contents</tt> file to look for any files that appear out of place, specifically some DarwinPorts temporary files such as <tt>/var/db/dports/receipts/ircii-20020912.tmp</tt>.)
-It's also important to review the contents file and make sure directories are listed <i>after</i> the files they contain for the uninstall process to work correctly.
-Next we should edit the Portfile to include our contents file:
-</p>
-<pre><tt>
-include contents
-</tt></pre>
-<p>
-If the list of files installed by the port does not extends beyond one page of an 80x24 terminal, the <tt>contents</tt> option should be included in the Portfile.
-Instead of <tt>include contents</tt>, one would use:
-</p>
-<pre><tt>
-contents    bin/irc \
-            bin/irc-20020912 \
-            man/man1/irc.1 \
-            man/man1/ircbug.1 \
-            man/man1/ircII.1 \
-            man/man1
-</pre></tt>
+<p>Take a look at some of our ports to see more examples on how to use the <tt>install.destroot</tt> option.</p>
 <p>
 Now we have a complete portfile.  Re-run the installation step to add your port to your own registry:
 </p>
@@ -284,6 +255,7 @@ Appendix
 The following is a complete listing of the ircII Portfile:
 </p>
 <pre><tt>
+# &#36;Id: &#36;
 PortSystem 1.0
 name            ircii
 version         20020912
@@ -293,10 +265,10 @@ description     an IRC and ICB client
 long_description        The ircII program is a full screen, termcap based interface to Internet Relay \
                         Chat. It gives full access to all of the normal IRC functions, plus a variety \
                         of additional options.
+homepage        http://www.eterna.com.au/ircii/
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 checksums       md5 2ae68c015698f58763a113e9bc6852cc
 configure.args  --disable-ipv6
-include         contents
 
 post-configure {
         reinplace "s|change.this.to.a.server|irc.openprojects.net|g" \
@@ -307,27 +279,6 @@ variant ipv6 {
         configure.args-append --enable-ipv6
 }
 </tt></pre>
-
-<h3>
-<a name="contentslist"></a>Contents Listing
-</h3>
-<p>
-The following is a partial listing of the ircII contents file:
-</p>
-<pre><tt>
-contents {
-bin/irc
-bin/irc-20020912
-... omitted ...
-man/man1/irc.1
-man/man1/ircbug.1
-man/man1/ircII.1
-man/man1
-man
-... omitted ...
-}
-</tt></pre>
-
 
 <? 
 	od_print_footer("en"); 
