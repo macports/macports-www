@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.12 2002/10/31 01:01:11 kevin Exp $
+// Version  : $Id: index.php,v 1.13 2002/11/10 21:50:16 michaelm Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -78,7 +78,7 @@ We are looking for people who would like to help to make this project a success.
 </p>
 
 <p>
-All contributions are very much welcomed! If you are interested, then can either send an e-mail to one of the project leads asking what needs to be done or simply submit an application to join the project with <a href="/en/joinproject.php">this form</a>.  Thanks!
+All contributions are very much welcomed! If you are interested, then either send an e-mail to one of the project leads asking what needs to be done or simply submit an application to join the project with <a href="/en/joinproject.php">this form</a>.  Thanks!
 </p>
 
 </td></tr>
