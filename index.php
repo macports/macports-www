@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.4 2002/09/25 10:52:13 jkh Exp $
+// Version  : $Id: index.php,v 1.5 2002/09/25 21:51:13 landonf Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -57,7 +57,7 @@ When the server asks you for a password you can simply hit return; the password 
 <p><strong>Joining the project </strong></p>
 
 <p>
-We are looking for people who are would like to help to make this project a success. There are still many parts of the project that need work, including: documentation, making ports, maintaining ports and testing.
+We are looking for people who would like to help to make this project a success. There are still many parts of the project that need work, including: documentation, making ports, maintaining ports and testing.
 </p>
 
 <p>
