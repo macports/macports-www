@@ -15,7 +15,7 @@
 		los &ldquo;Developer Tools&rdquo; de Mac OS X (para 10.2.x) o Xcode (para 10.3.x).</p>
 		
 		<p>Si desea usar DarwinPorts en alguna otra plataforma además de Mac OS X, por favor note
-		las siguientes dependencias (se asume que ya posee lo básico como gcc):
+		las siguientes dependencias (se asume que ya posee lo básico como gcc):</p>
 		<ul>
 			<li>TCL (8.3 u 8.4)</il>
 			<li>curl</li>

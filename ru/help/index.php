@@ -15,7 +15,7 @@
 
 	<p>В <a href="http://darwinports.opendarwin.org/docs">Описании DarwinPorts</a>
 	есть раздел для пользователей,
-	<a href="http://darwinports.opendarwin.org/docs/pt01.html">Часть 1: использование DarwinPorts</a>.
+	<a href="http://darwinports.opendarwin.org/docs/pt01.html">Часть 1: использование DarwinPorts</a>.</p>
 
 	<p>Часто задаваемые вопросы по DarwinPorts обновляются регулярно.</p>
 
