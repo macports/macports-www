@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.5 2003/01/12 00:23:29 matt Exp $
+// Version  : $Id: index.php,v 1.6 2003/01/15 01:17:27 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -64,7 +64,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-cocoa
 </pre>
 
-Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; vu qu'il n'y pas de mot de passe.
+Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; vu qu'il n'y pas de mot de passe. Le dépôt du CVS peut être examiné via <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.
 </p>
 
 <p><strong>Listes de diffusion et canaux IRC du projet</strong></p>
