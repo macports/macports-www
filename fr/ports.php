@@ -115,7 +115,7 @@
 				$nresult = mysql_query($nquery);
 				if ($nresult) {
 ?>
-	<i>Maintainu par :</i>
+	<i>Maintenu par :</i>
 <?
 					$primary = 1;
 					while ( $nrow = mysql_fetch_array($nresult) ) {
