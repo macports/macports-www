@@ -33,7 +33,7 @@
 				</select>
 			</td>
 			<td><input type="text" name="substr" size="40" /></td>
-			<td><input type="submit" name="Cerca" /></td>
+			<td><input type="submit" name="Search" value="Cerca" /></td>
 		</tr>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
