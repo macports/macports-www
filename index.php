@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.11 2002/10/04 06:58:40 kevin Exp $
+// Version  : $Id: index.php,v 1.12 2002/10/31 01:01:11 kevin Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -26,6 +26,9 @@
 <p>
 The DarwinPorts project aims to provide a large amount of software ports that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.
 </p>
+<p>
+The <a href="http://darwinports.gene-hacker.net/docs/guide/">DarwinPorts User Guide</a> is an excellent reference on DarwinPorts syntax and concepts.  (Note it is a work in progress, so please feel free to make suggestions and report bugs in the doc component of the DarwinPorts <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a> product.)
+</p>
 
 <p><strong>Project Status</strong></p>
 
@@ -33,7 +36,9 @@ The DarwinPorts project aims to provide a large amount of software ports that ma
 A number of ports are done and the system is reasonably usable as
 a <i>BETA</i> for anyone who's interested.  
 You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/ports.php">available software</a> here.
-
+</p>
+<p>
+Bug reports and feature requests should be submitted to <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
 </p>
 
 <p><strong>Getting the project from CVS</strong></p>
