@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.7 2002/10/04 01:44:13 landonf Exp $
+// Version  : $Id: faq.php,v 1.8 2002/10/04 01:48:48 landonf Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -139,7 +139,7 @@ installation and basic usage instructions</p>
 <p> port search takes a regex as an argument so you can look for the particular 
 port(s) you are interested in.</p>
 
-<p><strong>Known issues and Incompatibilities</strong></p>
+<p><strong>Known Issues and Incompatibilities</strong></p>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
 <p>
