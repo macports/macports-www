@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.3 2002/09/19 11:50:04 jkh Exp $
+// Version  : $Id: index.php,v 1.4 2002/09/25 10:52:13 jkh Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -27,7 +27,7 @@ include("$DOCUMENT_ROOT/header.html");
 </p>
 
 <p>
-The DarwinPorts project aims to provide a large amount of 'software ports' that make it easy to install freely available software on a Darwin system.
+The DarwinPorts project aims to provide a large amount of 'software ports' that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.
 </p>
 
 <p><strong>Project Status</strong></p>
