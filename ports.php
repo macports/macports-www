@@ -122,7 +122,7 @@
 					while ( $nrow = mysql_fetch_array($nresult) ) {
 						if ($primary) { echo "<b>"; }
 						$addr = obfuscate_email($nrow[0]);
-						print $addr
+						print $addr;
 						if ($primary) { echo "</b>"; }
 						$primary = 0;
 					}
