@@ -2,7 +2,7 @@
 
 //
 // File     : x11.php
-// Version  : $Id: x11.php,v 1.2 2003/01/13 19:20:33 matt Exp $
+// Version  : $Id: x11.php,v 1.3 2003/01/22 22:15:01 landonf Exp $
 // Location : /projects/darwinports/en/x11.php
 //
 
@@ -82,7 +82,7 @@ DarwinPorts is a BSD licensed software build, install, and packaging infrastruct
 <br>
 <strong>Download</strong>: <a href="http://www.opendarwin.org/projects/darwinports/packages/usr/gimp.dmg">gimp.dmg</a>
 <br>
-<strong>Note</strong>: A new package was posted at Jan 8th, 03:04 GMT. This update fixes jpeg support and can be installed over a previously installed copy of The Gimp.
+<strong>Note</strong>: To use the gimp, type the following into an xterm: /usr/local/bin/gimp-1.2 --no-shm --no-xshm
 </p>
 <hr>
 <p>
