@@ -36,7 +36,16 @@
 		</tr>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
-			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">View All Software Titles</a></td>
+<?
+		$result = mysql_query("SELECT count(*) from darwinports.portfiles");
+		if ($result) {
+			$row = mysql_fetch_array($result);
+			$count = $row[0];
+		} else {
+			$count = 0;
+		}
+?>
+			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">View All Software Titles (<?= $count; ?>)</a></td>
 		</tr>
 		<?
 			if (!$by || (!$substr && $by != "all")) {
