@@ -9,7 +9,15 @@
 	</center>
 
 	<p>
-	This form allows you to search the current index of DarwinPorts software.
+	This form allows you to search the current index of DarwinPorts software. <br />
+	<i>Index last updated: </i>
+	<?
+		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
+		$result = mysql_query($sql);
+		if($result && $row = mysql_fetch_row($result)) {
+				echo date("d-M-Y H:i:s", $row[0]);
+		}
+	?>
 	</p>
 	
 	<form action="<?= $PHP_SELF; ?>">
