@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.1 2004/10/17 22:47:31 matt Exp $
+# $Id: functions.inc,v 1.2 2004/12/23 23:36:32 matt Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -245,7 +245,7 @@ function print_all_headlines() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
     }
   }
   else {
@@ -267,7 +267,7 @@ function print_all_headlines_nonadmin() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
     }
   }
   else {
