@@ -2,7 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/fr/includes/common.inc");
     /* include_once("$DOCUMENT_ROOT/fr/includes/functions.inc"); */
-    print_header('Demander de l'aide', 'iso-8859-1');
+    print_header("Demander de l'aide", 'iso-8859-1');
   ?>
 
     <div id="content">
