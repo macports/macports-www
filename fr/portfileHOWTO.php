@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.10 2003/04/03 22:01:37 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.11 2003/04/17 03:35:58 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -83,7 +83,7 @@ Un Portfile consiste en une suite de paires de type clé/valeur. Chaque portfile 
 Arrivé à ce point, le Portfile est assez complet pour permettre le téléchargement d'ircII. Par défaut, DarwinPorts ajoutera <tt>version</tt> à <tt>name</tt> et considérera que les sources sont au format <tt>.tar.gz</tt>. Depuis votre répertoire de travail, exécutez la commande suivante :
 </p>
 <pre><tt>
-% port checksum
+% port <tt>-d</tt> <tt>-v</tt> checksum
 </tt></pre>
 <p>
 La commande <tt>port</tt> opère directement sur le <tt>Portfile</tt> du répertoire de travail actuel. Vous devriez voir la même chose que ce qui suit :
@@ -122,7 +122,7 @@ checksums       md5 2ae68c015698f58763a113e9bc6852cc
 Maintenant que nous avons une somme de contrôle, nous pouvons vérifier nos sources. Procédons à l'extraction des sources dans notre répertoire de travail. Exécutez la commande suivante :
 </p>
 <pre><tt>
-% port extract
+% port <tt>-d</tt> <tt>-v</tt> extract
 </tt></pre>
 <p>
 Qui devrait afficher ce qui suit :
@@ -149,7 +149,7 @@ Done
 Maintenant que les sources ont été extraites dans un répertoire nommé <tt>work</tt> placé dans le répertoire de travail actuel, nous pouvons configurer les sources afin de les compiler avec les options désirées. Par défaut, DarwinPorts assume que le logiciel que vous portez utilise un script configure autoconf, et toujours par défaut, DarwinPorts passera l'argument <tt>--prefix=${prefix}</tt> au script configure, spécifiant que ce logiciel devra s'installer dans la hiérarchie utilisée par DarwinPorts.
 </p>
 <p>
-Les options standards d'ircII semblent correctes pour une installation de base sur Darwin, donc nous passerons directement à la phase de compilation.  
+Les options standards d'ircII semblent correctes pour une installation de base sur Darwin, donc inutile de lancer le <tt>configure</tt> manuellement, nous passerons directement à la phase de compilation.  
 </p>
 
 <h3>
@@ -181,7 +181,7 @@ Regardez quelques-uns de nos ports pour voir plus d'exemples sur comment utilise
 À présent nous avons un portfile complet. Relancez l'étape d'installation pour ajouter ce port à votre propre registre :
 </p>
 <pre><tt>
-% sudo port install
+% sudo port <tt>-d</tt> <tt>-v</tt> install
 </tt></pre>
 Qui devrait afficher :
 <pre><tt>
