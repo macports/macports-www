@@ -43,8 +43,8 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 
       <h5 class="subhdr">Установка</h5>
 
-      <p>Once you have the project checked out of the CVS repository, there
-      are a still a few things you will need to do before you can install a port.</p>
+      <p>После того, как Вы получили DarwinPorts, необходимо дополнительно
+      проделать несколько операций, прежде чем Вы сможете устанавливать порты.</p>
 	
       <p>Инструкцию по установке пожалуйста смотрите в файле <tt>README_ru</tt>
       в той директории, где Вы делали CVS checkout. Так же есть 
