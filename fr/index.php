@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.2 2002/12/20 11:31:09 kevin Exp $
+// Version  : $Id: index.php,v 1.3 2003/01/08 13:14:17 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -17,14 +17,14 @@
 <h2>Projects :: DarwinPorts</h2>
 
 <p>
-<i>Chefs de projet: </i>
+<i>Chefs de projet : </i>
 <a href="mailto:landonf@opendarwin.org">Landon Fuller</a>, 
 <a href="mailto:jkh@opendarwin.org">Jordan Hubbard</a>,
 <a href="mailto:kevin@opendarwin.org">Kevin Van Vechten</a>
 </p>
 
 <p>
-Le projet Darwinports a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/en/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">Portfile HOWTO</a>.  
+Le projet Darwinports a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/fr/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/fr/portfileHOWTO.php">Portfile HOWTO</a>.  
 </p>
 <p>
 Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation DarwinPorts</a> est une excellente référence sur les concepts ainsi que la syntaxe de DarwinPorts. (Notez que ce travail est en cours de progression, donc n'hésitez pas à nous faire parvenir vos suggestions et rapports de bogues via le module doc de DarwinPorts sur <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.)
@@ -33,7 +33,10 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p><strong>Statut du Projet</strong></p>
 
 <p>
-Nombre de ports ont été fait et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">logiciels disponibles</a> ici.
+Nombre de ports ont été créés et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">logiciels disponibles</a> ici.
+</p>
+<p>
+Une GUI fonctionnelle basée sur Cocoa pour DarwinPorts, appelée DarwinPorts.app, est disponible et son développement est actuellement actif. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Copie d'écran.</a>
 </p>
 <p>
 Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
@@ -42,7 +45,7 @@ Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="h
 <p><strong>Récupérer le projet depuis CVS</strong></p>
 
 <p>
-Utilisez les commandes suivantes pour récupérer le projet depuis le serveur CVS d'OpenDarwin :
+Utilisez les commandes suivantes pour récupérer le projet depuis le serveur CVS d'OpenDarwin (requis pour DarwinPorts.app) :
 </p>
 
 <p>
@@ -51,13 +54,23 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports
 </pre>
 
+<p>
+Utilisez les commandes suivantes pour récupérer DarwinPorts.app depuis le serveur CVS d'OpenDarwin :
+</p>
+
+<p>
+<pre>
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-cocoa
+</pre>
+
 Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; vu qu'il n'y pas de mot de passe.
 </p>
 
 <p><strong>Listes de diffusion et canaux IRC du projet</strong></p>
 
 <p>La <a
-href="http://www.opendarwin.org/mailman/listinfo/darwinports">liste de diffusiondarwinports</a> est ouverte à tout le monde et c'est l'endroit où les discussions sur l'architecture et les fonctionnalités du projet sont tenues. Ceux souhaitant voir les historiques CVS concernant les soumissions détaillant changement par changement la progression du projet peuvent également s'inscrire sur la liste de diffusion <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.
+href="http://www.opendarwin.org/mailman/listinfo/darwinports">liste de diffusion darwinports</a> est ouverte à tout le monde et c'est l'endroit où les discussions sur l'architecture et les fonctionnalités du projet sont tenues. Ceux souhaitant voir les historiques CVS concernant les soumissions détaillant changement par changement la progression du projet peuvent également s'inscrire sur la liste de diffusion <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.
 </p>
 
 <p>
@@ -71,7 +84,7 @@ Nous recherchons des personnes qui voudrait nous aider à faire de ce projet un s
 </p>
 
 <p>
-Toute contribution est très appréciée et la bienvenue ! Si vous êtes intéressé, envoyez soit un e-mail à un des chefs du projet en demandant qu'est-ce qui a besoin d'être fait ou bien simplement en soumettant une application pour rejoindre le projet via ce <a href="/en/joinproject.php">questionnaire</a>.  Merci!
+Toute contribution est très appréciée et la bienvenue ! Si vous êtes intéressé, envoyez soit un e-mail à un des chefs du projet en demandant qu'est-ce qui a besoin d'être fait ou bien simplement en soumettant une application pour rejoindre le projet via ce <a href="/en/joinproject.php">formulaire</a>. Merci!
 </p>
 
 </td></tr>
