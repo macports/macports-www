@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.16 2003/04/18 06:52:19 fkr Exp $
+// Version  : $Id: faq.php,v 1.17 2003/06/23 04:54:48 fkr Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -162,6 +162,10 @@ port(s) you are interested in.</p>
 <p><strong>How do I build a Port?</strong></p>
 <p>There is an excellent <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">
 portfile-HOWTO</a> available, that explains this process.</p>
+
+<p><strong>Where should one sent enhancements/fixes to a port?</strong></p>
+
+<p>Patches to existing ports should be submitted into <a href="http://www.opendarwin.org/bugzilla/enter_bug.cgi">Bugzilla</a> as a bug within the <strong>dports</strong> component of the <strong>DarwinPorts</strong> product. Please assign the bug the maintainer listed in the Portfile.</p>
 
 <p></p>
 
