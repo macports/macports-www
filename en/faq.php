@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.12 2003/04/15 09:26:59 jkh Exp $
+// Version  : $Id: faq.php,v 1.13 2003/04/15 22:17:22 fkr Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -41,10 +41,11 @@ of what to install in what order.
 <p><strong>How is DarwinPorts implemented?</strong></p>
 
 <p> The DarwinPorts system is almost fully written in Tcl and designed
-to be embedded into other applications, such as software browsing
-front-ends (like the work-in-progress 
-<a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/dp-cocoa/">dp-cocoa</a>
-, a cocoa-based interface) or web-driven application management
+to be embedded into other applications, such as the Cocoa framework
+<a href="http://www.opendarwin.org/projects/dp-cocoa/">dp-cocoa</a>
+and the Cocoa software browsing front-end (that is based upon dp-cocoa)
+<a href="http://packages.opendarwin.org/Applications/PortManager.dmg">PortManager.app</a>
+, or web-driven application management
 mechanisms.  Being designed to be highly extensible from the very
 beginning, it is layered in such a way as to make it fairly
 future-proof in the face of future design changes and the
@@ -144,6 +145,10 @@ installation and basic usage instructions</p>
 <p> port search takes a regex as an argument so you can look for the particular 
 port(s) you are interested in.</p>
 
+<p><strong>How do I build a Port?</strong></p>
+<p>There is an excellent <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">
+portfile-HOWTO</a> available, that explains this process.</p>
+
 <p><strong>Known Issues and Incompatibilities</strong></p>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
@@ -151,6 +156,13 @@ port(s) you are interested in.</p>
 DarwinPorts will not build properly against the TCL libraries shipped with
 earlier versions of the Fink TCL package. Either update your installed fink TCL package or ensure your use of the system TCL library, and rebuild DarwinPorts.
 </p>
+
+<p><i>wrong tclsh</i></p>
+<p>
+Some third party Tcl-Packages have the habit of overwriting the <tt>/usr/bin/tclsh</tt> link,
+resulting in an error during the DarwinPorts-Installation. Pointing the link back to <tt>tclsh8.3</tt>
+fixes this:</p>
+<p><tt>sudo ln -s /usr/bin/tclsh8.3 /usr/bin/tclsh</tt></p>
 
 <p><i>Norton AntiVirus</i></p>
 <p>The Fink project has recently discovered numerous problems including kernel

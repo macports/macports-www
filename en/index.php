@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.17 2003/01/13 17:46:59 fkr Exp $
+// Version  : $Id: index.php,v 1.18 2003/04/15 22:17:21 fkr Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -38,7 +38,7 @@ a <i>BETA</i> for anyone who's interested.
 You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">available software</a> here.
 </p>
 <p>
-A functional Cocoa-based GUI for DarwinPorts, DarwinPorts.app, is available and under active development. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Screenshot.</a>
+A functional Cocoa-based GUI for DarwinPorts, <a href="http://packages.opendarwin.org/Applications/PortManager.dmg">PortManager.app</a>, is available and under active development. <a href="http://www.opendarwin.org/~fkr/portmanager.png">Screenshot.</a>
 </p>
 <p>
 Bug reports and feature requests should be submitted to <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
