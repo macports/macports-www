@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.11 2002/12/21 07:33:23 kevin Exp $
+// Version  : $Id: faq.php,v 1.12 2003/04/15 09:26:59 jkh Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -90,30 +90,33 @@ automate. </p>
 
 <p> It currently requires Mac OS X 10.2 (Jaguar) with the developer
 tools installed since that's the reference code base most of us are
-using.  There is also work planned to make it more compatible with
-10.1 (Puma) just as soon as we can identify all of the "variant"
-issues that need to be added to the various ports.  DarwinPorts does
-make provisions for OS version or architecture specific "variants" of
-a port and we intend to leverage this mechanism to support multiple OS
-versions and architectures (for Darwin/x86) in a fairly clean way.
+using.  DarwinPorts does make provisions for OS version or architecture
+specific "variants" of a port and we intend to leverage this mechanism to
+support multiple OS versions and architectures (for Darwin/x86) in a
+fairly clean way.
 </p>
 
 <p><strong>Does DarwinPorts also do package management?</strong></p>
 
-<p> At present, DarwinPorts just builds software from scratch,
-installs it and records the installation so that you can ask
-DarwinPorts to uninstall it again if necessary.  It will also create
-binary "snapshot" tarballs of a given port installation so that you
-can give these to someone else to simply unpack rather than having to
-build the ports themselves, but package management is something we've
-deliberately left for "phase II" of the project, where we'll probably
-adopt one of the existing package management systems and make
-DarwinPorts simply generate those on demand.  Even with "proper
-package management", it will always be important to offer the
-capability of building things from source since something has to
-generate the packages for each release of the OS or the individual
-ports, and developers who are modifying system libraries or playing
-with different ways of building a given piece of software may find a
+<p> DarwinPorts works by first building software, installing it
+into a temporary directory (or "destroot") and then copying the
+contents of that into its final $prefix resting place (typically
+/opt/local).  It also records the installation with a "receipt"
+so that you can ask DarwinPorts to uninstall it again if necessary.
+<p>Alternately, you can ask DarwinPorts to build a packaged version
+(pkg) of the software and install that with the standard installation tool
+(Installer.app) on Mac OS X.  If the package has dependencies, you
+can also build a multi-part package (mpkg) which contains them
+as well, increasing convenience at the cost of disk space.  Whichever
+type of Mac OS X package you install, you can also uninstall it with
+the Uninstaller.app provided at <a href="http://packages.opendarwin.org/Applications">packages.opendarwin.org</a>.  For the future, there are plans to
+support the RPM Package Manager (RPM) format as well.
+
+<p>It will always be important to offer the
+capability of building things from source, of course, since something has to
+generate packaged versions of these individual ports, and developers who
+are modifying system libraries or playing
+with different ways of building a given piece of software may also find a
 canned binary package to be insufficient for their needs. </p>
 
 <p><strong>Why does DarwinPorts install everything into /opt/local by default?</strong></p>
