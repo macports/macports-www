@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.9 2002/12/06 07:15:40 michaelm Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.10 2002/12/20 11:31:09 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -30,7 +30,7 @@ This article describes the construction of a simple Portfile, and explores a few
 Getting Started
 </h3>
 <p>
-In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/">homepage</a> describes how to get and install it.
+In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/en/">homepage</a> describes how to get and install it.
 </p>
 <p>
 Since you're interested in writing a Portfile, let's change some configuration options that will help in debugging as we go.  Edit the file <tt>/etc/ports/ports.conf</tt> to contain the following (you'll likely have to use <tt>sudo</tt> to edit this file):

@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.9 2002/12/08 16:13:57 landonf Exp $
+// Version  : $Id: faq.php,v 1.10 2002/12/20 11:31:09 kevin Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -130,7 +130,7 @@ so we elected to loosely follow Sun's convention and go with /opt/local.</p>
 <p><strong>OK, so how do I start playing with it then?</strong></p>
 
 <p> See the <a
-href="http://www.opendarwin.org/projects/darwinports">darwinports</a>
+href="http://www.opendarwin.org/projects/darwinports/en/">darwinports</a>
 web page for information on checking the project out of CVS.  Once you
 get your hands on a copy, check out the top level README for
 installation and basic usage instructions</p>

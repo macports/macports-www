@@ -2,12 +2,12 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.13 2002/11/10 21:50:16 michaelm Exp $
+// Version  : $Id: index.php,v 1.14 2002/12/20 11:31:09 kevin Exp $
 // Location : /projects/darwinports/index.php
 //
 
 	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
-	od_print_header("DarwinPorts", "en", "iso-8859-1", "", 0);
+	od_print_header("DarwinPorts", "en", "iso-8859-1", "", 0, "/projects/darwinports");
 ?>
 
 <center>
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-The DarwinPorts project aims to provide a large amount of software ports that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.
+The DarwinPorts project aims to provide a large amount of software ports that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/en/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">Portfile HOWTO</a>.
 </p>
 <p>
 The <a href="http://darwinports.gene-hacker.net/docs/guide/">DarwinPorts User Guide</a> is an excellent reference on DarwinPorts syntax and concepts.  (Note it is a work in progress, so please feel free to make suggestions and report bugs in the doc component of the DarwinPorts <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a> product.)
@@ -35,7 +35,7 @@ The <a href="http://darwinports.gene-hacker.net/docs/guide/">DarwinPorts User Gu
 <p>
 A number of ports are done and the system is reasonably usable as
 a <i>BETA</i> for anyone who's interested.  
-You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/ports.php">available software</a> here.
+You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">available software</a> here.
 </p>
 <p>
 Bug reports and feature requests should be submitted to <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.

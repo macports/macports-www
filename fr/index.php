@@ -2,12 +2,12 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.1 2002/12/10 17:50:23 kevin Exp $
+// Version  : $Id: index.php,v 1.2 2002/12/20 11:31:09 kevin Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
 	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
-	od_print_header("DarwinPorts", "fr", "iso-8859-1", "", 0);
+	od_print_header("DarwinPorts", "fr", "iso-8859-1", "", 0, "/projects/darwinports");
 ?>
 
 <center>
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-Le projet Darwinports a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.  
+Le projet Darwinports a pour ambition de fournir un nombre important de logiciels portés, simples à installer et disponibles librement pour le système Darwin. Reportez-vous à la <a href="http://www.opendarwin.org/projects/darwinports/en/faq.php">FAQ</a> pour plus d'information s'il vous plaît. Pour un tutorial sur comment créer un Portfile, reportez-vous au <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">Portfile HOWTO</a>.  
 </p>
 <p>
 Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation DarwinPorts</a> est une excellente référence sur les concepts ainsi que la syntaxe de DarwinPorts. (Notez que ce travail est en cours de progression, donc n'hésitez pas à nous faire parvenir vos suggestions et rapports de bogues via le module doc de DarwinPorts sur <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.)
@@ -33,7 +33,7 @@ Le <a href="http://darwinports.gene-hacker.net/docs/guide/">guide d'utilisation 
 <p><strong>Statut du Projet</strong></p>
 
 <p>
-Nombre de ports ont été fait et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/ports.php">logiciels disponibles</a> ici.
+Nombre de ports ont été fait et rend le système raisonnablement utilisable, comme une <i>BETA</i> pour quiconque souhaite s'y intéresser. Vous pouvez d'ores et déjà trouver une liste de <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">logiciels disponibles</a> ici.
 </p>
 <p>
 Les suggestions, requêtes ou rapports de bogues devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
