@@ -10,7 +10,9 @@
 
       <p>The DarwinPorts Project's main goal is to provide an easy way to
 	install various open-source software products on the Darwin OS 
-	family (Mac OS X, OpenDarwin, etc.)</p>
+	family (<a href="http://www.opendarwin.org/">OpenDarwin</a>,
+	<a href="http://www.apple.com/macosx/">Mac OS X</a> and
+	<a href="http://developer.apple.com/darwin/projects/darwin/">Darwin</a>)</p>
 
       <p>There are currently about 2400 completed and usable <a
 	href="/ports/">ports</a>, with more being added on a regular basis.
