@@ -2,7 +2,7 @@
 
 //
 // File     : x11.php
-// Version  : $Id: x11.php,v 1.3 2003/01/22 22:15:01 landonf Exp $
+// Version  : $Id: x11.php,v 1.4 2003/02/15 03:38:15 kevin Exp $
 // Location : /projects/darwinports/en/x11.php
 //
 
@@ -21,6 +21,10 @@ The following X11 packages for Mac OS X were built using the <a href="http://www
 DarwinPorts is a BSD licensed software build, install, and packaging infrastructure conceived as a part of the OpenDarwin Project. Written almost entirely in TCL, DarwinPorts is designed to be easily extended, embedded in other applications, and ported to a wide variety of architectures. DarwinPorts is in active development and currently supported on Mac OS X 10.2 and Darwin 6.0.2. For more information regarding DarwinPorts, see the <a href="http://www.opendarwin.org/projects/darwinports/">Project Page<a/>
 </p>
 <p align=right><strong>Feedback</strong>:<a href=mailto:dp-feedback@opendarwin.org>dp-feedback@opendarwin.org</a></p>
+<p>
+The DarwinPorts <a href="http://www.opendarwin.org/projects/darwinports/packages
+/Applications/UnInstaller.dmg">UnInstaller</a> may be used to remove these packages from your system.
+</p>
 
 <p>
 <h4><img align=center src=images/package.jpg>Libraries</h4>
