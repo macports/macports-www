@@ -21,7 +21,7 @@
 	  <ul>
 	  	<li>TCL (8.3 or 8.4)</li>
 		<li>curl</li>
-		<li>md5 (some systems have 'md5sum', you can safely symlink that to 'md5'</li>
+		<li>md5 (some systems have 'md5sum', you can safely symlink that to 'md5')</li>
 	  </ul>
 
       <p>Use the following commands to check the project out of the CVS
