@@ -24,7 +24,7 @@
 	<a href="/docs/">documentation</a>; si vous avez des questions ou bien des problèmes
 	liés à l'installation/utilisation, vous pouvez <a href="/fr/help/">demander de l'aide</a>.</p>
 
-	  <p>Les rapports de bogues, demandes d'ajout de fonctionnalités et les
+    <p>Les rapports de bogues, demandes d'ajout de fonctionnalités et les
 	nouveaux ports devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
 
       <div id="news">
@@ -33,6 +33,7 @@
 	<?php
 	  print_headlines();
 	?>
+    <p>Vous pouvez également lire les <a href="archives.php">archives</a>.</p>
       </div>
     </div>
   </div>
