@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.4 2002/09/28 00:32:46 michaelm Exp $
+// Version  : $Id: faq.php,v 1.5 2002/09/28 00:38:50 michaelm Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -19,10 +19,10 @@
 
 <p>
 This document attempts to answer some frequently asked questions about
-darwinports.
+darwinports.</p>
 
 <p><i>Author: Jordan K Hubbard</i></p>
-</p>
+
 
 <p><strong>What IS darwinports?</strong></p>
 
@@ -38,7 +38,7 @@ simply scatter itself all over the system or require user knowledge
 of what to install in what order.
 </p>
 
-<p><strong>How is darwinports implemented?</strong>
+<p><strong>How is darwinports implemented?</strong></p>
 
 <p> The darwinports system is almost fully written in Tcl and designed
 to be embedded into other applications, such as software browsing
@@ -47,9 +47,9 @@ mechanisms.  Being designed to be highly extensible from the very
 beginning, it is layered in such a way as to make it fairly
 future-proof in the face of future design changes and the
 infrastructure can be versioned independently of the individual ports,
-meaning that as the system evolves, older things don't just break.
+meaning that as the system evolves, older things don't just break.</p>
 
-Even though darwinports is written in Tcl, a user also does not need to
+<p>Even though darwinports is written in Tcl, a user also does not need to
 know Tcl in order to use the system or even to add new ports.  Port
 description files, though they are actually full Tcl programs in their
 own right, are designed to look like nothing more than a list of
@@ -133,6 +133,12 @@ web page for information on checking the project out of CVS.  Once you
 get your hands on a copy, check out the top level README for
 installation and basic usage instructions</p>
 
+<p><strong>Whats the command to see available ports?</strong></p>
+
+<p>port search ".*"</p>
+<p> port search takes a regex as an arguement so you can look for the particular 
+port(s) you are interested in.</p>
+
 <p><strong>Are there any known issues or incompatibilities?</strong></p>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
@@ -144,7 +150,7 @@ use the system tcl to build darwinports</p>
 <p><i>Norton AntiVirus</i></p>
 <p>Recently we have heard some reports of strange behavior in the BSD layer when Norton 
 AntVirus is running. If you are having peculiar problems which you can't identify, try 
-switching off Norton Antivirus and see if the problems persist</p>
+switching off Norton Antivirus and see if the problems persists. </p>
 
 </td></tr>
 </table>
