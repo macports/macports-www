@@ -1,7 +1,7 @@
 <?
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/ru/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/ru/includes/db_portslisting.inc");
+    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
     print_header('Текущая база портов', 'utf-8');
 ?>
 	<center>
@@ -32,7 +32,7 @@
 				</select>
 			</td>
 			<td><input type="text" name="substr" size="40" /></td>
-			<td><input type="submit" name="Search" /></td>
+			<td><input type="submit" name="Search" value="Поиск" /></td>
 		</tr>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>

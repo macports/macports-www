@@ -1,6 +1,6 @@
 <?php
 
-# $Id: common.inc,v 1.1 2004/09/13 23:01:04 matt Exp $
+# $Id: common.inc,v 1.2 2004/09/13 23:18:40 matt Exp $
 # $Trans-Id: common.inc,v 1.0 2004/09/14 00:47:13 jc Exp $
 # Copyright (c) 2003, OpenDarwin
 
@@ -29,7 +29,7 @@ function print_header($title, $encoding) {
   <div id="main">
 
 <?php
-  include("$DOCUMENT_ROOT/includes/header.inc");
+  include("$DOCUMENT_ROOT/ru/includes/header.inc");
 }
 
 ###################################################################### 
@@ -38,7 +38,7 @@ function print_header($title, $encoding) {
 function print_footer() {
   global $DOCUMENT_ROOT;
 
-  include("$DOCUMENT_ROOT/includes/footer.inc");
+  include("$DOCUMENT_ROOT/ru/includes/footer.inc");
 
   echo "  </body>\n";
   echo "</html>\n";
