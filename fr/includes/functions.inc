@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.3 2003/11/25 02:35:05 matt Exp $
+# $Id: functions.inc,v 1.4 2004/01/08 22:01:04 matt Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -18,7 +18,7 @@ mysql_select_db($db);
 function create_rss() {
   global $DOCUMENT_ROOT, $connect;
 
-  $query = "SELECT id, title, news FROM headlines ORDER BY timestamp DESC LIMIT 10";
+  $query = "SELECT id, title, news FROM headlines ORDER BY id DESC LIMIT 10";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
@@ -76,7 +76,7 @@ function create_rss() {
 function print_headlines() {
   global $connect;
 
-  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines ORDER BY timestamp DESC LIMIT 5";
+  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines ORDER BY id DESC LIMIT 5";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
@@ -238,7 +238,7 @@ function print_all_headlines() {
 
   echo "<p>Voici ci-dessous la liste de toutes les d&eacute;p&ecirc;ches existantes. Elles peuvent &ecirc;tre visualis&eacute;es, &eacute;dit&eacute;es, ou effac&eacute;es depuis cette interface. Vous pouvez &eacute;galement <a href=\"add.php\">ajouter une d&eacute;p&ecirc;che</a>.</p>\n\n";
 
-  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY timestamp DESC";
+  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
