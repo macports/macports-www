@@ -2,6 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/ru/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
+    include_once("$DOCUMENT_ROOT/includes/email.inc");
     print_header('Текущая база портов', 'utf-8');
 ?>
 	<center>
@@ -119,9 +120,8 @@
 					$primary = 1;
 					while ( $nrow = mysql_fetch_array($nresult) ) {
 						if ($primary) { echo "<b>"; }
-					?>
-						<a href="mailto:<?= $nrow[0]; ?>"><?= $nrow[0]; ?></a>
-					<?
+						$addr = obfuscate_email($nrow[0]);
+						print $addr;
 						if ($primary) { echo "</b>"; }
 						$primary = 0;
 					}
