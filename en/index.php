@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.19 2003/04/17 09:22:01 fkr Exp $
+// Version  : $Id: index.php,v 1.20 2003/04/18 06:52:19 fkr Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -38,7 +38,7 @@ a <i>BETA</i> for anyone who's interested.
 You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">available software</a> here.
 </p>
 <p>
-A Cocoa-based GUI for DarwinPorts, <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">PortManager.app</a>, is available and under active development. <a href="http://www.opendarwin.org/~fkr/portmanager.png">Screenshot.</a>
+A Cocoa-based GUI for DarwinPorts, <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">Ports Manager.app</a>, is available and under active development. <a href="http://www.opendarwin.org/~fkr/portsmanager.png">Screenshot.</a>
 </p>
 <p>
 Bug reports and feature requests should be submitted to <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
@@ -47,7 +47,7 @@ Bug reports and feature requests should be submitted to <a href="http://www.open
 <p><strong>Getting the project from CVS</strong></p>
 
 <p>
-Use the following commands to get DarwinPorts from the OpenDarwin CVS server (required for DarwinPorts.app):
+Use the following commands to get DarwinPorts from the OpenDarwin CVS server (required for Ports Manager.app):
 </p>
 
 <p>
@@ -57,7 +57,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 </pre>
 
 <p>
-Use the following commands to get DarwinPorts.app from the OpenDarwin CVS server:
+Use the following commands to get Ports Manager.app from the OpenDarwin CVS server:
 </p>
 
 <p>
@@ -69,6 +69,9 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-co
 When the server asks you for a password you can simply hit return; the password is empty.
 The CVS repository can be browsed through <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.
 </p>
+
+<p>
+In order to install and run DarwinPorts, the Mac OS X <a href="http://developer.apple.com/tools/">Developer Tools</a> must be installed.</p>
 
 <p><strong>Project mailing lists and IRC channels</strong></p>
 
