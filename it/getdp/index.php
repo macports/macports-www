@@ -28,7 +28,7 @@
 	progetto dal deposito CVS:</p>
 
       <pre>cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
-	cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports</pre>
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports</pre>
 
       <p>Quando il server ti chiederà una password premi semplicemente 
 	il tasto <kbd>return</kbd> della tua tastiera &mdash; la password 
