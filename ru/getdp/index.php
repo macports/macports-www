@@ -52,7 +52,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
       в <a href="http://darwinports.opendarwin.org/docs/">Описании DarwinPorts</a> в
       которой описаны установка и правила по использованию системы DarwinPorts. (возможно на англ. языке)</p> 
 
-      <p><a href="/help/">Помощь</a> так же доступна в случае необходимости.</p>
+      <p><a href="/ru/help/">Помощь</a> так же доступна в случае необходимости.</p>
     </div>
   </div>
 
