@@ -31,7 +31,7 @@
 			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">View All Software Titles</a></td>
 		</tr>
 		<?
-			if (!$by || !$substr) {
+			if (!$by || (!$substr && $by != "all")) {
 		?>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr><th colspan="4" align="left">View By Category:</th></tr>
@@ -52,8 +52,7 @@
 
 	<dl>
 <?
-	if ($by && $substr) {
-		// all
+	if ($by && ($substr || $by == "all")) {
 		$query = "SELECT name,description,maintainer FROM darwinports.portfiles p, darwinports.maintainers m, darwinports.categories c WHERE p.name=m.portfile AND p.name=c.portfile AND m.is_primary=1";
 		if ($by == "name") {
 			$query = $query . " AND p.name LIKE '%" . addslashes($substr) . "%'";
