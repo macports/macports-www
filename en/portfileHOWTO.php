@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.10 2002/12/20 11:31:09 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.11 2003/01/13 17:40:08 fkr Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -33,14 +33,7 @@ Getting Started
 In order to work with DarwinPorts, you'll need to download and install it on your system.  The DarwinPorts project <a href="http://opendarwin.org/projects/darwinports/en/">homepage</a> describes how to get and install it.
 </p>
 <p>
-Since you're interested in writing a Portfile, let's change some configuration options that will help in debugging as we go.  Edit the file <tt>/etc/ports/ports.conf</tt> to contain the following (you'll likely have to use <tt>sudo</tt> to edit this file):
-</p>
-<pre><tt>
-ports_debug     yes
-ports_verbose   yes
-</tt></pre>
-<p>
-This will display useful debugging messages that are usually suppressed while running DarwinPorts.
+Since you're interested in writing a Portfile, you should invoke the <tt>port</tt> command with the <tt>-v</tt> (verbose output) and the <tt>-d</tt> (debugging output) switches. This will display useful debugging messages that are usually suppressed while running DarwinPorts.
 </p>
 <p>
 DarwinPorts performs several basic predefined tasks, these are:
@@ -77,10 +70,14 @@ name            ircii
 version         20020912
 categories      irc
 maintainers     kevin@opendarwin.org
+description     an IRC and ICB client
+long_description        The ircII program is a full screen, termcap based interface to Internet Relay \
+                        Chat. It gives full access to all of the normal IRC functions, plus a variety \
+                        of additional options.
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address, and the <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
+A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailled description of the Software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
 At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
@@ -292,6 +289,10 @@ name            ircii
 version         20020912
 categories      irc
 maintainers     kevin@opendarwin.org
+description     an IRC and ICB client
+long_description        The ircII program is a full screen, termcap based interface to Internet Relay \
+                        Chat. It gives full access to all of the normal IRC functions, plus a variety \
+                        of additional options.
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 checksums       md5 2ae68c015698f58763a113e9bc6852cc
 configure.args  --disable-ipv6
