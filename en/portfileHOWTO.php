@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.11 2003/01/13 17:40:08 fkr Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.12 2003/01/13 17:42:01 fkr Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -77,7 +77,7 @@ long_description        The ircII program is a full screen, termcap based interf
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailled description of the Software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
+A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address. <tt>description</tt> provides a short description of the port, while <tt>long_description</tt> holds a more detailed description of the software. The <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
 At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
