@@ -17,7 +17,7 @@
 
 	  <p>If you want to use DarwinPorts on a platform other than Mac OS X, please be
 	  aware of the following dependencies (we assume that you have basics such as
-	  gcc):
+	  gcc):</p>
 	  <ul>
 	  	<li>TCL (8.3 or 8.4)</li>
 		<li>curl</li>

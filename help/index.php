@@ -16,7 +16,7 @@
 		<p>The <a href="http://darwinports.opendarwin.org/docs">DarwinPorts 
 			Guide</a> has a section for DarwinPorts users, 
 			<a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 
-			1: Using DarwinPorts</a>.
+			1: Using DarwinPorts</a>.</p>
 
 		<p>The DarwinPorts FAQ will reappear soon.</p>
 
