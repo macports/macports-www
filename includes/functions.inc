@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.2 2003/12/05 23:47:52 mij Exp $
+# $Id: functions.inc,v 1.3 2004/01/08 21:29:36 mij Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -18,7 +18,7 @@ mysql_select_db($db);
 function create_rss() {
   global $DOCUMENT_ROOT, $connect;
 
-  $query = "SELECT id, title, news FROM headlines ORDER BY timestamp DESC LIMIT 10";
+  $query = "SELECT id, title, news FROM headlines ORDER BY id DESC LIMIT 10";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
@@ -76,7 +76,7 @@ function create_rss() {
 function print_headlines() {
   global $connect;
 
-  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines ORDER BY timestamp DESC LIMIT 5";
+  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines ORDER BY id DESC LIMIT 5";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
@@ -238,7 +238,7 @@ function print_all_headlines() {
 
   echo "<p>Below is a list of all existing news headlines.  They can be viewed, edited, or deleted from this interface.  Alternatively, you can also <a href=\"add.php\">add news</a>.</p>\n\n";
 
-  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY timestamp DESC";
+  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
   $result = mysql_query($query) or die("Error: $query.");
   if(!$result) {
     die("Error: $result.");
