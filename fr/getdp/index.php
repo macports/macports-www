@@ -35,7 +35,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 	<kbd>entr&eacute;e</kbd> de votre clavier &mdash; vu qu'il n'y a pas de mot de passe.</p>
 	
 	<p>Si vous ne voulez pas utiliser CVS pour r&eacute;cup&eacute;rer DarwinPorts, vous pouvez t&eacute;l&eacute;charger
-	un <a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz%22%3E">
+	un <a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">
 	snapshot du CVS</a>. Une fois extrait, vous pourrez le maintenir &agrave; jour avec les commandes
 	CVS habituelles.</p>
 	
