@@ -1,6 +1,6 @@
       <div id="nav">
 	<div id="logo">
-	  <a href="/" title="DarwinPorts"><img src="/img/dp.jpg"
+	  <a href="/fr/" title="DarwinPorts"><img src="/img/dp.jpg"
 	    alt="DarwinPorts" /></a>
 	</div>
 	<div id="l">
