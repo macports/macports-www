@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.14 2003/04/16 08:41:27 jkh Exp $
+// Version  : $Id: faq.php,v 1.15 2003/04/17 09:22:01 fkr Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -44,7 +44,7 @@ of what to install in what order.
 to be embedded into other applications, such as the Cocoa framework
 <a href="http://www.opendarwin.org/projects/dp-cocoa/">dp-cocoa</a>
 and the Cocoa software browsing front-end (that is based upon dp-cocoa)
-<a href="http://packages.opendarwin.org/Applications/PortManager.dmg">PortManager.app</a>
+<a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">PortManager.app</a>
 , or web-driven application management
 mechanisms.  Being designed to be highly extensible from the very
 beginning, it is layered in such a way as to make it fairly
