@@ -9,10 +9,10 @@
       <h2 class="hdr">Introduction to DarwinPorts</h2>
 
       <p>The DarwinPorts Project's main goal is to provide an easy way to
-	install various open-source software products on a Darwin, Mac OS X,
-	FreeBSD, or Linux system.</p>
+	install various open-source software products on the Darwin OS 
+	family (Mac OS X, OpenDarwin, etc.)</p>
 
-      <p>There are currently a few hundred completed and usable <a
+      <p>There are currently about 2400 completed and usable <a
 	href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
