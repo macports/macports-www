@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.6 2002/10/05 18:38:29 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.7 2002/10/05 21:14:08 jkh Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -73,17 +73,17 @@ The first step is to choose a piece of software to bring to port.  For this exam
 </p>
 <pre><tt>
 PortSystem 1.0
-portname        ircii
-portversion     20020912
+name            ircii
+version         20020912
 categories      irc
 maintainers     kevin@opendarwin.org
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-A Portfile consists of key/value pairs.  The <tt>portname</tt> and <tt>portversion</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address, and the <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
+A Portfile consists of key/value pairs.  The <tt>name</tt> and <tt>version</tt> key describe the name and version of the software.  The <tt>categories</tt> key is a list of the logical categories to which the software belongs; this is used for organizational purposes.  The first entry in <tt>categories</tt> should match the directory in which the port's directory resides in the port tree.  The <tt>maintainers</tt> key should contain your email address, and the <tt>master_sites</tt> key should contain a list of sites where the distribution sources may be downloaded.  DarwinPorts uses the terms 'keys' and 'options' interchangeably since most keys are used as options of a particular task in the porting process.
 </p>
 <p>
-At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>portversion</tt> to the <tt>portname</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
+At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
 </p>
 <pre><tt>
 % port checksum
@@ -274,8 +274,8 @@ The following is a complete listing of the ircII Portfile:
 </p>
 <pre><tt>
 PortSystem 1.0
-portname        ircii
-portversion     20020912
+name            ircii
+version         20020912
 categories      irc
 maintainers     kevin@opendarwin.org
 master_sites    ftp://ircftp.au.eterna.com.au/pub/ircII/
