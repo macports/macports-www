@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.9 2002/10/04 01:22:18 kevin Exp $
+// Version  : $Id: index.php,v 1.10 2002/10/04 01:46:52 landonf Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-The DarwinPorts project aims to provide a large amount of 'software ports' that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.
+The DarwinPorts project aims to provide a large amount of software ports that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.
 </p>
 
 <p><strong>Project Status</strong></p>
