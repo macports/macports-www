@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.4 2002/10/04 04:13:24 landonf Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.5 2002/10/05 01:14:22 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -165,7 +165,7 @@ To build, type the following:
 % port build
 </tt></pre>
 <p>
-By default, the build phase executes the makefile using GNU make.  (This can be changed with the <tt>make.type</tt> option.)  The above step has starting compiling the sources, when it finishes we'll be ready to install the software.  
+By default, the build phase executes the system's make(1) utility.  (This can be changed with the <tt>build.type</tt> option which accepts an argument of <tt>bsd</tt>, <tt>gnu</tt>, or <tt>pbx</tt>.  Alternatively, the <tt>build.cmd</tt> option may be used to specify an arbitrary build command.)  The above step has starting compiling the sources, when it finishes we'll be ready to install the software.  
 </p>
 
 <h3>
