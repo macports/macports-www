@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.12 2003/05/08 00:03:43 landonf Exp $
+// Version  : $Id: index.php,v 1.13 2003/08/04 02:09:45 matt Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -67,7 +67,7 @@ Lorsque le serveur vous demande un mot de passe, appuyez simplement sur retour; 
 </p>
 
 <p>
-Afin d'installer et d'utiliser DarwinPorts, les <a href="http://developer.apple.com/tools">outils développeurs</a> de Mac OS X.
+Afin d'installer et d'utiliser DarwinPorts, les <a href="http://developer.apple.com/tools">outils développeurs</a> de Mac OS X doivent être installés.
 </p>
 
 <p><strong>Listes de diffusion et canaux IRC du projet</strong></p>
