@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.21 2003/05/05 17:20:14 landonf Exp $
+// Version  : $Id: index.php,v 1.22 2003/05/08 00:03:43 landonf Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -85,7 +85,7 @@ href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwin
 mailing list.</p>
 
 <p>For more real-time discussion, the #opendarwin channel on the <a
-href="http://freenode.net/">open projects network</a> is generally
+href="http://freenode.net/">freenode network</a> is generally
 where we hang out.</p>
 
 <p><strong>Joining the project </strong></p>

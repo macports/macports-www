@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.11 2003/05/05 17:20:15 landonf Exp $
+// Version  : $Id: index.php,v 1.12 2003/05/08 00:03:43 landonf Exp $
 // Location : /fr/projects/darwinports/index.php
 //
 
@@ -77,7 +77,7 @@ href="http://www.opendarwin.org/mailman/listinfo/darwinports">liste de diffusion
 </p>
 
 <p>
-Pour les discussions en temps réel, elles se tiennent généralement sur le canal #opendarwin disponible via le réseau <a href="http://freenode.net/">Open Projects</a>.
+Pour les discussions en temps réel, elles se tiennent généralement sur le canal #opendarwin disponible via le réseau <a href="http://freenode.net/">FreeNode</a>.
 </p>
 
 <p><strong>Se joindre au projet</strong></p>
