@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.5 2002/09/28 00:38:50 michaelm Exp $
+// Version  : $Id: faq.php,v 1.6 2002/09/29 00:22:11 landonf Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -133,10 +133,10 @@ web page for information on checking the project out of CVS.  Once you
 get your hands on a copy, check out the top level README for
 installation and basic usage instructions</p>
 
-<p><strong>Whats the command to see available ports?</strong></p>
+<p><strong>What's the command to see available ports?</strong></p>
 
 <p>port search ".*"</p>
-<p> port search takes a regex as an arguement so you can look for the particular 
+<p> port search takes a regex as an argument so you can look for the particular 
 port(s) you are interested in.</p>
 
 <p><strong>Are there any known issues or incompatibilities?</strong></p>
@@ -150,7 +150,7 @@ use the system tcl to build darwinports</p>
 <p><i>Norton AntiVirus</i></p>
 <p>Recently we have heard some reports of strange behavior in the BSD layer when Norton 
 AntVirus is running. If you are having peculiar problems which you can't identify, try 
-switching off Norton Antivirus and see if the problems persists. </p>
+switching off Norton Antivirus and see if the problems persist.</p>
 
 </td></tr>
 </table>
