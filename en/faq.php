@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.6 2002/09/29 00:22:11 landonf Exp $
+// Version  : $Id: faq.php,v 1.7 2002/10/04 01:44:13 landonf Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -139,18 +139,21 @@ installation and basic usage instructions</p>
 <p> port search takes a regex as an argument so you can look for the particular 
 port(s) you are interested in.</p>
 
-<p><strong>Are there any known issues or incompatibilities?</strong></p>
+<p><strong>Known issues and Incompatibilities</strong></p>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
-<p>Darwinports won't build properly if it is built when there is an older (pre 10.2) 
-version of tcl on the system. For example the problem will occur with a Fink tcl install 
-that hasn't been updated for 10.2. Either update the older version of tcl or make sure you 
-use the system tcl to build darwinports</p>
+<p>
+DarwinPorts will not build properly against the TCL libraries shipped with
+earlier versions of the Fink TCL package. Either update your installed fink TCL package or ensure your use of the system TCL library, and rebuild DarwinPorts.
+</p>
 
 <p><i>Norton AntiVirus</i></p>
-<p>Recently we have heard some reports of strange behavior in the BSD layer when Norton 
-AntVirus is running. If you are having peculiar problems which you can't identify, try 
-switching off Norton Antivirus and see if the problems persist.</p>
+<p>The Fink project has recently discovered numerous problems including kernel
+panics and infinite hangs during patching when certain anti-virus software is
+installed.
+You may need to switch off any anti-virus software before using DarwinPorts
+or Fink.
+</p>
 
 </td></tr>
 </table>
