@@ -28,7 +28,7 @@
 				<select name="by">
 				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>Nom du logiciel</option>
 				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
-				<option value="cat"<? if ($by == "cateogry") { echo " selected=\"selected\""; } ?>>Cat&eacute;gorie</option>
+				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>Cat&eacute;gorie</option>
 				<option value="maintainer"<? if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Mainteneur</option>
 				</select>
 			</td>
