@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.8 2003/03/25 01:40:42 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.9 2003/03/25 14:58:24 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -65,7 +65,7 @@ DarwinPorts effectuera plusieurs tâches basiques prédéfinies, qui sont :
 La première chose à faire est de choisir un logiciel à porter. Pour cet exemple, nous allons utiliser ircII, un client IRC populaire. Nous commencerons avec un Portfile simple, décrivant les attributs basiques d'ircII comme son nom, sa version et le site où nous pouvons télécharger les sources. Créez un répertoire de travail nommé <tt>ircii</tt> et créez à l'intérieur un fichier nommé <tt>Portfile</tt> ayant le contenu suivant :
 </p>
 <pre><tt>
-# $Id: portfileHOWTO.php,v 1.8 2003/03/25 01:40:42 matt Exp $
+# &#36;Id: &#36;
 PortSystem 1.0
 name               ircii
 version            20020912
@@ -78,7 +78,7 @@ long_description   The ircII program is a full screen, termcap based interface t
 master_sites       ftp://ircftp.au.eterna.com.au/pub/ircII/
 </tt></pre>
 <p>
-Un Portfile consiste en une suite de paires de type clé/valeur. Chaque portfile doit commencer avec <tt># $Id: portfileHOWTO.php,v 1.8 2003/03/25 01:40:42 matt Exp $</tt> qui est une balise RCS Id en commentaire. Après la balise RCS Id, vient la déclaration <tt>PortSystem</tt>. Actuellement la seule déclaration valide est <tt>PortSystem 1.0</tt>. Les clés <tt>name</tt> et <tt>version</tt> décrivent le nom et la version du logiciel. La clé <tt>categories</tt> est une liste des catégories auquel le logiciel peut appartenir de façon logique; c'est utilisé dans un but d'organisation. La première entrée dans <tt>categories</tt> devrait correspondre au nom du répertoire où doit résider le répertoire du port. La clé <tt>maintainers</tt> devrait, elle, contenir votre adresse email. <tt>description</tt> affiche une brève description du port, alors que <tt>long_description</tt> affiche une complète description du port. La clé <tt>master_sites</tt> devrait quant à elle contenir une liste des sites où télécharger les sources. DarwinPorts utilise les termes "clés" et "options" indifféremment comme la plupart des clés sont utilisées comme des options d'une tâche particulière dans le processus du portage.
+Un Portfile consiste en une suite de paires de type clé/valeur. Chaque portfile doit commencer avec <tt># &#36;Id: &#36;</tt> qui est une balise RCS Id en commentaire. Après la balise RCS Id, vient la déclaration <tt>PortSystem</tt>. Actuellement la seule déclaration valide est <tt>PortSystem 1.0</tt>. Les clés <tt>name</tt> et <tt>version</tt> décrivent le nom et la version du logiciel. La clé <tt>categories</tt> est une liste des catégories auquel le logiciel peut appartenir de façon logique; c'est utilisé dans un but d'organisation. La première entrée dans <tt>categories</tt> devrait correspondre au nom du répertoire où doit résider le répertoire du port. La clé <tt>maintainers</tt> devrait, elle, contenir votre adresse email. <tt>description</tt> affiche une brève description du port, alors que <tt>long_description</tt> affiche une complète description du port. La clé <tt>master_sites</tt> devrait quant à elle contenir une liste des sites où télécharger les sources. DarwinPorts utilise les termes "clés" et "options" indifféremment comme la plupart des clés sont utilisées comme des options d'une tâche particulière dans le processus du portage.
 </p>
 <p>
 Arrivé à ce point, le Portfile est assez complet pour permettre le téléchargement d'ircII. Par défaut, DarwinPorts ajoutera <tt>version</tt> à <tt>name</tt> et considérera que les sources sont au format <tt>.tar.gz</tt>. Depuis votre répertoire de travail, exécutez la commande suivante :
@@ -284,7 +284,7 @@ Annexe
 Ce qui suit est le listage complet du Portfile d'ircII :
 </p>
 <pre><tt>
-# $Id: portfileHOWTO.php,v 1.8 2003/03/25 01:40:42 matt Exp $
+# &#36;Id: &#36;
 PortSystem 1.0
 name               ircii
 version            20020912
