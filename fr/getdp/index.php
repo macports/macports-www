@@ -50,8 +50,8 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 
 	<p>Pour les instructions d'installation, r&eacute;f&eacute;rez-vous au fichier <tt>README.fr</tt>
 	qui se situe dans le r&eacute;pertoire que vous venez de r&eacute;cup&eacute;rer via CVS. Un
-	<a href="http://darwinports.opendarwin.org/docs/ch01s03.html%22%3Echapter%3C/a%3E">chapitre</a> du
-	<a href="http://darwinports.opendarwin.org/docs/%22%3EDarwinPorts">guide</a> traitant de
+	<a href="http://darwinports.opendarwin.org/docs/ch01s03.html">chapitre</a> du
+	<a href="http://darwinports.opendarwin.org/docs/">guide DarwinPorts</a> traitant de
 	l'installation et de l'utilisation de DarwinPorts est &eacute;galement disponible.</p>
 
 	  <p>De l'<a href="/fr/help/">aide</a> est &eacute;galement disponible au besoin.</p>
