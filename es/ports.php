@@ -2,15 +2,15 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/es/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
-    print_header('Portes Disponibles', 'iso-8859-1');
+    print_header('Portes Disponibles', 'utf-8');
 ?>
 	<center>
 	<h1>Portfiles de DarwinPorts</h1>
 	</center>
 
 	<p>
-	Este formulario le permite buscar en el íŒndice actualizado del software de DarwinPorts. <br />
-	<i> Ultima actualización del íŒndice: </i>
+	Este formulario le permite buscar en el Ã­ndice actualizado del software de DarwinPorts. <br />
+	<i> Ultima actualizaciÃ³n del Ã­ndice: </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
@@ -26,9 +26,9 @@
 			<th>Buscar por:</th>
 			<td>
 				<select name="by">
-				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>TíŒtulo del Software</option>
-				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>Descripció›n</option>
-				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>CategoríŒa</option>
+				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>TÃ­tulo del Software</option>
+				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>DescripciÃ³n</option>
+				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>CategorÃ­a</option>
 				<option value="maintainer"<? if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>"Maintainer"</option>
 				</select>
 			</td>
@@ -46,13 +46,13 @@
 			$count = 0;
 		}
 ?>
-			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los tíŒtulos (<?= $count; ?>)</a></td>
+			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los tÃ­tulos (<?= $count; ?>)</a></td>
 		</tr>
 		<?
 			if (!$by || (!$substr && $by != "all")) {
 		?>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
-		<tr><th colspan="4" align="left">Ver por CategoríŒa:</th></tr>
+		<tr><th colspan="4" align="left">Ver por CategorÃ­a:</th></tr>
 		<?
 				$query = "SELECT DISTINCT category FROM darwinports.categories ORDER BY category";
 				$result = mysql_query($query);
@@ -134,7 +134,7 @@
 				if ($nresult) {
 ?>
 	<br />
-	<i>CategoríŒas:</i>
+	<i>CategorÃ­as:</i>
 <?
 					$primary = 1;
 					while ( $nrow = mysql_fetch_assoc($nresult) ) {
