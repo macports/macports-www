@@ -208,3 +208,6 @@
 	}
 ?>
 	</dl>
+<?php
+  print_footer();
+?>
