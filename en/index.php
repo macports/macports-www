@@ -2,12 +2,12 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.8 2002/09/26 07:22:59 jkh Exp $
+// Version  : $Id: index.php,v 1.9 2002/10/04 01:22:18 kevin Exp $
 // Location : /projects/darwinports/index.php
 //
 
 	include_once("$DOCUMENT_ROOT/includes/od_lib.inc.php");
-	od_print_header("DarwinPorts", "en", "iso-8859-1", "");
+	od_print_header("DarwinPorts", "en", "iso-8859-1", "", 0);
 ?>
 
 <center>
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-The DarwinPorts project aims to provide a large amount of 'software ports' that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.
+The DarwinPorts project aims to provide a large amount of 'software ports' that make it easy to install freely available software on a Darwin system.  For more information, please read the <a href="http://www.opendarwin.org/projects/darwinports/faq.php">FAQ</a>.  For a tutorial on writing a Portfile, please read the <a href="http://www.opendarwin.org/projects/darwinports/portfileHOWTO.php">Portfile HOWTO</a>.
 </p>
 
 <p><strong>Project Status</strong></p>
