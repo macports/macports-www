@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.7 2002/10/05 21:14:08 jkh Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.8 2002/10/08 23:13:23 kevin Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -15,7 +15,7 @@ How to Write a DarwinPorts Portfile
 </h2>
 <pre><tt>
 Kevin Van Vechten | <a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>
-5-Oct-2002
+8-Oct-2002
 </tt></pre>
 <h3>
 Abstract
@@ -185,10 +185,12 @@ Using the unidiff format, we'll compare the list of existing files with the new 
 % sudo port install
 % find /opt/local > /tmp/more.files
 % diff -u /tmp/existing.files /tmp/more.files | grep ^\+\/ | \
-  sed -e 's|^\+/opt/local/||g' > contents
+  sed -e 's|^\+/opt/local/*||g' > contents
 </tt></pre>
 <p>
-Now that we have a contents file in our port directory, we should edit it to begin with <tt>contents {</tt> and end with a closing <tt>}</tt>.  (It is important to note that any other process using the <tt>${prefix}</tt> tree may interfere with the accuracy of the <tt>find</tt> command.  You should audit the resulting <tt>contents</tt> file to look for any files that appear out of place, specifically some DarwinPorts temporary files such as <tt>/var/db/dports/receipts/ircii-20020912.tmp</tt>.)  Next we should edit the Portfile to include our contents file:
+Now that we have a contents file in our port directory, we should edit it to begin with <tt>contents {</tt> and end with a closing <tt>}</tt>.  (It is important to note that any other process using the <tt>${prefix}</tt> tree may interfere with the accuracy of the <tt>find</tt> command.  You should audit the resulting <tt>contents</tt> file to look for any files that appear out of place, specifically some DarwinPorts temporary files such as <tt>/var/db/dports/receipts/ircii-20020912.tmp</tt>.)
+It's also important to review the contents file and make sure directories are listed <i>after</i> the files they contain for the uninstall process to work correctly.
+Next we should edit the Portfile to include our contents file:
 </p>
 <pre><tt>
 include contents
@@ -301,14 +303,14 @@ The following is a partial listing of the ircII contents file:
 </p>
 <pre><tt>
 contents {
-/bin/irc
-/bin/irc-20020912
+bin/irc
+bin/irc-20020912
 ... omitted ...
-/man/man1/irc.1
-/man/man1/ircbug.1
-/man/man1/ircII.1
-/share/irc
-/share/irc/help
+man/man1/irc.1
+man/man1/ircbug.1
+man/man1/ircII.1
+man/man1
+man
 ... omitted ...
 }
 </tt></pre>
