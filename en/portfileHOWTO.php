@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.13 2003/03/31 16:56:03 fkr Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.14 2003/04/16 08:34:27 jkh Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -84,7 +84,7 @@ A Portfile consists of key/value pairs. Every Portfile starts with <tt># &#36;Id
 At this point, the Portfile is complete enough to download ircII.  By default, DarwinPorts will append the <tt>version</tt> to the <tt>name</tt> and assume sources are in <tt>.tar.gz</tt> format.  From your working directory, execute the following command:
 </p>
 <pre><tt>
-% port checksum
+% port <tt>-d</tt> <tt>-v</tt> checksum
 </tt></pre>
 <p>
 The <tt>port</tt> command operates on the <tt>Portfile</tt> in the current working directory.  You should see the following output:
@@ -110,7 +110,7 @@ Portfile.
 <a name="checksum"></a>Verifying the Downloaded File
 </h3>
 <p>
-Notice that DarwinPorts first checks for a local copy of <tt>ircii-20020912.tar.gz</tt> and doesn't find it, so it then downloads from the remote site.  The port doesn't finish because of an error:  "No checksums statement in Portfile."  Portfiles must contain an md5 checksum of all distribution files--this allows DarwinPorts to verify the accuracy and authenticity of the sources.  For convenience, an md5 checksum of the downladed files is printed when the <tt>checksums</tt> argument is not specified.  Go back and add the following to your Portfile:
+Notice that DarwinPorts first checks for a local copy of <tt>ircii-20020912.tar.gz</tt> and doesn't find it, so it then downloads from the remote site.  The port doesn't finish because of an error:  "No checksums statement in Portfile."  Portfiles must contain an md5 checksum of all distribution files--this allows DarwinPorts to verify the accuracy and authenticity of the sources.  For convenience, an md5 checksum of the downloaded files is printed when the <tt>checksums</tt> argument is not specified.  Go back and add the following to your Portfile:
 </p>
 <pre><tt>
 checksums       md5 2ae68c015698f58763a113e9bc6852cc
@@ -123,7 +123,7 @@ checksums       md5 2ae68c015698f58763a113e9bc6852cc
 Now that we have a checksum and can verify our sources, we can proceed to extracting the sources into our working directory.  Execute the following:
 </p>
 <pre><tt>
-% port extract
+% port <tt>-d</tt> <tt>-v</tt> extract
 </tt></pre>
 <p>
 Which should display the following output:
@@ -150,7 +150,7 @@ Done
 Now that the sources have been extracted into a <tt>work</tt> directory in the current working directory, we can configure the sources to compile with the desired options.  By default DarwinPorts assumes the software you're porting uses an autoconf configure script, also by default, DarwinPorts will pass the <tt>--prefix=${prefix}</tt> argument to configure, specifying that the software should be installed in the directory tree used by DarwinPorts.
 </p>
 <p>
-ircII's standard set of options looks fine for a base install on Darwin, so we'll move on to the build phase.  
+ircII's standard set of options looks fine for a base install on Darwin, so won't do the <tt>configure</tt> phase manually and instead just move on to the build phase.  
 </p>
 
 <h3>
@@ -179,7 +179,7 @@ install.destroot        mandir=${destroot}${prefix}/man prefix=${destroot}${pref
 Now we have a complete portfile.  Re-run the installation step to add your port to your own registry:
 </p>
 <pre><tt>
-% sudo port install
+% sudo port <tt>-d</tt> <tt>-v</tt> install
 </tt></pre>
 Which will output the following:
 <pre><tt>
