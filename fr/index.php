@@ -16,8 +16,7 @@
 	op&eacute;rationnels et disponibles, mais d'autres seront bient&ocirc;t ajout&eacute;s r&eacute;guli&egrave;rement.
 	Vous pouvez prendre connaissance des ports r&eacute;cemment ajout&eacute;s en souscrivant
 	&agrave; la liste de discussion <a
-	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
-	ou en utilisant notre <a href="/dp_commits.xml">feed RSS sur les commits r&eacute;cents</a>.</p>
+	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.</p>
 
 	<p>Pour plus d'information sur l'obtention et l'installation de DarwinPorts,
 	lisez s'il vous pla&icirc;t la section <a href="/fr/getdp/">R&eacute;cup&eacute;rer DarwinPorts</a>
