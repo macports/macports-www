@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.7 2003/04/15 21:07:56 matt Exp $
+// Version  : $Id: faq.php,v 1.8 2003/04/17 23:25:37 matt Exp $
 // Location : /projects/darwinports/fr/faq.php
 //
 
@@ -30,17 +30,17 @@ Ce document essaye de répondre aux question les plus fréquemment posées à propos
 Une description de DarwinPorts est plus compréhensible en utilisant une comparaison : c'est une sorte de collection de ports comme ceux de <a href="http://www.freebsd.org/ports">FreeBSD</a> ou <a href="http://fink.sourceforge.net">fink</a> qui permet d'automatiser le processus de compilation et d'installation de logiciels tierce partie pour Mac OS X. Cela permet également de garder une trace des dépendances requises pour un logiciel donné et de savoir comment construire le logiciel souhaité sur Mac OS X et de l'installer dans un emplacement commun, ce qui revient à dire qu'un logiciel installé via DarwinPorts ne va pas aller se répandre dans tout le système ou demander une connaissance particulière pour l'installer et surtout dans quel ordre il faut l'installer. 
 </p>
 
-<p><strong>Comment est implémenté DarwinPorts ?</strong></p>
+<p><strong>Comment est constituée l'implémentation de DarwinPorts ?</strong></p>
 
 <p>
-Le système DarwinPorts est pratiquement tout écrit en Tcl et a été pensé pour être intégré dans d'autres applications, comme par exemple dans une interface de navigation (comme ce projet en cours appelé <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/dp-cocoa/">dp-cocoa</a>, une interface basée sur Cocoa) ou alors dans une application contrôlée via une interface web. Il a été prévu pour être très extensible depuis ses tous premiers débuts, il est composé de telle manière qu'un changement de conception et/ou d'infrastructure peut être opéré indépendamment des ports, signifiant que si le système évolue, les choses anciennes ne seront pas affectées. 
+Le système DarwinPorts est pratiquement tout écrit en Tcl et a été pensé pour être intégré dans d'autres applications, comme par exemple dans le framework Cocoa <a href="http://www.opendarwin.org/projects/dp-cocoa/">dp-cocoa</a> ainsi que dans ce logiciel de navigation Cocoa (basé sur dp-cocoa) appelé <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/sysutils/portmanager/">PortManager.app</a>, ou bien dans une application contrôlée via une interface web. Il a été prévu pour être très extensible depuis ses tous premiers débuts, il est composé de telle manière qu'un changement de conception et/ou d'infrastructure peut être opéré indépendamment des ports, signifiant que si le système évolue, les choses anciennes ne seront pas affectées. 
 </p>
 
 <p>
 Même si DarwinPorts est écrit en Tcl, un utilisateur n'a pas besoin de connaître le langage Tcl pour pouvoir utiliser ce système ou même ajouter de nouveaux ports. Même si les fichiers de description des ports sont actuellement des programmes complets en Tcl, ils ressemblent plus à une liste comportant des paires de type clé/valeur. 
 </p>
 
-<p><strong>Quelles sont les différences de DarwinPorts comparé aux ports de FreeBSD ?</strong></p>
+<p><strong>Quelles sont les différences entre DarwinPorts et les ports de FreeBSD ?</strong></p>
 
 <p>
 Les ports de FreeBSD sont essentiellement implémentés comme de petites mais impressionnantes macros de BSD make(1) placées un peu partout et pouvant paraître un peu opaques et non extensibles pour une personne voulant étendre ou réarranger des parties du système. Étant donné que les fichiers makefile ne sont pas la chose la plus facile à analyser, il est également plus difficile "d'extraire" la collection de ports de FreeBSD en donnée pour une autre utilisation, comme générer la documentation des index ou des interfaces arbitraires pour la création ou la maintenance des ports. 
@@ -58,15 +58,24 @@ Même en ne comptant pas les quelques limitations des ports FreeBSD décrites ci-d
 Il requiert actuellement Mac OS X 10.2 (Jaguar), avec les Developer Tools d'installés puisque c'est le code de référence que la plupart d'entre nous utilise. DarwinPorts va s'adapter à différentes versions d'OS, ainsi qu'aux "variantes" de ports spécifiques à une architecture et nous influencerons ce méchanisme pour supporter plusieurs versions d'OS ainsi que plusieurs types d'architectures (pour Darwin/x86 par exemple) d'une manière propre et claire. 
 </p>
 
+<p><strong>DarwinPorts fonctionne-t-il sur d'autres systèmes ?</strong></p>
+
+<p>
+Des patchs ont déjà été soumis afin que DarwinPorts puisse fonctionner sur plein d'autres systèmes, de Solaris à FreeBSD, en passant par NetBSD et OpenBSD, bien que toutes ces modifications apportées n'ont pas encore été incluses dans l'arbre principal.
+DarwinPorts a lui-même été pensé de façon a être un framework extrêmement compatible, dans lequel les ports individuels peuvent contenir une note permettant de savoir sur quelles plateformes ils peuvent s'installer (via le mot-clé <strong>platforms</strong>) ainsi que des variables spécifiques à certaines plateformes qui sont automatiquement invoquées lorsque le port choisi va être compilé/installé. Le travail actuel en cours influencera le portage de cette collection de ports sur plusieurs systèmes et architectures.
+</p>
+
 <p><strong>Est-ce que DarwinPorts gère également la création de paquet ?</strong></p>
 
 <p>
 DarwinPorts fonctionne de cette manière : compilation du logiciel puis installation dans une hiérarchie temporaire (appelée "destroot") puis copie le contenu nécessaire dans $prefix (par défaut /opt/local). À l'issue de l'installation il crée également un "reçu", vous permettant de demander à DarwinPorts de désinstaller le logiciel désiré si nécessaire.
+</p>
 <p>Vous pouvez également demander à DarwinPorts de créer un paquet (pkg) d'un logiciel puis de l'installer avec l'outil d'installation standard (Installer.app) de Mac OS X. Si le paquet a des dépendances, vous pouvez également créer un paquet multi-parties (mpkg) qui peut donc contenir les dépendances requises, vous évitant de gaspiller de l'espace disque. Quelque soit le type de paquet Mac OS X choisi, vous pourrez les désinstaller avec Uninstaller.app, disponible sur <a href="http://packages.opendarwin.org/Applications">packages.opendarwin.org</a>. Dans un avenir proche, nous espérerons supporter le format "RPM Package Manager" (RPM).
 </p>
 
 <p>
 Il sera toujours important de préserver la possiblité de compiler les logiciels depuis leurs sources, bien entendu, car les ports doivent être générés depuis quelque chose, et que les développeurs qui modifient des librairies système ou qui essayent différentes méthodes de compilation de logiciel peuvent trouver un binaire mis en boîte d'office insuffisant pour leurs besoins.
+</p>
 
 <p><strong>Pourquoi est-ce que DarwinPorts installe tout dans /opt/local par défaut ?</strong></p>
 
@@ -87,12 +96,24 @@ Reportez-vous à la page web de <a href="http://www.opendarwin.org/projects/darwi
 port search utilise une expression régulière (regex) comme argument donc vous pouvez chercher un (ou des) port(s) particulier(s) qui vous intéresse(nt). 
 </p>
 
-<p><strong>Problèmes connus et Incompatibilités</strong></p>
+<p><strong>Comment créer un Port ?</strong></p>
+
+<p>
+Il y a un excellent <a href="http://www.opendarwin.org/projects/darwinports/fr/portfileHOWTO.php">portfile-HOWTO</a> disponible, qui explique en détails ce processus.
+</p>
+
+<h2><p><strong>Problèmes connus et Incompatibilités</strong></p></h2>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
 <p>
-DarwinPorts ne se compilera pas correctement avec les librairies TCL livrées dans les premières versions du paquet TCL de Fink. Mettez à jour votre paquet TCL de Fink, ou assurez-vous que vous utilisez la librairie TCL du système, et reconstruisez DarwinPorts. 
+DarwinPorts ne se compilera pas correctement avec les librairies TCL livrées dans les premières versions du paquet TCL de Fink. Mettez à jour votre paquet TCL de Fink, ou assurez-vous que vous utilisez la librairie TCL du système, et recompilez DarwinPorts. 
 </p>
+
+<p><i>wrong tclsh</i></p>
+<p>
+Quelques installations Tcl tierces parties ont la fâcheuse habitude d'écraser littéralement le lien <tt>/usr/bin/tclsh</tt>, produisant une erreur lors de l'installation de DarwinPorts. Recréez le lien vers <tt>tclsh8.3</tt> devrait résoudre ce problème :
+</p>
+<p><tt>sudo ln -s /usr/bin/tclsh8.3 /usr/bin/tclsh</tt></p>
 
 <p><i>Norton AntiVirus</i></p>
 <p>
