@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.1 2003/11/19 01:59:08 mij Exp $
+# $Id: functions.inc,v 1.2 2003/12/05 23:47:52 mij Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -25,7 +25,7 @@ function create_rss() {
   }
 
   $open = fopen("$DOCUMENT_ROOT/dp_news.xml", "w+");
-  $rssdate = substr_replace(date("Y-m-d\TH:i:s0", time()),':', -2, 0);
+  $rssdate = substr_replace(date("Y-m-d\TH:i:sO", time()),':', -2, 0);
 
   $rss = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n";
   $rss .= "<rss version=\"2.0\"\n";
@@ -43,7 +43,7 @@ function create_rss() {
   $rss .= "    <dc:creator>Jim Mock (mij@opendarwin.org)</dc:creator>\n";
   $rss .= "    <dc:rights>Copyright 2002-2003</dc:rights>\n";
   $rss .= "    <dc:date>$rssdate</dc:date>\n";
-  $rss .= "    <admin:errorReportsTo rdf:resource\"mailto:mij@opendarwin.org\" />\n";
+  $rss .= "    <admin:errorReportsTo rdf:resource=\"mailto:mij@opendarwin.org\" />\n";
 
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
