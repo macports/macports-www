@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.22 2003/05/08 00:03:43 landonf Exp $
+// Version  : $Id: index.php,v 1.23 2003/08/06 18:34:27 landonf Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -18,6 +18,7 @@
 
 <p>
 <i>Project Leads: </i>
+<a href="mailto:fkr@opendarwin.org">Felix Kronlage</a>,
 <a href="mailto:landonf@opendarwin.org">Landon Fuller</a>, 
 <a href="mailto:jkh@opendarwin.org">Jordan Hubbard</a>,
 <a href="mailto:kevin@opendarwin.org">Kevin Van Vechten</a>
