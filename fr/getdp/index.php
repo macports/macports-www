@@ -8,8 +8,8 @@
     <div id="content">
       <h2 class="hdr">R&eacute;cup&eacute;rer DarwinPorts</h2>
 	
-	<p>Si vous souhaitez installer DarwinPorts, alors la première chose
-	&agrave; faire est de faire un "checkout" du CVS d'OpenDarwin.</p>
+	<p>Si vous souhaitez installer DarwinPorts, alors la premi&egrave;re chose
+	&agrave; faire est un "checkout" du CVS d'OpenDarwin.</p>
 	
 	<p>Avant de commencer, notez que pour l'installation et l'utilisation
 	de DarwinPorts vous devez avoir install&eacute; les outils d&eacute;veloppeurs de Mac OS X
@@ -31,7 +31,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
       <h5 class="subhdr">Installation</h5>
 	
 	<p>Une fois le projet r&eacute;cup&eacute;r&eacute; depuis le CVS, il vous faut encore configurer
-	quelques choses avant que vous ne puissiez commencer &agrave; installer des ports.</p>
+	quelques petites choses avant que vous ne puissiez commencer &agrave; installer des ports.</p>
 
 	<p>Pour les instructions d'installation, r&eacute;f&eacute;rez-vous au fichier <tt>README.fr</tt>
 	qui se situe dans le r&eacute;pertoire que vous venez de r&eacute;cup&eacute;rer via CVS. Un
