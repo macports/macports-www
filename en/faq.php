@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.8 2002/10/04 01:48:48 landonf Exp $
+// Version  : $Id: faq.php,v 1.9 2002/12/08 16:13:57 landonf Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -42,7 +42,9 @@ of what to install in what order.
 
 <p> The darwinports system is almost fully written in Tcl and designed
 to be embedded into other applications, such as software browsing
-front-ends (Cocoa anyone?) or web-driven application management
+front-ends (like the work-in-progress 
+<a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/dp-cocoa/">dp-cocoa</a>
+, a cocoa-based interface) or web-driven application management
 mechanisms.  Being designed to be highly extensible from the very
 beginning, it is layered in such a way as to make it fairly
 future-proof in the face of future design changes and the
