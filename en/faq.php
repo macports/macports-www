@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.13 2003/04/15 22:17:22 fkr Exp $
+// Version  : $Id: faq.php,v 1.14 2003/04/16 08:41:27 jkh Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -97,6 +97,20 @@ support multiple OS versions and architectures (for Darwin/x86) in a
 fairly clean way.
 </p>
 
+<p><strong>Does DarwinPorts run on any other operating systems?</strong></p>
+
+<p>There have already been patches submitted to make DarwinPorts run
+on everything from Solaris to FreeBSD, NetBSD and OpenBSD, though not
+all of this work has made it into the mainline tree yet.  DarwinPorts
+itself was designed to be a highly portable framework in which
+individual ports can note which platforms they run on (via the
+<strong>platforms</strong> keyword) and have platform-specific rules
+which are automatically invoked only when the port is being
+built/installed on that particular platform.  Work is currently
+underway to leverage that capability into a ports collection which
+supports multiple operating systems and CPU architectures.</p>
+
+
 <p><strong>Does DarwinPorts also do package management?</strong></p>
 
 <p> DarwinPorts works by first building software, installing it
@@ -149,12 +163,14 @@ port(s) you are interested in.</p>
 <p>There is an excellent <a href="http://www.opendarwin.org/projects/darwinports/en/portfileHOWTO.php">
 portfile-HOWTO</a> available, that explains this process.</p>
 
-<p><strong>Known Issues and Incompatibilities</strong></p>
+<p></p>
+
+<h2><p><strong>Known Issues and Incompatibilities</strong></p></h2>
 
 <p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
 <p>
 DarwinPorts will not build properly against the TCL libraries shipped with
-earlier versions of the Fink TCL package. Either update your installed fink TCL package or ensure your use of the system TCL library, and rebuild DarwinPorts.
+earlier versions of the Fink TCL package. Either update your installed fink TCL package or ensure that you're using the system TCL library and rebuild DarwinPorts.
 </p>
 
 <p><i>wrong tclsh</i></p>
