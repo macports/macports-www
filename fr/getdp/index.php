@@ -21,7 +21,7 @@
 	<ul>
 		<li>TCL (8.3 ou 8.4)</li>
 		<li>curl</li>
-		<li>md5 (certains syst&egrave;mes ont "md5sum" &agrave; la place, vous pouvez cependant cr&eacute;er un lien symbolique vers "md5")</li>
+		<li>OpenSSL ou libmd</li>
 	</ul>
 	</p>
 	
