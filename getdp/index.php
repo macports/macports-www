@@ -11,9 +11,18 @@
       <p>If you would like to install DarwinPorts, it first needs to be 
 	&ldquo;checked out&rdquo; of the OpenDarwin CVS repository.</p>
 
-      <p>Please note that in order to install and run DarwinPorts, you must
+      <p>Please note that in order to install and run DarwinPorts on Mac OS X, you must
 	have either the Mac OS X Developer Tools (for 10.2.x), or XCode (for
 	10.3.x) installed.</p>
+
+	  <p>If you want to use DarwinPorts on a platform other than Mac OS X, please be
+	  aware of the following dependencies (we assume that you have basics such as
+	  gcc):
+	  <ul>
+	  	<li>TCL (8.3 or 8.4)</li>
+		<li>curl</li>
+		<li>md5 (some systems have 'md5sum', you can safely symlink that to 'md5'</li>
+	  </ul>
 
       <p>Use the following commands to check the project out of the CVS
 	repository:</p>
@@ -23,6 +32,11 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 
       <p>When the server asks you for a password, simply press
 	<kbd>return</kbd> on your keyboard&mdash;the password is empty.</p>
+
+	  <p>If you do not want to bother with fetching from CVS, you can download
+	  a nightly updated <a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">
+	  CVS-snapshot</a>. Once extracted, you can keep it up to date with the usual
+	  CVS commands.</p>
 
       <p>If you'd simply like to view the CVS repository without checking it
 	out, you can do so via <a
@@ -36,8 +50,8 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 	
       <p>For installation instructions, please see the <tt>README</tt>
 	file in the directory where you performed the CVS checkout.  There is
-	also an <a href="http://bsdnews.org/01/darwinports.php">article</a>
-	available at <a href="http://bsdnews.org/">BSDnews</a> which
+	also a <a href="http://darwinports.opendarwin.org/docs/ch01s03.html">chapter</a>
+	in the <a href="http://darwinports.opendarwin.org/docs/">DarwinPorts Guide</a> that
 	provides DarwinPorts installation and usage instructions.</p> 
 
       <p><a href="/help/">Help</a> is also available should you need it.</p>
