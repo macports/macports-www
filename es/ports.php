@@ -9,8 +9,8 @@
 	</center>
 
 	<p>
-	Este formulario le permite buscar en el ÃŒndice actualizado del software de DarwinPorts. <br />
-	<i> Ultima acutalizaciÃ›n del ÃŒndice: </i>
+	Este formulario le permite buscar en el íŒndice actualizado del software de DarwinPorts. <br />
+	<i> Ultima actualización del íŒndice: </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
@@ -26,9 +26,9 @@
 			<th>Buscar por:</th>
 			<td>
 				<select name="by">
-				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>TÃŒtulo del Software</option>
-				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>DescripciÃ›n</option>
-				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>CategorÃŒa</option>
+				<option value="name"<? if ($by == "name") { echo " selected=\"selected\""; } ?>>TíŒtulo del Software</option>
+				<option value="desc"<? if ($by == "desc") { echo " selected=\"selected\""; } ?>>Descripció›n</option>
+				<option value="cat"<? if ($by == "cat") { echo " selected=\"selected\""; } ?>>CategoríŒa</option>
 				<option value="maintainer"<? if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>"Maintainer"</option>
 				</select>
 			</td>
@@ -46,13 +46,13 @@
 			$count = 0;
 		}
 ?>
-			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los tÃŒtulos (<?= $count; ?>)</a></td>
+			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los tíŒtulos (<?= $count; ?>)</a></td>
 		</tr>
 		<?
 			if (!$by || (!$substr && $by != "all")) {
 		?>
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
-		<tr><th colspan="4" align="left">Ver por CategorÃŒa:</th></tr>
+		<tr><th colspan="4" align="left">Ver por CategoríŒa:</th></tr>
 		<?
 				$query = "SELECT DISTINCT category FROM darwinports.categories ORDER BY category";
 				$result = mysql_query($query);
@@ -134,7 +134,7 @@
 				if ($nresult) {
 ?>
 	<br />
-	<i>CategorÃŒas:</i>
+	<i>CategoríŒas:</i>
 <?
 					$primary = 1;
 					while ( $nrow = mysql_fetch_assoc($nresult) ) {
