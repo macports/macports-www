@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.14 2002/12/20 11:31:09 kevin Exp $
+// Version  : $Id: index.php,v 1.15 2003/01/07 17:33:58 landonf Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -38,19 +38,32 @@ a <i>BETA</i> for anyone who's interested.
 You can search a list of <a href="http://www.opendarwin.org/projects/darwinports/en/ports.php">available software</a> here.
 </p>
 <p>
+A functional Cocoa-based GUI, DarwinPorts.app, is available and under active development. <a href="http://www.opendarwin.org/projects/darwinports/images/dp-cocoa.jpg">Screenshot.</a>
+</p>
+<p>
 Bug reports and feature requests should be submitted to <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.
 </p>
 
 <p><strong>Getting the project from CVS</strong></p>
 
 <p>
-Use the following commands to get the project from the OpenDarwin CVS server:
+Use the following commands to get DarwinPorts from the OpenDarwin CVS server (required for DarwinPorts.app:
 </p>
 
 <p>
 <pre>
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports
+</pre>
+
+<p>
+Use the following commands to get DarwinPorts.app from the OpenDarwin CVS server:
+</p>
+
+<p>
+<pre>
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
+cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-cocoa
 </pre>
 
 When the server asks you for a password you can simply hit return; the password is empty.
