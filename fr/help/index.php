@@ -11,6 +11,18 @@
 	<p>Si vous &ecirc;tes perdus, diff&eacute;rents moyens pour trouver de l'aide
 	s'offrent &agrave; vous.</p>
 
+		<h5 class="subhdr">Documentation</h5>
+
+		<p>Le <a href="http://darwinports.opendarwin.org/docs">Guide DarwinPorts</a> has a section 
+		for DarwinPorts users, <a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 
+			1: Using DarwinPorts</a>.
+
+		<p>La FAQ de DarwinPorts bientocirc;t disponible.</p>
+
+	<p>La documentation du projet &eacute;volue constament, donc si vous apercevez une erreur
+	quelconque, ou bien si vous avez des questions &agrave; propos de celle-ci, informez-nous !
+	Cela nous aidera grandement.</p>
+
       <h5 class="subhdr">Listes de discussions</h5>
 
 	<p>La <a href="http://www.opendarwin.org/mailman/listinfo/darwinports">liste de discussion
