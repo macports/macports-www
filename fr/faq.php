@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.6 2003/01/12 00:22:51 matt Exp $
+// Version  : $Id: faq.php,v 1.7 2003/04/15 21:07:56 matt Exp $
 // Location : /projects/darwinports/fr/faq.php
 //
 
@@ -55,14 +55,18 @@ Même en ne comptant pas les quelques limitations des ports FreeBSD décrites ci-d
 <p><strong>Quelles sont les conditions requises pour DarwinPorts ?</strong></p>
 
 <p>
-Il requiert actuellement Mac OS X 10.2 (Jaguar), avec les Developer Tools d'installés puisque c'est le code de référence que la plupart d'entre nous utilise. Il y également un portage prévu pour permettre une compatibilité avec la 10.1 (Puma) dès que nous aurons pu identifier toutes les conséquences des "variantes" qui ont besoin d'être ajoutées aux différents ports. Le projet DarwinPorts prend des dispositions concernant la version d'OS ou les "variantes" spécifiques à l'architecture des ports et nous souhaitons influencer ce mécanisme pour supporter plusieurs versions d'OS ainsi que plusieurs types d'architectures (pour Darwin/x86 par exemple) d'une manière propre et claire. 
+Il requiert actuellement Mac OS X 10.2 (Jaguar), avec les Developer Tools d'installés puisque c'est le code de référence que la plupart d'entre nous utilise. DarwinPorts va s'adapter à différentes versions d'OS, ainsi qu'aux "variantes" de ports spécifiques à une architecture et nous influencerons ce méchanisme pour supporter plusieurs versions d'OS ainsi que plusieurs types d'architectures (pour Darwin/x86 par exemple) d'une manière propre et claire. 
 </p>
 
-<p><strong>Est-ce que DarwinPorts gère également la gestion de paquet ?</strong></p>
+<p><strong>Est-ce que DarwinPorts gère également la création de paquet ?</strong></p>
 
 <p>
-Actuellement, DarwinPorts compile juste les logiciels depuis les sources, les installe et enregistre le processus d'installation afin de permettre à DarwinPorts d'être capable de les désinstaller si vous le lui demandiez. Il créera également un binaire "instantané" d'une installation d'un port que vous pourrez donner à quelqu'un d'autre afin de lui permettre d'éviter de repasser par les étapes de compilation du port; mais la gestion de paquet est une chose que nous avons délibérément mise de côté pour la "phase II" du projet, nous adopterons probablement alors un système de gestion de paquet déjà existant et feront que DarwinPorts génère simplement ces paquets à la demande. Même avec une "gestion propre et net des paquets", il sera toujours important de laisser le choix de compiler depuis les sources puisque quelque chose doit générer les paquets pour chaque version d'OS ou des différents ports, et les développeurs qui modifient les librairies système ou s'amusant à compiler un type de logiciel de différentes manières peuvent trouver insuffisant pour leurs besoins un paquet du binaire déjà "mis en boîte" et prêt à l'emploi.
+DarwinPorts fonctionne de cette manière : compilation du logiciel puis installation dans une hiérarchie temporaire (appelée "destroot") puis copie le contenu nécessaire dans $prefix (par défaut /opt/local). À l'issue de l'installation il crée également un "reçu", vous permettant de demander à DarwinPorts de désinstaller le logiciel désiré si nécessaire.
+<p>Vous pouvez également demander à DarwinPorts de créer un paquet (pkg) d'un logiciel puis de l'installer avec l'outil d'installation standard (Installer.app) de Mac OS X. Si le paquet a des dépendances, vous pouvez également créer un paquet multi-parties (mpkg) qui peut donc contenir les dépendances requises, vous évitant de gaspiller de l'espace disque. Quelque soit le type de paquet Mac OS X choisi, vous pourrez les désinstaller avec Uninstaller.app, disponible sur <a href="http://packages.opendarwin.org/Applications">packages.opendarwin.org</a>. Dans un avenir proche, nous espérerons supporter le format "RPM Package Manager" (RPM).
 </p>
+
+<p>
+Il sera toujours important de préserver la possiblité de compiler les logiciels depuis leurs sources, bien entendu, car les ports doivent être générés depuis quelque chose, et que les développeurs qui modifient des librairies système ou qui essayent différentes méthodes de compilation de logiciel peuvent trouver un binaire mis en boîte d'office insuffisant pour leurs besoins.
 
 <p><strong>Pourquoi est-ce que DarwinPorts installe tout dans /opt/local par défaut ?</strong></p>
 
