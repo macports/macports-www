@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.16 2003/01/07 17:36:33 landonf Exp $
+// Version  : $Id: index.php,v 1.17 2003/01/13 17:46:59 fkr Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -67,6 +67,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P dp-co
 </pre>
 
 When the server asks you for a password you can simply hit return; the password is empty.
+The CVS repository can be browsed through <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.
 </p>
 
 <p><strong>Project mailing lists and IRC channels</strong></p>
