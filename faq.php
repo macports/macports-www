@@ -2,7 +2,7 @@
 
 //
 // File     : faq.php
-// Version  : $Id: faq.php,v 1.3 2002/09/26 03:03:38 kevin Exp $
+// Version  : $Id: faq.php,v 1.4 2002/09/28 00:32:46 michaelm Exp $
 // Location : /projects/darwinports/faq.php
 //
 
@@ -132,6 +132,19 @@ href="http://www.opendarwin.org/projects/darwinports">darwinports</a>
 web page for information on checking the project out of CVS.  Once you
 get your hands on a copy, check out the top level README for
 installation and basic usage instructions</p>
+
+<p><strong>Are there any known issues or incompatibilities?</strong></p>
+
+<p><i>Unable to open port: can't find package Pextlib 1.0</i></p>
+<p>Darwinports won't build properly if it is built when there is an older (pre 10.2) 
+version of tcl on the system. For example the problem will occur with a Fink tcl install 
+that hasn't been updated for 10.2. Either update the older version of tcl or make sure you 
+use the system tcl to build darwinports</p>
+
+<p><i>Norton AntiVirus</i></p>
+<p>Recently we have heard some reports of strange behavior in the BSD layer when Norton 
+AntVirus is running. If you are having peculiar problems which you can't identify, try 
+switching off Norton Antivirus and see if the problems persist</p>
 
 </td></tr>
 </table>
