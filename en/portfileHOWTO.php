@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.8 2002/10/08 23:13:23 kevin Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.9 2002/12/06 07:15:40 michaelm Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -195,6 +195,18 @@ Next we should edit the Portfile to include our contents file:
 <pre><tt>
 include contents
 </tt></pre>
+<p>
+If the list of files installed by the port does not extends beyond one page of an 80x24 terminal, the <tt>contents</tt> option should be included in the Portfile.
+Instead of <tt>include contents</tt>, one would use:
+</p>
+<pre><tt>
+contents    bin/irc \
+            bin/irc-20020912 \
+            man/man1/irc.1 \
+            man/man1/ircbug.1 \
+            man/man1/ircII.1 \
+            man/man1
+</pre></tt>
 <p>
 Now we have a complete portfile.  Re-run the installation step to add your port to your own registry:
 </p>
