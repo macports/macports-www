@@ -2,7 +2,7 @@
 
 //
 // File     : index.php
-// Version  : $Id: index.php,v 1.5 2002/09/25 21:51:13 landonf Exp $
+// Version  : $Id: index.php,v 1.6 2002/09/25 23:45:10 jkh Exp $
 // Location : /projects/darwinports/index.php
 //
 
@@ -53,6 +53,21 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 
 When the server asks you for a password you can simply hit return; the password is empty.
 </p>
+
+<p><strong>Project mailing lists and IRC channels</strong></p>
+
+<p>The <a
+href="http://www.opendarwin.org/mailman/listinfo/darwinports">darwinports
+mailing list</a> is open to all and is where most architectural and
+feature discussions are held.  Those wishing to see the cvs commit
+logs which detail the change-by-change progress of the project can
+also subscribe to the <a
+href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
+mailing list.</p>
+
+<p>For more real-time discussion, the #opendarwin channel on the <a
+href="http://freenode.net/">open projects network</a> is generally
+where we hang out.</p>
 
 <p><strong>Joining the project </strong></p>
 
