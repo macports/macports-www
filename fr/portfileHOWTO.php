@@ -2,7 +2,7 @@
 
 //
 // File     : portfileHOWTO.php
-// Version  : $Id: portfileHOWTO.php,v 1.9 2003/03/25 14:58:24 matt Exp $
+// Version  : $Id: portfileHOWTO.php,v 1.10 2003/04/03 22:01:37 matt Exp $
 // Location : /projects/darwinports/portfileHOWTO.php
 //
 
@@ -14,8 +14,8 @@
 Comment écrire un Portfile pour DarwinPorts
 </h2>
 <pre><tt>
-Kevin Van Vechten | <a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>
-8-Oct-2002
+Kevin Van Vechten (<a href="mailto:kevin@opendarwin.org">kevin@opendarwin.org</a>), Felix Kronlage (<a href=mailto:fkr@opendarwin.org>fkr@opendarwin.org</a>)
+15-Mar-2003
 </tt></pre>
 <h3>
 Divers
@@ -55,7 +55,6 @@ DarwinPorts effectuera plusieurs tâches basiques prédéfinies, qui sont :
 <a name="appendixtoc"></a><h4>Annexe</h4>
 <ul>
 <li><a href="#portfilelist">Aperçu d'un Portfile</a></li>
-<li><a href="#contentslist">Liste de contents</a></li>
 </ul>
 
 <h3>
@@ -170,40 +169,14 @@ Par défaut, la phase de compilation exécute l'utilitaire système make(1). (Cela 
 <a name="install"></a>Installation du programme dans le système
 </h3>
 <p>
-Les Portfiles doivent contenir une option <tt>contents</tt> qui spécifie quels sont les fichiers installés. DarwinPorts utilise cette information pour cataloguer quel fichier appartient à quel logiciel, car ensuite il peut être désinstaller ultérieurement. Chaque paramètre de <tt>contents</tt> est un chemin vers un fichier. Tous les chemins sont relatifs à la variable <tt>${prefix}</tt>. Comme moyen simple de déterminer exactement quels fichiers font partie d'ircII, utilisons la commande "find" pour composer un manifeste des fichiers dans la hiérarchie <tt>${prefix}</tt>. Après l'installation, nous allons réutiliser la commande "find" et utiliser les différences pour générer notre liste.
+L'ancienne méthode qui consistait à inclure la liste dans le fichier <tt>contents</tt> est devenue obsolète en partie grâce au méchanisme <tt>destroot</tt>. Avec <tt>destroot</tt> le logiciel est installé dans une hiérarchie se situant dans le répertoire <tt>work</tt>. Alors que certains logiciels (comme ircII) ne requièrent pas de manipulations spéciales pour être installés dans le <tt>destroot</tt>, d'autres (comme <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/dports/net/ncftp/">ncftp</a>) ont besoin de la variable <tt>install.destroot</tt> afin qu'ils s'installent correctement dans le <tt>destroot</tt>.
 </p>
-<p>
-En utilisant le format unidiff, nous allons comparer la liste des fichiers existants avec la nouvelle liste de fichiers, en prenant en compte juste les nouvelles lignes ajoutées. Comme les chemins sont supposés être relatifs à <tt>${prefix}</tt>, nous allons passer via <tt>sed</tt> et effacer le prefix (/opt/local/), et stocker le résultat dans un fichier nommé <tt>contents</tt> placé dans notre dossier hébergeant notre port. Nous pouvons faire tout cela via les commandes suivantes :
-</p>
-<!--
-.........|.........|.........|.........|.........|.........|.........|.........|
--->
 <pre><tt>
-% find /opt/local > /tmp/existing.files
-% sudo port install
-% find /opt/local > /tmp/more.files
-% diff -u /tmp/existing.files /tmp/more.files | grep ^\+\/ | \
-  sed -e 's|^\+/opt/local/*||g' > contents
+ install.destroot        mandir=${destroot}${prefix}/man prefix=${destroot}${prefix}
 </tt></pre>
 <p>
-Maintenant que nous avons un fichier contents dans notre répertoire hébergeant notre port, nous devrons l'éditer afin de débuter avec <tt>contents {</tt> et de terminer avec un <tt>}</tt>. (C'est important de noter que tout autre processus utilisant la hiérarchie <tt>${prefix}</tt> peut interférer avec l'efficacité de la commande <tt>find</tt>. Vous devriez vérifier le fichier <tt>contents</tt> résultant afin de voir si tout les fichiers apparaissent à leur place, spécialement les fichiers temporaires de DarwinPorts comme <tt>/var/db/receipts/ircii-20020912.tmp</tt>.)
-Il est également important de s'assurer que dans le fichier contents les répertoires soient listés <i>après</i> les fichiers qui les contiennent afin que le processus de désinstallation fonctionne correctement.
-Ensuite nous devrons éditer le Portfile afin d'inclure notre fichier contents :
+Regardez quelques-uns de nos ports pour voir plus d'exemples sur comment utiliser l'option <tt>install.destroot</tt>.
 </p>
-<pre><tt>
-include contents
-</tt></pre>
-<p>
-Si la liste des fichiers installés par le port ne s'étend pas au-delà d'une page de terminal de 80x24, l'option <tt>contents</tt> devrait être incluse dans le Portfile. Au lieu de <tt>include contents</tt>, nous utiliserons :
-</p>
-<pre><tt>
-contents    bin/irc \
-            bin/irc-20020912 \
-            man/man1/irc.1 \
-            man/man1/ircbug.1 \
-            man/man1/ircII.1 \
-            man/man1
-</pre></tt>
 <p>
 À présent nous avons un portfile complet. Relancez l'étape d'installation pour ajouter ce port à votre propre registre :
 </p>
@@ -294,10 +267,10 @@ description        an IRC and ICB client
 long_description   The ircII program is a full screen, termcap based interface to Internet Relay \
                    Chat. It gives full access to all the normal IRC functions, plus a variety \
                    of additionnal options.
+homepage           http://www.eterna.com.au/ircii/
 master_sites       ftp://ircftp.au.eterna.com.au/pub/ircII/
 checksums          md5 2ae68c015698f58763a113e9bc6852cc
 configure.args     --disable-ipv6
-include            contents
 
 post-configure {
         reinplace "s|change.this.to.a.server|irc.openprojects.net|g" \
@@ -308,27 +281,6 @@ variant ipv6 {
         configure.args-append --enable-ipv6
 }
 </tt></pre>
-
-<h3>
-<a name="contentslist"></a>Liste de contents
-</h3>
-<p>
-Ce qui suit est un listage partiel du fichier contents d'ircII :
-</p>
-<pre><tt>
-contents {
-bin/irc
-bin/irc-20020912
-... omitted ...
-man/man1/irc.1
-man/man1/ircbug.1
-man/man1/ircII.1
-man/man1
-man
-... omitted ...
-}
-</tt></pre>
-
 
 <? 
 	od_print_footer("fr"); 
