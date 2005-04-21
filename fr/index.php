@@ -13,7 +13,7 @@
 	<a href="http://developer.apple.com/darwin/projects/darwin/">Darwin</a> (<a href="http://
 	www.apple.com/fr/macosx/">Mac OS X</a>, <a href="http://opendarwin.org/fr/">OpenDarwin</a>)</p>
 	
-	<p>Il y a actuellement environ 2400 <a href="/fr/ports/">ports</a>
+	<p>Il y a actuellement environ 2500 <a href="/fr/ports/">ports</a>
 	opérationnels et disponibles, mais d'autres seront bientôt ajoutés régulièrement.
 	Vous pouvez prendre connaissance des ports récemment ajoutés en souscrivant
 	à la liste de discussion <a
