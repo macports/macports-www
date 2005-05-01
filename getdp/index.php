@@ -8,13 +8,14 @@
     <div id="content">
       <h2 class="hdr">Get DarwinPorts</h2>
 
-	<p>To install DarwinPorts you first need to download the 1.0 release
-	package in either <a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a>
-	format or <a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a>. Checksums
-	for both packages are contained <a href="/downloads/DarwinPorts-1.0.chk.txt">here</a>.<p>
+	 <p>The DarwinPorts 1.0 release is available in binary form as a
+	 <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> disk image, containing a pkg
+	 installer, and in source form as either a <a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a>
+	 package or a <a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a> one.
+	 Checksums for all these are contained <a href="/downloads/DarwinPorts-1.0.chk.txt">here</a>.</p>
 
       <p>Please note that in order to install and run DarwinPorts on Mac OS X, you must
-	have either the Mac OS X Developer Tools (for 10.2.x), or XCode (for
+	have either the Mac OS X Developer Tools (for 10.2.x) or XCode (for
 	10.3.x) installed.</p>
 
 	  <p>If you want to use DarwinPorts on a platform other than Mac OS X, please be
@@ -26,15 +27,38 @@
 		<li>OpenSSL or libmd</li>
 	  </ul>
 
-      <h5 class="subhdr">Installation</h5>
+	<h5 class="subhdr">Mac OS X Package (.pkg) Installer</h5>
 
-      <p>Once you have downloaded the 1.0 tarball, there are a still a few things
-      you will need to do before you can install a port with the DarwinPorts system,
-      namely installing DarwinPorts itself. &ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded
-      the package and run &ldquo;<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>&rdquo; or
-      &ldquo;<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>&rdquo;, depending on whether you
-      downloaded the bz2 tarball or the gz one, respectively. This will unpack the DarwinPorts
-      sources that you will proceed to install. To do so, execute the following:</p>
+	<p>The easiest way to install DarwinPorts on a Mac OS X system is by downloading
+	the <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> image and running Installer.app
+	on the pkg contained therein, following the on-screen instructions until completion.
+	This procedure will place a fully functional and default DarwinPorts installation
+	on your host system, completely ready for usage.</p>
+
+	<p>To take advantage of your new installation, you need to adapt your shell's
+	configuration filess to find the binaries installed by DarwinPorts. Please refer
+	to the README file contained in the dmg for instructions on how to do this.</p>
+
+	<p>Although not strictly necessary, it is still recommended that you synchronize your
+	recent installation with OpenDarwin servers to ensure you have the latest release
+	available of the DarwinPorts infrastructure and of the Portfiles containing the instructions
+	necessary for the installation of ports. To accomplish this simply execute:</p>
+
+	<pre>sudo port -d selfupdate</pre>
+
+	<p>It is also recommended to run the above command on a regular basis to keep your
+	installation always current. At this point you should be ready to enjoy	DarwinPorts!</p>
+
+	<h5 class="subhdr">Source Installation</h5>
+
+	<p>If on the other hand you decide to install from source, there are still a few
+	things you will need to do once you've downloaded the tarball before you can
+	install a port with the DarwinPorts system, namely installing DarwinPorts itself.
+	&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
+	and run &ldquo;<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>&rdquo; or &ldquo;<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>&rdquo;,
+	depending on whether you downloaded the bz2 tarball or the gz one, respectively.
+	This will unpack the DarwinPorts sources that you will proceed to install. To do
+	so, execute the following:</p>
 
       <pre>cd DarwinPorts-1.0
 ./configure && make && sudo make install</pre>
@@ -51,15 +75,13 @@ rm -rf DarwinPorts-1.0.*</pre>
       of &ldquo;<kbd>./confugure --help | more</kbd>&rdquo; and pass the appropriate options to the
       configuration script in the steps detailed above.</p>
 	
-	<p>Lastly, you will need to synchronize your recent installation with the OpenDarwin servers
-	and download the &ldquo;Portfiles&rdquo; containing the descriptions necessary for DarwinPorts
-	to install ports on your system:</p>
+	<p>You will need to adapt your shell's configuration files to find the binaries installed by
+	DarwinPorts. Lastly, you need to synchronize your recent installation with OpenDarwin servers:</p>
 
 	<pre>sudo port -d selfupdate</pre>
 
-	<p>Upon completion DarwinPorts will be ready to install ports. It is recommended to run the above
-	command on a regular basis to keep your installation synchronized with the latest changes to the
-	Portfiles and the infrastructure itself.</p>
+	<p>Upon completion DarwinPorts will be ready to install ports. Again, it is recommended to run
+	the above command on a regular basis to keep your installation current.</p>
 
       <p>Alternatively, you can refer to the <tt>README_RELEASE1</tt>
 	file contained in the 1.0 release tarball for basic installtion and usage instructions.</p>
