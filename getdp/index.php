@@ -72,7 +72,7 @@ rm -rf DarwinPorts-1.0.*</pre>
       will ask the password upon installation. This procedure will install a pristine DarwinPorts
       system and, if the optional steps are taken, remove the as of now unnecessary DarwinPorts-1.0
       directory and corresponding tarball. To customize your installation you should read the output
-      of &ldquo;<kbd>./confugure --help | more</kbd>&rdquo; and pass the appropriate options to the
+      of &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and pass the appropriate options to the
       configuration script in the steps detailed above.</p>
 	
 	<p>You will need to adapt your shell's configuration files to find the binaries installed by
