@@ -36,7 +36,7 @@
 	on your host system, completely ready for usage.</p>
 
 	<p>To take advantage of your new installation, you need to adapt your shell's
-	configuration filess to find the binaries installed by DarwinPorts. Please refer
+	configuration files to find the binaries installed by DarwinPorts. Please refer
 	to the README file contained in the dmg for instructions on how to do this.</p>
 
 	<p>Although not strictly necessary, it is still recommended that you synchronize your
@@ -84,7 +84,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 	the above command on a regular basis to keep your installation current.</p>
 
       <p>Alternatively, you can refer to the <tt>README_RELEASE1</tt>
-	file contained in the 1.0 release tarball for basic installtion and usage instructions.</p>
+	file contained in the 1.0 release tarball for basic installation and usage instructions.</p>
 
       <p><a href="/help/">Help</a> is also available should you need it.</p>
 
