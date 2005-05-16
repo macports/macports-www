@@ -16,7 +16,7 @@
 
       <p>Please note that in order to install and run DarwinPorts on Mac OS X, you must
 	have either the Mac OS X Developer Tools (for 10.2.x) or XCode (for
-	10.3.x) installed.</p>
+	10.3.x and 10.4.x) installed.</p>
 
 	  <p>If you want to use DarwinPorts on a platform other than Mac OS X, please be
 	  aware of the following dependencies (we assume that you have basics such as
@@ -85,6 +85,8 @@ rm -rf DarwinPorts-1.0.*</pre>
 
       <p>Alternatively, you can refer to the <tt>README_RELEASE1</tt>
 	file contained in the 1.0 release tarball for basic installation and usage instructions.</p>
+
+	<h5 class="subhdr">Help</h5>
 
       <p><a href="/help/">Help</a> is also available should you need it.</p>
 
