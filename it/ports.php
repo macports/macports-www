@@ -10,7 +10,8 @@
 	</center>
 
 	<p>
-	Questo form permette di cercare il software nel corrente indice dei ports di DarwinPorts.<br />
+	Questo form permette di cercare il software nel corrente indice dei
+	ports di DarwinPorts.<br />
 	<i>Indice aggiornato al: </i>
 	<?
 		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";

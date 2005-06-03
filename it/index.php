@@ -8,34 +8,40 @@
     <div id="content">
       <h2 class="hdr">Introduzione a DarwinPorts</h2>
 
-      <p>L'obiettivo principale del progetto DarwinPorts è di fornire
-	un metodo semplice per l'installazione di vario software open-source
-	su sistemi Darwin, Mac OS X, FreeBSD o Linux.</p>
+      <p>L'obiettivo principale del progetto DarwinPorts è fornire un metodo
+	per semplificare l'installazione di vario software open-source
+	sui sistemi operativi della famiglia Darwin (
+	<a href="http://www.opendarwin.org/"> OpenDarwin</a>,
+	<a href="http://www.apple.com/macosx/">Mac OS X</a> e
+	<a href="http://developer.apple.com/darwin/projects/darwin/">
+	Darwin</a>).</p>
 
-      <p>Attualmente ci sono poche centinaia di <a href="/it/ports/">ports</a>
-	disponibili, ma regolarmente ne vengono aggiunti altri. Puoi tenere 
-	traccia dei ports recentemente aggiunti iscrivendoti alla lista di 
-	discussione <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
-	cvs-darwinports-all</a>.</p>
-	
-      <p>Maggiori informazioni su come ottenere e su come installare 
-	DarwinPorts sono disponibili nella sezione <a href="/it/getdp/">Ottenere 
-	DarwinPorts</a> di questo sito. Inoltre ti raccomandiamo di consultare
-	la <a href="/docs/">documentazione</a> disponibile e se hai domande o 
-	incorri in un problema puoi sempre <a href="/it/help/">richiedere aiuto</a>.</p>
+      <p>Attualmente sono disponibili circa 2500 <a href="/it/ports/">ports</a>
+	funzionanti ed il numero è in costante crescita. Inscrivendoti alla
+	mailing list
+	<a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
+	cvs-darwinports-all</a> potrai tenere traccia dei ports recentemente
+	aggiunti.</p>
 
-      <p>Segnalazioni di bug, richieste di nuove funzionalità e di nuovi 
-	ports devono essere inviate tramite <a href="http://www.opendarwin.org/bugzilla/">
-	Bugzilla</a>.</p>
+      <p>Maggiori informazioni su come ottenere e su come installare
+	DarwinPorts sono presenti alla sezione <a href="/it/getdp/">Ottenere
+	DarwinPorts</a> di questo sito. Inoltre ti invitiamo a consultare la
+	<a href="/docs/">documentazione</a> (attualmente disponibile solo in
+	inglese). Per eventuali problemi puoi sempre <a href="/it/help/">
+	richiedere aiuto</a>.</p>
+
+      <p>Ti ricordiamo che tutte le segnalazioni di bug, le richieste di nuove
+	funzionalità e di nuovi ports devono essere inviate tramite
+	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
 
       <div id="news">
-	<h2 class="hdr">Notizie del progetto</h2>
+	<h2 class="hdr">Ultime notizie</h2>
 
 	<?php
 	  print_headlines();
 	?>
 
-		<p>Puoi anche visualizzare l'<a href="archives.php">archivio delle notizie</a>.</p>
+		<p><a href="archives.php">Archivio delle notizie</a>.</p>
 	
       </div>
     </div>
