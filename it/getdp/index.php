@@ -9,7 +9,7 @@
       <h2 class="hdr">Ottenere DarwinPorts</h2>
 
       <p>La release 1.0 di DarwinPorts è disponibile sia in formato binario
-	<a href="/donwloads/DarwinPorts-1.0.dmg">dmg</a>, contenente un
+	<a href="/downloads/DarwinPorts-1.0.dmg">dmg</a>, contenente un
 	installer pkg, sia in codice sorgente attraverso un pacchetto
 	<a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a> oppure
 	<a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a>. I checksums
