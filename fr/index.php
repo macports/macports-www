@@ -20,7 +20,7 @@
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.</p>
 
 	<p>Pour plus d'information sur l'obtention et l'installation de DarwinPorts,
-	lisez s'il vous plaît la section <a href="/fr/getdp/">Récupérer DarwinPorts</a>
+	lisez s'il vous plaît la section <a href="/fr/getdp/">Obtenir DarwinPorts</a>
 	de ce site. Assurez-vous au préalable d'avoir jeté un oeil sur la
 	<a href="/docs/">documentation</a>; si vous avez des questions ou bien des problèmes
 	liés à l'installation/utilisation, vous pouvez <a href="/fr/help/">demander de l'aide</a>.</p>
@@ -29,7 +29,7 @@
 	nouveaux ports devront être soumis à <a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
 
       <div id="news">
-	<h2 class="hdr">Nouvelles concernant le project</h2>
+	<h2 class="hdr">Nouvelles concernant le projet</h2>
 
 	<?php
 	  print_headlines();
