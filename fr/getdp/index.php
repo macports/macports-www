@@ -37,7 +37,7 @@
 	l'installation soit terminée. Cette procédure installera une copie entièrement fonctionnelle 
 	de DarwinPorts sur votre système, immédiatement utilisable.</p>
 
-	<p>Pour profiter de votre nouveau logiciel, vous devez adpater les fichiers de configuration 
+	<p>Pour profiter de votre nouveau logiciel, vous devez adapter les fichiers de configuration 
 	de votre shell afin de trouver les binaires installés par DarwinPorts. Lisez attentivement 
 	le fichier README.fr inclus dans l'image disque concernant la marche à suivre pour faire 
 	cela.</p>
@@ -56,7 +56,7 @@
 	
 	<p>Si pour une raison ou une autre vous souhaitez installer DarwinPorts grâce aux sources, 
 	toutefois avant de pouvoir installer un port avec DarwinPorts il y a quelques points que vous 
-	devrez accomplir une fois les sources téléchargées. "<kbd>cd</kbd> dans le répertoire où les sources 
+	devrez accomplir une fois les sources téléchargées. "<kbd>cd</kbd>" dans le répertoire où les sources 
 	ont été téléchargées puis décompressez-les avec "<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>" ou 
 	"<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>" suivant le format de l'archive que vous avez choisi. 
 	Une fois les sources décompressées, exécutez les commandes suivantes :</p>
@@ -72,7 +72,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 	<p>Ces commandes doivent être exécutées par un administrateur, dont "<kbd>sudo</kbd>" demandera son 
 	mot de passe pour l'installation. Cette procédure installera DarwinPorts, ainsi les sources et le 
 	répertoire DarwinPorts-1.0 pourront être effacés. Pour personnaliser votre installation vous devrez 
-	consulter le résultat de la commande "<kbd>./configure --help | more </kbd>" puis utiliser les 
+	consulter le résultat de la commande "<kbd>./configure --help | more</kbd>" puis utiliser les 
 	options appropriées.</p>
 
 	<p>Vous devrez adapter vos fichiers de configuration du shell pour trouver les binaires installés par 
@@ -92,7 +92,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 
 	<h5 class="subhdr">Sources CVS</h5>
 
-	<p>Si vous êtes un développeur ou un utilisateur désireux goûter aux joies des versions de développement 
+	<p>Si vous êtes un développeur ou un utilisateur désireux de goûter aux joies des versions de développement 
 	et souhaiter obtenir les dernières fonctions, vous pouvez récupérer les sources de DarwinPorts via CVS.</p>
 
 	<p>Utilisez les commandes suivantes pour récupérer le projet depuis le dépôt CVS d'OpenDarwin :</p>

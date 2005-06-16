@@ -29,7 +29,8 @@
 	des discussions sur l'évolution du projet se passent. C'est également l'endroit
 	idéal pour poser vos questions. Concernant cette liste, veuillez noter qu'à cause 
 	du spam les messages envoyés par des personnes non abonnées à cette liste devront être 
-	approuvés avant d'être diffusés. Pour éviter cela, il est mieux de s'abonner à la liste.</p>
+	approuvés avant d'être diffusés. Pour éviter cela, il est préférable de s'abonner à la 
+	liste.</p>
 
 	<p>Avant de poser votre question vous pouvez vérifier dans les 
 	<a href="http://www.opendarwin.org/pipermail/darwinports/">archives de la liste</a> 
