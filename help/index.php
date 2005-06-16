@@ -44,8 +44,8 @@
 			fairly short.</p>
 
 		<p>Otherwise, archives of the darwinports mailing list are easily browsable at 
-			<a href="http://gmane.org/">Gmane.org</a> as well as through NNTP (news:
-			//news.gmane.org/).</p>
+			<a href="http://gmane.org/">Gmane.org</a> as well as through 
+			<a href="nntp://news.gmane.org/">NNTP</a>.</p>
 
 		<p>When you post a question to the mailing list, please included 
 			any information you think might be relevent to the problem, 

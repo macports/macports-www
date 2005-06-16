@@ -37,10 +37,11 @@
 	si une solution n'a pas déjà été proposée; bien que cela ne soit pas obligatoire, cela 
 	peut vous aider à trouver plus rapidement une solution à votre problème. Nous essayons 
 	d'aider du mieux que nous pouvons mais si la question a déjà été posée, nos réponses 
-	peuvent être très succinctes.
+	peuvent être très succinctes.</p>
 
 	<p>Sinon le site <a href="http://gmane.org/">Gmane.org</a> permet de naviguer très aisément 
-	dans les archives et permet d'y accéder via le protocole NNTP (news://news.gmane.org/).
+	dans les archives et permet d'y accéder via le protocole <a href="nntp://news.gmane.org/">
+	NNTP</a>.</p>
 
 	<p>Lorsque vous posez une question dans la liste de discussions, incluez toute information 
 	qui pourrait aider à trouver une solution, comme le système utilisé, ainsi que sa version 
