@@ -43,6 +43,10 @@
 			possible, but if it's a common question, our answers may be 
 			fairly short.</p>
 
+		<p>Otherwise, archives of the darwinports mailing list are easily browsable at 
+			<a href="http://gmane.org/">Gmane.org</a> as well as through NNTP (news:
+			//news.gmane.org/).</p>
+
 		<p>When you post a question to the mailing list, please included 
 			any information you think might be relevent to the problem, 
 			such as what operating system and version you're using (OS X 
