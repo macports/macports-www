@@ -43,6 +43,10 @@
 	un dovere. Cercheremo il più possibile di aiutarti, ma se le domande
 	sono comuni le nostre risposte potrebbero essere abbastanza brevi.</p>
 
+	<p>Ad ogni modo gli archivi della mailing list sono facilmente
+	accessibili tramite <a href="http://gmane.org/">Gmane.org</a> e anche
+	attraverso <a href="nntp://news.gmane.org/">NNTP</a>.</p>
+
 	<p>Quando invii un messaggio alla mailing list ti invitiamo ad
 	includere ogni informazione che pensi potrebbe essere rilevante ai fini
 	risolutivi del problema, come quale sistema operativo stai usando
@@ -57,10 +61,10 @@
 	canale #opendarwin della <a href="http://freenode.net/">rete IRC
 	freenode</a>.</p>
 	
-	<p>Anche se puoi ricevere aiuto per favore tieni sempre a mente che
-	nessuno è obbligato a rispondere. Quindi, nel caso non ricevessi
-	risposta, non c'è niente di personale; potrai semplicemente porre le
-	tue domande scrivendo alla mailing list
+	<p>Anche se puoi richiedere aiuto, ricorda sempre che nessuno è
+	obbligato a risponderti. Quindi, nel caso non ricevessi risposta, non
+	c'è niente di personale; potrai semplicemente porre le tue domande
+	scrivendo alla mailing list
 	<a href="http://www.opendarwin.org/mailman/listinfo/darwinports">
 	darwinports</a>.</p>
 
