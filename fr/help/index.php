@@ -46,8 +46,9 @@
 	<p>Lorsque vous posez une question dans la liste de discussions, incluez toute information 
 	qui pourrait aider à trouver une solution, comme le système utilisé, ainsi que sa version 
 	(Mac OS X 10.3.2 par exemple), l'existence de logiciels tierce partie installés (dans 
-	/usr/local par exemple) et tout message d'erreurs de DarwinPorts. Il est plus facile de 
-	vous aider avec un maximum d'informations.</p>
+	/usr/local par exemple) et tout message d'erreurs de DarwinPorts (utilisez les options -d 
+	et -v de port(1) pour afficher les informations de déboguage). Il est plus facile de vous 
+	aider une fois ces options utilisées.</p>
 
       <h5 class="subhdr">IRC</h5>
 	

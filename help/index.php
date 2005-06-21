@@ -52,9 +52,9 @@
 			such as what operating system and version you're using (OS X 
 			10.3.2, for example), whether you have any other third party 
 			software installed /usr/local (for example), and any error 
-			messages that DarwinPorts might give.  It's a lot easier for 
-			us to help you if we have too much information than if we 
-			don't have enough.</p>
+			messages that DarwinPorts might give (use the -d and -v port(1)'s 
+			flags to turn on debugging informations). It's a lot easier for 
+			us to help you once these flags uses.</p>
 
 		<h5 class="subhdr">IRC</h5>
 
