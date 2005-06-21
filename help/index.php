@@ -54,7 +54,7 @@
 			software installed /usr/local (for example), and any error 
 			messages that DarwinPorts might give (use the -d and -v port(1)'s 
 			flags to turn on debugging informations). It's a lot easier for 
-			us to help you once these flags uses.</p>
+			us to help you once these flags used.</p>
 
 		<h5 class="subhdr">IRC</h5>
 
