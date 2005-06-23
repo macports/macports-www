@@ -52,8 +52,9 @@
 	risolutivi del problema, come quale sistema operativo stai usando
 	(OS X 10.3.2, per esempio), se hai installato altro software di terze
 	parti nella directory /usr/local e qualsiasi messaggio di errore hai
-	ricevuto da DarwinPorts. Ricordati che più informazioni darai e più
-	sarà semplice per noi aiutarti.</p>
+	ricevuto da DarwinPorts (specificando le flag -d e -v al comando
+	port(1) attiverai le informazioni per il debugging). Ricordati che più
+	informazioni darai e più sarà semplice per noi aiutarti.</p>
 
 	<h5 class="subhdr">IRC</h5>
 
