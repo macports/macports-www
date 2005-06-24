@@ -32,7 +32,10 @@
 
       <p>Ti ricordiamo che tutte le segnalazioni di bug, le richieste di nuove
 	funzionalità e di nuovi ports devono essere inviate tramite
-	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
+	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>. Leggi
+	il paragrafo <a href="docs/ch01s05.html#user_bugs">Bug reports</a>
+	della documentazione per facilitare e migliorare il processo di un
+	bug report.</p>
 
       <div id="news">
 	<h2 class="hdr">Ultime notizie</h2>
