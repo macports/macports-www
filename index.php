@@ -27,7 +27,9 @@
 	href="/help/">get help</a>.</p>
 
       <p>Bug reports, feature requests, and new ports should be submitted to
-	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>.</p>
+	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>. Please consult
+    the <a href="docs/ch01s05.html#user_bugs">Bug report documentation</a>
+    to improve the processing of your bug report(s).</p>
 
       <div id="news">
 	<h2 class="hdr">Project News</h2>
