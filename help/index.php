@@ -58,7 +58,7 @@
 
 		<h5 class="subhdr">IRC</h5>
 
-		<p>For more real-time discussion, the #opendarwin channel on the <a
+		<p>For more real-time discussion, the #darwinports channel on the <a
 			href="http://freenode.net/">freenode IRC network</a> is generally
 			where we hang out.</p>
 	

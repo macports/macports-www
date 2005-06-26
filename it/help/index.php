@@ -59,7 +59,7 @@
 	<h5 class="subhdr">IRC</h5>
 
 	<p>Generalmente per le discussioni in tempo reale siamo in ascolto sul
-	canale #opendarwin della <a href="http://freenode.net/">rete IRC
+	canale #darwinports della <a href="http://freenode.net/">rete IRC
 	freenode</a>.</p>
 	
 	<p>Anche se puoi richiedere aiuto, ricorda sempre che nessuno è

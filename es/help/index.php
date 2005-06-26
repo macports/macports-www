@@ -49,7 +49,7 @@
 
 		<h5 class="subhdr">IRC</h5>
 		
-		<p>Para una discusión más en tiempo real, el canal #opendarwin en la <a href="http://freenode">
+		<p>Para una discusión más en tiempo real, el canal #darwinports en la <a href="http://freenode">
 		red IRC freenode</a> es generalmente donde pasamos el tiempo.</p>
 		
 		<p>Aunque generalemte es de ayuda, por favor mantenga en mente que si entra al

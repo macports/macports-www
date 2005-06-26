@@ -52,7 +52,7 @@
 
       <h5 class="subhdr">IRC</h5>
 	
-	<p>Pour les discussions en temps réel, le canal #opendarwin sur le
+	<p>Pour les discussions en temps réel, le canal #darwinports sur le
 	réseau IRC <a href="http://freenode.net/">Freenode</a> est généralement
 	utilisé.</p>
 
