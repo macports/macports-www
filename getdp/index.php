@@ -55,7 +55,8 @@
 	things you will need to do once you've downloaded the tarball before you can
 	install a port with the DarwinPorts system, namely installing DarwinPorts itself.
 	&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
-	and run &ldquo;<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>&rdquo; or &ldquo;<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>&rdquo;,
+	and run &ldquo;<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.0.tar.bz2">DarwinPorts-1.0.tar.bz2</a></kbd>&rdquo;
+	or &ldquo;<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.0.tar.gz">DarwinPorts-1.0.tar.gz</a></kbd>&rdquo;,
 	depending on whether you downloaded the bz2 tarball or the gz one, respectively.
 	This will unpack the DarwinPorts sources that you will proceed to install. To do
 	so, execute the following:</p>
