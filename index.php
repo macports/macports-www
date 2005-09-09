@@ -31,6 +31,8 @@
     the <a href="docs/ch01s05.html#user_bugs">Bug report documentation</a>
     to improve the processing of your bug report(s).</p>
 
+	<p>The DarwinPorts wiki is available <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">here</a>.</p>
+
       <div id="news">
 	<h2 class="hdr">Project News</h2>
 
