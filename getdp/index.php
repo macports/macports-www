@@ -8,11 +8,17 @@
     <div id="content">
       <h2 class="hdr">Get DarwinPorts</h2>
 
+	 <p>DarwinPorts version 1.1 is available in source form as either a
+	 <a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a>
+	 package or a <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> one.
+	 Checksums for all these are contained
+	 <a href="/downloads/DarwinPorts-1.1.chk.txt">here</a>.</p>
 	 <p>The DarwinPorts 1.0 release is available in binary form as a
-	 <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> disk image, containing a pkg
-	 installer, and in source form as either a <a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a>
-	 package or a <a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a> one.
-	 Checksums for all these are contained <a href="/downloads/DarwinPorts-1.0.chk.txt">here</a>.</p>
+	 <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> disk image, containing a
+	 pkg installer.
+	 </p>
+	 <p>To get a files listing of all available downloads see the
+	 <a href="/downloads/">downloads section</a></p>
 
       <p>Please note that in order to install and run DarwinPorts on Mac OS X, you must
 	have either the Mac OS X Developer Tools (for 10.2.x) or XCode (for
