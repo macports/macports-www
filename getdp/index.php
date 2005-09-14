@@ -61,23 +61,23 @@
 	things you will need to do once you've downloaded the tarball before you can
 	install a port with the DarwinPorts system, namely installing DarwinPorts itself.
 	&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
-	and run &ldquo;<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.0.tar.bz2">DarwinPorts-1.0.tar.bz2</a></kbd>&rdquo;
-	or &ldquo;<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.0.tar.gz">DarwinPorts-1.0.tar.gz</a></kbd>&rdquo;,
+	and run &ldquo;<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.1.tar.bz2">DarwinPorts-1.1.tar.bz2</a></kbd>&rdquo;
+	or &ldquo;<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.1.tar.gz">DarwinPorts-1.1.tar.gz</a></kbd>&rdquo;,
 	depending on whether you downloaded the bz2 tarball or the gz one, respectively.
 	This will unpack the DarwinPorts sources that you will proceed to install. To do
 	so, execute the following:</p>
 
-      <pre>cd DarwinPorts-1.0
+      <pre>cd DarwinPorts-1.1
 ./configure && make && sudo make install</pre>
 
 	<p>Optionally:</p>
 
 <pre>cd ../
-rm -rf DarwinPorts-1.0.*</pre>
+rm -rf DarwinPorts-1.1.*</pre>
 
       <p>These steps need to be perfomed from an administrator account, for which &ldquo;<kbd>sudo</kbd>&rdquo;
       will ask the password upon installation. This procedure will install a pristine DarwinPorts
-      system and, if the optional steps are taken, remove the as of now unnecessary DarwinPorts-1.0
+      system and, if the optional steps are taken, remove the as of now unnecessary DarwinPorts-1.1
       directory and corresponding tarball. To customize your installation you should read the output
       of &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and pass the appropriate options to the
       configuration script in the steps detailed above.</p>
@@ -91,7 +91,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 	the above command on a regular basis to keep your installation current.</p>
 
       <p>Alternatively, you can refer to the <tt>README_RELEASE1</tt>
-	file contained in the 1.0 release tarball for basic installation and usage instructions.</p>
+	file contained in the 1.1 release tarball for basic installation and usage instructions.</p>
 
 	<h5 class="subhdr">Help</h5>
 
