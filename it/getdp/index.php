@@ -8,13 +8,18 @@
     <div id="content">
       <h2 class="hdr">Ottenere DarwinPorts</h2>
 
-      <p>La release 1.0 di DarwinPorts è disponibile sia in formato binario
-	<a href="/downloads/DarwinPorts-1.0.dmg">dmg</a>, contenente un
-	installer pkg, sia in codice sorgente attraverso un pacchetto
-	<a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a> oppure
-	<a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a>. I checksums
-	dei files sopra elencati sono contenuti in
+      <p>DarwinPorts 1.1 è disponibile in codice sorgente tramite i formati
+	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a>
+	e <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a>. I
+	checksums dei files sopra elencati sono contenuti in
 	<a href="/downloads/DarwinPorts-1.0.chk.txt">questo file</a>.</p>
+
+      <p>DarwinPorts 1.0 è disponibile in codice binario tramite file
+	<a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> (Disk Image),
+	contenente un installer pkg</p>
+
+      <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
+	lista completa di tutti i files scaricabili.</p>
 
       <p>Ti ricordiamo che, qualora volessi installare ed eseguire DarwinPorts
 	su Mac OS X, devi assicurarti prima di tutto di aver già installato i
@@ -62,25 +67,27 @@
       <p>Anche l'installazione da sorgenti richiede pochi e piccoli passi.
 	Una volta scaricato il tarball, da shell, posizionati nella directory
 	contentente il pacchetto ed esegui
-	“<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>” se hai scelto il tarball
-	bz2, oppure “<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>” se invece hai
-	scelto il tarball gz. Quest'ultimo comando estrarrà i sorgenti di
-	DarwinPorts in una nuova subdirectory. Per compilare ed installare
-	DarwinPorts basta eseguire i seguenti comandi:</p>
+	“<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.1.tar.bz2">
+	DarwinPorts-1.1.tar.bz2</a></kbd>” se hai scelto il tarball bz2, oppure
+	“<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.1.tar.gz">
+	DarwinPorts-1.1.tar.gz</a></kbd>” se invece hai scelto il tarball gz.
+	Quest'ultimo comando estrarrà i sorgenti di DarwinPorts in una nuova
+	subdirectory. Per compilare ed installare DarwinPorts basta eseguire i
+	seguenti comandi:</p>
 
-<pre>cd DarwinPorts-1.0
+<pre>cd DarwinPorts-1.1
 ./configure && make && sudo make install</pre>
 
       <p>Comandi opzionali:</p>
 
 <pre>cd ../
-rm -rf DarwinPorts-1.0.*</pre>
+rm -rf DarwinPorts-1.1.*</pre>
 
       <p>Per effettuare l'installazione sono necessari i privilegi di
 	amministratore, infatti “<kbd>sudo</kbd>” ti chiederà la password
 	per completare il processo. Questa procedura installerà il sistema
 	DarwinPorts e, eseguendo anche i comandi opzionali, rimuoverà tutti
-	gli elementi non più necessari, ossia la directory DarwinPorts-1.0 ed
+	gli elementi non più necessari, ossia la directory DarwinPorts-1.1 ed
 	il tarball corrispondente. Leggendo l'output di
 	“<kbd>./configure --help | more</kbd>” puoi personalizzare
 	l'installazione e passare le opzioni appropriate allo script di
@@ -100,7 +107,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 	installazione.</p>
 
       <p>Alternativamente puoi fare riferimento al file
-	<tt>README_RELEASE1.it</tt> presente nel tarball di release 1.0 per
+	<tt>README_RELEASE1.it</tt> presente nel tarball di release 1.1 per
 	tutto ciò che riguarda l'installazione base e le istruzioni all'uso.</p>
 
       <h5 class="subhdr">Aiuto</h5>

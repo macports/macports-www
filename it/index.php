@@ -37,6 +37,9 @@
 	della documentazione per facilitare e migliorare il processo di un
 	bug report.</p>
 
+      <p>Il wiki di DarwinPorts è disponibile
+	<a href="http://wiki.opendarwin.org/index.php/DarwinPorts">qui</a>.</p>
+
       <div id="news">
 	<h2 class="hdr">Ultime notizie</h2>
 
