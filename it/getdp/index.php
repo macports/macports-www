@@ -12,10 +12,10 @@
 	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a>
 	e <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a>. I
 	checksums dei files sopra elencati sono contenuti in
-	<a href="/downloads/DarwinPorts-1.0.chk.txt">questo file</a>.</p>
+	<a href="/downloads/DarwinPorts-1.1.chk.txt">questo file</a>.</p>
 
       <p>I binari di DarwinPorts 1.1 invece sono disponibili attraverso il
-	formato <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> (Disk Image),
+	formato <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> (Disk Image),
 	contenente un installer pkg.</p>
 
       <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
