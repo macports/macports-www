@@ -14,9 +14,9 @@
 	checksums dei files sopra elencati sono contenuti in
 	<a href="/downloads/DarwinPorts-1.0.chk.txt">questo file</a>.</p>
 
-      <p>DarwinPorts 1.0 è disponibile in codice binario tramite file
-	<a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> (Disk Image),
-	contenente un installer pkg</p>
+      <p>I binari di DarwinPorts 1.1 invece sono disponibili attraverso il
+	formato <a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> (Disk Image),
+	contenente un installer pkg.</p>
 
       <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
 	lista completa di tutti i files scaricabili.</p>
@@ -37,7 +37,7 @@
 
       <p>Il modo più semplice per installare DarwinPorts su piattaforma Mac OS
 	X è scaricare e montare il file
-	<a href="/downloads/DarwinPorts-1.0.dmg">dmg</a> e successivamente
+	<a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> e successivamente
 	lanciare l'applicazione Installer.app contenuta nell'immagine, seguendo
 	le istruzioni che appariranno sullo schermo. Al termine di questa
 	procedura DarwinPorts sarà perfettamente installato nel sistema e
