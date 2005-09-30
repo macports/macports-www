@@ -18,8 +18,8 @@
 
       <p>Attualmente sono disponibili circa 2500 <a href="/it/ports/">ports</a>
 	funzionanti ed il numero è in costante crescita. Inscrivendoti alla
-	mailing list
-	<a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
+	mailing list <a 
+	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
 	cvs-darwinports-all</a> potrai tenere traccia dei ports recentemente
 	aggiunti.</p>
 
@@ -28,7 +28,12 @@
 	DarwinPorts</a> di questo sito. Inoltre ti invitiamo a consultare la
 	<a href="/docs/">documentazione</a> (attualmente disponibile solo in
 	inglese). Per eventuali problemi puoi sempre <a href="/it/help/">
-	richiedere aiuto</a>.</p>
+	richiedere aiuto</a>. Il nuovo
+	<a href="http://wiki.opendarwin.org/index.php/DarwinPorts">DarwinPorts
+	Wiki</a> è un'ottima risorsa di aiuto per trovare risposta alle
+	domande a carattere generale e non solo, in particolar modo grazie alle
+	<a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">FAQ</a>
+	in fase di sviluppo.</p>
 
       <p>Ti ricordiamo che tutte le segnalazioni di bug, le richieste di nuove
 	funzionalità e di nuovi ports devono essere inviate tramite
@@ -36,9 +41,6 @@
 	il paragrafo <a href="docs/ch01s05.html#user_bugs">Bug reports</a>
 	della documentazione per facilitare e migliorare il processo di un
 	bug report.</p>
-
-      <p>Il wiki di DarwinPorts è disponibile
-	<a href="http://wiki.opendarwin.org/index.php/DarwinPorts">qui</a>.</p>
 
       <div id="news">
 	<h2 class="hdr">Ultime notizie</h2>

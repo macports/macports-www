@@ -20,7 +20,12 @@
 	<a href="http://darwinports.opendarwin.org/docs/pt01.html">
 	Parte 1: Utilizzo di DarwinPorts</a>.</p>
 
-	<p>A breve torneranno in linea anche le FAQ di DarwinPorts.</p>
+	<p>Le <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">
+	DarwinPorts FAQ</a> sono tornate online e sono in continuo sviluppo,
+	infatti ora sono parte integrante del nostro
+	<a href="http://wiki.opendarwin.org/index.php/DarwinPorts">Wiki</a>,
+	dove chiunque può registrarsi liberamente e contribuire alla stesura
+	di articoli.</p>
 
 	<p>Tutta la nostra documentazione è in continua evoluzione, di
 	conseguenza se leggendo trovi un errore o hai dei dubbi circa alcune
