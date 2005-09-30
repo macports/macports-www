@@ -8,12 +8,17 @@
     <div id="content">
       <h2 class="hdr">Obtenir DarwinPorts</h2>
 
-	<p>La version 1.0 de DarwinPorts est disponible et distribuée sous forme de binaire sur une 
-	<a href="/downloads/DarwinPorts-1.0.dmg">image disque</a> contenant un installateur (.pkg). 
-	Les sources sont également disponibles, soit en <a href="/downloads/DarwinPorts-1.0.tar.bz2">tar.bz2</a>, 
-	soit en  <a href="/downloads/DarwinPorts-1.0.tar.gz">tar.gz</a>.
-	Les sommes de contrôles pour tous ces fichiers sont disponibles 
-	<a href="/downloads/DarwinPorts-1.0.chk.txt">ici</a>.</p>
+	<p>Les sources de la version 1.1 de DarwinPorts sont disponibles en  
+	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a> ou en 
+	<a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a>.
+	Les sommes de contrôle pour ces archives sont disponibles 
+	<a href="/downloads/DarwinPorts-1.1.chk.txt">ici</a>.</p>
+
+	<p>La version 1.1 de DarwinPorts est disponible et distribuée sous forme de binaire sur une 
+	<a href="/downloads/DarwinPorts-1.0.dmg">image disque</a> contenant un installateur (.pkg).</p>
+
+	<p>Pour voir la liste de tous les téléchargements disponibles, regardez la 
+	<a href="/downloads/">section</a> des téléchargements.</p>
 	
 	<p>Veuillez noter que pour installer et utiliser DarwinPorts sur Mac OS X, vous devez avoir 
 	installé les outils de développement de Mac OS X (Developer Tools pour 10.2.x) ou Xcode (pour 10.3.x et
@@ -32,7 +37,7 @@
 	<h5 class="subhdr">L'installateur pour Mac OS X (.pkg)</h5>
 
 	<p>Le moyen le plus simple pour installer DarwinPorts sur Mac OS X est de télécharger 
-	l'<a href="/downloads/DarwinPorts-1.0.dmg">image disque</a> et de lancer "Installer.app" 
+	l'<a href="/downloads/DarwinPorts-1.1.dmg">image disque</a> et de lancer "Installer.app" 
 	en double-cliquant sur le paquet (.pkg) et de suivre les instructions jusqu'à ce que 
 	l'installation soit terminée. Cette procédure installera une copie entièrement fonctionnelle 
 	de DarwinPorts sur votre système, immédiatement utilisable.</p>
@@ -57,21 +62,22 @@
 	<p>Si pour une raison ou une autre vous souhaitez installer DarwinPorts grâce aux sources, 
 	toutefois avant de pouvoir installer un port avec DarwinPorts il y a quelques points que vous 
 	devrez accomplir une fois les sources téléchargées. "<kbd>cd</kbd>" dans le répertoire où les sources 
-	ont été téléchargées puis décompressez-les avec "<kbd>tar xjvf DarwinPorts-1.0.tar.bz2</kbd>" ou 
-	"<kbd>tar xzvf DarwinPorts-1.0.tar.gz</kbd>" suivant le format de l'archive que vous avez choisi. 
+	ont été téléchargées puis décompressez-les avec "<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.1.tar.bz2">
+	DarwinPorts-1.1.tar.bz2</a></kbd>" ou "<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.1.tar.gz">DarwinPorts
+	-1.1.tar.gz</a></kbd>" suivant le format de l'archive que vous avez choisi. 
 	Une fois les sources décompressées, exécutez les commandes suivantes :</p>
 
-      <pre>cd DarwinPorts-1.0
+      <pre>cd DarwinPorts-1.1
 ./configure && make && sudo make install</pre>
 
 	<p>Puis optionnellement :</p>
 
 	<pre>cd ../
-rm -rf DarwinPorts-1.0.*</pre>
+rm -rf DarwinPorts-1.1.*</pre>
 	
 	<p>Ces commandes doivent être exécutées par un administrateur, dont "<kbd>sudo</kbd>" demandera son 
 	mot de passe pour l'installation. Cette procédure installera DarwinPorts, ainsi les sources et le 
-	répertoire DarwinPorts-1.0 pourront être effacés. Pour personnaliser votre installation vous devrez 
+	répertoire DarwinPorts-1.1 pourront être effacés. Pour personnaliser votre installation vous devrez 
 	consulter le résultat de la commande "<kbd>./configure --help | more</kbd>" puis utiliser les 
 	options appropriées.</p>
 
@@ -84,7 +90,7 @@ rm -rf DarwinPorts-1.0.*</pre>
 	recommandé d'exécuter régulièrement la commande précédente afin de s'assurer d'être bien à jour.</p>
 
 	<p>De plus, vous pouvez lire le fichier <tt>README_RELEASE1.fr</tt> disponible dans l'archive de 
-	la version 1.0 concernant une installation basique et des instructions d'utilisation.</p>
+	la version 1.1 concernant une installation basique et des instructions d'utilisation.</p>
 
 	<h5 class="subhdr">Aide</h5>
 

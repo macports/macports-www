@@ -30,6 +30,9 @@
 	de ce site. Assurez-vous au préalable d'avoir consulté la <a href="/docs/">
 	documentation</a>; si vous avez des questions ou bien des problèmes	liés à
 	l'installation/utilisation, vous pouvez <a href="/fr/help/">demander de l'aide</a>.
+	Le <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">wiki de DarwinPorts</a> 
+	est généralement d'une bonne aide ainsi que la <a href="http://wiki.opendarwin.org/index.php/
+	DarwinPorts:FAQ">FAQ</a>.
 	</p>
 
     <p>
