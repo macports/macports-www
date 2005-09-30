@@ -22,16 +22,16 @@
 	
       <p>For more information on obtaining and installing DarwinPorts,
 	please see the <a href="/getdp/">Get DarwinPorts</a> section of the
-	site.  Also be sure to check out <a href="/docs/">documentation</a>,
-	and if you have questions or run into problems, you can <a
-	href="/help/">get help</a>.</p>
+	site.  Also be sure to check out the <a href="/docs/">documentation</a>,
+	and if you have questions or run into problems, you can get help at our <a
+	href="/help/">help section</a>. The <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">DarwinPorts Wiki</a>
+	is also a good resource for general and miscellaneous help, specially the 
+	ongoing <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">FAQ</a> effort.</p>
 
       <p>Bug reports, feature requests, and new ports should be submitted to
 	<a href="http://www.opendarwin.org/bugzilla/">Bugzilla</a>. Please consult
     the <a href="docs/ch01s05.html#user_bugs">Bug report documentation</a>
     to improve the processing of your bug report(s).</p>
-
-	<p>The DarwinPorts wiki is available <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">here</a>.</p>
 
       <div id="news">
 	<h2 class="hdr">Project News</h2>

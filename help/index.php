@@ -18,7 +18,10 @@
 			<a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 
 			1: Using DarwinPorts</a>.</p>
 
-		<p>The DarwinPorts FAQ will reappear soon.</p>
+		<p>The <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">DarwinPorts FAQ</a>
+		is now an ongoing, user driven effort part of our <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">Wiki</a>,
+		where anyone with a Wiki account and DarwinPorts knowledge can contribute with
+		information to help others.</p>
 
 		<p>All of our documentation is a work in progress, so if you spot 
 			an error, or have a quesiton about some part of the document, 
@@ -54,7 +57,7 @@
 			software installed /usr/local (for example), and any error 
 			messages that DarwinPorts might give (use the -d and -v port(1)'s 
 			flags to turn on debugging informations). It's a lot easier for 
-			us to help you once these flags used.</p>
+			us to help you once these flags are used.</p>
 
 		<h5 class="subhdr">IRC</h5>
 
