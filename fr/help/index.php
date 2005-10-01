@@ -16,7 +16,10 @@
 	section dédiée pour les utilisateurs de DarwinPorts,
 	<a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 1: Using DarwinPorts</a>.</p>
 
-	<p>La FAQ de DarwinPorts sera bientôt de nouveau disponible.</p>
+	<p>La <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">FAQ</a> de DarwinPorts est maintenant 
+	en ligne, grâce à l'effort procuré par les utilisateurs du <a href="http://wiki.opendarwin.org/index.php/
+	DarwinPorts">Wiki</a>. Tout le monde ayant un compte Wiki et la connaissance nécessaire peut contribuer à 
+	informer les autres utilisateurs.</p>
 
 	<p>La documentation du projet évolue constament, donc si vous apercevez une erreur
 	quelconque, ou bien si vous avez des questions à propos de celle-ci, informez-nous !
