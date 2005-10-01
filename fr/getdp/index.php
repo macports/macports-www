@@ -11,7 +11,7 @@
 	<p>La version 1.1 de DarwinPorts est disponible sous forme d'archive 
 	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a> ou	
 	<a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> pour les sources, ou sous forme d'
-	<a href="/downloads/DarwinPorts-1.0.dmg">image disque</a> contenant un installateur (.pkg).	Les sommes 
+	<a href="/downloads/DarwinPorts-1.1.dmg">image disque</a> contenant un installateur (.pkg).	Les sommes 
 	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-1.1.chk.txt">ici</a>.</p>
 
 	<p>Pour voir la liste de tous les fichiers disponibles, regardez la 
