@@ -16,7 +16,7 @@
 	<a href="http://developer.apple.com/darwin/projects/darwin/">
 	Darwin</a>).</p>
 
-      <p>Attualmente sono disponibili circa 2500 <a href="/it/ports/">ports</a>
+      <p>Attualmente sono disponibili circa 2800 <a href="/it/ports/">ports</a>
 	funzionanti ed il numero è in costante crescita. Inscrivendoti alla
 	mailing list <a 
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">

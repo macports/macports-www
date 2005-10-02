@@ -8,15 +8,14 @@
     <div id="content">
       <h2 class="hdr">Ottenere DarwinPorts</h2>
 
-      <p>DarwinPorts 1.1 è disponibile in codice sorgente tramite i formati
+      <p>DarwinPorts 1.1 è disponibile sia in codice sorgente sia in binario
+	rispettivamente tramite gli archivi
 	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a>
-	e <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a>. I
-	checksums dei files sopra elencati sono contenuti in
+	o <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> e attraverso
+	il formato <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> 
+	(Disk Image), contenente un installer pkg grafico. I checksums dei 
+	files sopra elencati sono contenuti in
 	<a href="/downloads/DarwinPorts-1.1.chk.txt">questo file</a>.</p>
-
-      <p>I binari di DarwinPorts 1.1 invece sono disponibili attraverso il
-	formato <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> (Disk Image),
-	contenente un installer pkg.</p>
 
       <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
 	lista completa di tutti i files scaricabili.</p>
