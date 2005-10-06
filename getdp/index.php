@@ -13,7 +13,10 @@
 	 package or a <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> one,
 	 and in binary form as a <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> disk
 	 image, containing a pkg installer. Checksums for all these are contained
-	 <a href="/downloads/DarwinPorts-1.1.chk.txt">here</a>.</p>
+	 <a href="/downloads/DarwinPorts-1.1.chk.txt">here</a>. The dmg disk-image
+	 currently is only available for Mac OS X 10.4/ppc and probably will not
+	 work on other systems - please install from source.
+	 </p>
 
 	 <p>To get a files listing of all available downloads checkout the
 	 <a href="/downloads/">downloads section</a></p>
