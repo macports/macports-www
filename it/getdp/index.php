@@ -14,8 +14,11 @@
 	o <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> e attraverso
 	il formato <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> 
 	(Disk Image), contenente un installer pkg grafico. I checksums dei 
-	files sopra elencati sono contenuti in
-	<a href="/downloads/DarwinPorts-1.1.chk.txt">questo file</a>.</p>
+	files sopra elencati sono contenuti in 
+	<a href="/downloads/DarwinPorts-1.1.chk.txt">questo file</a>.
+	Attualmente il disk-image è disponibile solo per Mac OS X 10.4/ppc e
+	potrebbe non funzionare correttamente in altre versioni; si consiglia
+	perciò l'installazione da sorgenti.</p>
 
       <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
 	lista completa di tutti i files scaricabili.</p>
