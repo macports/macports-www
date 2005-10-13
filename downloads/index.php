@@ -17,7 +17,7 @@ while ($fichier = readdir ($dossier)) {
 			$tableau = explode (".", $fichier);
 			$nb_element_1 = count ($tableau) -1;
 			if ($tableau[$nb_element_1] != "php") {
-				echo '<a href="./download.php?file='.$fichier.'">'.$fichier.'</a><br />';
+				echo '<a href="'.$fichier.'">'.$fichier.'</a><br />';
 			}
 		}
 }
