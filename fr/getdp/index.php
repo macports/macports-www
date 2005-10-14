@@ -12,10 +12,12 @@
 	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a> ou	
 	<a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> pour les sources, ou sous forme d'
 	<a href="/downloads/DarwinPorts-1.1.dmg">image disque</a> contenant un installateur (.pkg).	Les sommes 
-	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-1.1.chk.txt">ici</a>.</p>
+	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-1.1.chk.txt">ici</a>. L'image disque 
+	n'est actuellement disponible que pour Mac OS X 10.4/ppc et peut ne pas s'installer sur d'autres versions de Mac OS X.
+	Cependant, vous pouvez installer DarwinPorts depuis les sources.</p>
 
 	<p>Pour voir la liste de tous les fichiers disponibles, regardez la 
-	<a href="/downloads/">section</a> des téléchargements.</p>
+	<a href="/fr/downloads/">liste</a> des téléchargements.</p>
 
 	<p>Veuillez noter que pour installer et utiliser DarwinPorts sur Mac OS X, vous devez avoir 
 	installé les outils de développement de Mac OS X (Developer Tools pour 10.2.x) ou Xcode (pour 10.3.x et
