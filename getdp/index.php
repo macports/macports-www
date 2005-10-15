@@ -13,9 +13,9 @@
 	 package or a <a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> one,
 	 and in binary form as a <a href="/downloads/DarwinPorts-1.1.dmg">dmg</a> disk
 	 image, containing a pkg installer. Checksums for all these are contained
-	 <a href="/downloads/DarwinPorts-1.1.chk.txt">here</a>. The dmg disk-image
-	 currently is only available for Mac OS X 10.4/ppc and probably will not
-	 work on other systems - please install from source.
+	 <a href="/downloads/DarwinPorts-1.1.chk.txt">here</a>. The dmg disk image is
+	 currently available only for Mac OS X 10.4/ppc and probably will not
+	 work on other systems - please install from source in such cases.
 	 </p>
 
 	 <p>To get a files listing of all available downloads checkout the
@@ -113,7 +113,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
        <kbd>return</kbd> on your keyboard&mdash;the password is empty.</p>
 		    
 	<p>If you do not want to bother with fetching from CVS, you can download
-	a nightly updated <a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">
+	a nightly updated <a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">
 	CVS-snapshot</a>. Once extracted, you can keep it up to date with the usual
 	&ldquo;<kbd>cvs update</kbd>&rdquo; commands.</p>
 
