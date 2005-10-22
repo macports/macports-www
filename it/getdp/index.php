@@ -132,7 +132,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 
       <p>Se non vuoi prelevare i files dal CVS puoi procedere con il download
 	di una
-	<a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">
+	<a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">
 	CVS-snapshot</a> (istantanea del CVS di questa notte). Una volta
 	estratto il tutto puoi mantenerlo aggiornato tramite l'usuale
 	comando “<kbd>cvs update</kbd>”.</p>
