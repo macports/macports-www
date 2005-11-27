@@ -13,7 +13,7 @@
 $dossier = opendir ("./");
 
 while ($fichier = readdir ($dossier)) {
-	if ($fichier != "." && $fichier != "..") {
+	if (!is_dir('./'.$fichier)) {
 			$tableau = explode (".", $fichier);
 			$nb_element_1 = count ($tableau) -1;
 			if ($tableau[$nb_element_1] != "php") {
