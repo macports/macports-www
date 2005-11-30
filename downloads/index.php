@@ -13,9 +13,9 @@
 $chemin=".";
 $rep=opendir($chemin);
 chdir($chemin);
-while ($file = readdir($rep)) {
-	if($file != '..' && $file !='.' && $file !='index.php'){
-		if (!is_dir($file)){
+while($file = readdir($rep)) {
+	if($file != '..' && $file !='.' && (!eregi('php$', $file)) {
+		if(!is_dir($file)) {
 			echo "<a href=\"/downloads/$file\">$file</a>";
 			echo "<br>";
 		}
