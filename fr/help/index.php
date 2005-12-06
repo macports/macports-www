@@ -12,9 +12,9 @@
 
 		<h5 class="subhdr">Documentation</h5>
 
-	<p>Le <a href="http://darwinports.opendarwin.org/docs">Guide DarwinPorts</a> contient une 
+	<p>Le <a href="http://www.darwinports.org/docs">Guide DarwinPorts</a> contient une 
 	section dédiée pour les utilisateurs de DarwinPorts,
-	<a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 1: Using DarwinPorts</a>.</p>
+	<a href="http://www.darwinports.org/docs/pt01.html">Part 1: Using DarwinPorts</a>.</p>
 
 	<p>La <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">FAQ</a> de DarwinPorts est maintenant 
 	en ligne, grâce à l'effort procuré par les utilisateurs du <a href="http://wiki.opendarwin.org/index.php/
