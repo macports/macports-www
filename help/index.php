@@ -13,9 +13,9 @@
 	  
 		<h5 class="subhdr">Documentation</h5>
 
-		<p>The <a href="http://darwinports.opendarwin.org/docs">DarwinPorts 
+		<p>The <a href="http://www.darwinports.org/docs">DarwinPorts 
 			Guide</a> has a section for DarwinPorts users, 
-			<a href="http://darwinports.opendarwin.org/docs/pt01.html">Part 
+			<a href="http://www.darwinports.org/docs/pt01.html">Part 
 			1: Using DarwinPorts</a>.</p>
 
 		<p>The <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">DarwinPorts FAQ</a>
