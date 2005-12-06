@@ -1,6 +1,6 @@
 <?php
 
-# $Id: common.inc,v 1.2 2004/10/27 05:28:17 wbb4 Exp $
+# $Id: common.inc,v 1.3 2005/12/06 18:25:03 mww Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -19,7 +19,7 @@ function print_header($title, $encoding) {
     <meta name="copyright" content="2003, OpenDarwin" />
     <meta name="robots" content="all" />
     <link rel="stylesheet" type="text/css" href="/dp.css" />
-    <link rel="alternate" type="application/rss+xml" href="http://darwinports.opendarwin.org/dp.xml" />
+    <link rel="alternate" type="application/rss+xml" href="http://www.darwinports.org/dp_news.xml" />
   </head>
 
   <body>
@@ -56,7 +56,7 @@ function check_referer() {
 	  
 		<p><i>darwinports.com</i> <b>is not the official DarwinPorts Web Site</b>, nor is it a mirror of the <i>Official DarwinPorts Web Site</i>.  There is <b>no relationship</b> between the <i>DarwinPorts Project</i> and <i>darwinports.com</i>.</p>
 
-		<p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not maintained by the <i>DarwinPorts Project</i>.  For the most accurate information about DarwinPorts, please bookmark this site, <a href="http://darwinports.opendarwin.org">http://darwinports.opendarwin.org</a>.</p>
+		<p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not maintained by the <i>DarwinPorts Project</i>.  For the most accurate information about DarwinPorts, please bookmark this site, <a href="http://www.darwinports.org">http://www.darwinports.org</a>.</p>
 	</div>
 
 <?php
