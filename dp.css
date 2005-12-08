@@ -1,5 +1,5 @@
 /*
-  $Id: dp.css,v 1.4 2004/10/27 05:28:17 wbb4 Exp $
+  $Id: dp.css,v 1.5 2005/12/08 20:35:07 matt Exp $
 */
 
 * {
@@ -191,13 +191,13 @@ pre {
 	width: 692px;
 	background: #fff;
 	border: 1px solid #bbb;
-	text-align: left;
 	font-size: 10px;
 	padding: 5px;
+	text-align: right;
 }
 
-.copyright {
-	float: right;
+.languages {
+	float: left;
 }
 
 .hdr {
