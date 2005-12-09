@@ -15,7 +15,7 @@ $portname = basename(dirname($_SERVER['PATH_INFO']));
 <?php
 
 //	Read the file as an array of lines
-$target	= "${DOCUMENT_ROOT}/..${_SERVER['PATH_INFO']}";
+$target	= "${DOCUMENT_ROOT}${_SERVER['PATH_INFO']}";
 $lines = @file($target);
 if ($lines)
 {
