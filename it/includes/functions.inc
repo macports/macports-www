@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.2 2004/12/23 23:36:32 matt Exp $
+# $Id: functions.inc,v 1.3 2005/12/09 15:20:31 riccardo Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -37,7 +37,7 @@ function create_rss() {
 
   $rss .= "  <channel>\n";
   $rss .= "    <title>DarwinPorts Project News</title>\n";
-  $rss .= "    <link>http://darwinports.opendarwin.org/</link>\n";
+  $rss .= "    <link>http://www.darwinports.org/</link>\n";
   $rss .= "    <description>DarwinPorts Project News</description>\n";
   $rss .= "    <dc:language>en-us</dc:language>\n";
   $rss .= "    <dc:creator>Jim Mock (mij@opendarwin.org)</dc:creator>\n";
@@ -49,7 +49,7 @@ function create_rss() {
     while($row = mysql_fetch_object($result)) {
       $rss .= "    <item>\n";
       $rss .= "      <title>$row->title</title>\n";
-      $rss .= "      <link>http://darwinports.opendarwin.org/archives.php?id=$row->id</link>\n";
+      $rss .= "      <link>http://www.darwinports.org/archives.php?id=$row->id</link>\n";
 
       $desc_query = "SELECT SUBSTRING_INDEX(news, ' ', 26) FROM headlines WHERE id=$row->id";
       $desc_result = mysql_query($desc_query);
@@ -58,7 +58,7 @@ function create_rss() {
       $description = $desc_row[0];
 
       $rss .= "      <description><![CDATA[$description...</p>]]></description>\n";
-      $rss .= "      <guid isPermaLink=\"true\">http://darwinports.opendarwin.org/archives.php?id=$row->id</guid>\n";
+      $rss .= "      <guid isPermaLink=\"true\">http://www.darwinports.org/archives.php?id=$row->id</guid>\n";
       $rss .= "      <content:encoded><![CDATA[$row->news]]></content:encoded>\n";
       $rss .= "    </item>\n";
     }

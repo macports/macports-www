@@ -1,6 +1,6 @@
 <?php
 
-# $Id: common.inc,v 1.1 2004/10/17 22:47:31 matt Exp $
+# $Id: common.inc,v 1.2 2005/12/09 15:20:30 riccardo Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -19,7 +19,7 @@ function print_header($title, $encoding) {
     <meta name="copyright" content="2003, OpenDarwin" />
     <meta name="robots" content="all" />
     <link rel="stylesheet" type="text/css" href="/dp.css" />
-    <link rel="alternate" type="application/rss+xml" href="http://darwinports.opendarwin.org/dp.xml" />
+    <link rel="alternate" type="application/rss+xml" href="http://www.darwinports.org/dp_news.xml" />
   </head>
 
   <body>
