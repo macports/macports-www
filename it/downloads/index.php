@@ -10,18 +10,18 @@
 		<h2 class="hdr">Downloads disponibili</h2>
 		<p>
 <?php
-$dossier = opendir ("$DOCUMENT_ROOT/downloads");
-
-while ($fichier = readdir ($dossier)) {
-	if ($fichier != "." && $fichier != "..") {
-			$tableau = explode (".", $fichier);
-			$nb_element_1 = count ($tableau) -1;
-			if ($tableau[$nb_element_1] != "php") {
-				echo '<a href="/downloads/'.$fichier.'">'.$fichier.'</a><br />';
-			}
+$chemin=".";
+$rep=opendir($chemin);
+chdir($chemin);
+while($file = readdir($rep)) {
+	if($file != '..' && $file !='.' && (!eregi('php$', $file))) {
+		if(!is_dir($file)) {
+			echo "<a href=\"/downloads/$file\">$file</a>";
+			echo "<br>";
 		}
+	}
 }
-closedir ($dossier);
+closedir($rep);
 ?>
 		</p>
     </div>
