@@ -108,7 +108,7 @@
 <?		
 			while( $row = mysql_fetch_assoc($result) ) {
 ?>
-	<dt><b><a href="http://darwinports.opendarwin.org/darwinports/dports/<?= $row['path']; ?>/Portfile"><?= $row['name']; ?></a></b> <?= $row['version']; ?></dt>
+	<dt><b><a href="http://www.darwinports.org/darwinports/dports/<?= $row['path']; ?>/Portfile"><?= $row['name']; ?></a></b> <?= $row['version']; ?></dt>
 	<dd>
 	<?= $row['description']; ?><br />
 	<?
