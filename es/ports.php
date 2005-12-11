@@ -77,6 +77,9 @@
 		if ($by == "name") {
 			$query = $query . " AND p.name LIKE '%" . addslashes($substr) . "%'";
 		}
+		if ($by == "library") {
+			$query = $query . " AND p.name='" . addslashes($substr) . "'";
+		}
 		if ($by == "desc") {
 			$query = $query . " AND p.description LIKE '%" . addslashes($substr) . "%'";
 		}
@@ -173,9 +176,9 @@
 <?
 					while ( $nrow = mysql_fetch_array($nresult) ) {
 						// lib:libpng.3:libpng -> libpng
-						$library = eregi_replace("^[^:]*:[^:]*:", "", $nrow[0]);
+						$library = eregi_replace("^([^:]*:[^:]*:|[^:]*:)", "", $nrow[0]);
 					?>
-						<a href="<?= $PHP_SELF; ?>?by=name&substr=<?= $library; ?>"><?= $library; ?></a>
+						<a href="<?= $PHP_SELF; ?>?by=library&substr=<?= $library; ?>"><?= $library; ?></a>
 					<?
 					}
 				}
