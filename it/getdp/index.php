@@ -20,7 +20,7 @@
 	potrebbe non funzionare correttamente in altre versioni; si consiglia
 	perciò l'installazione da sorgenti.</p>
 
-      <p>Nella <a href="/downloads/">sezione downloads</a> puoi trovare la
+      <p>Nella <a href="/it/downloads/">sezione downloads</a> puoi trovare la
 	lista completa di tutti i files scaricabili.</p>
 
       <p>Ti ricordiamo che, qualora volessi installare ed eseguire DarwinPorts
