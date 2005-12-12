@@ -10,7 +10,7 @@
 		<h2 class="hdr">Downloads disponibili</h2>
 		<p>
 <?php
-$chemin=".";
+$chemin="$DOCUMENT_ROOT/downloads";
 $rep=opendir($chemin);
 chdir($chemin);
 while($file = readdir($rep)) {
