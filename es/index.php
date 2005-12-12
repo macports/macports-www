@@ -12,7 +12,7 @@
 			sencilla de instalar varios productos de código abierto en un sistema
 			Darwin, Mac OS X, FreeBSD o Linux.</p>
 
-			<p>En la actualidad hay unos cuantos cientos de <a href="/es/ports/">portes</a>
+			<p>En la actualidad hay <? print_available_ports(); ?> <a href="/es/ports/">portes</a>
 			completados y usables, mientras que más son agregados regularmente. Usted
 			puede conocer sobre los portes recientemente añadidos al susbcribirse a la
 			lista de correo <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>.</p>

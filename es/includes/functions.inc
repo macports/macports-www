@@ -1,6 +1,6 @@
-	<?php
+<?php
 
-# $Id: functions.inc,v 1.2 2004/09/14 18:05:17 matt Exp $
+# $Id: functions.inc,v 1.3 2005/12/12 18:56:59 matt Exp $
 # Copyright (c) 2004, OpenDarwin
 
 ###############################################################################
@@ -249,5 +249,21 @@
 				echo "<p>No hay titulares disponibles.</p>\n\n";
 			}
 		}
+
+######################################################################
+
+# print the number or available ports
+function print_available_ports() {
+	global $connect;
 	
-	?>
+	$result = mysql_query("SELECT count(*) from darwinports.portfiles");
+	if ($result) {
+		$row = mysql_fetch_array($result);
+		$count = $row[0];
+		echo $count;
+	} else {
+		$count = 0;
+	}
+}
+	
+?>

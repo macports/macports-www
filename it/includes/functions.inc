@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.3 2005/12/09 15:20:31 riccardo Exp $
+# $Id: functions.inc,v 1.4 2005/12/12 18:56:59 matt Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -275,6 +275,20 @@ function print_all_headlines_nonadmin() {
   }
 }
 
+######################################################################
 
+# print the number or available ports
+function print_available_ports() {
+	global $connect;
+	
+	$result = mysql_query("SELECT count(*) from darwinports.portfiles");
+	if ($result) {
+		$row = mysql_fetch_array($result);
+		$count = $row[0];
+		echo $count;
+	} else {
+		$count = 0;
+	}
+}
 
 ?>

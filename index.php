@@ -14,7 +14,7 @@
 	<a href="http://www.apple.com/macosx/">Mac OS X</a> and
 	<a href="http://developer.apple.com/darwin/projects/darwin/">Darwin</a>)</p>
 
-      <p>There are currently about 2800 completed and usable <a
+      <p>There are currently about <? print_available_ports(); ?> completed and usable <a
 	href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
