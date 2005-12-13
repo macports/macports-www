@@ -22,8 +22,9 @@
                         $count = 0;
                 }
 ?>
-      <p>There are currently about <?= $count; ?> completed and usable <a
-	href="/ports/">ports</a>, with more being added on a regular basis.
+      <p>There are currently about 3034 completed and usable
+     <!-- <p>There are currently about <?= $count; ?> completed and usable <a -->
+	<a href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
 	mailing list.</p>
