@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.8 2005/12/13 05:17:05 jmpp Exp $
+# $Id: functions.inc,v 1.9 2005/12/13 06:07:35 yeled Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -12,8 +12,6 @@ include_once("$DOCUMENT_ROOT/includes/db.inc");
 $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
 mysql_select_db($db);
 
-# includes for print_available_ports()
-$connect_darwinports = include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
 
 
 ######################################################################
@@ -280,19 +278,5 @@ function print_all_headlines_nonadmin() {
 }
 
 ######################################################################
-
-# print the number or available ports
-function print_available_ports() {
-	global $connect_darwinports;
-	
-	$result = mysql_query("SELECT count(*) from darwinports.portfiles");
-	if ($result) {
-		$row = mysql_fetch_array($result);
-		$count = $row[0];
-		echo $count;
-	} else {
-		$count = 0;
-	}
-}
 
 ?>
