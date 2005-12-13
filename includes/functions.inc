@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.7 2005/12/13 04:26:54 matt Exp $
+# $Id: functions.inc,v 1.8 2005/12/13 05:17:05 jmpp Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -13,7 +13,7 @@ $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
 mysql_select_db($db);
 
 # includes for print_available_ports()
-$connect_darwinports = include_once("$DOCUMENT_ROOT/includes/dp_portlisting.inc");
+$connect_darwinports = include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
 
 
 ######################################################################
