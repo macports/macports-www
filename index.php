@@ -13,8 +13,16 @@
 	family (<a href="http://www.opendarwin.org/">OpenDarwin</a>,
 	<a href="http://www.apple.com/macosx/">Mac OS X</a> and
 	<a href="http://developer.apple.com/darwin/projects/darwin/">Darwin</a>)</p>
-
-      <p>There are currently about <? print_available_ports(); ?> completed and usable <a
+<?
+                $result = mysql_query("SELECT count(*) from darwinports.portfiles");
+                if ($result) {
+                        $row = mysql_fetch_array($result);
+                        $count = $row[0];
+                } else {
+                        $count = 0;
+                }
+?>
+      <p>There are currently about <?= $count; ?> completed and usable <a
 	href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>
