@@ -2,7 +2,6 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/fr/includes/common.inc");
     include_once("$DOCUMENT_ROOT/fr/includes/functions.inc");
-    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
     print_header('Accueil DarwinPorts', 'utf-8');
   ?>
 
@@ -18,7 +17,7 @@
 	</p>
 	
 	<p>
-	Il y a actuellement <? print_available_ports(); ?> <a href="/fr/ports/">ports</a>opérationnels
+	Il y a actuellement beaucoup de <a href="/fr/ports/">ports</a>opérationnels
 	et disponibles, mais d'autres seront bientôt ajoutés régulièrement. Vous pouvez
 	prendre connaissance des ports récemment ajoutés en souscrivant à la liste de
 	discussion <a href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
