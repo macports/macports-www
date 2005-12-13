@@ -2,6 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/fr/includes/common.inc");
     include_once("$DOCUMENT_ROOT/fr/includes/functions.inc");
+    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
     print_header('Accueil DarwinPorts', 'utf-8');
   ?>
 
