@@ -1,7 +1,7 @@
 <?
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/es/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
+    include_once("$DOCUMENT_ROOT/includes/db.inc");
     include_once("$DOCUMENT_ROOT/includes/email.inc");
     print_header('Portes Disponibles', 'utf-8');
 ?>
