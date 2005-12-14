@@ -8,20 +8,19 @@
     <div id="content">
       <h2 class="hdr">Obtenir DarwinPorts</h2>
 
-	<p>La version 1.1 de DarwinPorts est disponible sous forme d'archive 
-	<a href="/downloads/DarwinPorts-1.1.tar.bz2">tar.bz2</a> ou	
-	<a href="/downloads/DarwinPorts-1.1.tar.gz">tar.gz</a> pour les sources, ou sous forme d'
-	<a href="/downloads/DarwinPorts-1.1.dmg">image disque</a> contenant un installateur (.pkg).	Les sommes 
-	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-1.1.chk.txt">ici</a>. L'image disque 
-	n'est actuellement disponible que pour Mac OS X 10.4/ppc et peut ne pas s'installer sur d'autres versions de Mac OS X.
-	Cependant, vous pouvez installer DarwinPorts depuis les sources.</p>
+	<p>La version <? print "$dp_version"; ?> de DarwinPorts est disponible sous forme d'archive
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> ou
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a> pour les sources, ou sous forme d'
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">image disque</a>pour Mac OS X 10.4 et pour
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Mac OS X 10.3</a>contenant un installateur (.pkg). Les sommes 
+	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">ici</a>.</p>
 
 	<p>Pour voir la liste de tous les fichiers disponibles, regardez la 
 	<a href="/fr/downloads/">liste</a> des téléchargements.</p>
 
 	<p>Veuillez noter que pour installer et utiliser DarwinPorts sur Mac OS X, vous devez avoir 
-	installé les outils de développement de Mac OS X (Developer Tools pour 10.2.x) ou Xcode (pour 10.3.x et
-	10.4.x).</p>
+	installé Xcode, dont vous pouvez vous procurez une copie sur le <a href="http://developer.apple.com/">
+	site d'Apple</a> ou sur vos disques d'installation de Mac OS X.</p>
 
 	<p>Si vous souhaitez utiliser DarwinPorts sur un système autre que Mac OS X,
 	voici les dépendances nécessaires (un minimum de connaissance sur les outils
@@ -36,15 +35,13 @@
 	<h5 class="subhdr">L'installateur pour Mac OS X (.pkg)</h5>
 
 	<p>Le moyen le plus simple pour installer DarwinPorts sur Mac OS X est de télécharger 
-	l'<a href="/downloads/DarwinPorts-1.1.dmg">image disque</a> et de lancer "Installer.app" 
-	en double-cliquant sur le paquet (.pkg) et de suivre les instructions jusqu'à ce que 
+	l'<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">image disque pour Mac OS X 10.4</a>
+	ou l'<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">image disque pour Mac OS X 10.3</a> et
+	de lancer "Installer.app" en double-cliquant sur le paquet (.pkg) et de suivre les instructions jusqu'à ce que 
 	l'installation soit terminée. Cette procédure installera une copie entièrement fonctionnelle 
-	de DarwinPorts sur votre système, immédiatement utilisable.</p>
-
-	<p>Pour profiter de votre nouveau logiciel, vous devez adapter les fichiers de configuration 
-	de votre shell afin de trouver les binaires installés par DarwinPorts. Lisez attentivement 
-	le fichier README.fr inclus dans l'image disque concernant la marche à suivre pour faire 
-	cela.</p>
+	de DarwinPorts sur votre système, immédiatement utilisable. Si besoin est, les fichiers de configuration
+	de votre shell seront modifiés par l'installateur pour permettre l'utilisation de DarwinPorts.
+	Après installation, ces changements seront valides pour les shells nouvellement ouverts.</p>
 
 	<p>Bien que facultatif, il est recommandé de synchroniser votre toute nouvelle installation 
 	avec les serveurs d'OpenDarwin afin de s'assurer d'avoir DarwinPorts bien à jour ainsi que 
@@ -61,22 +58,22 @@
 	<p>Si pour une raison ou une autre vous souhaitez installer DarwinPorts grâce aux sources, 
 	toutefois avant de pouvoir installer un port avec DarwinPorts il y a quelques points que vous 
 	devrez accomplir une fois les sources téléchargées. "<kbd>cd</kbd>" dans le répertoire où les sources 
-	ont été téléchargées puis décompressez-les avec "<kbd>tar xjvf <a href="/downloads/DarwinPorts-1.1.tar.bz2">
-	DarwinPorts-1.1.tar.bz2</a></kbd>" ou "<kbd>tar xzvf <a href="/downloads/DarwinPorts-1.1.tar.gz">DarwinPorts
-	-1.1.tar.gz</a></kbd>" suivant le format de l'archive que vous avez choisi. 
+	ont été téléchargées puis décompressez-les avec "<kbd>tar xjvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">
+	DarwinPorts-<? print "$dp_version"; ?>.tar.bz2</a></kbd>" ou "<kbd>tar xzvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">DarwinPorts
+	-<? print "$dp_version"; ?>.tar.gz</a></kbd>" suivant le format de l'archive que vous avez choisi. 
 	Une fois les sources décompressées, exécutez les commandes suivantes :</p>
 
-      <pre>cd DarwinPorts-1.1
+      <pre>cd DarwinPorts-<? print "$dp_version"; ?>
 ./configure && make && sudo make install</pre>
 
 	<p>Puis optionnellement :</p>
 
 	<pre>cd ../
-rm -rf DarwinPorts-1.1.*</pre>
+rm -rf DarwinPorts-<? print "$dp_version"; ?>.*</pre>
 	
 	<p>Ces commandes doivent être exécutées par un administrateur, dont "<kbd>sudo</kbd>" demandera son 
 	mot de passe pour l'installation. Cette procédure installera DarwinPorts, ainsi les sources et le 
-	répertoire DarwinPorts-1.1 pourront être effacés. Pour personnaliser votre installation vous devrez 
+	répertoire DarwinPorts-<? print "$dp_version"; ?> pourront être effacés. Pour personnaliser votre installation vous devrez 
 	consulter le résultat de la commande "<kbd>./configure --help | more</kbd>" puis utiliser les 
 	options appropriées.</p>
 
@@ -89,7 +86,7 @@ rm -rf DarwinPorts-1.1.*</pre>
 	recommandé d'exécuter régulièrement la commande précédente afin de s'assurer d'être bien à jour.</p>
 
 	<p>De plus, vous pouvez lire le fichier <tt>README_RELEASE1.fr</tt> disponible dans l'archive de 
-	la version 1.1 concernant une installation basique et des instructions d'utilisation.</p>
+	la version <? print "$dp_version"; ?> concernant une installation basique et des instructions d'utilisation.</p>
 
 	<h5 class="subhdr">Aide</h5>
 
