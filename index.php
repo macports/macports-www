@@ -2,6 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/includes/common.inc");
     include_once("$DOCUMENT_ROOT/includes/functions.inc");
+    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
     print_header('DarwinPorts Home', 'iso-8859-1');
   ?>
 
@@ -22,8 +23,7 @@
                         $count = 0;
                 }
 ?>
-      <p>There are currently about 3034 completed and usable
-     <!-- <p>There are currently about <?= $count; ?> completed and usable <a -->
+      <p>There are currently about <?= $count; ?> completed and usable
 	<a href="/ports/">ports</a>, with more being added on a regular basis.
 	You can track recently added ports by subscribing to the <a
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">cvs-darwinports-all</a>

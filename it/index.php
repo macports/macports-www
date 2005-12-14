@@ -2,12 +2,21 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/it/includes/common.inc");
     include_once("$DOCUMENT_ROOT/it/includes/functions.inc");
+    include_once("$DOCUMENT_ROOT/includes/db_portslisting.inc");
     print_header('Home di DarwinPorts', 'utf-8');
   ?>
 
     <div id="content">
       <h2 class="hdr">Introduzione a DarwinPorts</h2>
-
+<?
+                $result = mysql_query("SELECT count(*) from darwinports.portfiles");
+                if ($result) {
+                        $row = mysql_fetch_array($result);
+                        $count = $row[0];
+                } else {
+                        $count = 0;
+                }
+?>
       <p>L'obiettivo principale del progetto DarwinPorts è fornire un metodo
 	per semplificare l'installazione di vario software open-source
 	sui sistemi operativi della famiglia Darwin (
