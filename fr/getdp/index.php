@@ -106,7 +106,7 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 	il n'y a pas de mot de passe.</p>
 
 	<p>Si vous ne voulez pas télécharger les sources depuis le CVS, vous pouvez télécharger une 
-	<a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">archive</a> 
+	<a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">archive</a> 
 	créée quotidiennement. Une fois décompressée, vous pouvez maintenir cette installation avec les 
 	commandes "<kbd>cvs update</kbd>" usuelles.</p>
 
