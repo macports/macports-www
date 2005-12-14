@@ -24,7 +24,7 @@
 	or on your Mac OS X installation CDs/DVD.</p>
 
 	  <p>If you want to use DarwinPorts on a platform other than Mac OS X, please be
-	  aware of the following dependencies (we assume that you have basics such as
+	  aware of the following requirements (we assume that you have basics such as
 	  gcc):</p>
 	  <ul>
 	  	<li>TCL (8.3 or 8.4)</li>
