@@ -1,6 +1,6 @@
 <?php
 
-# $Id: functions.inc,v 1.11 2005/12/14 15:31:16 matt Exp $
+# $Id: functions.inc,v 1.12 2005/12/15 02:03:03 matt Exp $
 # Copyright (c) 2003, OpenDarwin
 
 ######################################################################
@@ -11,9 +11,6 @@ $PHP_SELF = $_SERVER['PHP_SELF'];
 include_once("$DOCUMENT_ROOT/includes/db.inc");
 $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
 mysql_select_db($db);
-
-# current version of DarwinPorts
-$dp_version = "1.2";
 
 ######################################################################
 
