@@ -63,7 +63,7 @@
 	-<? print "$dp_version"; ?>.tar.gz</a></kbd>" suivant le format de l'archive que vous avez choisi. 
 	Une fois les sources décompressées, exécutez les commandes suivantes :</p>
 
-      <pre>cd DarwinPorts-<? print "$dp_version"; ?>
+      <pre>cd DarwinPorts-<? print "$dp_version"; ?> 
 ./configure && make && sudo make install</pre>
 
 	<p>Puis optionnellement :</p>
