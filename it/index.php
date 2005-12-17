@@ -9,13 +9,13 @@
     <div id="content">
       <h2 class="hdr">Introduzione a DarwinPorts</h2>
 <?
-                $result = mysql_query("SELECT count(*) from darwinports.portfiles");
-                if ($result) {
-                        $row = mysql_fetch_array($result);
-                        $count = $row[0];
-                } else {
-                        $count = 0;
-                }
+		$result = mysql_query("SELECT count(*) from darwinports.portfiles");
+		if ($result) {
+			$row = mysql_fetch_array($result);
+			$count = $row[0];
+		} else {
+			$count = 0;
+		}
 ?>
       <p>L'obiettivo principale del progetto DarwinPorts è fornire un metodo
 	per semplificare l'installazione di vario software open-source
@@ -25,9 +25,9 @@
 	<a href="http://developer.apple.com/darwin/projects/darwin/">
 	Darwin</a>).</p>
 
-      <p>Attualmente sono disponibili circa <?= $count&nbsp;?> <a href="/it/ports/">ports</a>
-	funzionanti ed il numero è in costante crescita. Inscrivendoti alla
-	mailing list <a 
+      <p>Attualmente sono disponibili <?= $count ?> 
+	<a href="/it/ports/">ports</a> funzionanti ed il numero è in costante
+	crescita. Inscrivendoti alla mailing list <a 
 	href="http://www.opendarwin.org/mailman/listinfo/cvs-darwinports-all">
 	cvs-darwinports-all</a> potrai tenere traccia dei ports recentemente
 	aggiunti.</p>
