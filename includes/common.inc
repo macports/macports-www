@@ -1,7 +1,12 @@
 <?php
 
-# $Id: common.inc,v 1.3 2005/12/06 18:25:03 mww Exp $
+# $Id: common.inc,v 1.4 2005/12/29 15:54:25 jmpp Exp $
 # Copyright (c) 2003, OpenDarwin
+
+######################################################################
+
+# print the current darwinports version
+$dp_version = "1.2";
 
 ######################################################################
 
