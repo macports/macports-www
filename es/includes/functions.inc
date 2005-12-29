@@ -1,21 +1,20 @@
 <?php
 
-# $Id: functions.inc,v 1.4 2005/12/13 14:58:48 matt Exp $
+# $Id: functions.inc,v 1.5 2005/12/29 15:52:22 jmpp Exp $
 # Copyright (c) 2004, OpenDarwin
 
 ###############################################################################
 
-# variables and includes:
+# variables and includes
+$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+$PHP_SELF = $_SERVER['PHP_SELF'];
+include_once("$DOCUMENT_ROOT/includes/db.inc");
+$connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
+mysql_select_db($db);
 
-		$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-		$PHP_SELF = $_SERVER['PHP_SELF'];
-		include_once("$DOCUMENT_ROOT/es/includes/db.inc");
-		$connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
-		mysql_select_db($db);
-	
 ###############################################################################
 
-# create an RSS feed of the prokect news:
+# create an RSS feed of the project news:
 
 		function create_rss() {
 			global $DOCUMENT_ROOT, $connect;
@@ -39,7 +38,7 @@
 			
 			$rss .= "  <channel>\n";
 			$rss .= "	<title>DarwinPorts Project News</title>\n";
-			$rss .= "	<link>http://darwinports.opendarwin.org/</link>\n";
+			$rss .= "	<link>http://www.darwinports.org/</link>\n";
 			$rss .= "	<description>DarwinPorts Project News</description>\n";
 			$rss .= "	<dc:language>en-us</dc:language>\n";
 			$rss .= "	<dc:creator>Jim Mock (mij@opendarwin.org)</dc:creator>\n";
@@ -51,7 +50,7 @@
 				while ($row = mysql_fetch_objects($result)) {
 					$rss .= "	<item>\n";
 					$rss .= "		<title>$row->title</title>\n";
-					$rss .= "		<link>http://darwinports.opendarwin.org/archives/$row->id.php</link>\n";
+					$rss .= "		<link>http://www.darwinports.org/es/archives.php?id=$row->id</link>\n";
 					
 					$desc_query = "SELECT SUBSTRING_INDEX(news, ' ',26) FROM headlines WHERE id=$row->id";
 					$desc_result = mysql_query($desc_query);
@@ -60,9 +59,9 @@
 					$description = $desc_row[0];
 					
 					$rss .= "		<description><![CDATA[$description...</p>]]></description>\n";
-					$rss .= "		<guid isPermaLink=\"true\">http://darwinports.opendarwin.org/archives/$row->id.php</guid>\n";
-					$rss .= "		<content:encoded><![CDATA[$row-news]]></content:encoded>\n";
-					$rss .= "	<item>\n";
+					$rss .= "		<guid isPermaLink=\"true\">http://www.darwinports.org/es/archives.php?id=$row->id</guid>\n";
+					$rss .= "		<content:encoded><![CDATA[$row->news]]></content:encoded>\n";
+					$rss .= "	</item>\n";
 				}
 			}
 			$rss .= "	</channel>\n";
@@ -98,13 +97,13 @@
 
 ########################################################################
 
-#display a single headline:
+# display a single headline:
 
 		function print_headline() {
 			global $connect;
 			
 			$id = $_GET['id'];
-			$query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines WHERE ID='$id'";
+			$query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines WHERE id='$id'";
 			$result = mysql_query($query) or die("Error: $query.");
 			if (!result) {
 				die("Error: $result.");
@@ -129,7 +128,7 @@
 			global $PHP_SELF, $connect;
 			
 			if (!$_POST['submit']) {
-				echo "<p>Utilice el formulario que se presenta abajo para añadir noticias del proyecto.</p>\n\n";
+				echo "<p>Utilice el formulario que se presenta abajo para agregar noticias del proyecto.</p>\n\n";
 				echo "<form action=\"$PHP_SELF\" method=\"post\">\n";
 				echo "<p>Título:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
 				echo "<p>Noticias:</p>\n";
@@ -155,7 +154,7 @@
 					if (!$result) {
 						die("Error: $result.");
 					}
-					echo "<p>La entrada fue añadida exitosamente. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">añadir otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
+					echo "<p>La entrada fue agregada exitosamente. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">agregar otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
 					create_rss();
 				} else {
 					echo "<p>Han ocurrido los siguientes errores:</p>\n\n";
@@ -163,7 +162,7 @@
 					for ($x = 0; $x < sizeof($errorList); $x++) {
 						echo "<li>$errorList[$x]</li>\n";
 					}
-					echo "</lu>\n\n";
+					echo "</ul>\n\n";
 				}
 			}
 		}
@@ -186,7 +185,7 @@
 					$row = mysql_fetch_object($result);
 					echo "<p>Use el formulario abajo mostrado para editar las noticias del proyecto.</p>\n\n";
 					echo "<form action=\"$PHP_SELF?id=$id\" method=\"post\">\n";
-					echo "<p>TÌtulo:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
+					echo "<p>Título:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
 					echo "<p>Noticias:</p>\n";
 					echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\">";
 					echo htmlentities($row->news);
@@ -210,12 +209,12 @@
 					$count++;
 				}
 				if (sizeof($errorList) == 0) {
-					$query = "UDPATE headlines SET title='$title', news='$news' WHERE id='$id'";
+					$query = "UPDATE headlines SET title='$title', news='$news' WHERE id='$id'";
 					$result = mysql_query($query) or die("Error: $query.");
 					if (!$result) {
 						die("Error: $result.");
 					}
-					echo "<p>El update fue exitoso. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">añadir otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
+					echo "<p>El update fue exitoso. Puede bien sea <a href=\"list.php\">ver todos los titulares, <a href=\"add.php\">agregar otro titular</a> o <a href=\"/\">volver a la página principal de DarwinPorts</a>.</p>\n\n";
 					create_rss();
 				} else {
 					echo "<p>Han ocurrido los siguientes errores:</p>\n\n";
@@ -235,19 +234,43 @@
 		function print_all_headlines() {
 			global $connect;
 			
-			echo "<p>Abajo se muestra una lista de todos los titulares existentes. Pueden ser leídos, editados o borrados desde esta interface. Además, Usted también puede <a href=\"add.php\">añadir noticias al proyecto</a>.</p>\n\n";
+			echo "<p>Abajo se muestra una lista de todos los titulares existentes. Pueden ser leidos, editados o borrados desde esta interface. Además, también puede <a href=\"add.php\">agregar noticias al proyecto</a>.</p>\n\n";
 			$query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
 			$result = mysql_query($query) or die("Error: $query.");
 			if (!$result) {
-				die("Error: $query.");
+				die("Error: $result.");
 			}
 			if (mysql_num_rows($result) > 0) {
 				while ($row = mysql_fetch_object($result)) {
-					echo "<p><a href=\"/archives/$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+					echo "<p><a href=\"/es/archives.php?id=$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">editar</a></p>\n\n";
 				}
 			} else {
 				echo "<p>No hay titulares disponibles.</p>\n\n";
 			}
 		}
-	
+
+######################################################################
+
+# print a list of all existing headlines wihtout the admin foobage
+# (this is cheap and could be better)
+function print_all_headlines_nonadmin() {
+
+	 global $connect;
+
+	 $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
+	 $result = mysql_query($query) or die("Error: $query.");
+	 if (!$result) {
+	    die("Error: $result.");
+	 }
+	 if (mysql_num_rows($result)>0) {
+	    while ($row = mysql_fetch_object($result)) {
+		  echo "<p><a href=\"/es/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+		}
+	} else {
+		  echo "<p>No hay titulares disponibles.</p>\n\n";
+	}
+}
+
+######################################################################
+
 ?>

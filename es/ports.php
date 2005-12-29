@@ -47,7 +47,7 @@
 			$count = 0;
 		}
 ?>
-			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los títulos (<?= $count; ?>)</a></td>
+			<td colspan="4" align="left"><a href="<?= $PHP_SELF; ?>?by=all">Ver todos los Títulos (<?= $count; ?>)</a></td>
 		</tr>
 		<?
 			if (!$by || (!$substr && $by != "all")) {
@@ -104,7 +104,7 @@
 		if($result) {
 ?>
 	<p>
-	<i><?= mysql_num_rows($result); ?> Portfile<? if (mysql_num_rows($result) != 1) { echo "s"; } ?> Selecionado</i>
+	<i><?= mysql_num_rows($result); ?> Portfile<? if (mysql_num_rows($result) != 1) { echo "s"; } ?> Seleccionado</i>
 	</p>
 	<dl>
 <?		
@@ -206,7 +206,7 @@
 <?	
 			} 
 		} else {
-			echo "An Error Occurred. (501)";
+			echo "Ocurrió un error. (501)";
 		}
 	}
 ?>

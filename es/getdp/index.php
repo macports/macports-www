@@ -7,52 +7,118 @@
 	
 	<div id="content">
 		<h2 class="hdr">Obtención de DarwinPorts</h2>
+
+		<p>La versión <? print "$dp_version"; ?> de DarwinPorts está disponible en forma
+		binaria como una imagen de disco dmg <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">para Tiger</a>
+		o una <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">para Panther</a>,
+		ambas conteniendo un instalador pkg, o en forma de código fuente bien sea como un paquete
+		<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a>
+		o uno <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a>.
+		Checksums para todos estos se pueden encontrar <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">aquí</a>.</p>
+
+		<p>Para obtener un listado de todas nuestras descargas disponibles puede revisar la
+		<a href="/es/downloads/">sección de downloads</a>.</p>
 		
-		<p>Si Usted desea instalar DarwinPorts, primero debe realizar un &ldquo;checkout&rdquo;
-		del proyecto desde el repositorio CVS de OpenDarwin.</p>
-		
-		<p>Por favor note que para instalar y usar DarwinPorts, debe tener instalado bien sea 
-		los &ldquo;Developer Tools&rdquo; de Mac OS X (para 10.2.x) o Xcode (para 10.3.x).</p>
+		<p>Por favor note que para instalar y usar DarwinPorts en Mac OS X, debe tener instalado el paquete
+		Xcode de Apple, que puede encontrar en la <a href="http://developer.apple.com/">Página de Progamadores de Apple</a>
+		(en Inglés) o en sus CDs/DVD de instalación del sistema.</p>
 		
 		<p>Si desea usar DarwinPorts en alguna otra plataforma además de Mac OS X, por favor note
-		las siguientes dependencias (se asume que ya posee lo básico como gcc):</p>
+		los siguientes requisitos (se asume que ya posee lo básico como gcc):</p>
 		<ul>
 			<li>TCL (8.3 u 8.4)</il>
 			<li>curl</li>
 			<li>OpenSSL o libmd</li>
 		</ul>
 		
-		<p>Use los siguientes comandos para comenzar el &ldquo;checkout&rdquo; del proyecto del
-		repositorio CVS:</p>
+		<h5 class="subhdr">Paquete de instalación para Mac OS X (.pkg)</h5>
+
+		<p>La forma más fácil de instalar DarwinPorts en un sistema Mac OS X es bajando el
+		<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">dmg para Tiger</a>
+		o el <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">dmg para Panther</a>
+		y correr Installer.app en el pkg ahí contenido al hacer doble click sobre ellos, siguendo
+		las instrucciones del instalador hasta el final. Este procedimiento colocará una instalación
+		de DarwinPorts completamente funcional y configurada con las opciones por defecto en su sistema,
+		lista para su uso. De ser necesario, los documentos de configuración de su shell serán adaptados
+		por el instalador para incluir los settings necesarios para usar DarwinPorts. Es posible que
+		tenga que abrir un nuevo shell para que estos cambios se hagan efectivos.</p>
+
+		<p>Aunque no es estrictamente necesario, se recomienda de todas formas sincronizar la reciente
+		instalación de DarwinPorts con nuestro servidor de rsync para asegurar la disponibilidad de
+		la última versión de la infraestructura de DarwinPorts y de los &ldquo;Portfiles&rdquo; que
+		que contienen las instrucciones empleadas en la compilación e instalación de portes.
+		Para lograr esto, simplemente ejecute:</p>
+
+		<pre>sudo port selfupdate</pre>
+
+		<p>También se recomienda ejecutar el comando antenrior de manera regular para mantener su instalación
+		siempre al día. De aquí en adelante debería estar listo para disfrutar DarwinPorts!</p>
+
+		<h5 class="subhdr">Instalación a Partir de las Fuentes</h5>
+
+		<p>Si en cambio Ud. desea instalar DarwinPorts a partir de su código fuente, hay todavía un par de
+		cosas que deberá hacer después de bajar el paquete tar antes de poder instalar un porte a través de DarwinPorts,
+		compilar e instalar DarwinPorts en sí. &ldquo;<kbd>cd</kbd>&rdquo; al directorio al cual bajó el tar y corra
+		&ldquo;<kbd>tar xjvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">DarwinPorts-<? print "$dp_version"; ?>.tar.bz2</a></kbd>&rdquo;
+		o &ldquo;<kbd>tar xzvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">DarwinPorts-<? print "$dp_version"; ?>.tar.gz</a></kbd>&rdquo;,
+		dependiendo de si bajó el tar bz2 o el gz, respectivamente. Esto desempaquetará las fuentes de DarwinPorts
+		que procederá a compilar e instalar. Para esto, ejecute lo siguiente:</p>
+
+<pre>cd DarwinPorts-<? print "$dp_version"; ?>
+
+./configure && make && sudo make install</pre>
+
+		<p>Opcionalmente:</p>
+
+		<pre>cd ../
+rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
+
+		<p>Estos pasos deben ser ejecutados desde una cuenta administradora, de la cual &ldquo;<kbd>sudo</kbd>&rdquo;
+		pedirá el password al momento de instalar. Este procedimiento creará una instalación standard de DarwinPorts
+		en su sistema y, si los pasos opcionales son ejecutados también, removerá las ahora innecesarias fuentes de
+		DarwinPorts y el correspondiente paquete tar. Para personalizar su instalación debe leer el output de
+		&ldquo;<kbd>./configure --help | more</kbd>&rdquo; y pasar las opciones apropiadas al script de configuración
+		en los pasos arriba detallados.</p>
+
+		<p>Deberá adaptar los documentos de configuración de su shell para encontrar los programas instalados por
+		DarwinPorts. Finalmente, debe sincronizar su instalación reciente con los servidores de OpenDarwin:</p>
+
+		<pre>sudo port -d selfupdate</pre>
+
+		<p>Al completar, DarwinPorts estará listo para instalar portes. Nuevamente, es recomendado ejecutar el comando
+		anterior regularmente para mantener su instalación siempre al día.</p>
+
+		<p>También puede referirse al documento <tt>README_RELEASE1.es</tt> contenido en los paquetes tar de las fuentes
+		<? print "$dp_version"; ?> de DarwinPorts para instrucciones básicas de instalación y uso.</p>
+
+		<h5 class="subhdr">Ayuda</h5>
+
+		<p><a href="/es/help">Ayuda</a> también se encuentra disponible en caso que la necesite.</p>
+
+		<h5 class="subhdr">Fuentes de CVS</h5>
+
+		<p>Si Ud. es un programador o un usuario que desea mantenerse siempre al día con los últimos cambios y adiciones
+		a DarwinPorts, puede adquirir las fuentes del proyecto a través de CVS.</p>
+
+		<p>Use los siguientes comandos para realizar el &ldquo;checkout&rdquo; del proyecto del
+		repositorio anónimo CVS de OpenDarwin:</p>
 		
-			      <pre>cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
+		<pre>cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports</pre>
 
 		<p>Cuando el servidor le pregunte por un password, simplemente pulse <kbd>return</kbd>
 		en su teclado&mdash; el campo del password se encuentra vacío.</p>
 		
-		<p>Si no se quiere molestar con CVS para obtener DarwinPorts, Usted puede bajar un <a href="http://darwinports.opendarwin.org/darwinports-nightly-cvs-snapshot.tar.gz">
-		snapshot de CVS nocturno</a>. Una vez extraído, Ud. lo puede mantener actualizado con
-		los comandos de CVS de costumbre.</p>
+		<p>Si no se quiere molestar con CVS para obtener las fuentes en primera instancia, puede bajar el <a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">
+		snapshot nocturno</a> de éstas y, una vez extraído, mantenerlo actualizado con los comandos de CVS de costumbre,
+		&ldquo;<kbd>cvs update</kbd>&rdquo;.</p>
 		
 		<p>Si desea simplemente ver el repositorio CVS sin realizar un &ldquo;checkout&rdquo;,
-		lo puede hacer via <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.</p>
-		
-		<h5 class="subhdr">Instalación</h5>
-		
-		<p>Una vez que el proyecto ha sido obtenido del repositorio CVS, todavía hay un par de
-		cosas que deberá hacer para poder instalar un porte.</p>
-		
-		<p>Para instrucciones de instalación, por favor vea el documento <tt>README.es</tt> en
-		el directorio donde realizó el &ldquo;checkout&rdquo; de CVS. También está el <a href="http://darwinports.opendarwin.org/docs/ch01s03.html">capítulo</a>
-		(en Inglés) de la <a href="http://darwinports.opendarwin.org/docs/">Guía de DarwinPorts</a>
-		que provee instrucciones de instalación y uso de DarwinPorts.</p>
-		
-		<p><a href="/es/help">Ayuda</a> también se encuentra disponible en caso que la necesite.</p>
+		lo puede hacer vía <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.</p>
 	
 	</div>
 </div>
 
-	<?php
-		print_footer();
-	?>
+<?php
+	print_footer();
+?>
