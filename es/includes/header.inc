@@ -39,9 +39,9 @@
 						echo "<li><a href=\"/es/ports/\" title=\"Portes Disponibles\">Portes Disponibles</a></li>\n";
 					}
 					if ($PHP_SELF == $help) {
-						echo "<li class=\"selected\"><a href=\"/es/help/\" title=\"Obtención de Ayuda\">Obtención de Ayuda</a></li>\n";
+						echo "<li class=\"selected\"><a href=\"/es/help/\" title=\"Ayuda\">Ayuda</a></li>\n";
 					} else {
-						echo "<li class=\"last\"><a href=\"/es/help/\" title=\"Obtención de Ayuda\">Obtención de Ayuda</a></li>\n";
+						echo "<li class=\"last\"><a href=\"/es/help/\" title=\"Ayuda\"> Ayuda</a></li>\n";
 					}
 				?>
 			</ul>
