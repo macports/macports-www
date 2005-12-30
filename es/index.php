@@ -33,7 +33,7 @@
 			<p>Para más información sobre la obtención e instalación de DarwinPorts, por
 			favor refiérase la sección <a href="/es/getdp/">Obtención de DarwinPorts</a>
 			de nuestra página. También asegúrese de revisar la <a href="/docs/">documentación</a>
-			y si tiene preguntas o experimenta algún problema, puede buscar ayuda en nuestra
+			(en Inglés) y si tiene preguntas o experimenta algún problema, puede buscar ayuda en nuestra
 			<a href="/es/help/">sección de ayuda</a>. Nuestro
 			<a href="http://wiki.opendarwin.org/index.php/DarwinPorts">Wiki</a> también es un
 			buen recurso para ayuda general y variada, especialmente el proyecto vivo de
