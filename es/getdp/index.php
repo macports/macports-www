@@ -14,12 +14,12 @@
 		ambas conteniendo un instalador pkg, o en forma de código fuente bien sea como un paquete
 		<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a>
 		o uno <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a>.
-		Checksums para todos estos se pueden encontrar <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">aquí</a>.</p>
+		Checksums para todos estos están disponibles <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">aquí</a>.</p>
 
 		<p>Para obtener un listado de todas nuestras descargas disponibles puede revisar la
 		<a href="/es/downloads/">sección de downloads</a>.</p>
 		
-		<p>Por favor note que para instalar y usar DarwinPorts en Mac OS X, debe tener instalado el paquete
+		<p>Por favor note que para instalar y usar DarwinPorts en Mac OS X debe tener instalado el paquete
 		Xcode de Apple, que puede encontrar en la <a href="http://developer.apple.com/">Página de Progamadores de Apple</a>
 		(en Inglés) o en sus CDs/DVD de instalación del sistema.</p>
 		
@@ -88,7 +88,7 @@ rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
 		<p>Al completar, DarwinPorts estará listo para instalar portes. Nuevamente, es recomendado ejecutar el comando
 		anterior regularmente para mantener su instalación siempre al día.</p>
 
-		<p>También puede referirse al documento <tt>README_RELEASE1.es</tt> contenido en los paquetes tar de las fuentes
+		<p>También puede referirse al documento &ldquo;<tt>README_RELEASE1.es</tt>&rdquo; contenido en los paquetes tar de las fuentes
 		<? print "$dp_version"; ?> de DarwinPorts para instrucciones básicas de instalación y uso.</p>
 
 		<h5 class="subhdr">Ayuda</h5>
@@ -106,8 +106,8 @@ rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
 		<pre>cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
 cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwinports</pre>
 
-		<p>Cuando el servidor le pregunte por un password, simplemente pulse <kbd>return</kbd>
-		en su teclado&mdash; el campo del password se encuentra vacío.</p>
+		<p>Cuando el servidor le pregunte por el password, simplemente pulse <kbd>return</kbd>
+		en su teclado&mdash; el campo se encuentra vacío.</p>
 		
 		<p>Si no se quiere molestar con CVS para obtener las fuentes en primera instancia, puede bajar el <a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">
 		snapshot nocturno</a> de éstas y, una vez extraído, mantenerlo actualizado con los comandos de CVS de costumbre,

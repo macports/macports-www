@@ -16,14 +16,14 @@
 		<p>La <a href="/docs/">Guía de DarwinPorts</a> tiene una sección para usuarios,
 		<a href="/docs/pt01.html">Parte 1: Usando DarwinPorts</a> (en Inglés).</p>
 
-		<p>La sección de <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">Preguntas Frecuentes y Respuestas (FAQ)</a>
-		(en Inglés) de nuestro Wiki es un esfuerzo vivo y conducido por los usuarios, parte
-		de nuestro <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">Wiki</a>
+		<p>Las <a href="http://wiki.opendarwin.org/index.php/DarwinPorts:FAQ">Preguntas Frecuentes y Respuestas (FAQ)</a>
+		(en Inglés) son un esfuerzo vivo y conducido por los usuarios, parte
+		de nuestro <a href="http://wiki.opendarwin.org/index.php/DarwinPorts">Wiki</a>,
 		donde cualquiera con una <a href="http://wiki.opendarwin.org/index.php?title=Special:Userlogin&returnto=DarwinPorts">cuenta de Wiki</a> y conocimiento sobre DarwinPorts puede contribuir
 		con información para ayudar a otros.</p>
 				
 		<p>Toda nuestra documentación es un trabajo en progreso, por lo que si ubica
-		algún error o tiene alguna pregunta sobre alguna parte de ésta en específico, por favor infórmenos
+		algún error o tiene alguna pregunta sobre cualquier parte de ésta en específico, por favor infórmenos
 		al respecto! Así nos estará ayudando.</p>
 		
 		<h5 class="subhdr">Listas de Correo</h5>
@@ -32,7 +32,7 @@
 		general de correo de DarwinPorts</a> está abierta al público. Es el mejor lugar para
 		hacer preguntas sobre DarwinPorts, para nuevos usuarios, programadores, todos
 		por igual! Es también el lugar donde se lleva a cabo toda la discusión sobre
-		DarwinPorts en sí. Por favor note que debido a problemas de Spam, la lista de correos
+		DarwinPorts en sí. Por favor note que debido a problemas de spam, la lista de correos
 		requiere que todos los mensajes de personas no suscritas a la lista sean aprobados.
 		Es mejor suscribirse.</p>
 		
@@ -44,7 +44,7 @@
 		<p>Por otro lado, archivos indexados de esta lista se pueden explorar en
 		<a href="http://gmane.org/">Gmane.org</a> o a través de <a href="nntp://news.gmane.org/">NNTP</a>.</p>
 		
-		<p>Cuando publique alguna pregunta a la lista, por favor incluya cualquier información
+		<p>Cuando publique alguna pregunta en la lista, por favor incluya cualquier información
 		que crea es relevante al problema, tal como el sistema operativo y versión
 		que usa, Mac OS X 10.3.2 por ejemplo, si tiene algún otro software de terceros
 		instalado, como en /usr/local, y cualquier mensaje de error que DarwinPorts
@@ -58,8 +58,8 @@
 		red Freenode de IRC</a> es generalmente donde compartimos.</p>
 		
 		<p>Aunque generalemte es de ayuda, por favor mantenga en mente que si entra al
-		canal de IRC nadie está obligado a ayudar o hasta a responder su pregunta. No lo
-		tome personal, simplemente haga su pregunta en la <a href="http://www.opendarwin.org/mialman/listinfo/darwinports">lista de correo</a>
+		canal de IRC nadie está obligado a ayudar o hasta a responder sus preguntas. No lo
+		tome personal, simplemente hágalas en la <a href="http://www.opendarwin.org/mialman/listinfo/darwinports">lista de correo</a>
 		en vez.</p>
 		
 	</div>
