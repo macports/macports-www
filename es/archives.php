@@ -2,7 +2,7 @@
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/es/includes/common.inc");
     include_once("$DOCUMENT_ROOT/es/includes/functions.inc");
-    print_header('Archivo de Noticias de DarwinPorts', 'iso-8859-1');
+    print_header('Archivo de Noticias de DarwinPorts', 'utf-8');
   ?>
 
     <div id="content">
