@@ -8,12 +8,12 @@
     <div id="content">
       <h2 class="hdr">Obtenir DarwinPorts</h2>
 
-	<p>La version <? print "$dp_version"; ?> de DarwinPorts est disponible sous forme d'archive
-	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> ou
-	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a> pour les sources, ou sous forme d'
-	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">image disque</a> pour Mac OS X 10.4 et pour
-	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Mac OS X 10.3</a> contenant un installateur (.pkg). Les sommes 
-	de contrôle pour ces fichiers sont disponibles <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">ici</a>.</p>
+	<p>La version <? print "$dp_version"; ?> de DarwinPorts est disponible sous forme d'image disque pour
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">Mac OS X 10.4</a> ou pour
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Mac OS X 10.3</a> contenant un installateur (.pkg)
+	ou sous forme d'archive	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> ou
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a>. Les sommes de contrôle pour ces fichiers
+	sont disponibles <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">ici</a>.</p>
 
 	<p>Pour voir la liste de tous les fichiers disponibles, regardez la 
 	<a href="/fr/downloads/">liste</a> des téléchargements.</p>
@@ -34,9 +34,9 @@
 
 	<h5 class="subhdr">L'installateur pour Mac OS X (.pkg)</h5>
 
-	<p>Le moyen le plus simple pour installer DarwinPorts sur Mac OS X est de télécharger 
-	l'<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">image disque pour Mac OS X 10.4</a>
-	ou l'<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">image disque pour Mac OS X 10.3</a> et
+	<p>Le moyen le plus simple pour installer DarwinPorts sur Mac OS X est de télécharger une image disque pour
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">Mac OS X 10.4</a> ou
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Mac OS X 10.3</a> et
 	de lancer "Installer.app" en double-cliquant sur le paquet (.pkg) et de suivre les instructions jusqu'à ce que 
 	l'installation soit terminée. Cette procédure installera une copie entièrement fonctionnelle 
 	de DarwinPorts sur votre système, immédiatement utilisable. Si besoin est, les fichiers de configuration
