@@ -1,7 +1,7 @@
   <?php
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/fr/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/fr/includes/functions.inc");
+    include_once("$DOCUMENT_ROOT/it/includes/common.inc");
+    include_once("$DOCUMENT_ROOT/it/includes/functions.inc");
     print_header('Distribuzioni di DarwinPorts', 'utf-8');
   ?>
 
