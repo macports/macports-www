@@ -10,7 +10,7 @@
 
 		<p>La versión <? print "$dp_version"; ?> de DarwinPorts está disponible en forma
 		binaria como una imagen de disco dmg <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">para Tiger</a>
-		o una <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">para Panther</a>,
+		o <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">para Panther</a>,
 		ambas conteniendo un instalador pkg, o en forma de código fuente bien sea como un paquete
 		<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a>
 		o uno <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a>.
