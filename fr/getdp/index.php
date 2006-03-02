@@ -9,7 +9,7 @@
       <h2 class="hdr">Obtenir DarwinPorts</h2>
 
 	<p>La version <? print "$dp_version"; ?> de DarwinPorts est disponible sous forme d'image disque pour
-	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">Mac OS X 10.4</a> ou pour
+	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">Mac OS X 10.4 (PowerPC)</a> ou pour
 	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Mac OS X 10.3</a> contenant un installateur (.pkg)
 	ou sous forme d'archive	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> ou
 	<a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a>. Les sommes de contrôle pour ces fichiers
