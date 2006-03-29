@@ -10,18 +10,29 @@
 		<h2 class="hdr">Available Downloads</h2>
 		<p>
 <?php
-$chemin=".";
-$rep=opendir($chemin);
-chdir($chemin);
-while($file = readdir($rep)) {
-	if($file != '..' && $file !='.' && (!eregi('php$', $file))) {
-		if(!is_dir($file)) {
-			echo "<a href=\"/downloads/$file\">$file</a>";
-			echo "<br>";
-		}
-	}
+$dir=".";
+
+// Read files from the dirctory
+$files = array();
+$rep=opendir($dir);
+while ($file = readdir($rep)) {
+	if (   preg_match('/^(\..*)|(.*\.php)$/', $file)
+		|| is_dir($file)
+	   )
+		continue;
+		
+	// Add file to array, keyed by mod time of the file
+	$files[filemtime($file)] = $file;
 }
 closedir($rep);
+
+// Sort the array in reverse order by key, which is mod time of the file
+krsort($files);
+
+// Emit the files, with dates
+foreach ($files as $t => $f) {
+	echo date("d-M-Y G:i", $t)." <a href=\"/downloads/$f\">$f</a><br />\n";
+}
 ?>
 		</p>
     </div>
