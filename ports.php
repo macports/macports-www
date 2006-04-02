@@ -62,7 +62,7 @@
 				if($result) {
 					while( $row = mysql_fetch_assoc($result) ) {
 		?>
-		<tr><td colspan="4"><a href="<?php echo $PHP_SELF; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>"><?php echo htmlspecialchars($row['category']); ?></a></td></tr>
+		<tr><td colspan="4"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>"><?php echo htmlspecialchars($row['category']); ?></a></td></tr>
 		<?php
 					}
 				}
