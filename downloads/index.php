@@ -8,7 +8,7 @@
     <div id="content">
 	
 		<h2 class="hdr">Available Downloads</h2>
-		<p>
+		<table>
 <?php
 $dir=".";
 
@@ -18,23 +18,26 @@ $rep=opendir($dir);
 while ($file = readdir($rep)) {
 	if (   preg_match('/^(\..*)|(.*\.php)$/', $file)
 		|| is_dir($file)
-	   )
+	   ) {
 		continue;
-		
-	// Add file to array, keyed by mod time of the file
-	$files[filemtime($file)] = $file;
+	}
+	
+	// Add file to array, as key, with modtime as value
+	$files[$file] = filemtime($file);
 }
 closedir($rep);
 
-// Sort the array in reverse order by key, which is mod time of the file
-krsort($files);
+// Sort the array in reverse order by value (modtime)
+arsort($files);
 
 // Emit the files, with dates
-foreach ($files as $t => $f) {
-	echo date("d-M-Y G:i", $t)." <a href=\"/downloads/$f\">$f</a><br />\n";
+foreach ($files as $f => $t) {
+	echo "<tr>";
+	echo "<td>".date("d-M-Y G:i", $t)."</td><td><a href=\"/downloads/$f\">$f</a></td>\n";
+	echo "</tr>";
 }
 ?>
-		</p>
+		</table>
     </div>
   </div>
 
