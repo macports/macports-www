@@ -9,7 +9,7 @@
       <h2 class="hdr">Get DarwinPorts</h2>
 
 	 <p>DarwinPorts version <? print "$dp_version"; ?> is available in binary form as a
-	 dmg disk image <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">for Tiger (PowerPC)</a>
+	 dmg disk image <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">for Tiger (fat)</a>
 	 or <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Panther</a>,
 	 both containing a pkg installer, or in source form as either a
 	 <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> package
