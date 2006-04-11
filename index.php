@@ -42,6 +42,8 @@
     the <a href="docs/ch01s05.html#user_bugs">Bug report documentation</a>
     to improve the processing of your bug report(s).</p>
 
+    <p><b>Current DarwinPorts <a href="/getdp/">release</a>: <? print "$dp_version"; ?></b></p>
+
       <div id="news">
 	<h2 class="hdr">Project News</h2>
 
