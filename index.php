@@ -42,6 +42,11 @@
     the <a href="docs/ch01s05.html#user_bugs">Bug report documentation</a>
     to improve the processing of your bug report(s).</p>
 
+    <p>For information on becoming an official member of the DarwinPorts project
+    with write access to our CVS repository, please consult the <a href="/docs/foo">relevant documentation</a>
+    detailing our membership requirements and resulting duties &amp; benefits
+    of holding an OpenDarwin account.</p>
+
     <p><b>Current DarwinPorts <a href="/getdp/">release</a>: <? print "$dp_version"; ?></b></p>
 
       <div id="news">
