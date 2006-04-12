@@ -68,7 +68,7 @@
 
       <pre>cd DarwinPorts-<? print "$dp_version"; ?>
 
-./configure && make && sudo make install</pre>
+./configure &amp;&amp; make &amp;&amp; sudo make install</pre>
 
 	<p>Optionally:</p>
 
