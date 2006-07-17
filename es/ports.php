@@ -4,6 +4,8 @@
     include_once("$DOCUMENT_ROOT/includes/db.inc");
     include_once("$DOCUMENT_ROOT/includes/email.inc");
     print_header('Portes Disponibles', 'utf-8');
+    $by = isset($_GET['by']) ? $_GET['by'] : '';
+    $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
 	<center>
 	<h1>Portfiles de DarwinPorts</h1>

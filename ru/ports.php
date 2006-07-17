@@ -4,6 +4,8 @@
     include_once("$DOCUMENT_ROOT/includes/db.inc");
     include_once("$DOCUMENT_ROOT/includes/email.inc");
     print_header('Текущая база портов', 'utf-8');
+    $by = isset($_GET['by']) ? $_GET['by'] : '';
+    $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
 	<center>
 	<h1>Текущая база портов DarwinPorts</h1>
