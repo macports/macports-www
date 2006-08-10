@@ -8,10 +8,10 @@
     <div id="content">
       <h2 class="hdr">Get DarwinPorts</h2>
 
-	 <p>DarwinPorts version <? print "$dp_version"; ?> is available in binary form as a
-	 dmg disk image <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">for Tiger (Universal)</a>
-	 or <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">Panther</a>,
-	 both containing a pkg installer, or in source form as either a
+	 <p>DarwinPorts version <? print "$dp_version_dmg"; ?> is available in binary form as a
+	 dmg disk image <a href="/downloads/DarwinPorts-<? print "$dp_version_dmg"; ?>-10.4.dmg">for Tiger (Universal)</a>
+	 or <a href="/downloads/DarwinPorts-<? print "$dp_version_dmg"; ?>-10.3.dmg">Panther</a>,
+	 both containing a pkg installer, or version <? print "$dp_version"; ?> in source form as either a
 	 <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">tar.bz2</a> package
 	 or a <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">tar.gz</a> one.
 	 Checksums for all these are contained <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.chk.txt">here</a>.</p>
@@ -35,8 +35,8 @@
 	<h5 class="subhdr">Mac OS X Package (.pkg) Installer</h5>
 
 	<p>The easiest way to install DarwinPorts on a Mac OS X system is by downloading
-	the <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.4.dmg">dmg for Tiger</a>
-	or the <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>-10.3.dmg">one for Panther</a>
+	the <a href="/downloads/DarwinPorts-<? print "$dp_version_dmg"; ?>-10.4.dmg">dmg for Tiger</a>
+	or the <a href="/downloads/DarwinPorts-<? print "$dp_version_dmg"; ?>-10.3.dmg">one for Panther</a>
 	and running Installer.app on the pkg contained therein by double clicking on them,
 	following the on-screen instructions until completion. This procedure will place a
 	fully functional and default DarwinPorts installation on your host system,
