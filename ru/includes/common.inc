@@ -1,6 +1,6 @@
 <?php
 
-# $Id: common.inc,v 1.2 2004/09/13 23:18:40 matt Exp $
+# $Id$
 # $Trans-Id: common.inc,v 1.0 2004/09/14 00:47:13 jc Exp $
 # Copyright (c) 2003, OpenDarwin
 
