@@ -5,6 +5,7 @@
 	print_header('Available Ports', 'utf-8');
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';
+        /* $Id$ */
 ?>
 	<center>
 	<h1>MacPorts Portfiles</h1>

@@ -1,6 +1,6 @@
 <?php
 
-# $Id $
+# $Id$
 # Copyright (c) 2004, OpenDarwin
 
 function obfuscate_email($email)

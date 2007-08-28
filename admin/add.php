@@ -3,6 +3,7 @@
     include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
     include_once("$DOCUMENT_ROOT/macports/includes/news.inc");
     print_header('MacPorts | Add news', 'utf-8');
+    /* $Id$ */
   ?>
 
     <div id="content">

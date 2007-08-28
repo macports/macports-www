@@ -4,6 +4,7 @@ $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 include_once("$DOCUMENT_ROOT/macports/includes/email.inc");
 
 $portname = basename(dirname($_SERVER['PATH_INFO']));
+/* $Id$ */
 ?>
 
 <html>

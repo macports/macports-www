@@ -1,3 +1,4 @@
+<!-- $Id$ -->
       <div id="nav">
 	<div id="logo">
 	  <a href="/macports/" title="MacPorts"><img src="/macports/img/dp.jpg"

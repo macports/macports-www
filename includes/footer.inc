@@ -1,3 +1,4 @@
+<!-- $Id$ -->
     <div id="footer">
         <span class="languages">English, <a href="/macports/fr/">Fran&ccedil;ais</a>, <a href="/macports/es/">Espa&ntilde;ol</a>,
             <a href="/macports/ru/">Russian</a>, <a href="/macports/it/">Italiano</a></span>
