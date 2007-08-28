@@ -1,5 +1,5 @@
-<!-- $Id$ -->
       <div id="nav">
+<!-- $Id$ -->
 	<div id="logo">
 	  <a href="/macports/" title="MacPorts"><img src="/macports/img/dp.jpg"
 	    alt="MacPorts" /></a>

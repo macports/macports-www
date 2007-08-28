@@ -1,8 +1,8 @@
   <?php
+    /* $Id$ */
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
     print_header('MacPorts -- Download & Installation', 'utf-8');
-    /* $Id$ */
   ?>
 
     <div id="content">
