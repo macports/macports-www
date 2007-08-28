@@ -1,8 +1,7 @@
   <?php
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/includes/functions.inc");
-    print_header('DarwinPorts Downloads', 'iso-8859-1');
+    include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+    print_header('MacPorts Downloads', 'utf-8');
   ?>
 
     <div id="content">
@@ -16,7 +15,7 @@ $dir=".";
 $files = array();
 $rep=opendir($dir);
 while ($file = readdir($rep)) {
-	if (   preg_match('/^(\..*)|(.*\.php)$/', $file)
+	if (   preg_match('/^(\..*)|(.*\.php)|(.*\.css)|(.*\.html)$/', $file)
 		|| is_dir($file)
 	   ) {
 		continue;
@@ -33,7 +32,7 @@ arsort($files);
 // Emit the files, with dates
 foreach ($files as $f => $t) {
 	echo "<tr>";
-	echo "<td>".date("d-M-Y G:i", $t)."</td><td><a href=\"/downloads/$f\">$f</a></td>\n";
+	echo "<td>".date("d-M-Y G:i", $t)."</td><td><a href=\"/macports/downloads/$f\">$f</a></td>\n";
 	echo "</tr>";
 }
 ?>

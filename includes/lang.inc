@@ -1,3 +1,3 @@
-      <p id="lang">[ <a href="/">English</a>, <a
-	href="/ja/">Japanese</a>, <a href="/fr/">Fran&ccedil;ais</a>, <a
-	href="/es/">Espa&ntilde;ol</a> ]</p>
+      <p id="lang">[ <a href="/macports/">English</a>, <a
+	href="/macports/ja/">Japanese</a>, <a href="/macports/fr/">Fran&ccedil;ais</a>, <a
+	href="/macports/es/">Espa&ntilde;ol</a> ]</p>

@@ -1,8 +1,7 @@
   <?php
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/includes/functions.inc");
-    print_header('DarwinPorts Site Administration', 'iso-8859-1');
+    include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+    print_header('MacPorts Site Administration', 'utf-8');
   ?>
 
     <div id="content">
@@ -12,13 +11,13 @@
 	the site:</p>
 
       <ul>
-	<li><a href="/admin/headlines/add.php">Add headline</a></li>
-	<li><a href="/admin/headlines/list.php">List all headlines</a></li>
-	<li><a href="/admin/headlines/rss.php">Regenerate RSS feed</a></li>
+	<li><a href="/macports/admin/add.php">Add headline</a></li>
+	<li><a href="/macports/admin/list.php">List all headlines</a></li>
+	<li><a href="/macports/admin/rss.php">Regenerate RSS feed</a></li>
       </ul>
 
       <p>If you need to edit an already-posted headline, find it in the <a
-	href="/admin/headlines/list.php">list</a>, and choose edit.</p>
+	href="/macports/admin/list.php">list</a>, and choose edit.</p>
     </div>
   </div>
 

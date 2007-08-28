@@ -8,7 +8,7 @@
 # variables and includes
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 $PHP_SELF = $_SERVER['PHP_SELF'];
-include_once("$DOCUMENT_ROOT/includes/db.inc");
+/* include_once("$DOCUMENT_ROOT/macports/includes/db.inc"); */
 $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
 mysql_select_db($db);
 
@@ -26,10 +26,10 @@ function create_rss() {
     die("Error: $result.");
   }
 
-  $open = fopen("$DOCUMENT_ROOT/dp_news.xml", "w+");
+  $open = fopen("$DOCUMENT_ROOT/mp_news.xml", "w+");
   $rssdate = substr_replace(date("Y-m-d\TH:i:sO", time()),':', -2, 0);
 
-  $rss = "<?xml version=\"1.0\" encoding=\"iso-8859-1\"?>\n";
+  $rss = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";
   $rss .= "<rss version=\"2.0\"\n";
   $rss .= "  xmlns:dc=\"http://purl.org/dc/elements/1.1/\"\n";
   $rss .= "  xmlns:sy=\"http://purl.org/rss/1.0/modules/syndication/\"\n";
@@ -38,20 +38,20 @@ function create_rss() {
   $rss .= "  xmlns:content=\"http://purl.org/rss/1.0/modules/content/\">\n\n";
 
   $rss .= "  <channel>\n";
-  $rss .= "    <title>DarwinPorts Project News</title>\n";
-  $rss .= "    <link>http://www.darwinports.org/</link>\n";
-  $rss .= "    <description>DarwinPorts Project News</description>\n";
+  $rss .= "    <title>MacPorts Project News</title>\n";
+  $rss .= "    <link>http://www.macports.org/</link>\n";
+  $rss .= "    <description>MacPorts Project News</description>\n";
   $rss .= "    <dc:language>en-us</dc:language>\n";
-  $rss .= "    <dc:creator>Jim Mock (mij@opendarwin.org)</dc:creator>\n";
-  $rss .= "    <dc:rights>Copyright 2002-2003</dc:rights>\n";
+  $rss .= "    <dc:creator>Jim Mock (mij@macports.org)</dc:creator>\n";
+  $rss .= "    <dc:rights>Copyright 2002-2007</dc:rights>\n";
   $rss .= "    <dc:date>$rssdate</dc:date>\n";
-  $rss .= "    <admin:errorReportsTo rdf:resource=\"mailto:mij@opendarwin.org\" />\n";
+  $rss .= "    <admin:errorReportsTo rdf:resource=\"mailto:mij@macports.org\" />\n";
 
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
       $rss .= "    <item>\n";
       $rss .= "      <title>$row->title</title>\n";
-      $rss .= "      <link>http://www.darwinports.org/archives.php?id=$row->id</link>\n";
+      $rss .= "      <link>http://www.macports.org/archives.php?id=$row->id</link>\n";
 
       $desc_query = "SELECT SUBSTRING_INDEX(news, ' ', 26) FROM headlines WHERE id=$row->id";
       $desc_result = mysql_query($desc_query);
@@ -60,7 +60,7 @@ function create_rss() {
       $description = $desc_row[0];
 
       $rss .= "      <description><![CDATA[$description...</p>]]></description>\n";
-      $rss .= "      <guid isPermaLink=\"true\">http://www.darwinports.org/archives.php?id=$row->id</guid>\n";
+      $rss .= "      <guid isPermaLink=\"true\">http://www.macports.org/archives.php?id=$row->id</guid>\n";
       $rss .= "      <content:encoded><![CDATA[$row->news]]></content:encoded>\n";
       $rss .= "    </item>\n";
     }
@@ -155,7 +155,8 @@ function print_add_headline() {
       if(!$result) {
 	die("Error: $result.");
       }
-      echo "<p>The addition was successful.  You can either <a href=\"list.php\">list all existing headlines, <a href=\"add.php\">add another headline</a>, or <a href=\"/\">return to the DarwinPorts site</a>.</p>\n\n";
+      echo "<p>The addition was successful.  You can either <a href=\"/macports/admin/list.php\">list all existing headlines,
+      <a href=\"/macports/admin/add.php\">add another headline</a>, or <a href=\"/macports/index.php\">return to the MacPorts site</a>.</p>\n\n";
       create_rss();
     }
     else {
@@ -218,7 +219,8 @@ function print_edit_headline($id) {
       if(!$result) {
 	die("Error: $result.");
       }
-      echo "<p>The update was successful.  You can either <a href=\"list.php\">list all existing headlines, <a href=\"add.php\">add another headline</a>, or <a href=\"/\">return to the DarwinPorts site</a>.</p>\n\n";
+      echo "<p>The update was successful.  You can either <a href=\"/macports/admin/list.php\">list all existing headlines,
+      <a href=\"/macports/admin/add.php\">add another headline</a>, or <a href=\"/macports/index.php\">return to the MacPorts site</a>.</p>\n\n";
       create_rss();
     }
     else {
@@ -238,7 +240,8 @@ function print_edit_headline($id) {
 function print_all_headlines() {
   global $connect;
 
-  echo "<p>Below is a list of all existing news headlines.  They can be viewed, edited, or deleted from this interface.  Alternatively, you can also <a href=\"add.php\">add news</a>.</p>\n\n";
+  echo "<p>Below is a list of all existing news headlines.  They can be viewed, edited, or deleted from this interface.
+  Alternatively, you can also <a href=\"/macports/admin/add.php\">add news</a>.</p>\n\n";
 
   $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
   $result = mysql_query($query) or die("Error: $query.");
@@ -247,7 +250,8 @@ function print_all_headlines() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+      echo "<p><a href=\"/macports/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;
+           <a href=\"/macports/admin/edit.php?id=$row->id\">edit</a></p>\n\n";
     }
   }
   else {
@@ -269,7 +273,7 @@ function print_all_headlines_nonadmin() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+      echo "<p><a href=\"/macports/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
     }
   }
   else {

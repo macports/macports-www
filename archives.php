@@ -1,8 +1,8 @@
   <?php
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/includes/common.inc");
-    include_once("$DOCUMENT_ROOT/includes/functions.inc");
-    print_header('DarwinPorts Home', 'iso-8859-1');
+    include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+    include_once("$DOCUMENT_ROOT/macports/includes/news.inc");
+    print_header('MacPorts Home', 'utf-8');
   ?>
 
     <div id="content">

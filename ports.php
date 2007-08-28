@@ -1,21 +1,20 @@
 <?php
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	include_once("$DOCUMENT_ROOT/includes/common.inc");
-	include_once("$DOCUMENT_ROOT/includes/db.inc");
-	include_once("$DOCUMENT_ROOT/includes/email.inc");
-	print_header('Available Ports', 'iso-8859-1');
+	include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+	include_once("$DOCUMENT_ROOT/macports/includes/email.inc");
+	print_header('Available Ports', 'utf-8');
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
 	<center>
-	<h1>DarwinPorts Portfiles</h1>
+	<h1>MacPorts Portfiles</h1>
 	</center>
 
 	<p>
-	This form allows you to search the current index of DarwinPorts software. <br />
+	This form allows you to search the current index of MacPorts software. <br />
 	<i>Index last updated: </i>
 	<?php
-		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM darwinports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
+		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM macports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
 		if($result && $row = mysql_fetch_row($result)) {
 				echo date("d-M-Y H:i:s", $row[0]);
@@ -41,7 +40,7 @@
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
 <?php
-		$result = mysql_query("SELECT count(*) from darwinports.portfiles");
+		$result = mysql_query("SELECT count(*) from macports.portfiles");
 		if ($result) {
 			$row = mysql_fetch_array($result);
 			$count = $row[0];
@@ -57,7 +56,7 @@
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr><th colspan="4" align="left">View By Category:</th></tr>
 		<?php
-				$query = "SELECT DISTINCT category FROM darwinports.categories ORDER BY category";
+				$query = "SELECT DISTINCT category FROM macports.categories ORDER BY category";
 				$result = mysql_query($query);
 				if($result) {
 					while( $row = mysql_fetch_assoc($result) ) {
@@ -75,7 +74,7 @@
 	if ($by && ($substr || $by == "all")) {
 		$fields = "name, path, version, description";
 		$query = "1";
-		$tables = "darwinports.portfiles p";
+		$tables = "macports.portfiles p";
 		if ($by == "name") {
 			$query .= " AND p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
@@ -86,19 +85,19 @@
 			$query .= " AND p.description LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
 		if ($by == "cat") {
-			$tables .= ", darwinports.categories c";
+			$tables .= ", macports.categories c";
 			$query .= " AND c.portfile=p.name AND c.category='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "variant") {
-			$tables .= ", darwinports.variants v";
+			$tables .= ", macports.variants v";
 			$query .= " AND v.portfile=p.name AND v.variant='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "platform") {
-			$tables .= ", darwinports.platforms pl";
+			$tables .= ", macports.platforms pl";
 			$query .= " AND pl.portfile=p.name AND pl.platform ='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "maintainer") {
-			$tables .= ", darwinports.maintainers m";
+			$tables .= ", macports.maintainers m";
 			$query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
 		$query = "SELECT DISTINCT $fields FROM $tables WHERE $query ORDER BY name";
@@ -112,12 +111,12 @@
 <?php
 			while( $row = mysql_fetch_assoc($result) ) {
 ?>
-	<dt><b><a href="http://www.darwinports.org/darwinports/dports/<?php echo $row['path']; ?>/Portfile"><?php echo htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
+	<dt><b><a href="http://trac.macports.org/projects/macports/browser/trunk/dports/<?php echo $row['path']; ?>/Portfile"><?php echo htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
 	<dd>
 	<?php echo htmlspecialchars($row['description']); ?><br />
 	<?php
 // MAINTAINERS
-				$nquery = "SELECT maintainer FROM darwinports.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, maintainer";
+				$nquery = "SELECT maintainer FROM macports.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, maintainer";
 				$nresult = mysql_query($nquery);
 				if ($nresult) {
 ?>
@@ -134,7 +133,7 @@
 				}
 
 // CATEGORIES
-				$nquery = "SELECT category FROM darwinports.categories WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, category";
+				$nquery = "SELECT category FROM macports.categories WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, category";
 				$nresult = mysql_query($nquery);
 				if ($nresult) {
 ?>
@@ -153,7 +152,7 @@
 				}
 
 // PLATFORMS
-				$nquery = "SELECT platform FROM darwinports.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY platform";
+				$nquery = "SELECT platform FROM macports.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY platform";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
@@ -169,7 +168,7 @@
 				}
 
 // DEPENDENCIES
-				$nquery = "SELECT library FROM darwinports.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY library";
+				$nquery = "SELECT library FROM macports.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY library";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
@@ -186,7 +185,7 @@
 				}
 /*
 // VARIANTS
-				$nquery = "SELECT variant FROM darwinports.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
+				$nquery = "SELECT variant FROM macports.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
