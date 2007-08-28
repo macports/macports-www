@@ -1,7 +1,7 @@
   <?php
     $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
     include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
-    print_header('Get Help', 'utf-8');
+    print_header('MacPorts -- Help', 'utf-8');
     /* $Id$ */
   ?>
 

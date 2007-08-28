@@ -14,10 +14,10 @@
 	    $help = '/macports/help.php';
 
 	    if($PHP_SELF == $home) {
-	      echo "<li class=\"selected\"><a href=\"/macports/index.php\" title=\"MacPorts Home\">MacPorts Home</a></li>\n";
+	      echo "<li class=\"selected\"><a href=\"/macports/index.php\" title=\"Home\">Home</a></li>\n";
 	    }
 	    else {
-	      echo "<li><a href=\"/macports/index.php\" title=\"MacPorts Home\">MacPorts Home</a></li>\n";
+	      echo "<li><a href=\"/macports/index.php\" title=\"Home\">Home</a></li>\n";
 	    }
 	    if($PHP_SELF == $getmp) {
 	      echo "<li class=\"selected\"><a href=\"/macports/getmp.php\" title=\"Get MacPorts\">Get MacPorts</a></li>\n";
@@ -26,12 +26,12 @@
 	      echo "<li><a href=\"/macports/getmp.php\" title=\"Get MacPorts\">Get MacPorts</a></li>\n";
 	    }
 	  ?>
-	    <li class="last"><a href="http://trac.macports.org/" title="Bugzilla">Support & Development</a></li>
+	    <li class="last"><a href="http://trac.macports.org/" title="Support & Development">Support & Development</a></li>
 	  </ul>
 	</div>
 	<div id="r">
 	  <ul>
-	    <li><a href="/macports/docs/" title="Documentation">Documentation</a></li>
+	    <li><a href="http://geeklair.net/new_macports_guide/" title="Documentation">Documentation</a></li>
 	    <?php
 	      if($PHP_SELF == $ports) {
 		echo "<li class=\"selected\"><a href=\"/macports/ports.php\" title=\"Available Ports\">Available Ports</a></li>\n";
@@ -40,10 +40,10 @@
 		echo "<li><a href=\"/macports/ports.php\" title=\"Available Ports\">Available Ports</a></li>\n";
 	      }
 	      if($PHP_SELF == $help) {
-		echo "<li class=\"sellast\"><a href=\"/macports/help.php\" title=\"Get Help\">Get Help</a></li>\n";
+		echo "<li class=\"sellast\"><a href=\"/macports/help.php\" title=\"Help\">Help</a></li>\n";
 	      }
 	      else {
-		echo "<li class=\"last\"><a href=\"/macports/help.php\" title=\"Get Help\">Get Help</a></li>\n";
+		echo "<li class=\"last\"><a href=\"/macports/help.php\" title=\"Help\">Help</a></li>\n";
 	      }
 	    ?>
 	  </ul>

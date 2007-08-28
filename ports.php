@@ -2,7 +2,7 @@
 	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 	include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
 	include_once("$DOCUMENT_ROOT/macports/includes/email.inc");
-	print_header('Available Ports', 'utf-8');
+	print_header('MacPorts -- Available Ports', 'utf-8');
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';
         /* $Id$ */
