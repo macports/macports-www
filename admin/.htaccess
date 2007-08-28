@@ -1,4 +1,4 @@
-AuthName "DP Site Administration"
+AuthName "MacPorts Site Administration"
 AuthType Basic
-AuthUserFile /var/db/darwinports/dpadmin-htpasswd
+AuthUserFile /var/db/macports/mpadmin-htpasswd
 require valid-user
