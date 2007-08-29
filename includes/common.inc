@@ -3,6 +3,16 @@
 # $Id$
 # Copyright (c) 2003, OpenDarwin
 
+
+######################################################################
+
+# Ports database connection parameters:
+$host = 'localhost';
+$user = 'www';
+$pass = '';
+$connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
+
+
 ######################################################################
 
 # print the current MacPorts version

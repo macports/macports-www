@@ -9,8 +9,8 @@
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 $PHP_SELF = $_SERVER['PHP_SELF'];
 /* include_once("$DOCUMENT_ROOT/macports/includes/db.inc"); */
-$connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
-mysql_select_db($db);
+/* $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!"); */
+/* mysql_select_db($db); */
 
 
 
