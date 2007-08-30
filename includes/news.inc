@@ -152,7 +152,7 @@ function print_add_headline() {
       $count++;
     }
     if(sizeof($errorList) == 0) {
-      $query = "INSERT INTO headlines (timestamp, title, news) VALUES (NOW(), '$title', '$news')";
+      $query = "INSERT INTO $newsdb.headlines (timestamp, title, news) VALUES (NOW(), '$title', '$news')";
       $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
       if(!$result) {
 	die("Error: $result.");
@@ -215,7 +215,7 @@ function print_edit_headline($id) {
       $count++;
     }
     if(sizeof($errorList) == 0) {
-      $query = "UPDATE headlines SET title='$title', news='$news' WHERE id='$id'";
+      $query = "UPDATE $newsdb.headlines SET title='$title', news='$news' WHERE id='$id'";
       $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
 
       if(!$result) {
