@@ -9,19 +9,21 @@
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
 $PHP_SELF = $_SERVER['PHP_SELF'];
 /* include_once("$DOCUMENT_ROOT/macports/includes/db.inc"); */
-/* $connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!"); */
-/* mysql_select_db($db); */
-
+$newsdb = 'macports_news';
+$newsdb_host = 'localhost';
+$newsdb_user = 'www';
+$newsdb_passwd = '';
+$newsdb_connect = mysql_pconnect($newsdb_host, $newsdb_user, $newsdb_pass) or die("Can't connect to the MacPorts news database!");
 
 
 ######################################################################
 
 # create an RSS feed of the project news
 function create_rss() {
-  global $DOCUMENT_ROOT, $connect;
+  global $DOCUMENT_ROOT, $newsdb, $newsdb_connect;
 
-  $query = "SELECT id, title, news FROM headlines ORDER BY id DESC LIMIT 10";
-  $result = mysql_query($query) or die("Error: $query.");
+  $query = "SELECT id, title, news FROM $newsdb.headlines ORDER BY id DESC LIMIT 10";
+  $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
   if(!$result) {
     die("Error: $result.");
   }
@@ -53,7 +55,7 @@ function create_rss() {
       $rss .= "      <title>$row->title</title>\n";
       $rss .= "      <link>http://www.macports.org/archives.php?id=$row->id</link>\n";
 
-      $desc_query = "SELECT SUBSTRING_INDEX(news, ' ', 26) FROM headlines WHERE id=$row->id";
+      $desc_query = "SELECT SUBSTRING_INDEX(news, ' ', 26) FROM $newsdb.headlines WHERE id=$row->id";
       $desc_result = mysql_query($desc_query);
       $desc_row = mysql_fetch_row($desc_result);
 
@@ -76,10 +78,10 @@ function create_rss() {
 
 # print the project news
 function print_headlines() {
-  global $connect;
+  global $newsdb, $newsdb_connect;
 
-  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines ORDER BY id DESC LIMIT 5";
-  $result = mysql_query($query) or die("Error: $query.");
+  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM $newsdb.headlines ORDER BY id DESC LIMIT 5";
+  $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
   if(!$result) {
     die("Error: $result.");
   }
@@ -100,11 +102,11 @@ function print_headlines() {
 
 # display a single headline
 function print_headline() {
-  global $connect;
+  global $newsdb, $newsdb_connect;
 
   $id = $_GET['id'];
-  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM headlines WHERE id='$id'";
-  $result = mysql_query($query) or die("Error: $query.");
+  $query = "SELECT id, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp, title, news FROM $newsdb.headlines WHERE id='$id'";
+  $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
   if(!$result) {
     die("Error: $result.");
   }
@@ -125,7 +127,7 @@ function print_headline() {
 
 # print the form used to add project news
 function print_add_headline() {
-  global $PHP_SELF, $connect;
+  global $PHP_SELF, $newsdb, $newsdb_connect;
 
   if(!$_POST['submit']) {
     echo "<p>Use the form below to add project news.</p>\n\n";
@@ -151,7 +153,7 @@ function print_add_headline() {
     }
     if(sizeof($errorList) == 0) {
       $query = "INSERT INTO headlines (timestamp, title, news) VALUES (NOW(), '$title', '$news')";
-      $result = mysql_query($query) or die("Error: $query.");
+      $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
       if(!$result) {
 	die("Error: $result.");
       }
@@ -174,12 +176,12 @@ function print_add_headline() {
 
 # print the form used to edit project news
 function print_edit_headline($id) {
-  global $PHP_SELF, $connect;
+  global $PHP_SELF, $newsdb, $newsdb_connect;
 
   if(!$_POST['submit']) {
     $id = $_GET['id'];
-    $query = "SELECT title, news FROM headlines WHERE id='$id'";
-    $result = mysql_query($query) or die("Error: $query.");
+    $query = "SELECT title, news FROM $newsdb.headlines WHERE id='$id'";
+    $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
     if(!$result) {
       die("Error: $result.");
     }
@@ -214,7 +216,7 @@ function print_edit_headline($id) {
     }
     if(sizeof($errorList) == 0) {
       $query = "UPDATE headlines SET title='$title', news='$news' WHERE id='$id'";
-      $result = mysql_query($query) or die("Error: $query.");
+      $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
 
       if(!$result) {
 	die("Error: $result.");
@@ -238,13 +240,13 @@ function print_edit_headline($id) {
 
 # print a list of all existing headlines
 function print_all_headlines() {
-  global $connect;
+  global $newsdb, $newsdb_connect;
 
   echo "<p>Below is a list of all existing news headlines.  They can be viewed, edited, or deleted from this interface.
   Alternatively, you can also <a href=\"/macports/admin/add.php\">add news</a>.</p>\n\n";
 
-  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
-  $result = mysql_query($query) or die("Error: $query.");
+  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM $newsdb.headlines ORDER BY id DESC";
+  $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
   if(!$result) {
     die("Error: $result.");
   }
@@ -264,10 +266,10 @@ function print_all_headlines() {
 # print a list of all existing headlines without the admin foobage
 # (this is cheap and could be better)
 function print_all_headlines_nonadmin() {
-  global $connect;
+  global $newsdb, $newsdb_connect;
 
-  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM headlines ORDER BY id DESC";
-  $result = mysql_query($query) or die("Error: $query.");
+  $query = "SELECT id, title, DATE_FORMAT(timestamp, '%e %b %Y, %l:%i %p') AS f_timestamp FROM $newsdb.headlines ORDER BY id DESC";
+  $result = mysql_query($query) or die("Error: $query (" . mysql_error() . ")");
   if(!$result) {
     die("Error: $result.");
   }

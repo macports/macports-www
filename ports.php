@@ -15,7 +15,7 @@
 	This form allows you to search the current index of MacPorts software. <br />
 	<i>Index last updated: </i>
 	<?php
-		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM macports.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
+		$sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
 		$result = mysql_query($sql);
 		if($result && $row = mysql_fetch_row($result)) {
 				echo date("d-M-Y H:i:s", $row[0]);
@@ -41,7 +41,7 @@
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr>
 <?php
-		$result = mysql_query("SELECT count(*) from macports.portfiles");
+		$result = mysql_query("SELECT count(*) from $portsdb.portfiles");
 		if ($result) {
 			$row = mysql_fetch_array($result);
 			$count = $row[0];
@@ -57,7 +57,7 @@
 		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
 		<tr><th colspan="4" align="left">View By Category:</th></tr>
 		<?php
-				$query = "SELECT DISTINCT category FROM macports.categories ORDER BY category";
+				$query = "SELECT DISTINCT category FROM $portsdb.categories ORDER BY category";
 				$result = mysql_query($query);
 				if($result) {
 					while( $row = mysql_fetch_assoc($result) ) {
@@ -75,7 +75,7 @@
 	if ($by && ($substr || $by == "all")) {
 		$fields = "name, path, version, description";
 		$query = "1";
-		$tables = "macports.portfiles p";
+		$tables = "$portsdb.portfiles p";
 		if ($by == "name") {
 			$query .= " AND p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
@@ -86,19 +86,19 @@
 			$query .= " AND p.description LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
 		if ($by == "cat") {
-			$tables .= ", macports.categories c";
+			$tables .= ", $portsdb.categories c";
 			$query .= " AND c.portfile=p.name AND c.category='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "variant") {
-			$tables .= ", macports.variants v";
+			$tables .= ", $portsdb.variants v";
 			$query .= " AND v.portfile=p.name AND v.variant='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "platform") {
-			$tables .= ", macports.platforms pl";
+			$tables .= ", $portsdb.platforms pl";
 			$query .= " AND pl.portfile=p.name AND pl.platform ='" . mysql_real_escape_string($substr) . "'";
 		}
 		if ($by == "maintainer") {
-			$tables .= ", macports.maintainers m";
+			$tables .= ", $portsdb.maintainers m";
 			$query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
 		}
 		$query = "SELECT DISTINCT $fields FROM $tables WHERE $query ORDER BY name";
@@ -117,7 +117,7 @@
 	<?php echo htmlspecialchars($row['description']); ?><br />
 	<?php
 // MAINTAINERS
-				$nquery = "SELECT maintainer FROM macports.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, maintainer";
+				$nquery = "SELECT maintainer FROM $portsdb.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, maintainer";
 				$nresult = mysql_query($nquery);
 				if ($nresult) {
 ?>
@@ -134,7 +134,7 @@
 				}
 
 // CATEGORIES
-				$nquery = "SELECT category FROM macports.categories WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, category";
+				$nquery = "SELECT category FROM $portsdb.categories WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, category";
 				$nresult = mysql_query($nquery);
 				if ($nresult) {
 ?>
@@ -153,7 +153,7 @@
 				}
 
 // PLATFORMS
-				$nquery = "SELECT platform FROM macports.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY platform";
+				$nquery = "SELECT platform FROM $portsdb.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY platform";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
@@ -169,7 +169,7 @@
 				}
 
 // DEPENDENCIES
-				$nquery = "SELECT library FROM macports.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY library";
+				$nquery = "SELECT library FROM $portsdb.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY library";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>
@@ -186,7 +186,7 @@
 				}
 /*
 // VARIANTS
-				$nquery = "SELECT variant FROM macports.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
+				$nquery = "SELECT variant FROM $portsdb.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
 				$nresult = mysql_query($nquery);
 				if ($nresult && mysql_num_rows($nresult) > 0) {
 ?>

@@ -7,10 +7,11 @@
 ######################################################################
 
 # Ports database connection parameters:
-$host = 'localhost';
-$user = 'www';
-$pass = '';
-$connect = mysql_pconnect($host, $user, $pass) or die("Can't connect to db!");
+$portsdb = 'macports_ports';
+$portsdb_host = 'localhost';
+$portsdb_user = 'www';
+$portsdb_passwd = '';
+$portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the ports database!");
 
 
 ######################################################################
@@ -66,7 +67,9 @@ function print_footer() {
 
 # Print a total count of currently available ports:
 function ports_count() {
-         $result = mysql_query("SELECT count(*) FROM macports.portfiles");
+         global $portsdb;
+
+         $result = mysql_query("SELECT count(*) FROM $portsdb.portfiles") or die("Error: " . mysql_error());
          if ($result) {
            $row = mysql_fetch_array($result);
            $count = $row[0];
