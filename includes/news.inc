@@ -28,7 +28,7 @@ function create_rss() {
     die("Error: $result.");
   }
 
-  $open = fopen("$DOCUMENT_ROOT/mp_news.xml", "w+");
+  $open = fopen("$DOCUMENT_ROOT/macports/macports_news.xml", "w+");
   $rssdate = substr_replace(date("Y-m-d\TH:i:sO", time()),':', -2, 0);
 
   $rss = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n";

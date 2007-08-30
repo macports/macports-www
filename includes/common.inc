@@ -38,7 +38,7 @@ function print_header($title, $encoding) {
     <meta name="copyright" content="2007, MacPorts Team" />
     <meta name="robots" content="all" />
     <link rel="stylesheet" type="text/css" href="/macports/mp.css" />
-    <link rel="alternate" type="application/rss+xml" href="/macports/mp_news.xml" />
+    <link rel="alternate" type="application/rss+xml" href="/macports/macports_news.xml" />
   </head>
 
   <body>
