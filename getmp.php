@@ -23,10 +23,12 @@
 
 	  <p>If you want to use MacPorts on a platform other than Mac OS X, please be
 	  aware of the following requirements (we assume that you have basics such as
-	  gcc):</p>
+	  GCC and X11):</p>
 	  <ul>
-	  	<li>TCL (8.3 or 8.4)</li>
-		<li>curl</li>
+	  	<li><a href="http://www.tcl.tk/">Tcl</a> (8.3 or 8.4), with threads</li>
+	  	<li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation</li>
+		<li><a href="http://rsync.samba.org/">rsync</a></li>
+		<li><a href="http://curl.haxx.se/">cURL</a></li>
 		<li>OpenSSL or libmd</li>
 	  </ul>
 
