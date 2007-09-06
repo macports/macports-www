@@ -7,9 +7,7 @@
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
-	<center>
-	<h1>MacPorts Portfiles</h1>
-	</center>
+	<h2>MacPorts Portfiles</h2>
 
 	<p>
 	This form allows you to search the current index of MacPorts software. <br />
@@ -38,7 +36,7 @@
 			<td><input type="text" name="substr" size="40" /></td>
 			<td><input type="submit" value="Search" /></td>
 		</tr>
-		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
+		<tr><td colspan="4"><hr /></td></tr>
 		<tr>
 <?php
 		$result = mysql_query("SELECT count(*) from $portsdb.portfiles");
@@ -54,7 +52,7 @@
 		<?php
 			if (!$by || (!$substr && $by != "all")) {
 		?>
-		<tr><td colspan="4"><hr size="1" noshade="noshade" /></td></tr>
+		<tr><td colspan="4"><hr /></td></tr>
 		<tr><th colspan="4" align="left">View By Category:</th></tr>
 		<?php
 				$query = "SELECT DISTINCT category FROM $portsdb.categories ORDER BY category";
@@ -204,16 +202,14 @@
 	?>
 	<br />
 	</dd>
-	<br />
 <?php
 			} 
 		} else {
 			echo "An Error Occurred. (501)";
 		}
-	}
 ?>
-	</dl>
-	</div>
+    </dl>
 <?php
+	}
 	print_footer();
 ?>

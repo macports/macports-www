@@ -1,20 +1,17 @@
-  <?php
-    /* $Id$ */
-    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
-    print_header('MacPorts -- Download & Installation', 'utf-8');
-  ?>
-
-    <div id="content">
-      <h2 class="hdr">Get MacPorts</h2>
-
-	 <p>MacPorts version <? print "$mp_version_dmg"; ?> is available in binary form as a
-	 dmg disk image for <a href="/macports/downloads/MacPorts-<? print "$mp_version_dmg"; ?>-10.4.dmg">
-         Tiger (Universal)</a> or <a href="/macports/downloads/MacPorts-<? print "$mp_version_dmg"; ?>-10.3.dmg">
-         Panther</a>, both containing a pkg installer, or version <? print "$mp_version"; ?>
-         in source form as either a <a href="/macports/downloads/MacPorts-<? print "$mp_version"; ?>.tar.bz2">tar.bz2</a>
-         package or a <a href="/macports/downloads/MacPorts-<? print "$mp_version"; ?>.tar.gz">tar.gz</a> one.
-	 Checksums for all these are contained in the <a href="/macports/downloads/MacPorts-<? print "$mp_version_dmg"; ?>.chk.txt">
+<?php
+  /* $Id$ */
+  $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+  include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+  print_header('MacPorts -- Download &amp; Installation', 'utf-8');
+?>
+    <h2 class="hdr">Get MacPorts</h2>
+    <p>MacPorts version <?php print "$mp_version_dmg"; ?> is available in binary form as a
+	 dmg disk image for <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>-10.4.dmg">
+         Tiger (Universal)</a> or <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>-10.3.dmg">
+         Panther</a>, both containing a pkg installer, or version <?php print "$mp_version"; ?>
+         in source form as either a <a href="/macports/downloads/MacPorts-<?php print "$mp_version"; ?>.tar.bz2">tar.bz2</a>
+         package or a <a href="/macports/downloads/MacPorts-<?php print "$mp_version"; ?>.tar.gz">tar.gz</a> one.
+	 Checksums for all these are contained in the <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>.chk.txt">
          checksums file</a>.</p>
 
 	 <p>To get a files listing of all our available downloads checkout the
@@ -33,11 +30,11 @@
 		<li>OpenSSL or libmd</li>
 	  </ul>
 
-	<h5 class="subhdr">Mac OS X Package (.pkg) Installer</h5>
+	<h3 class="subhdr">Mac OS X Package (.pkg) Installer</h3>
 
 	<p>The easiest way to install MacPorts on a Mac OS X system is by downloading
-	the <a href="/macports/downloads/MacPorts-<? print "$mp_version_dmg"; ?>-10.4.dmg">dmg for Tiger</a>
-	or the <a href="/macports/downloads/MacPorts-<? print "$mp_version_dmg"; ?>-10.3.dmg">one for Panther</a>
+	the <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>-10.4.dmg">dmg for Tiger</a>
+	or the <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>-10.3.dmg">one for Panther</a>
 	and running Installer.app on the pkg contained therein by double clicking on them,
 	following the on-screen instructions until completion. This procedure will place a
 	fully functional and default MacPorts installation on your host system,
@@ -55,31 +52,31 @@
 	<p>It is also recommended to run the above command on a regular basis to keep your
 	installation always current. At this point you should be ready to enjoy	MacPorts!</p>
 
-	<h5 class="subhdr">Source Installation</h5>
+	<h3 class="subhdr">Source Installation</h3>
 
 	<p>If on the other hand you decide to install from source, there are still a couple of
 	things you will need to do once you've downloaded the tarball before you can
 	install a port with the MacPorts system, namely compiling and installing MacPorts itself.
 	&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
-	and run &ldquo;<kbd>tar xjvf <a href="/macpports/downloads/MacPorts-<? print "$mp_version"; ?>.tar.bz2">
-        MacPorts-<? print "$mp_version"; ?>.tar.bz2</a></kbd>&rdquo; or &ldquo;<kbd>tar xzvf
-        <a href="/macports/downloads/MacPorts-<? print "$mp_version"; ?>.tar.gz">MacPorts-<? print "$mp_version"; ?>.tar.gz</a></kbd>&rdquo;,
+	and run &ldquo;<kbd>tar xjvf <a href="/macports/downloads/MacPorts-<?php print "$mp_version"; ?>.tar.bz2">
+        MacPorts-<?php print "$mp_version"; ?>.tar.bz2</a></kbd>&rdquo; or &ldquo;<kbd>tar xzvf
+        <a href="/macports/downloads/MacPorts-<?php print "$mp_version"; ?>.tar.gz">MacPorts-<?php print "$mp_version"; ?>.tar.gz</a></kbd>&rdquo;,
 	depending on whether you downloaded the bz2 tarball or the gz one, respectively.
 	This will unpack the MacPorts sources that you will proceed to build and install. To do
 	so, execute the following:</p>
 
-      <pre>cd MacPorts-<? print "$mp_version"; ?>
+      <pre>cd MacPorts-<?php print "$mp_version"; ?>
 
 ./configure &amp;&amp; make &amp;&amp; sudo make install</pre>
 
 	<p>Optionally:</p>
 
 <pre>cd ../
-rm -rf MacPorts-<? print "$mp_version"; ?>*</pre>
+rm -rf MacPorts-<?php print "$mp_version"; ?>*</pre>
 
       <p>These steps need to be perfomed from an administrator account, for which &ldquo;<kbd>sudo</kbd>&rdquo;
       will ask the password upon installation. This procedure will install a pristine MacPorts
-      system and, if the optional steps are taken, remove the as of now unnecessary MacPorts-<? print "$mp_version"; ?>
+      system and, if the optional steps are taken, remove the as of now unnecessary MacPorts-<?php print "$mp_version"; ?>
       source directory and corresponding tarball. To customize your installation you should read the output
       of &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and pass the appropriate options for the settings you wish
       to tweak to the configuration script in the steps detailed above.</p>
@@ -93,11 +90,11 @@ rm -rf MacPorts-<? print "$mp_version"; ?>*</pre>
 	the above command on a regular basis to keep your installation current.</p>
 
 
-	<h5 class="subhdr">Help</h5>
+	<h3 class="subhdr">Help</h3>
 
       <p><a href="/macports/help.php">Help</a> is also available should you need it.</p>
 
-	<h5 class="subhdr">SVN Sources</h5>
+	<h3 class="subhdr">SVN Sources</h3>
 
      <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes
      and feature additions, you may acquire the MacPorts sources through SVN.</p>
@@ -115,9 +112,6 @@ rm -rf MacPorts-<? print "$mp_version"; ?>*</pre>
       <p>If you'd simply like to view the SVN repository without checking it
 	out, you can do so via the <a href="http://trac.macports.org/projects/macports/browser">
         Trac browser</a>.</p>
-
-    </div>
-  </div>
 
 <?php
   print_footer();

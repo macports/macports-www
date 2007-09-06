@@ -1,56 +1,59 @@
-      <div id="nav">
 <!-- $Id$ -->
-	<div id="logo">
-	  <a href="/macports/" title="MacPorts"><img src="/macports/img/dp.jpg"
-	    alt="MacPorts" /></a>
-	</div>
-	<div id="l">
-	  <ul>
-	  <?php
-	    $PHP_SELF = $_SERVER['PHP_SELF'];
-	    $home = '/macports/index.php';
-	    $getdp = '/macports/getmp.php';
-	    $ports = '/macports/ports.php';
-	    $help = '/macports/help.php';
+    <h1>
+      <a href="/macports/" title="MacPorts">
+        <span class="accessibility">MacPorts</span>
+      </a>
+    </h1>
+    <p class="accessibility">
+      <a href="#content">Skip to Content</a>
+    </p>
+    <div id="header">
+      <a id="download" href="/macports/getmp.php">
+        <span class="accessibility">Download MacPorts</span>
+      </a>
+      <span class="accessibility">View site in</span>
+      <span>
+        <a href="#" id="language"><img src="/macports/img/en-enabled.png" alt="English" width="30" height="48" /></a>
+      </span>
+      <span id="languages">
+        <a href="#"><img src="/macports/img/fr-disabled.png" alt="Fran&ccedil;ais" width="30" height="48" /></a><a href="#"><img src="/macports/img/es-disabled.png" alt="Espa&ntilde;ol" width="30" height="48" /></a><a href="#"><img src="/macports/img/ru-disabled.png" alt="" width="30" height="48" /></a><a href="#"><img src="/macports/img/it-disabled.png" alt="Italiano" width="30" height="48" /></a>
+      </span>
+    </div>
+    <div id="navigation">
+      <dl>
+        <dt>Getting Started</dt>
+        <dd>
+          <ul>
+<?php
+            $PHP_SELF = $_SERVER['PHP_SELF'];
+            $pages = array (
+              'Home'            => '/macports/index.php',
+              'Get MacPorts'    => '/macports/getmp.php',
+              'Available Ports' => '/macports/ports.php',
+              'Documentation'   => 'http://geeklair.net/new_macports_guide',
+              'Support &amp; Development'
+                                => 'http://trac.macports.org/',
+            );
 
-	    if($PHP_SELF == $home) {
-	      echo "<li class=\"selected\"><a href=\"/macports/index.php\" title=\"Home\">Home</a></li>\n";
-	    }
-	    else {
-	      echo "<li><a href=\"/macports/index.php\" title=\"Home\">Home</a></li>\n";
-	    }
-	    if($PHP_SELF == $getmp) {
-	      echo "<li class=\"selected\"><a href=\"/macports/getmp.php\" title=\"Get MacPorts\">Get MacPorts</a></li>\n";
-	    }
-	    else {
-	      echo "<li><a href=\"/macports/getmp.php\" title=\"Get MacPorts\">Get MacPorts</a></li>\n";
-	    }
-	  ?>
-	    <li class="last"><a href="http://trac.macports.org/" title="Support & Development">Support & Development</a></li>
-	  </ul>
-	</div>
-	<div id="r">
-	  <ul>
-	    <li><a href="http://geeklair.net/new_macports_guide/" title="Documentation">Documentation</a></li>
-	    <?php
-	      if($PHP_SELF == $ports) {
-		echo "<li class=\"selected\"><a href=\"/macports/ports.php\" title=\"Available Ports\">Available Ports</a></li>\n";
-	      }
-	      else {
-		echo "<li><a href=\"/macports/ports.php\" title=\"Available Ports\">Available Ports</a></li>\n";
-	      }
-	      if($PHP_SELF == $help) {
-		echo "<li class=\"sellast\"><a href=\"/macports/help.php\" title=\"Help\">Help</a></li>\n";
-	      }
-	      else {
-		echo "<li class=\"last\"><a href=\"/macports/help.php\" title=\"Help\">Help</a></li>\n";
-	      }
-	    ?>
-	  </ul>
-	</div>
-      </div>
-
-      <div id="content">
-           <h2>Warning: This is just a test installation of the old DarwinPorts project page, official site is located at
-           <a href="htp://www.macports.org">http://www.macports.org</a> as always (currently in plans for a redesign)</h2>
-      </div>
+            foreach ($pages as $title => $url) {
+              if ($PHP_SELF == $url) {
+                echo "            <li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+              } else {
+                echo "            <li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+              }
+            }
+          ?>
+          </ul>
+        </dd>
+        <dt>Shortcuts</dt>
+        <dd>
+          <ul>
+            <li><a href="http://svn.macports.org/repository/macports/">Subversion Repository</a></li>
+            <li><a href="http://trac.macports.org/projects/macports/wiki/FAQ">MacPorts FAQ</a></li>
+            <li><a href="http://trac.macports.org/projects/macports/newticket">Report a Bug</a></li>
+          </ul>
+        </dd>
+      </dl>
+    </div>
+    <div id="content">
+      <p class="warning">Warning: This is just a test installation of the old DarwinPorts project page, official site is located at <a href="htp://www.macports.org">http://www.macports.org</a> as always (currently in plans for a redesign)</p>

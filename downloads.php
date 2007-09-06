@@ -5,8 +5,6 @@
     print_header('MacPorts -- Downloads', 'utf-8');
   ?>
 
-    <div id="content">
-	
 		<h2 class="hdr">Available Downloads</h2>
 		<table>
 <?php
@@ -16,7 +14,7 @@ $dir=".";
 $files = array();
 $rep=opendir($dir);
 while ($file = readdir($rep)) {
-	if (   preg_match('/^(\..*)|(.*\.php)|(.*\.css)|(.*\.html)$/', $file)
+	if (preg_match('/^(\..*)|(.*\.(php|css|html|js))$/', $file)
 		|| is_dir($file)
 	   ) {
 		continue;
@@ -38,8 +36,6 @@ foreach ($files as $f => $t) {
 }
 ?>
 		</table>
-    </div>
-  </div>
 
 <?php
   print_footer();
