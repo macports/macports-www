@@ -56,4 +56,5 @@
       </dl>
     </div>
     <div id="content">
-      <p class="warning">Warning: This is just a test installation of the old DarwinPorts project page, official site is located at <a href="htp://www.macports.org">http://www.macports.org</a> as always (currently in plans for a redesign)</p>
+      <p class="warning">Warning: This is just a test installation of a new design for the MacPorts project page, official site is located at
+      <a href="htp://www.macports.org">http://www.macports.org</a> as always.</p>
