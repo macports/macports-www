@@ -29,7 +29,7 @@
 	  	<li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation</li>
 		<li><a href="http://rsync.samba.org/">rsync</a></li>
 		<li><a href="http://curl.haxx.se/">cURL</a></li>
-		<li>OpenSSL or libmd</li>
+		<li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a></li>
 	  </ul>
 
 	<h3 class="subhdr">Mac OS X Package (.pkg) Installer</h3>
