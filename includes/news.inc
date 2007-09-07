@@ -13,7 +13,7 @@ $newsdb = 'macports_news';
 $newsdb_host = 'localhost';
 $newsdb_user = 'www';
 $newsdb_passwd = '';
-$newsdb_connect = mysql_pconnect($newsdb_host, $newsdb_user, $newsdb_pass) or die("Can't connect to the MacPorts news database!");
+$newsdb_connect = mysql_pconnect($newsdb_host, $newsdb_user, $newsdb_passwd) or die("Can't connect to the MacPorts news database!");
 
 
 ######################################################################

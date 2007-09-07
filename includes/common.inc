@@ -82,7 +82,7 @@ function ports_count() {
 # Warn against darwinports.com leach!
 function check_referer() {
 	global $_SERVER;
-	if (preg_match("/darwinports.com/", $_SERVER['HTTP_REFERER'])) {
+	if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinports.com') !== false) {
 ?>
 	<div class="warning">
 		<p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
