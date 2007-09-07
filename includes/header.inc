@@ -1,4 +1,6 @@
-<!-- $Id$ -->
+<?php
+  // $Id$
+?>
     <h1>
       <a href="/macports/" title="MacPorts">
         <span class="accessibility">MacPorts</span>
