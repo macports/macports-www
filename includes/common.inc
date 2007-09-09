@@ -44,7 +44,7 @@ function print_header($title, $encoding) {
     <script type="text/javascript" src="language.js"></script>
   </head>
   <body>
-  <?php
+<?php
     include("$DOCUMENT_ROOT/macports/includes/header.inc");
     check_referer();
 }

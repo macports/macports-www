@@ -58,5 +58,8 @@
       </dl>
     </div>
     <div id="content">
-      <p class="warning">Warning: This is just a test installation of a new design for the MacPorts project page, official site is located at
-      <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
+      <p class="warning">
+        Warning: This is just a test installation of a new design for the
+        MacPorts project page, official site is located at
+        <a href="http://www.macports.org">http://www.macports.org</a> as always.
+      </p>

@@ -94,7 +94,7 @@ function print_headlines() {
     }
   }
   else {
-    echo "<p>No headlines are available at this time.</p>\n";
+    echo "        <p>No headlines are available at this time.</p>\n";
   }
 }
 
