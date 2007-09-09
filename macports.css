@@ -119,10 +119,7 @@ a#download:hover {
     background: #FCC;
     border: 2px solid #F66;
     padding: 0.5em;
-    margin: 0.5em;
-    float: right;
-    clear: right;
-    width: 200px;
+    margin: 0 0.5em 0.5em 0.5em;
 }
 #footer {
     font-size: 90%;
