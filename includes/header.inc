@@ -2,7 +2,7 @@
   // $Id$
 ?>
     <h1>
-      <a href="/macports/" title="MacPorts">
+      <a href="http://www.macports.org/" title="MacPorts">
         <span class="accessibility">MacPorts</span>
       </a>
     </h1>
@@ -10,15 +10,15 @@
       <a href="#content">Skip to Content</a>
     </p>
     <div id="header">
-      <a id="download" href="/macports/getmp.php">
+      <a id="download" href="getmp.php">
         <span class="accessibility">Download MacPorts</span>
       </a>
       <span class="accessibility">View site in</span>
       <span>
-        <a href="#" id="language"><img src="/macports/img/en-enabled.png" alt="English" width="30" height="48" /></a>
+        <a href="#" id="language"><img src="img/en-enabled.png" alt="English" width="30" height="48" /></a>
       </span>
       <span id="languages">
-        <a href="#"><img src="/macports/img/fr-disabled.png" alt="Fran&ccedil;ais" width="30" height="48" /></a><a href="#"><img src="/macports/img/es-disabled.png" alt="Espa&ntilde;ol" width="30" height="48" /></a><a href="#"><img src="/macports/img/ru-disabled.png" alt="" width="30" height="48" /></a><a href="#"><img src="/macports/img/it-disabled.png" alt="Italiano" width="30" height="48" /></a>
+        <a href="#"><img src="img/fr-disabled.png" alt="Fran&ccedil;ais" width="30" height="48" /></a><a href="#"><img src="img/es-disabled.png" alt="Espa&ntilde;ol" width="30" height="48" /></a><a href="#"><img src="img/ru-disabled.png" alt="" width="30" height="48" /></a><a href="#"><img src="img/it-disabled.png" alt="Italiano" width="30" height="48" /></a>
       </span>
     </div>
     <div id="navigation">
@@ -29,9 +29,9 @@
 <?php
             $PHP_SELF = $_SERVER['PHP_SELF'];
             $pages = array (
-              'Home'            => '/macports/index.php',
-              'Get MacPorts'    => '/macports/getmp.php',
-              'Available Ports' => '/macports/ports.php',
+              'Home'            => 'index.php',
+              'Get MacPorts'    => 'getmp.php',
+              'Available Ports' => 'ports.php',
               'Documentation'   => 'http://geeklair.net/new_macports_guide',
               'Support &amp; Development'
                                 => 'http://trac.macports.org/',

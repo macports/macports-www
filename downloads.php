@@ -1,7 +1,7 @@
   <?php
     /* $Id$ */
-    $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-    include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
+    $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
+    include_once("$MPWEB/includes/common.inc");
     print_header('MacPorts -- Downloads', 'utf-8');
   ?>
 

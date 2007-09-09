@@ -6,7 +6,7 @@
 ######################################################################
 
 # variables and includes
-$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
+$DOCUMENT_ROOT = dirname($_SERVER['SCRIPT_NAME']);
 $PHP_SELF = $_SERVER['PHP_SELF'];
 /* include_once("$DOCUMENT_ROOT/macports/includes/db.inc"); */
 $newsdb = 'macports_news';

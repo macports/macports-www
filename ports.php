@@ -1,8 +1,8 @@
 <?php
         /* $Id$ */
-	$DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-	include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
-	include_once("$DOCUMENT_ROOT/macports/includes/email.inc");
+    $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
+	include_once("$MPWEB/includes/common.inc");
+	include_once("$MPWEB/includes/email.inc");
 	print_header('MacPorts -- Available Ports', 'utf-8');
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';

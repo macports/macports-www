@@ -1,7 +1,8 @@
 <?php
 /* $Id$ */
 $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-include_once("$DOCUMENT_ROOT/macports/includes/email.inc");
+$MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
+include_once("$MPWEB/includes/email.inc");
 $portname = basename(dirname($_SERVER['PATH_INFO']));
 ?>
 

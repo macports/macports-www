@@ -1,8 +1,8 @@
 <?php
   /* $Id$ */
-  $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-  include_once("$DOCUMENT_ROOT/macports/includes/common.inc");
-  include_once("$DOCUMENT_ROOT/macports/includes/news.inc");
+  $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
+  include_once("$MPWEB/includes/common.inc");
+  include_once("$MPWEB/includes/news.inc");
   print_header('MacPorts -- Home', 'utf-8');
 ?>
       <h2 class="hdr">Introduction to MacPorts</h2>

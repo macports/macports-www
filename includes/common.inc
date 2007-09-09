@@ -24,7 +24,7 @@ $mp_version_dmg = "1.5.0";
 
 # print the page header
 function print_header($title, $encoding) {
-  global $DOCUMENT_ROOT;
+  global $MPWEB;
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
                       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -38,14 +38,14 @@ function print_header($title, $encoding) {
     <meta name="copyright" content="2003, OpenDarwin" />
     <meta name="copyright" content="2007, MacPorts Team" />
     <meta name="robots" content="all" />
-    <link rel="stylesheet" type="text/css" href="/macports/macports.css" />
-    <link rel="alternate" type="application/rss+xml" href="/macports/macports_news.xml" />
+    <link rel="stylesheet" type="text/css" href="macports.css" />
+    <link rel="alternate" type="application/rss+xml" href="macports_news.xml" />
     <script type="text/javascript" src="mootools.v1.11.js"></script>
     <script type="text/javascript" src="language.js"></script>
   </head>
   <body>
 <?php
-    include("$DOCUMENT_ROOT/macports/includes/header.inc");
+    include("$MPWEB/includes/header.inc");
     check_referer();
 }
 
@@ -53,9 +53,9 @@ function print_header($title, $encoding) {
 
 # print the page footer
 function print_footer() {
-  global $DOCUMENT_ROOT;
+  global $MPWEB;
 
-  include("$DOCUMENT_ROOT/macports/includes/footer.inc");
+  include("$MPWEB/includes/footer.inc");
 
   echo "  </body>\n";
   echo "</html>\n";

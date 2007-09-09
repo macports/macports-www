@@ -1,6 +1,6 @@
 <?php
-  $DOCUMENT_ROOT = $_SERVER['DOCUMENT_ROOT'];
-  include_once("$DOCUMENT_ROOT/macports/includes/news.inc");
+  $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
+  include_once("$MPWEB/includes/news.inc");
   create_rss();
   /* $Id$ */
 ?>

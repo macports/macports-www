@@ -4,7 +4,7 @@
 
 body {
     margin: 30px 40px;
-    background: url(/macports/img/top-backdrop.png) repeat-x #EDEDED;
+    background: url(img/top-backdrop.png) repeat-x #EDEDED;
     font: 12px Helvetica, Arial, sans-serif;
     line-height: 1.2em;
 }
@@ -35,7 +35,7 @@ h1 a {
     display: block;
     width: 183px;
     height: 70px;
-    background: url(/macports/img/macports-logo-top.png);
+    background: url(img/macports-logo-top.png);
 }
 h2, h3 {
     background: #8695B3;
@@ -52,13 +52,13 @@ img {
     width: 183px;
     float: left;
     clear: left;
-    background: url(/macports/img/nav-header.png) top no-repeat #B1BACC;
+    background: url(img/nav-header.png) top no-repeat #B1BACC;
     line-height: 1.4em;
 }
 #navigation dl {
     padding: 16px;
     margin: 0;
-    background: url(/macports/img/nav-footer.png) bottom no-repeat;
+    background: url(img/nav-footer.png) bottom no-repeat;
 }
 #navigation dd, #navigation dt {
     margin: 0;
@@ -104,11 +104,11 @@ img {
     float: right;
     width: 70px;
     height: 48px;
-    background: url(/macports/img/download.png);
+    background: url(img/download.png);
     margin-left: 5px;
 }
 a#download:hover {
-    background: url(/macports/img/download-highlight.png);
+    background: url(img/download-highlight.png);
 }
 #content {
     padding: 1px 0 40px 191px;
