@@ -5,7 +5,6 @@
   include_once("$MPWEB/includes/news.inc");
   print_header('MacPorts -- Home', 'utf-8');
 ?>
-
     <div id="content">
       <h2 class="hdr">Introduction to MacPorts</h2>
       <p>
