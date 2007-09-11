@@ -5,6 +5,7 @@
     print_header('MacPorts -- Downloads', 'utf-8');
   ?>
 
+    <div id="content">
 		<h2 class="hdr">Available Downloads</h2>
 		<table>
 <?php
@@ -36,7 +37,7 @@ foreach ($files as $f => $t) {
 }
 ?>
 		</table>
-
+    </div>
 <?php
   print_footer();
 ?>

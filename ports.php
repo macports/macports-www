@@ -7,6 +7,8 @@
 	$by = isset($_GET['by']) ? $_GET['by'] : '';
 	$substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
+
+    <div id="content">
 	<h2>MacPorts Portfiles</h2>
 
 	<p>
@@ -68,6 +70,7 @@
 		?>
 	</table>
 	</form>
+    </div>
 
 <?php
 	if ($by && ($substr || $by == "all")) {
@@ -209,6 +212,7 @@
 		}
 ?>
     </dl>
+    </div>
 <?php
 	}
 	print_footer();

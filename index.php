@@ -5,6 +5,8 @@
   include_once("$MPWEB/includes/news.inc");
   print_header('MacPorts -- Home', 'utf-8');
 ?>
+
+    <div id="content">
       <h2 class="hdr">Introduction to MacPorts</h2>
       <p>
         The MacPorts Project's main goal is to provide an easy way to
@@ -55,6 +57,7 @@
 ?>
         <p>You can also browse our <a href="/macports/archives.php">news archives</a>.</p>
       </div>
+    </div>
 <?php
   print_footer();
 ?>

@@ -6,6 +6,7 @@
     print_header('MacPorts -- News Archive', 'utf-8');
   ?>
 
+    <div id="content">
 		<h2 class="hdr">News Archive</h2>
      <?php
 		if (isset($_GET['id'])) {
@@ -16,7 +17,7 @@
       ?>
 
 
-
+    </div>
 <?php
   print_footer();
 ?>

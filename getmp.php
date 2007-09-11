@@ -4,6 +4,8 @@
   include_once("$MPWEB/includes/common.inc");
   print_header('MacPorts -- Download &amp; Installation', 'utf-8');
 ?>
+
+    <div id="content">
     <h2 class="hdr">Get MacPorts</h2>
     <p>MacPorts version <?php print "$mp_version_dmg"; ?> is available in binary form as a
 	 dmg disk image for <a href="/macports/downloads/MacPorts-<?php print "$mp_version_dmg"; ?>-10.4.dmg">
@@ -114,6 +116,7 @@ rm -rf MacPorts-<?php print "$mp_version"; ?>*</pre>
       <p>If you'd simply like to view the SVN repository without checking it
 	out, you can do so via the <a href="http://trac.macports.org/projects/macports/browser">
         Trac browser</a>.</p>
+    </div>
 
 <?php
   print_footer();

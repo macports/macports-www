@@ -1,7 +1,6 @@
 <?php
   // $Id$
 ?>
-    </div>
     <div id="footer">
       <p>
       <a href="http://validator.w3.org/check?uri=referer"><img
