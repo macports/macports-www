@@ -60,7 +60,7 @@
                 $query = "SELECT DISTINCT category FROM $portsdb.categories ORDER BY category";
                 $result = mysql_query($query);
                 if ($result) {
-                    while ( $row = mysql_fetch_assoc($result) ) {
+                    while ($row = mysql_fetch_assoc($result)) {
 ?>
                         <tr><td colspan="4"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>"><?php echo htmlspecialchars($row['category']); ?></a></td></tr>
 <?php
@@ -111,7 +111,7 @@
     </p>
     <dl>
 <?php
-        while ( $row = mysql_fetch_assoc($result) ) {
+        while ($row = mysql_fetch_assoc($result)) {
 ?>
             <dt><b><a href="http://trac.macports.org/projects/macports/browser/trunk/dports/<?php echo $row['path']; ?>/Portfile"><?php echo htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
             <dd>
@@ -125,7 +125,7 @@
                     <i>Maintained by:</i>
 <?php
                     $primary = 1;
-                    while ( $nrow = mysql_fetch_array($nresult) ) {
+                    while ($nrow = mysql_fetch_array($nresult)) {
                         if ($primary) { echo "<b>"; }
                         $addr = obfuscate_email($nrow[0]);
                         print $addr;
@@ -143,7 +143,7 @@
                     <i>Categories:</i>
 <?php
                     $primary = 1;
-                    while ( $nrow = mysql_fetch_assoc($nresult) ) {
+                    while ($nrow = mysql_fetch_assoc($nresult)) {
                         if ($primary) { echo "<b>"; }
 ?>
                         <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($nrow['category']); ?>"><?php echo htmlspecialchars($nrow['category']); ?></a>
@@ -161,7 +161,7 @@
                     <br />
                     <i>Platforms:</i>
 <?php
-                    while ( $nrow = mysql_fetch_array($nresult) ) {
+                    while ($nrow = mysql_fetch_array($nresult)) {
                         $platform = $nrow[0];
 ?>
                         <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=platform&amp;substr=<?php echo urlencode($platform); ?>"><?php echo htmlspecialchars($platform); ?></a>
@@ -177,7 +177,7 @@
                     <br />
                     <i>Dependencies:</i>
 <?php
-                    while ( $nrow = mysql_fetch_array($nresult) ) {
+                    while ($nrow = mysql_fetch_array($nresult)) {
                         // lib:libpng.3:libpng -> libpng
                         $library = eregi_replace("^([^:]*:[^:]*:|[^:]*:)", "", $nrow[0]);
 ?>
@@ -194,7 +194,7 @@
                     <br />
                     <i>Variants:</i>
 <?php
-                    while ( $nrow = mysql_fetch_array($nresult) ) {
+                    while ($nrow = mysql_fetch_array($nresult)) {
                         $variant = $nrow[0];
 ?>
                         <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>"><?php echo htmlspecialchars($variant); ?></a>
