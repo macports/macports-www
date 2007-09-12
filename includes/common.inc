@@ -18,7 +18,7 @@ $portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd) 
 
 # print the current MacPorts version
 $mp_version = "1.5.2";
-$mp_version_dmg = "1.5.0";
+$mp_version_major = "1.5.0";
 
 ######################################################################
 

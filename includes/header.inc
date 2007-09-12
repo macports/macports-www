@@ -1,6 +1,8 @@
 <?php
 /* $Id$ */
+global $mp_version_major;
 ?>
+
 <h1>
     <a href="http://www.macports.org/" title="MacPorts"><span class="accessibility">MacPorts</span></a>
 </h1>
@@ -42,6 +44,7 @@
         <dt>Shortcuts</dt>
         <dd>
             <ul>
+                <li><a href="http://svn.macports.org/repository/macports/downloads/MacPorts-<?php print "$mp_version_major"; ?>">MacPorts Downloads</a></li>
                 <li><a href="http://svn.macports.org/repository/macports/">Subversion Repository</a></li>
                 <li><a href="http://trac.macports.org/projects/macports/wiki/FAQ">MacPorts FAQ</a></li>
                 <li><a href="http://trac.macports.org/projects/macports/newticket">Report a Bug</a></li>
