@@ -16,9 +16,23 @@ $portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd) 
 
 ######################################################################
 
-# print the current MacPorts version
-$mp_version = "1.5.2";
-$mp_version_major = "1.5.0";
+# print the current MacPorts version:
+$mp_version_major = '1.5.0';
+$mp_version_latest = '1.5.2';
+
+
+######################################################################
+
+# Some useful URL abstractions:
+$trac_url = 'http://trac.macports.org/projects/macports';
+$svn_url = 'http://svn.macports.org/repository/macports';
+$downloads = $svn_url . '/downloads/MacPorts-' . $mp_version_major;
+$tiger_dmg = $downloads . '/MacPorts-' . $mp_version_major .'-10.4.dmg';
+$panther_dmg = $downloads . '/MacPorts-' . $mp_version_major .'-10.3.dmg';
+$bz2_tarball = $downloads . '/MacPorts-' . $mp_version_major . '.tar.bz2';
+$gz_tarball = $downloads . '/MacPorts-' . $mp_version_major . '.tar.gz';
+$checksums = $downloads .  '/MacPorts-' . $mp_version_major . '.chk.txt';
+
 
 ######################################################################
 

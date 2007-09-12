@@ -47,7 +47,7 @@
         duties &amp; benefits from holding a MacPorts account.
       </p>
       <p>
-        <b>Current MacPorts <a href="/macports/getmp.php">release</a>: <?php print "$mp_version"; ?></b>
+        <b>Current MacPorts <a href="/macports/getmp.php">release</a>: <?php print "$mp_version_latest"; ?></b>
       </p>
       <div id="news">
         <h2 class="hdr">Project News</h2>

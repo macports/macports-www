@@ -1,6 +1,6 @@
 <?php
 /* $Id$ */
-global $mp_version_major;
+global $mp_version_major, $trac_url;
 ?>
 
 <h1>
@@ -28,7 +28,7 @@ global $mp_version_major;
                     'Get MacPorts' => 'getmp.php',
                     'Available Ports' => 'ports.php',
                     'Documentation' => 'http://geeklair.net/new_macports_guide',
-                    'Support &amp; Development' => 'http://trac.macports.org/',
+                    'Support &amp; Development' => "$trac_url"
                 );
 
                 foreach ($pages as $title => $url) {
