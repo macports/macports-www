@@ -20,11 +20,11 @@
     <p>For more information on obtaining and installing MacPorts, please see the <a href="getmp.php">Get MacPorts</a>
     section of this site. Also be sure to check out the <a href="http://geeklair.net/new_macports_guide/">documentation</a>,
     and if and if you have questions or run into problems, you can get help at our <a href="help.php">help section</a>.
-    The <a href="http://trac.macports.org/projects/macports/wiki">MacPorts Wiki</a>is also a good resource for general
-    and miscellaneous help, specially the ongoing <a href="http://trac.macports.org/projects/macports/wiki/FAQ">FAQ</a>
+    The <a href="<?php print $trac_url . 'wiki'; ?>">MacPorts Wiki</a> is also a good resource for general and
+    miscellaneous help, specially the ongoing <a href="<?php print $trac_url . 'wiki/FAQ'; ?>">FAQ</a>
     effort.</p>
 
-    <p>Bug reports, feature requests, and new ports should be submitted as <a href="http://trac.macports.org/projects/macports/newticket">
+    <p>Bug reports, feature requests, and new ports should be submitted as <a href="<?php print $trac_url . 'newticket'; ?>">
     new tickets</a> into our Trac system. Please consult the <a href="http://geeklair.net/new_macports_guide/#project.tickets">
     documentation</a> to improve the processing of your ticket(s).</p>
 
