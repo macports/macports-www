@@ -14,18 +14,18 @@
       </p>
       <p>
         There are currently about <?php echo ports_count(); ?> completed and
-        usable <a href="/macports/ports.php">ports</a>, with more being added on
+        usable <a href="ports.php">ports</a>, with more being added on
         a regular basis. You can track recently added ports by subscribing to
         the <a href="http://lists.macosforge.org/mailman/listinfo/macports-changes">macports-changes</a>
         mailing list.
       </p>
       <p>
         For more information on obtaining and installing MacPorts, please see
-        the <a href="/macports/getmp.php">Get MacPorts</a> section of this site.
+        the <a href="getmp.php">Get MacPorts</a> section of this site.
         Also be sure to check out the <a
         href="http://geeklair.net/new_macports_guide/">documentation</a>, and if
         and if you have questions or run into problems, you can get help at our
-        <a href="/macports/help.php">help section</a>. The
+        <a href="help.php">help section</a>. The
         <a href="http://trac.macports.org/projects/macports/wiki">MacPorts
         Wiki</a>is also a good resource for general and miscellaneous help,
         specially the ongoing <a
@@ -47,14 +47,14 @@
         duties &amp; benefits from holding a MacPorts account.
       </p>
       <p>
-        <b>Current MacPorts <a href="/macports/getmp.php">release</a>: <?php print "$mp_version_latest"; ?></b>
+        <b>Current MacPorts <a href="getmp.php">release</a>: <?php print "$mp_version_latest"; ?></b>
       </p>
       <div id="news">
         <h2 class="hdr">Project News</h2>
 <?php
   print_headlines();
 ?>
-        <p>You can also browse our <a href="/macports/archives.php">news archives</a>.</p>
+        <p>You can also browse our <a href="archives.php">news archives</a>.</p>
       </div>
     </div>
 <?php

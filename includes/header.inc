@@ -1,6 +1,6 @@
 <?php
 /* $Id$ */
-global $mp_version_major, $trac_url;
+global $mp_version_major, $trac_url, $svn_url, $downloads;
 ?>
 
 <h1>
@@ -44,10 +44,10 @@ global $mp_version_major, $trac_url;
         <dt>Shortcuts</dt>
         <dd>
             <ul>
-                <li><a href="http://svn.macports.org/repository/macports/downloads/MacPorts-<?php print "$mp_version_major"; ?>">MacPorts Downloads</a></li>
-                <li><a href="http://svn.macports.org/repository/macports/">Subversion Repository</a></li>
-                <li><a href="http://trac.macports.org/projects/macports/wiki/FAQ">MacPorts FAQ</a></li>
-                <li><a href="http://trac.macports.org/projects/macports/newticket">Report a Bug</a></li>
+                <li><a href="<?php print $downloads; ?>">MacPorts Downloads</a></li>
+                <li><a href="<?php print $svn_url; ?>">Subversion Repository</a></li>
+                <li><a href="<?php print $trac_url . 'wiki/FAQ'; ?>">MacPorts FAQ</a></li>
+                <li><a href="<?php print $trac_url . 'newticket'; ?>">Report a Bug</a></li>
             </ul>
         </dd>
     </dl>

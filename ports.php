@@ -112,7 +112,7 @@
 <?php
             while ($row = mysql_fetch_assoc($result)) {
 ?>
-                <dt><b><a href="http://trac.macports.org/projects/macports/browser/trunk/dports/<?php echo $row['path']; ?>/Portfile"><?php echo htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
+                <dt><b><a href="<?php print $trac_url . 'browser/trunk/dports/' . $row['path'] . '/Portfile'; ?>"><?php echo htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
                 <dd>
                     <?php echo htmlspecialchars($row['description']); ?><br />
 <?php
