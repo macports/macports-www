@@ -1,0 +1,5 @@
+<Files Portfile>
+    Action process-portfile /emit_portfile.php
+    SetHandler process-portfile
+</Files>
+
