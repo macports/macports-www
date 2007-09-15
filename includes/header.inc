@@ -1,7 +1,7 @@
 <?php
 /* $Id$ */
 $PHP_SELF = $_SERVER['PHP_SELF'];
-global $mp_version_major, $trac_url, $svn_url, $downloads;
+global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 ?>
 
 <h1>
@@ -27,7 +27,7 @@ global $mp_version_major, $trac_url, $svn_url, $downloads;
                     'Home' => 'index.php',
                     'Get MacPorts' => 'getmp.php',
                     'Available Ports' => 'ports.php',
-                    'Documentation' => 'http://geeklair.net/new_macports_guide',
+                    'Documentation' => $guide_url,
                     'Support &amp; Development' => $trac_url
                 );
                 foreach ($pages as $title => $url) {
@@ -47,16 +47,20 @@ global $mp_version_major, $trac_url, $svn_url, $downloads;
                 $shortcuts = array (
                     'Downloads' => $downloads,
                     'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
+                    // We should either link to the new ticketing guidelines below, while at the same
+                    // time including a link to trac's 'newticket' handler page on the former, or link
+                    // to them off some kind of banner on the latter.
                     'Report a Bug' => $trac_url . 'newticket',
-                    'Subversion Repository' => $svn_url,
                     'Blog' => 'blog/',
-                    'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers'
+                    'Subversion Repository' => $svn_url,
+                    'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
+                    'Becoming a Member' => $guide_url . '#project.membership'
                 );
                 foreach ($shortcuts as $title => $url) {
                     if (basename($PHP_SELF) == $url) {
-                        echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>";
+                        echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                     } else {
-                        echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>";
+                        echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                     }
                 }
 ?>
