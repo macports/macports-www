@@ -1,5 +1,6 @@
 <?php
 /* $Id$ */
+$PHP_SELF = $_SERVER['PHP_SELF'];
 global $mp_version_major, $trac_url, $svn_url, $downloads;
 ?>
 
@@ -22,17 +23,15 @@ global $mp_version_major, $trac_url, $svn_url, $downloads;
         <dd>
             <ul>
 <?php
-                $PHP_SELF = $_SERVER['PHP_SELF'];
                 $pages = array (
                     'Home' => 'index.php',
                     'Get MacPorts' => 'getmp.php',
                     'Available Ports' => 'ports.php',
                     'Documentation' => 'http://geeklair.net/new_macports_guide',
-                    'Support &amp; Development' => "$trac_url"
+                    'Support &amp; Development' => $trac_url
                 );
-
                 foreach ($pages as $title => $url) {
-                    if ($PHP_SELF == $url) {
+                    if (basename($PHP_SELF) == $url) {
                         echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                     } else {
                         echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
@@ -44,10 +43,21 @@ global $mp_version_major, $trac_url, $svn_url, $downloads;
         <dt>Shortcuts</dt>
         <dd>
             <ul>
-                <li><a href="<?php print $downloads; ?>">MacPorts Downloads</a></li>
-                <li><a href="<?php print $svn_url; ?>">Subversion Repository</a></li>
-                <li><a href="<?php print $trac_url . 'wiki/FAQ'; ?>">MacPorts FAQ</a></li>
-                <li><a href="<?php print $trac_url . 'newticket'; ?>">Report a Bug</a></li>
+<?php
+                $shortcuts = array (
+                    'MacPorts Downloads' => $downloads,
+                    'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
+                    'Subversion Repository' => $svn_url,
+                    'Report a Bug' => $trac_url . 'newticket'
+                );
+                foreach ($shortcuts as $title => $url) {
+                    if (basename($PHP_SELF) == $url) {
+                        echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>";
+                    } else {
+                        echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>";
+                    }
+                }
+?>
             </ul>
         </dd>
     </dl>
