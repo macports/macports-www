@@ -45,10 +45,12 @@ global $mp_version_major, $trac_url, $svn_url, $downloads;
             <ul>
 <?php
                 $shortcuts = array (
-                    'MacPorts Downloads' => $downloads,
+                    'Downloads' => $downloads,
                     'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
+                    'Report a Bug' => $trac_url . 'newticket',
                     'Subversion Repository' => $svn_url,
-                    'Report a Bug' => $trac_url . 'newticket'
+                    'Blog' => 'blog/',
+                    'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers'
                 );
                 foreach ($shortcuts as $title => $url) {
                     if (basename($PHP_SELF) == $url) {
