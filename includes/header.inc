@@ -9,7 +9,7 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 </h1>
 <p class="accessibility"><a href="#content">Skip to Content</a></p>
 <div id="header">
-    <a id="download" href="getmp.php"><span class="accessibility">Download MacPorts</span></a>
+    <a id="download" href="install.php"><span class="accessibility">Download MacPorts</span></a>
     <span class="accessibility">View site in</span>
     <span><a href="#" id="language"><img src="img/en-enabled.png" alt="English" width="30" height="48" /></a></span>
     <span id="languages">
@@ -25,7 +25,7 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 <?php
                 $pages = array (
                     'Home' => 'index.php',
-                    'Get MacPorts' => 'getmp.php',
+                    'Install MacPorts' => 'install.php',
                     'Available Ports' => 'ports.php',
                     'Documentation' => $guide_url,
                     'Support &amp; Development' => $trac_url
