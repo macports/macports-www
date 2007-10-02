@@ -10,7 +10,7 @@
     <h2 class="hdr">Installing MacPorts</h2>
 
     <p>MacPorts version <?php print "$mp_version_major"; ?> is available in binary form as dmg disk images for <a
-    href="<?php print $tiger_dmg; ?>"> Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>"> Panther</a>,
+    href="<?php print $tiger_dmg; ?>"> Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>"> Panther (PowerPC)</a>,
     both containing a pkg installer, or in source form as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a>
     package or a <a href="<?php print $gz_tarball; ?>">tar.gz</a> one. Checksums for all these are contained in the
     <a href="<?php print $checksums; ?>">checksums file</a>.</p>
@@ -20,7 +20,7 @@
 
     <p>Please note that in order to install and run MacPorts on Mac OS X you must have Apple's Developer Tools
     package installed, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer site</a>
-    or on your Mac OS X installation CDs/DVD. It is also strongly recommended to have the X11 windowing environment
+    or on your Mac OS X installation CDs/DVD. It is also strongly recommended to have the X11 windowing environment (X11 User)
     and its related SDK package (X11 SDK) installed if you wish to install ports that depend on the functionality
     they provide to compile and run. While the former is part of the base Mac OS X installation process, the latter
     is an optional installation in the Developer Tools package, so you need to add it explicitly through the
@@ -97,9 +97,9 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
     <ul>
         <li><a href="http://www.tcl.tk/">Tcl</a> (8.3 or 8.4), with threads</li>
         <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation</li>
-        <li><a href="http://rsync.samba.org/">rsync</a></li>
-        <li><a href="http://curl.haxx.se/">cURL</a></li>
-        <li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a></li>
+        <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports</li>
+        <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles</li>
+        <li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a> for checksums</li>
     </ul>
 
     <h3 class="subhdr">Help</h3>
