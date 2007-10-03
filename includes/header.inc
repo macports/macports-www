@@ -26,7 +26,7 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 <?php
                 $pages = array (
                     'Home' => 'index.php',
-                    'Install MacPorts' => 'install.php',
+                    'Installing MacPorts' => 'install.php',
                     'Available Ports' => 'ports.php',
                     'Documentation' => $guide_url,
                     'Support &amp; Development' => $trac_url
