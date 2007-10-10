@@ -29,7 +29,8 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
                     'Installing MacPorts' => 'install.php',
                     'Available Ports' => 'ports.php',
                     'Documentation' => $guide_url,
-                    'Support &amp; Development' => $trac_url
+                    'Support &amp; Development' => $trac_url,
+                    'Blog' => 'blog/'
                 );
                 foreach ($pages as $title => $url) {
                     if (basename($PHP_SELF) == $url) {
@@ -46,15 +47,12 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
             <ul>
 <?php
                 $shortcuts = array (
-                    'Downloads' => $downloads,
+                    'Available Downloads' => $downloads,
                     'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
-                    // We should either link to the new ticketing guidelines below, while at the same
-                    // time including a link to trac's 'newticket' handler page on the former, or link
-                    // to them off some kind of banner on the latter.
                     'Report a Bug' => $trac_url . 'newticket',
-                    'Blog' => 'blog/',
                     'Subversion Repository' => $svn_url,
                     'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
+                    'Contact Us' => 'contact.php',
                     'Becoming a Member' => $guide_url . '#project.membership'
                 );
                 foreach ($shortcuts as $title => $url) {

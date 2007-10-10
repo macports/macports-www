@@ -6,11 +6,15 @@
     print_header('MacPorts -- Download &amp; Installation', 'utf-8');
 ?>
 
+<!--
+ *) Amend "help" section with references to 'contact.php';
+-->
+
 <div id="content">
 
     <h2 class="hdr">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print "$mp_version_major"; ?> is available in binary form as dmg disk images for <a
+    <p>MacPorts version <?php print $mp_version_major; ?> is available in binary form as dmg disk images for <a
     href="<?php print $tiger_dmg; ?>"> Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>"> Panther (PowerPC)</a>,
     both containing a pkg installer, or in source form as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a>
     package or a <a href="<?php print $gz_tarball; ?>">tar.gz</a> one. Checksums for all these are contained in the
@@ -52,8 +56,8 @@
     <p>If on the other hand you decide to install MacPorts from source, there are still a couple of things you will need to
     do once you've downloaded the tarball before you can start installing ports, namely compiling
     and installing MacPorts itself. &ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
-    and run &ldquo;<kbd>tar xjvf <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print "$mp_version_major"; ?>.tar.bz2
-    </a></kbd>&rdquo; or &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print "$mp_version_major";
+    and run &ldquo;<kbd>tar xjvf <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.bz2
+    </a></kbd>&rdquo; or &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $mp_version_major;
     ?>.tar.gz</a></kbd>&rdquo;, depending on whether you downloaded the bz2 tarball or the gz one, respectively.
     This will unpack the MacPorts sources that you will proceed to build and install. To do so, execute the following:</p>
 
@@ -67,7 +71,7 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
 
     <p>These steps need to be perfomed from an administrator account, for which &ldquo;<kbd>sudo</kbd>&rdquo;
     will ask the password upon installation. This procedure will install a pristine MacPorts system and, if the
-    optional steps are taken, remove the as of now unnecessary MacPorts-<?php print "$mp_version_major"; ?> source
+    optional steps are taken, remove the as of now unnecessary MacPorts-<?php print $mp_version_major; ?> source
     directory and corresponding tarball. To customize your installation you should read the output of
     &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and pass the appropriate options for the settings you wish to
     tweak to the configuration script in the steps detailed above.</p>

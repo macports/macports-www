@@ -10,7 +10,7 @@
 ?>
 
 <div id="content">
-    <h2>MacPorts Portfiles</h2>
+    <h2 class="hdr">MacPorts Portfiles</h2>
 
     <p>
         This form allows you to search the current index of MacPorts software. <br />
