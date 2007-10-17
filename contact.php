@@ -41,6 +41,12 @@
     text messages, reducing the number and size of attachments in any way possible and, last but not least, searching the
     archives before raising a question.</p>
 
+    <p>Needless to say, providing us with as much information as you can gather will help us help you in turn diagnosing any
+    problems you may be experiencing, so always remember to use <kbd>port(1)</kbd>'s <kbd>-v</kbd> or <kbd>-d</kbd> flags for
+    verbose and debugging output if you want to post an error message MacPorts is giving you, for example. Platform information
+    such as operating system (e.g. 10.4.10) and any third party software that may exist in <kbd>/usr/local</kbd> is also very
+    useful information.</p>
+
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
 <!-- we need a link down here pointing to some page detailing the portmgr team - guide authors? ;-) -->
     list is where you should send mail to in case you need to get in touch with the <a href="">MacPorts management team</a>
