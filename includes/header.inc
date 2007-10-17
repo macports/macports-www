@@ -1,14 +1,14 @@
 <?php
-/* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
-/* $Id$ */
-$PHP_SELF = $_SERVER['PHP_SELF'];
-global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
+    /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
+    /* $Id$ */
+    $PHP_SELF = $_SERVER['PHP_SELF'];
+    global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 ?>
 
-<h1>
-    <a href="http://www.macports.org/" title="MacPorts"><span class="accessibility">MacPorts</span></a>
-</h1>
+<h1><a href="http://www.macports.org/" title="MacPorts"><span class="accessibility">MacPorts</span></a></h1>
+
 <p class="accessibility"><a href="#content">Skip to Content</a></p>
+
 <div id="header">
     <a id="download" href="install.php"><span class="accessibility">Download MacPorts</span></a>
     <span class="accessibility">View site in</span>
@@ -30,6 +30,7 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
                     'Available Ports' => 'ports.php',
                     'Documentation' => $guide_url,
                     'Support &amp; Development' => $trac_url,
+                    'Contact Us' => 'contact.php',
                     'Blog' => 'blog/'
                 );
                 foreach ($pages as $title => $url) {
@@ -52,7 +53,6 @@ global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
                     'Report a Bug' => $trac_url . 'newticket',
                     'Subversion Repository' => $svn_url,
                     'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
-                    'Contact Us' => 'contact.php',
                     'Becoming a Member' => $guide_url . '#project.membership'
                 );
                 foreach ($shortcuts as $title => $url) {
