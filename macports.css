@@ -1,4 +1,5 @@
-/* -*- coding: utf-8; mode: css; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=css:et:sw=4:ts=4:sts=4
+/*
+-*- coding: utf-8; mode: css; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=css:et:sw=4:ts=4:sts=4
 $Id$
 */
 
@@ -8,46 +9,57 @@ body {
     font: 12px Helvetica, Arial, sans-serif;
     line-height: 1.2em;
 }
+
 .accessibility {
     display: block;
     overflow: hidden;
     width: 0;
     height: 0;
 }
+
 a:link {
     color: #0155CD;
     text-decoration: underline;
 }
+
 a:visited {
     color: #012567;
 }
+
 a:hover {
     color: #3591ED;
 }
+
 h1, h2, h3 {
     margin: 0;
     color: white;
 }
+
 h1 {
     float: left;
 }
+
 h1 a {
     display: block;
     width: 183px;
     height: 70px;
     background: url(img/macports-logo-top.png);
 }
+
 h2, h3 {
     background: #8695B3;
     padding: 0.2em;
 }
+
 h2 {
     font: bold 24px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 img {
     margin: 0;
     border: 0;
 }
+
 #navigation {
     width: 183px;
     float: left;
@@ -55,50 +67,62 @@ img {
     background: url(img/nav-header.png) top no-repeat #B1BACC;
     line-height: 1.4em;
 }
+
 #navigation dl {
     padding: 16px;
     margin: 0;
     background: url(img/nav-footer.png) bottom no-repeat;
 }
+
 #navigation dd, #navigation dt {
     margin: 0;
     padding: 0;
 }
+
 #navigation dt {
     color: white;
     font: bold 125% "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 #navigation ul {
     margin: 0 0 1em 1em;
     padding: 0;
 }
+
 #navigation li {
     display: block;
     margin: 0;
     padding: 0;
 }
+
 #navigation a {
     text-decoration: none;
     color: #242933;
 }
+
 #navigation a:hover {
     text-decoration: underline;
 }
+
 #header {
     margin: 21px 0 17px 191px;
     min-width: 350px;
     max-width: 700px;
     height: 51px;
 }
+
 #header div, #header span {
     float: right;
 }
+
 #header img {
     margin-left: 5px;
 }
+
 #languages {
     width: 140px;
 }
+
 #download {
     display: block;
     float: right;
@@ -107,14 +131,17 @@ img {
     background: url(img/download.png);
     margin-left: 5px;
 }
+
 a#download:hover {
     background: url(img/download-highlight.png);
 }
+
 #content {
     padding: 1px 0 40px 191px;
     min-width: 350px;
     max-width: 700px;
 }
+
 .warning {
     background: #FCC;
     border: 2px solid #F66;
@@ -122,6 +149,7 @@ a#download:hover {
     margin: 7px 7px 7px 198px;
     width: 700px;
 }
+
 #footer {
     font-size: 90%;
     clear: both;
