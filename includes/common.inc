@@ -46,7 +46,7 @@ function print_header($title, $encoding) {
                       "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
-        <title><?php echo("$title"); ?></title>
+        <title><?php echo $title; ?></title>
         <meta http-equiv="Content-type" content="application/xhtml+xml; charset=<?php echo $encoding; ?>" />
         <meta name="author" content="Jim Mock (mij@macports.org)" />
         <meta name="author" content="Juan Manuel Palacios (jmpp@macports.org)" />
