@@ -59,7 +59,12 @@
 
     <h3 class="subhdr">IRC</h3>
 
-    <p></p>
+    <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://chat.freenode.net/#MacPorts">#MacPorts</a>
+    channel on the <a href="http://freenode.net/">Freenode network</a> is where some of us usually hang out, MacPorts developers
+    and community members alike. Everyone is free and welcomed to join us, even if it is for a random fun conversation or
+    a productive troubleshooting session, but please keep in mind that no one is guaranteed to be around at any particular
+    moment and that channel members are not obligated to answer your questions. If you fail to get any traction at any time
+    do not take it personally and simply direct your questions to the mailing lists detailed above.</p>
 
     <h3 class="subhdr">Other</h3>
 
