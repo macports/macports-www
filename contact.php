@@ -28,10 +28,10 @@
         with archives located <a href="http://lists.macosforge.org/pipermail/macports-dev/">here</a>.</li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a> mailing list,
         where the logs of commits to our <a href="<?php print $svn_url; ?>">SVN repository</a> get posted to (including
-        commits to both the &rdquo;base&ldquo; code and ports tree, among others). A moderate to low volume list with
+        commits to both the &rdquo;base&ldquo; code and ports tree, among others). A low to moderate volume list with
         archives located <a href="http://lists.macosforge.org/pipermail/macports-changes/">here</a>.</li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a> mailing list,
-        where ticket activity on our <a href="<?php print $trac_url; ?>">Trac issue tracker</a> is posted to. This list
+        where ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker</a> is posted to. This list
         is currently disabled, however.</li>
     </ul>
 
@@ -50,8 +50,8 @@
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
 <!-- we need a link down here pointing to some page detailing the portmgr team - guide authors? ;-) -->
     list is where you should send mail to in case you need to get in touch with the <a href="">MacPorts management team</a>
-    (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request and/or question or if you wish to discuss
-    anything you might feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
+    (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request or if you wish to discuss anything you mightd
+    feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
 
     <h3 class="subhdr">Bug Tracker</h3>
 
@@ -59,7 +59,7 @@
     'roadmap'; ?>">bug tracking</a> and <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a> needs, thus buying ourselves
     seamless read-only integration with our SVN repository through its <a href="<?php print $trac_url . 'browser'; ?>">source
     browser</a> and the project <a href="<?php print $trac_url . 'timeline'; ?>">timeline</a> (where ticket activity can also
-    be viewed). Note that in order to interact with Trac for anything other than viewing only operations you need to <a
+    be viewed). Note that in order to interact with Trac for anything other than viewing only operations, you need to <a
     href="http://www.macosforge.org/wp-register.php">register</a> with Mac OS Forge for a Wordpress/Trac combined account.</p>
 
     <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself,
@@ -79,7 +79,7 @@
     channel on the <a href="http://freenode.net/">Freenode network</a> is where some of us usually hang out, MacPorts developers
     and community members alike. Everyone is free and welcomed to join us, even if it is for a random fun conversation or
     a productive troubleshooting session, but please keep in mind that no one is guaranteed to be around at any particular
-    moment and that channel members are not obligated to answer your questions. If you fail to get any traction at any time
+    moment and that channel members are not obligated to answer your questions. If you fail to get any traction at any time,
     do not take it personally and simply direct your questions to the mailing lists detailed above.</p>
 
     <h3 class="subhdr">Other</h3>
