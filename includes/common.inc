@@ -55,7 +55,6 @@ function print_header($title, $encoding) {
         <meta name="copyright" content="2007, MacPorts Team" />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
-        <link rel="alternate" type="application/rss+xml" href="macports_news.xml" />
         <script type="text/javascript" src="mootools.v1.11.js"></script>
         <script type="text/javascript" src="language.js"></script>
     </head>

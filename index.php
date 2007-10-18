@@ -3,7 +3,6 @@
     /* $Id$ */
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
-    include_once("$MPWEB/includes/news.inc");
     print_header('MacPorts -- Home', 'utf-8');
 ?>
 
@@ -49,12 +48,8 @@ Things we should address when rewriting this page:
 
     <div id="news">
 
-        <h2 class="hdr">Project News</h2>
+        <h2 class="hdr">Project News &amp; Blog</h2>
 
-<?php
-        print_headlines();
-?>
-        <p>You can also browse our <a href="archives.php">news archives</a>.</p>
     </div>
 
 </div>
