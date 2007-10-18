@@ -38,8 +38,8 @@
     <p>Even though everyone is free to subscribe to any of our mailing lists, they are closed to non-subscribers due to
     basic spam control policies. Members are expected to abide by the very simple <a href="http://www.dtcc.edu/cs/rfc1855.html">
     Netiquette guidelines</a> that are common to most open forums when posting; of particular relevance is sticking to plain
-    text messages, reducing the number and size of attachments in any way possible and, last but not least, searching the
-    archives before raising a question.</p>
+    text messages, our language of choice (English), reducing the number and size of attachments in any way possible and,
+    last but not least, searching the archives before raising a question.</p>
 
     <p>Needless to say, providing us with as much information as you can gather will help us help you in turn diagnosing any
     problems you may be experiencing, so always remember to use <kbd>port(1)</kbd>'s <kbd>-v</kbd> or <kbd>-d</kbd> flags for
@@ -80,7 +80,10 @@
     and community members alike. Everyone is free and welcomed to join us, even if it is for a random fun conversation or
     a productive troubleshooting session, but please keep in mind that no one is guaranteed to be around at any particular
     moment and that channel members are not obligated to answer your questions. If you fail to get any traction at any time,
-    do not take it personally and simply direct your questions to the mailing lists detailed above.</p>
+    do not take it personally and simply direct your questions to the mailing lists instead.</p>
+
+    <p>The language of choice for the IRC channel is also English, for obvious reasons of universality, so sticking to it is
+    appreciated.</p>
 
     <h3 class="subhdr">Other</h3>
 
