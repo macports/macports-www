@@ -6,11 +6,8 @@
     print_header('MacPorts -- Download &amp; Installation', 'utf-8');
 ?>
 
-<!--
- *) Amend "help" section with references to 'contact.php';
--->
-
 <div id="content">
+
 
     <h2 class="hdr">Installing MacPorts</h2>
 
@@ -31,35 +28,36 @@
     is an optional installation in the Developer Tools package, so you need to add it explicitly through the
     &ldquo;Customize&rdquo; button of the corresponding installer.</p>
 
+
     <h3 class="subhdr">Mac OS X Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the <a href="<?php print $tiger_dmg;
-    ?>">dmg for Tiger</a> or the <a href="<?php print $panther_dmg; ?>"> one for Panther</a> respectively and running
+    ?>">dmg for Tiger</a> or the one <a href="<?php print $panther_dmg; ?>">for Panther</a> respectively and running
     the system's Installer by double clicking on the pkg contained therein, following the on-screen instructions until
     completion. This procedure will place a fully functional and default MacPorts installation on your host system,
     ready for usage. If needed your shell configuration files will be adapted by the installer to include the necessary
     settings to run MacPorts and the programs it installs. You may need to open a new shell for these changes to take
     effect.</p>
 
-    <p>Although not strictly necessary, it's recommended that you synchronize your recent installation with our rsync
-    server to ensure you have the latest available release of the MacPorts infrastructure and of the &ldquo;Portfiles&rdquo;
-    that contain the instructions employed in the building and installation of ports. To accomplish this simply open up a
-    terminal window and execute:</p>
-
+    <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will be run for you by the installer to ensure you have
+    our latest available release and the latest revisions to the &ldquo;Portfiles&rdquo; that contain the instructions
+    employed in the building and installation of ports. After installation is done, it is recommended that you run this
+    step manually on a regular basis to to keep your MacPorts system always current:</p>
+    
     <pre>sudo port -d selfupdate</pre>
 
-    <p>It is also recommended to run this command on a regular basis to keep your MacPorts installation always current.
-    At this point you should be ready to enjoy MacPorts!</p>
+    <p>At this point you should be ready to enjoy MacPorts!</p>
+
 
     <h3 class="subhdr">Source Installation</h3>
 
     <p>If on the other hand you decide to install MacPorts from source, there are still a couple of things you will need to
-    do once you've downloaded the tarball before you can start installing ports, namely compiling
-    and installing MacPorts itself. &ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package
-    and run &ldquo;<kbd>tar xjvf <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.bz2
-    </a></kbd>&rdquo; or &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $mp_version_major;
-    ?>.tar.gz</a></kbd>&rdquo;, depending on whether you downloaded the bz2 tarball or the gz one, respectively.
-    This will unpack the MacPorts sources that you will proceed to build and install. To do so, execute the following:</p>
+    do after downloading the tarball before you can start installing ports, namely compiling and installing MacPorts itself.
+    &ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package and run &ldquo;<kbd>tar xjvf <a href=
+    "<?php print $bz2_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.bz2 </a></kbd>&rdquo; or &ldquo;<kbd>tar
+    xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.gz</a></kbd>&rdquo;, depending
+    on whether you downloaded the bz2 tarball or the gz one, respectively. This will unpack the MacPorts sources that you will
+    proceed to build and install. To do so, execute the following:</p>
 
 <pre>cd MacPorts-<?php print $mp_version_major . "\n"; ?>
 ./configure &amp;&amp; make &amp;&amp; sudo make install</pre>
@@ -90,11 +88,12 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
     <p>Upon completion MacPorts will be ready to install ports. Again, it is recommended to run the above
     command on a regular basis to keep your installation current.</p>
 
+
     <h3 class="subhdr">Other Platforms</h3>
 
     <p>Running on platforms other than Mac OS X is not the main focus of the MacPorts project, so remaining cross-platform
     is not an actively pursued development goal. Nevertheless, it is not an actively discouraged goal either and as a result
-    some experimental support exists for other POSIX compliant platforms such as FreeBSD and GNU/Linux.</p>
+    some experimental support does exist for other POSIX compliant platforms such as FreeBSD and GNU/Linux.</p>
 
     <p>The full list of requirements to run MacPorts on these other platforms is as follows (we assume you have the
     basics such as GCC and X11):</p>
@@ -107,6 +106,7 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
         <li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a> for checksums</li>
     </ul>
 
+
     <h3 class="subhdr">Help</h3>
 
     <p>Help on a wide variety of topics is also available in the project <a href="<?php print $guide_url; ?>">Guide</a> and
@@ -114,16 +114,11 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
     MacPorts. Of particular relevance are the <a href="<?php print $guide_url . '#installing'; ?>">installation</a> &amp; <a
     href="<?php print $guide_url . '#using'; ?>">usage</a> sections of the former and the <a href="<?php print $trac_url .
     'wiki/FAQ'; ?>">FAQ</a> section of the <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a>, where track of quesitons
-    that are fielded often on our <a href="<?php print $trac_url . 'wiki/MailingLists'; ?>">mailing lists</a> is kept.</p>
+    that are fielded often on our <a href="contact.php#lists">mailing lists</a> is kept.</p>
 
-    <p>All of our documentation is a work in progress, so if you spot an error or have a quesiton about some part of the
-    the <a href="<?php print $guide_url; ?>">Guide</a> and/or this website please do <a href="<?php print $guide_url .
-    '#project.tickets'; ?>">let us known</a>!</p>
-
-    <p>For more real-time discussion, the #MacPorts channel on the <a href="http://freenode.net/">Freenode IRC network</a> is
-    generally where we hang out. Though it is generally helpful, please keep in mind that no one is obligated to help or even
-    answer your question if you join the channel. Do not take it personally, simply ask your question on the <a href="<?php
-    print $trac_url . 'wiki/MailingLists'; ?>">mailing lists</a> instead.</p>
+    <p>All of our documentation is a work in progress, so if you spot an error or have any quesitons about some part of the
+    the <a href="<?php print $guide_url; ?>">Guide</a> and/or this website please do let us known, there are many ways to
+    <a href="contact.php">contact us</a>!</p>
 
 
     <h3 class="subhdr">SVN Sources</h3>
@@ -136,8 +131,10 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
 
 <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
 
-    <p>If you'd simply like to view the SVN repository without checking it out, you can do so via the
-    <a href="http://trac.macports.org/projects/macports/browser">Trac browser</a>.</p>
+    <p>Purpose specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
+
+    <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the
+    <a href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
 
 </div>
 

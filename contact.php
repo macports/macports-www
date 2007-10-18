@@ -9,12 +9,14 @@
 
 <div id="content">
 
+
     <h2 class="hdr">Getting in Touch With Us</h2>
 
     <p>There are a number of ways in which you can get in contact with the MacPorts project, either the core developers
     and ports maintainers behind it and/or members of its broad user base.</p>
 
-    <h3 class="subhdr">Mailing Lists</h3>
+
+    <h3 class="subhdr" id="lists">Mailing Lists</h3>
 
     <p>The MacPorts project hosts a number of purpose specific mailing lists you can freely subscribe to:</p>
 
@@ -53,6 +55,7 @@
     (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request or if you wish to discuss anything you mightd
     feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
 
+
     <h3 class="subhdr">Bug Tracker</h3>
 
     <p>We use the popular <a href="http://trac.edgewall.org/">Trac</a> web-based tool for our <a href="<?php print $trac_url .
@@ -73,6 +76,7 @@
     <p>Viewing existing tickets through the facilities of predefined and custom <a href="<?php print $trac_url . 'report'; ?>">
     reports</a> that allow you to customize queries is also available.</p>
 
+
     <h3 class="subhdr">IRC</h3>
 
     <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://chat.freenode.net/#MacPorts">#MacPorts</a>
@@ -84,6 +88,7 @@
 
     <p>The language of choice for the IRC channel is also English, for obvious reasons of universality, so sticking to it is
     appreciated.</p>
+
 
     <h3 class="subhdr">Other</h3>
 
