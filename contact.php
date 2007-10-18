@@ -85,7 +85,7 @@
     <h3 class="subhdr">Other</h3>
 
     <p>Other miscellaneous venues you can use to learn about the MacPorts project and its activities are the <a href="<?php print
-    $trac_url . 'wki/MacPortsDevelopers'; ?>">team members page</a> in our Wiki and our CIA <a href="http://cia.vc/stats/project/MacPorts">
+    $trac_url . 'wiki/MacPortsDevelopers'; ?>">team members page</a> in our Wiki and our CIA <a href="http://cia.vc/stats/project/MacPorts">
     project page</a>, where you can also view our SVN commit activity and many other types of project statistics.</p>
 
 </div>
