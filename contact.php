@@ -31,7 +31,7 @@
         commits to both the &rdquo;base&ldquo; code and ports tree, among others). A moderate to low volume list with
         archives located <a href="http://lists.macosforge.org/pipermail/macports-changes/">here</a>.</li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a> mailing list,
-        where ticket activity on our <a href="<?php print $trac_url ; ?>">Trac issue tracker</a> is posted to. This list
+        where ticket activity on our <a href="<?php print $trac_url; ?>">Trac issue tracker</a> is posted to. This list
         is currently disabled, however.</li>
     </ul>
 
@@ -53,9 +53,25 @@
     (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request and/or question or if you wish to discuss
     anything you might feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
 
-    <h3 class="subhdr">Trac</h3>
+    <h3 class="subhdr">Bug Tracker</h3>
 
-    <p></p>
+    <p>We use the popular <a href="http://trac.edgewall.org/">Trac</a> web-based tool for our <a href="<?php print $trac_url .
+    'roadmap'; ?>">bug tracking</a> and <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a> needs, thus buying ourselves
+    seamless read-only integration with our SVN repository through its <a href="<?php print $trac_url . 'browser'; ?>">source
+    browser</a> and the project <a href="<?php print $trac_url . 'timeline'; ?>">timeline</a> (where ticket activity can also
+    be viewed). Note that in order to interact with Trac for anything other than viewing only operations you need to <a
+    href="http://www.macosforge.org/wp-register.php">register</a> with Mac OS Forge for a Wordpress/Trac combined account.</p>
+
+    <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself,
+    feel free to <a href="<?php print $trac_url . 'newticket'; ?>">open a ticket</a> to help us look into the problem.
+    Please keep in mind that we usually get a fairly high number of duplicate reports for common problems and therefore appreciate
+    any help we can get in the process of streamlining our ticket dutties. <a href="<?php print $trac_url . 'search'; ?>">
+    Searching</a> the database and reading our <a href="<?php print $trac_url . 'wiki/FAQ'; ?>">FAQ</a> to see if your report
+    has already been filed is recommended, as well as reading the <a href="<?php print $guide_url . '#project.tickets'; ?>">
+    ticketing guidelines</a> that will help you create a better report.</p>
+
+    <p>Viewing existing tickets through the facilities of predefined and custom <a href="<?php print $trac_url . 'report'; ?>">
+    reports</a> that allow you to customize queries is also available.</p>
 
     <h3 class="subhdr">IRC</h3>
 
