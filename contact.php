@@ -7,8 +7,8 @@
     print_header('MacPorts -- Contact Us', 'utf-8');
 ?>
 
-<div id="content">
 
+<div id="content">
 
     <h2 class="hdr">Getting in Touch With Us</h2>
 
@@ -97,6 +97,7 @@
     project page</a>, where you can also view our SVN commit activity and many other types of project statistics.</p>
 
 </div>
+
 
 <?php
     print_footer();

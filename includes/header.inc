@@ -5,11 +5,14 @@
     global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 ?>
 
+
 <h1><a href="http://www.macports.org/" title="MacPorts"><span class="accessibility">MacPorts</span></a></h1>
 
 <p class="accessibility"><a href="#content">Skip to Content</a></p>
 
+
 <div id="header">
+
     <a id="download" href="install.php"><span class="accessibility">Download MacPorts</span></a>
     <span class="accessibility">View site in</span>
     <span><a href="#" id="language"><img src="img/en-enabled.png" alt="English" width="30" height="48" /></a></span>
@@ -18,7 +21,9 @@
     </span>
 </div>
 
+
 <div id="navigation">
+
     <dl>
         <dt>Getting Started</dt>
         <dd>
@@ -67,6 +72,7 @@
         </dd>
     </dl>
 </div>
+
 
 <p class="warning"> Warning: This is just a test installation of a new design for the MacPorts project page,
 official site is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>

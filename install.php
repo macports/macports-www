@@ -6,8 +6,8 @@
     print_header('MacPorts -- Download &amp; Installation', 'utf-8');
 ?>
 
-<div id="content">
 
+<div id="content">
 
     <h2 class="hdr">Installing MacPorts</h2>
 
@@ -137,6 +137,7 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
     <a href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
 
 </div>
+
 
 <?php
   print_footer();
