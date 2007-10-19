@@ -18,7 +18,7 @@ $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd)
 
 ######################################################################
 
-# print the current MacPorts version:
+# MacPorts version variables:
 $mp_version_major = '1.5.0';
 $mp_version_latest = '1.5.2';
 
@@ -39,12 +39,11 @@ $guide_url = 'http://geeklair.net/new_macports_guide/';
 
 ######################################################################
 
-# print the page header
+# Page header
 function print_header($title, $encoding) {
     global $MPWEB;
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-                      "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
     <head>
         <title><?php echo $title; ?></title>
@@ -68,7 +67,7 @@ function print_header($title, $encoding) {
 
 ###################################################################### 
 
-# print the page footer
+# Page footer
 function print_footer() {
     global $MPWEB;
 
@@ -81,7 +80,7 @@ function print_footer() {
 
 ######################################################################
 
-# Print a total count of currently available ports:
+# Total count of currently available ports:
 function ports_count() {
     global $portsdb;
 
@@ -98,21 +97,24 @@ function ports_count() {
 
 ###################################################################### 
 
-# Warn against darwinports.com leach!
+# Warning against darwinports.com leach!
 function check_referer() {
     global $_SERVER;
 
     if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinports.com') !== false) {
 ?>
         <div class="warning">
+        
             <p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
+            
             <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of
-            the <i>Official MacPorts Web Site</i>.  There is <b>no relationship</b> between the <i>MacPorts
+            the <i>Official MacPorts Web Site</i>. There is <b>no relationship</b> between the <i>MacPorts
             Project</i> and <i>darwinports.com</i>.</p>
 
             <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect
             or outdated and is not endorsed in any way by the <i>MacPorts Project</i>. For the most accurate
             information about MacPorts, please bookmark this site, <a href="http://www.macports.org">http://www.macports.org</a>.</p>
+            
         </div>
 <?php
     }
