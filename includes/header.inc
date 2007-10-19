@@ -1,6 +1,8 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
+    /* Copyright (c) 2004-2007, MacPorts Organization */
+    /* Copyright (c) 2004, OpenDarwin */
     $PHP_SELF = $_SERVER['PHP_SELF'];
     global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 ?>
