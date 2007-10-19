@@ -5,6 +5,7 @@
 # Copyright (c) 2003, OpenDarwin
 # Copyright (c) 2003-2007, MacPorts Team.
 
+
 #####################################################################
 
 # Ports database connection parameters:
@@ -64,6 +65,7 @@ function print_header($title, $encoding) {
     check_referer();
 }
 
+
 ###################################################################### 
 
 # print the page footer
@@ -75,6 +77,7 @@ function print_footer() {
     echo "  </body>\n";
     echo "</html>\n";
 }
+
 
 ######################################################################
 
@@ -91,6 +94,7 @@ function ports_count() {
     }
     return $count;
 }
+
 
 ###################################################################### 
 
