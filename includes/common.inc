@@ -73,7 +73,7 @@ function print_footer() {
 
     include("$MPWEB/includes/footer.inc");
 
-    echo "  </body>\n";
+    echo "    </body>\n";
     echo "</html>\n";
 }
 
