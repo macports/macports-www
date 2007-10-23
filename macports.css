@@ -158,9 +158,10 @@ a#download:hover {
 .warning {
     background: #FCC;
     border: 2px solid #F66;
-    padding: 0.5em;
+    padding: 6px;
     margin: 7px 7px 7px 198px;
-    width: 780px;
+    min-width: 320px;
+    max-width: 670px;
 }
 
 #footer {
