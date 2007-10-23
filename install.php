@@ -23,7 +23,7 @@
     downloads section</a> of the site.</p>
 
 <!-- (NOTE: I still need to investigate whether X11 installation is optional or default on Tiger/Leopard and how dev
-    tools installation reacts to X11User being installed or not -- that is, is X11SDK default/optional based on X11User presence?) -->
+    tools installation reacts to X11User being installed or not - that is, is X11SDK default/optional based on X11User presence?) -->
     <p>Please note that in order to install and run MacPorts on Mac OS X you must have Apple's Developer Tools
     package installed, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer site</a>
     or on your Mac OS X installation CDs/DVD. It is also strongly recommended to have the X11 windowing environment (X11 User)
