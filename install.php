@@ -22,6 +22,8 @@
     <p>To get a files listing of all our available downloads checkout the <a href="<?php print $downloads; ?>">
     downloads section</a> of the site.</p>
 
+<!-- (NOTE: I still need to investigate whether X11 installation is optional or default on Tiger/Leopard and how dev
+    tools installation reacts to X11User being installed or not -- that is, is X11SDK default/optional based on X11User presence?) -->
     <p>Please note that in order to install and run MacPorts on Mac OS X you must have Apple's Developer Tools
     package installed, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer site</a>
     or on your Mac OS X installation CDs/DVD. It is also strongly recommended to have the X11 windowing environment (X11 User)
@@ -118,10 +120,9 @@ rm -rf MacPorts-<?php print $mp_version_major; ?>*</pre>
     'wiki/FAQ'; ?>">FAQ</a> section of the <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a>, where track of quesitons
     that are fielded often on our <a href="contact.php#lists">mailing lists</a> is kept.</p>
 
-    <p>All of our documentation is a work in progress, so if you spot an error or have any quesitons about some part of the
-    the <a href="<?php print $guide_url; ?>">Guide</a> and/or this website please do let us known, there are many ways to
-    <a href="contact.php">contact us</a>!</p>
-
+    <p>If any of these resources do not answer your questions or if you need any kind of extended support, there are many ways
+    to <a href="contact.php">contact us</a>!</p>
+    
 
     <h3 class="subhdr">SVN Sources</h3>
 
