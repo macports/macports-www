@@ -16,41 +16,49 @@
     <p>MacPorts version <?php print $mp_version_major; ?> is available in various formats for download and installation:</p>
 
     <ul>
-        <li>&ldquo;dmg&rdquo; disk images for both <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and
-        <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)</a>, both containing <a href="#pkg">a pkg installer</a>.</li>
-        <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package
-        or a <a href="<?php print $gz_tarball; ?>">tar.gz</a> one.</li>
-        <li><a href="#svn">SVN checkout</a>.</li>
+        <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
+        href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)</a>,
+        containing pkg installers for use with the Mac OS X Installer. By far the simplest intallation procedure that most users
+        should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">below</a>.</li>
+        <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
+        <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
+        in any way.</li>
+        <li><a href="#svn">SVN checkout</a> of the unpackaged sources, if you wish to follow MacPorts development.</li>
     </ul>
 
     <p>Checksums for all our <a href="<?php print $downloads; ?>">downloads</a> are contained in the <a href="<?php print
     $checksums; ?>">checksums file</a>.</p>
 
-    <p>Please note that in order to install and run MacPorts on Mac OS X your system must have installations of the
-    following components:</p>
 
-    <ol>
-        <li>Apple's Developer Tools, found at the <a href="http://developer.apple.com/tools/xcode/">
-        Apple Developer site</a> or on your Mac OS X installation CDs/DVD.</li>
-        <li>The X11 windowing environment (A.K.A. &ldquo;X11 User&rdquo;) and its related SDK package (&ldquo;X11 SDK&rdquo;)
-        for ports that depend on the functioanlity they provide to compile and run.
-            <ul>
-                <li>on Panther and Tiger, the &ldquo;X11 User&rdquo; package is an optional installation on your system
-                CDs/DVD (enabled through the &ldquo;Customize&rdquo; button of the installer), whereas it is included by
-                default on Leopard.</li>
-                <li>the &ldquo;X11 SDK&rdquo; package on each OS specific Developer Tools installer reacts to included or
-                optional depending on whether &ldquo;X11 User&rdquo; is installed or not.</li>
-            </ul>
-        </li>
-    </ol>
+    <div id="requirements">
+
+        <p>Please note that in order to install and run MacPorts on Mac OS X, your system must have installations of the
+        following components:</p>
+
+        <ol>
+            <li>Apple's Developer Tools, found at the <a href="http://developer.apple.com/tools/xcode/"> Apple Developer
+            site</a> or on your Mac OS X installation CDs/DVD.</li>
+            <li>The X11 windowing environment (A.K.A. &ldquo;X11 User&rdquo;) and its related SDK package (&ldquo;X11
+            SDK&rdquo;) for ports that depend on the functioanlity they provide to compile and run.
+                <ul>
+                    <li>the &ldquo;X11 User&rdquo; package is an optional installation on your system CDs/DVD for Panther and
+                    Tiger, enabled through the &ldquo;Customize&rdquo; button of the installer, whereas it is included by default
+                    on Leopard.</li>
+                    <li>the &ldquo;X11 SDK&rdquo; package from the Developer Tools will be automatically installed if &ldquo;X11
+                    User&rdquo; is already installed, so be sure to install that first.
+                </ul>
+            </li>
+        </ol>
+
+    </div>
 
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the <a href="<?php print $tiger_dmg;
-    ?>">dmg for Tiger</a> or the one <a href="<?php print $panther_dmg; ?>">for Panther</a> respectively and running
-    the system's Installer by double clicking on the pkg contained therein, following the on-screen instructions until
-    completion.</p>
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $leopard_dmg; ?>">
+    Leopard (Universal)</a>, <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> or <a href="<?php print $panther_dmg; ?>">
+    Panther (PowerPC)</a>, respectively, and running the system's Installer by double clicking on the pkg contained therein, following
+    the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully functional and default MacPorts installation on your host system, ready for usage.
     If needed your shell configuration files will be adapted by the installer to include the necessary settings to run MacPorts
@@ -68,9 +76,8 @@
 
     <h3 class="subhdr" id="source">Source Installation</h3>
 
-    <p>If on the other hand you decide to install MacPorts from source, there are still a couple of things you will need
-    to do after downloading the tarball before you can start installing ports, namely compiling and installing MacPorts
-    itself:</p>
+    <p>If on the other hand you decide to install MacPorts from source there are still a couple of things you will need to do after
+    downloading the tarball before you can start installing ports, namely compiling and installing MacPorts itself:</p>
 
 
     <ol>
@@ -121,8 +128,8 @@
     <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes and feature additions,
     you may acquire the MacPorts sources through SVN.</p>
 
-    <p>Use the following command to check the project's trunk out of the MacPorts anonymous subversion repository, containing
-    all of our source modules (MacPorts' &ldquo;base&rdquo;, the ports tree and all of our documentation in raw form):</p>
+    <p>Use the following command to check the project's &ldquo;trunk&rdquo; out of the MacPorts anonymous subversion repository,
+    containing all of our source modules (MacPorts' &ldquo;base&rdquo;, the ports tree and all of our documentation in raw form):</p>
 
     <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
 
@@ -148,6 +155,9 @@
         <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles</li>
         <li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a> for checksums</li>
     </ul>
+
+    <p>Naturally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts on any
+    of these platforms.</p>
 
 
     <h3 class="subhdr">Help</h3>
