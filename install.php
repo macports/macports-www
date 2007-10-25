@@ -74,7 +74,7 @@
     
     <pre>sudo port -d selfupdate</pre>
 
-    <p>At this point you should be ready to enjoy MacPorts!
+    <p>At this point you should be ready to enjoy MacPorts!</p>
 
     <p>Type &ldquo;<kbd>man port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print
     $guide_url; ?>">Guide</a> to find out more information about using MacPorts. <a href="#help">Help</a> is also available.
