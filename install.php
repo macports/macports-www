@@ -20,8 +20,8 @@
         <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
         href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)
         </a>, containing pkg installers for use with the Mac OS X Installer. By far the simplest intallation procedure
-        that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">below
-        </a>.</li>
+        that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
+        below</a>.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package
         or a <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your
         installation in any way.</li>
@@ -63,8 +63,9 @@
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully functional and default MacPorts installation on your host system, ready for
-    usage. If needed your shell configuration files will be adapted by the installer to include the necessary settings to
-    run MacPorts and the programs it installs, but you may need to open a new shell for these changes to take effect.</p>
+    usage. If needed your shell configuration files will be adapted by the installer to include the necessary settings
+    to run MacPorts and the programs it installs, but you may need to open a new shell for these changes to take effect.
+    </p>
 
     <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will be run for you by the installer to ensure you have
     our latest available release and the latest revisions to the &ldquo;Portfiles&rdquo; that contain the instructions
@@ -73,7 +74,11 @@
     
     <pre>sudo port -d selfupdate</pre>
 
-    <p>At this point you should be ready to enjoy MacPorts!</p>
+    <p>At this point you should be ready to enjoy MacPorts!
+
+    <p>Type &ldquo;<kbd>man port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print
+    $guide_url; ?>">Guide</a> to find out more information about using MacPorts. <a href="#help">Help</a> is also available.
+    </p>
 
 
     <h3 class="subhdr" id="source">Source Installation</h3>
@@ -125,8 +130,11 @@
 
     <pre>sudo port -d selfupdate</pre>
 
-    <p>Upon completion MacPorts will be ready to install ports! Again, it is recommended to run the above
-    command on a regular basis to keep your installation current.</p>
+    <p>Upon completion MacPorts will be ready to install ports! </p>
+
+    <p>It is recommended to run the above command on a regular basis to keep your installation current. Type &ldquo;<kbd>
+    man port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print $guide_url; ?>">Guide
+    </a> to find out more information about using MacPorts. <a href="#help">Help</a> is also available.</p>
 
 
     <h3 class="subhdr" id="svn">SVN Sources</h3>
@@ -135,15 +143,15 @@
     additions, you may acquire the MacPorts sources through SVN.</p>
 
     <p>Use the following command to check the project's &ldquo;trunk&rdquo; out of the MacPorts anonymous subversion
-    repository, containing all of our source modules (MacPorts' &ldquo;base&rdquo;, the ports tree and all of our documentation
-    in raw form):</p>
+    repository, containing all of our source modules (MacPorts' &ldquo;base&rdquo;, the ports tree and all of
+    documentation in raw form):</p>
 
     <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
 
     <p>Purpose specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
 
-    <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the
-    <a href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
+    <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
+    href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
 
 
     <h3 class="subhdr">Other Platforms</h3>
@@ -164,11 +172,11 @@
         checksums</li>
     </ul>
 
-    <p>Naturally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts
-    on any of these platforms.</p>
+    <p>Naturally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run
+    MacPorts on any of these platforms.</p>
 
 
-    <h3 class="subhdr">Help</h3>
+    <h3 class="subhdr" id="help">Help</h3>
 
     <p>Help on a wide variety of topics is also available in the project <a href="<?php print $guide_url; ?>">Guide</a>
     and through our <a href="<?php print $trac_url; ?>">Trac portal</a> should you run into any problems installing and/or
