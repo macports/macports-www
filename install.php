@@ -47,7 +47,7 @@
                     and Tiger, enabled through the &ldquo;Customize&rdquo; button of the installer, whereas it is included
                     by default on Leopard.</li>
                     <li>the &ldquo;X11 SDK&rdquo; package from the Developer Tools will be automatically installed if &ldquo;X11
-                    User&rdquo; is already installed, so be sure to install that first.
+                    User&rdquo; is already installed, so be sure to install that first.</li>
                 </ul>
             </li>
         </ol>
