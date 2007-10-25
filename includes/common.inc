@@ -43,7 +43,7 @@ $guide_url = 'http://geeklair.net/new_macports_guide/';
 # Page header
 function print_header($title, $encoding) {
     global $MPWEB;
-    echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n";
+    echo "<?xml version=\"1.0\" encoding=\"$encoding\"?>\n";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
