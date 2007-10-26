@@ -158,7 +158,7 @@
 
     <p>Running on platforms other than Mac OS X is not the main focus of the MacPorts project, so remaining cross-platform
     is not an actively pursued development goal. Nevertheless, it is not an actively discouraged goal either and as a
-    result some experimental support does exist for other POSIX compliant platforms such as FreeBSD and GNU/Linux.</p>
+    result some experimental support does exist for other POSIX compliant platforms such as *BSD and GNU/Linux.</p>
 
     <p>The full list of requirements to run MacPorts on these other platforms is as follows (we assume you have the
     basics such as GCC and X11):</p>
