@@ -172,7 +172,7 @@
         checksums</li>
     </ul>
 
-    <p>Naturally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run
+    <p>Normally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run
     MacPorts on any of these platforms.</p>
 
 
