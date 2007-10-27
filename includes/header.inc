@@ -1,14 +1,14 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
-    /* Copyright (c) 2004-2007, MacPorts Organization */
-    /* Copyright (c) 2004, OpenDarwin */
+    /* Copyright (c) 2004, OpenDarwin. */
+    /* Copyright (c) 2004-2007, The MacPorts Project. */
     $PHP_SELF = $_SERVER['PHP_SELF'];
     global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
 ?>
 
 
-<h1><a href="http://www.macports.org/" title="MacPorts"><span class="accessibility">MacPorts</span></a></h1>
+<h1><a href="http://www.macports.org/" title="The MacPorts Project"><span class="accessibility">The MacPorts Project</span></a></h1>
 
 <p class="accessibility"><a href="#content">Skip to Content</a></p>
 
@@ -76,5 +76,5 @@
 </div>
 
 
-<p class="warning"> Warning: This is just a test installation of a new design for the MacPorts project page,
+<p class="warning"> Warning: This is just a test installation of a new design for The MacPorts Project page,
 official site is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
