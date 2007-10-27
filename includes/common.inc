@@ -47,6 +47,7 @@ function print_header($title, $encoding) {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
     <head>
         <title><?php echo $title; ?></title>
         <meta http-equiv="Content-type" content="application/xhtml+xml; charset=<?php echo $encoding; ?>" />
@@ -60,7 +61,8 @@ function print_header($title, $encoding) {
         <script type="text/javascript" src="mootools.v1.11.js"></script>
         <script type="text/javascript" src="language.js"></script>
     </head>
-<body>
+
+    <body>
 <?php
     include("$MPWEB/includes/header.inc");
     check_referer();
