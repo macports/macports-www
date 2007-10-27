@@ -1,12 +1,12 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
-    /* Copyright (c) 2004-2007, MacPorts Organization */
-    /* Copyright (c) 2004, OpenDarwin */
+    /* Copyright (c) 2004, OpenDarwin. */
+    /* Copyright (c) 2004-2007, The MacPorts Project. */
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     include_once("$MPWEB/includes/email.inc");
-    print_header('MacPorts -- Available Ports', 'utf-8');
+    print_header('The MacPorts Project -- Available Ports', 'utf-8');
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>

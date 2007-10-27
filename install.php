@@ -1,11 +1,11 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
-    /* Copyright (c) 2004-2007, MacPorts Organization */
-    /* Copyright (c) 2004, OpenDarwin */
+    /* Copyright (c) 2004, OpenDarwin. */
+    /* Copyright (c) 2004-2007, The MacPorts Project. */
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
-    print_header('MacPorts -- Download &amp; Installation', 'utf-8');
+    print_header('The MacPorts Project -- Download &amp; Installation', 'utf-8');
 ?>
 
 
@@ -156,7 +156,7 @@
 
     <h3 class="subhdr">Other Platforms</h3>
 
-    <p>Running on platforms other than Mac OS X is not the main focus of the MacPorts project, so remaining cross-platform
+    <p>Running on platforms other than Mac OS X is not the main focus of The MacPorts Project, so remaining cross-platform
     is not an actively pursued development goal. Nevertheless, it is not an actively discouraged goal either and as a
     result some experimental support does exist for other POSIX compliant platforms such as *BSD and GNU/Linux.</p>
 

@@ -1,11 +1,11 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
-    /* Copyright (c) 2007, MacPorts Organization */
+    /* Copyright (c) 2007, The MacPorts Project. */
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     include_once("$MPWEB/includes/email.inc");
-    print_header('MacPorts -- Contact Us', 'utf-8');
+    print_header('The MacPorts Project -- Contact Us', 'utf-8');
 ?>
 
 
@@ -13,7 +13,7 @@
 
     <h2 class="hdr">Getting in Touch With Us</h2>
 
-    <p>There are a number of ways in which you can get in contact with people involved with the MacPorts project, depending
+    <p>There are a number of ways in which you can get in contact with people involved with The MacPorts Project, depending
     on who you need to contact and the type of support you're looking for:</p>
 
     <ul>
@@ -54,7 +54,7 @@
 
     <h3 class="subhdr" id="Lists">Public Mailing Lists</h3>
 
-    <p>The MacPorts project hosts a number of specialized mailing lists you can freely subscribe to:</p>
+    <p>The MacPorts Project hosts a number of specialized mailing lists you can freely subscribe to:</p>
 
     <ul>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-users/">MacPorts Users</a>
@@ -90,12 +90,12 @@
 
     <!-- we need a link down here pointing to some page detailing the portmgr team - guide authors? ;-) -->
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
-    list is where you should send mail to in case you need to get in touch with the <a href="">MacPorts management team</a>
-    (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request or if you wish to discuss anything you might
-    feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
+    list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="">
+    management team</a> (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request or if you wish to
+    discuss anything you might feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
 
-    <p>This is also where you should turn to if you are a developer and/or a contributor interested in joning the MacPorts
-    team with full write access to our SVN repository and Wiki pages, either to work on MacPorts itself or as a ports
+    <p>This is also where you should turn to if you are a developer and/or a contributor interested in joning The MacPorts
+    Project with full write access to our SVN repository and Wiki pages, either to work on MacPorts itself or as a ports
     maintainer. Please read the <a href="<?php print $guide_url . '#project.membership'; ?>">documentation available</a>
     on joining for more information.</p>
 
