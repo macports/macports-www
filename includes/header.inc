@@ -19,7 +19,7 @@
     <span class="accessibility">View site in</span>
     <span><a href="#" id="language"><img src="img/en-enabled.png" alt="English" width="30" height="48" /></a></span>
     <span id="languages">
-        <a href="#"><img src="img/fr-disabled.png" alt="Fran&ccedil;ais" width="30" height="48" /></a><a href="#"><img src="img/es-disabled.png" alt="Espa&ntilde;ol" width="30" height="48" /></a><a href="#"><img src="img/ru-disabled.png" alt="" width="30" height="48" /></a><a href="#"><img src="img/it-disabled.png" alt="Italiano" width="30" height="48" /></a>
+        <a href="#"><img src="img/fr-disabled.png" alt="Fran&ccedil;ais" width="30" height="48" /></a><a href="#"><img src="img/es-disabled.png" alt="Espa&ntilde;ol" width="30" height="48" /></a><a href="#"><img src="img/ru-disabled.png" alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&nbsp;(Russkij)" width="30" height="48" /></a><a href="#"><img src="img/it-disabled.png" alt="Italiano" width="30" height="48" /></a>
     </span>
 </div>
 
