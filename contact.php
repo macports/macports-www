@@ -73,15 +73,15 @@
         </li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
         (<a href="http://lists.macosforge.org/pipermail/macports-tickets/">archives</a>):
-            <p>Ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker</a>. This list is currently
-            disabled, however.</p>
+            <p>Read-only list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker</a>. A moderate
+            volume list.</p>
         </li>
     </ul>
 
-    <p>Note that due to spam control policies you must subscribe in order to post to any of these lists. Members are
-    expected to abide by the very simple <a href="http://www.dtcc.edu/cs/rfc1855.html">Netiquette guidelines</a> that are
-    common to most open forums when posting; of particular relevance is sticking to plain text messages, our language of
-    choice (English), and reducing the number and size of attachments in any way possible (e.g, by using paste bins such
+    <p>Note that due to spam control policies you must subscribe to our non read-only lists in order to post to any of them.
+    Members are expected to abide by the very simple <a href="http://www.dtcc.edu/cs/rfc1855.html">Netiquette guidelines</a>
+    that are common to most open forums when posting; of particular relevance is sticking to plain text messages, our language
+    of choice (English), and reducing the number and size of attachments in any way possible (e.g, by using paste bins such
     as <a href="http://paste.lisp.org/new/macports">lisppaste</a> or <a href="http://pastie.caboo.se">pastie</a> and
     passing along the paste URL rather than full error messages).</p>
 
