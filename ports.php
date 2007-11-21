@@ -45,16 +45,7 @@
             </tr>
             <tr><td colspan="4"><hr /></td></tr>
             <tr>
-<?php
-                $result = mysql_query("SELECT count(*) from $portsdb.portfiles");
-                if ($result) {
-                    $row = mysql_fetch_array($result);
-                    $count = $row[0];
-                } else {
-                    $count = 0;
-                }
-?>
-                <td colspan="4" align="left"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">View All Software Titles (<?php echo $count; ?>)</a></td>
+                <td colspan="4" align="left"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">View All Software Titles (<?php print ports_count(); ?>)</a></td>
             </tr>
 <?php
             if (!$by || (!$substr && $by != "all")) {
