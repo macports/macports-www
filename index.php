@@ -37,7 +37,7 @@
     <p>if you are interested in participating and/or joining The MacPorts Project in any way then don't hesitate to contact
     the project's management team, &ldquo;<a href="contact.php#portmgr">PortMgr</a>&rdquo;, to explain your particular interest
     and make a formal petition. We're always looking for more helping hands that can extend and improve our ports tree and
-    documentation or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging field.
+    documentation, or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging field.
     We're eager to hear from you!</p>
 
     <!-- latest available release & cue to install.php -->
