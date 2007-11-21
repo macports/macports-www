@@ -1,5 +1,6 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
+    /* Web client to the PortIndex2MySQL script located in MacPorts base/portmgr/jobs svn directory. */
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
@@ -112,7 +113,7 @@
                 <dd>
                     <?php echo htmlspecialchars($row['description']); ?><br />
 <?php
-// MAINTAINERS
+/* MAINTAINERS */
                     $nquery = "SELECT maintainer FROM $portsdb.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, maintainer";
                     $nresult = mysql_query($nquery);
                     if ($nresult) {
@@ -129,7 +130,7 @@
                         }
                     }
 
-// CATEGORIES
+/* CATEGORIES */
                     $nquery = "SELECT category FROM $portsdb.categories WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY is_primary DESC, category";
                     $nresult = mysql_query($nquery);
                     if ($nresult) {
@@ -148,7 +149,7 @@
                         }
                     }
 
-// PLATFORMS
+/* PLATFORMS */
                     $nquery = "SELECT platform FROM $portsdb.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY platform";
                     $nresult = mysql_query($nquery);
                     if ($nresult && mysql_num_rows($nresult) > 0) {
@@ -164,7 +165,7 @@
                         }
                     }
 
-// DEPENDENCIES
+/* DEPENDENCIES */
                     $nquery = "SELECT library FROM $portsdb.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY library";
                     $nresult = mysql_query($nquery);
                     if ($nresult && mysql_num_rows($nresult) > 0) {
@@ -174,29 +175,30 @@
 <?php
                         while ($nrow = mysql_fetch_array($nresult)) {
                             // lib:libpng.3:libpng -> libpng
+                            // might need adapting to the new port: depspec
                             $library = eregi_replace("^([^:]*:[^:]*:|[^:]*:)", "", $nrow[0]);
 ?>
                             <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=library&amp;substr=<?php echo urlencode($library); ?>"><?php echo htmlspecialchars($library); ?></a>
 <?php
                         }
                     }
-/*
-// VARIANTS
-                    $nquery = "SELECT variant FROM $portsdb.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
-                    $nresult = mysql_query($nquery);
-                    if ($nresult && mysql_num_rows($nresult) > 0) {
-?>
-                        <br />
-                        <i>Variants:</i>
-<?php
-                        while ($nrow = mysql_fetch_array($nresult)) {
-                            $variant = $nrow[0];
-?>
-                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>"><?php echo htmlspecialchars($variant); ?></a>
-<?php
-                        }
-                    }
-*/
+/* VARIANTS */
+//
+//                    $nquery = "SELECT variant FROM $portsdb.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
+//                    $nresult = mysql_query($nquery);
+//                    if ($nresult && mysql_num_rows($nresult) > 0) {
+//?>
+//                        <br />
+//                        <i>Variants:</i>
+//<?php
+//                        while ($nrow = mysql_fetch_array($nresult)) {
+//                            $variant = $nrow[0];
+//?>
+//                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>"><?php echo htmlspecialchars($variant); ?></a>
+//<?php
+//                        }
+//                   }
+//
 ?>
                     <br />
                 </dd>
