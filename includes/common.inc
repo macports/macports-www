@@ -89,7 +89,7 @@ function print_footer() {
 function ports_count() {
     global $portsdb;
 
-    $result = mysql_query("SELECT count(*) FROM $portsdb.portfiles") or die("Error: " . mysql_error());
+    $result = mysql_query("SELECT count(name) FROM $portsdb.portfiles") or die("Error: " . mysql_error());
     if ($result) {
         $row = mysql_fetch_array($result);
         $count = $row[0];
