@@ -182,23 +182,23 @@
 <?php
                         }
                     }
+
 /* VARIANTS */
-//
-//                    $nquery = "SELECT variant FROM $portsdb.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
-//                    $nresult = mysql_query($nquery);
-//                    if ($nresult && mysql_num_rows($nresult) > 0) {
-//?>
-//                        <br />
-//                        <i>Variants:</i>
-//<?php
-//                        while ($nrow = mysql_fetch_array($nresult)) {
-//                            $variant = $nrow[0];
-//?>
-//                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>"><?php echo htmlspecialchars($variant); ?></a>
-//<?php
-//                        }
-//                   }
-//
+                    $nquery = "SELECT variant FROM $portsdb.variants WHERE portfile='" . mysql_real_escape_string($row['name']) . "' ORDER BY variant";
+                    $nresult = mysql_query($nquery);
+                    if ($nresult && mysql_num_rows($nresult) > 0) {
+?>
+                        <br />
+                        <i>Variants:</i>
+<?php
+                        while ($nrow = mysql_fetch_array($nresult)) {
+                            $variant = $nrow[0];
+?>
+                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>"><?php echo htmlspecialchars($variant); ?></a>
+<?php
+                        }
+                   }
+
 ?>
                     <br />
                 </dd>
