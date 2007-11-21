@@ -26,6 +26,8 @@
         or a <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your
         installation in any way.</li>
         <li><a href="#svn">SVN checkout</a> of the unpackaged sources, if you wish to follow MacPorts development.</li>
+        <li>The <a href="#selfupdate">selfupdate</a> target of the <kbd>port(1)</kbd> command, for users who already have
+        MacPorts installed and wish to upgrade to a new release.</li>
     </ul>
 
     <p>Checksums for all our <a href="<?php print $downloads; ?>">downloads</a> are contained in the <a href="<?php print
@@ -152,7 +154,12 @@
 
     <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
     href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
+    
+    
+    <h3 class="subhdr" id="selfupdate">Selfupdate</h3>
 
+    <p></p>
+    
 
     <h3 class="subhdr">Other Platforms</h3>
 
