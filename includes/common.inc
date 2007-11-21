@@ -100,6 +100,23 @@ function ports_count() {
 }
 
 
+######################################################################
+
+# Total count of port categories:
+function categories_count() {
+    global $portsdb;
+
+    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb.categories") or die ("Error: " . mysql_error());
+    if ($result) {
+        $row = mysql_fetch_array($result);
+        $count = $row[0];
+    } else {
+        $count = 0;
+    }
+    return $count;
+}
+
+
 ###################################################################### 
 
 # Warning against darwinports.com leach!
