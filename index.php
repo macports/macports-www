@@ -17,7 +17,7 @@
     and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macosx/">
     Mac OS X</a> operating system. To that end we provide the MacPorts software package under a <a href="http://opensource.org/licenses/bsd-license.php">
     BSD License</a>, and through it easy access to thousands of ports that <a href="<?php print $guide_url . '#introduction'; ?>">
-    greatly simplify</a> the task of compiling and installing open source software on your Mac.</p>
+    greatly simplify</a> the task of compiling and installing open-source software on your Mac.</p>
     
     <!-- brief ports tree description: monolithic, no 'stable' and 'unstable' trees; total number of available ports -->
     <p>We provide a single <a href="ports.php">software tree</a> that attempts to track the latest release of every software
@@ -30,15 +30,15 @@
     and explore the myriad of download options we provide, along our base system requirements for proper functioning. If you
     run into any problems installing and/or using MacPorts we also have many options to help you, depending on how you wish to
     get <a href="contact.php">get in touch with us</a>. Other important help resources are our online documentation, A.K.A
-    <a href="<?php print $guide_url; ?>">The MacPorts Guide</a>, and our <a href="<?php print $trac_url; ?>">Trac portal</a>
-    Wiki server &amp; bug tracker.</p>
+    <a href="<?php print $guide_url; ?>">The MacPorts Guide</a>, and our Trac <a href="<?php print $trac_url; ?>">Wiki server
+    &amp; bug tracker</a>.</p>
     
     <!-- how to contribute and/or join, cue to 'contact.php' -->
-    <p>if you are interested in participating and/or joining The MacPorts Project in any way then don't hesitate to contact the
-    project's management team, &ldquo;<a href="contact.php#portmgr">PortMgr</a>&rdquo;, to explain your particular interest and
-    make a formal petition. We're always looking for more helping hands that can extend and improve our ports tree and take
-    MacPorts itself beyond its current limitations and into new areas of the vast software packaging field. We're eager to hear
-    from you!</p>
+    <p>if you are interested in participating and/or joining The MacPorts Project in any way then don't hesitate to contact
+    the project's management team, &ldquo;<a href="contact.php#portmgr">PortMgr</a>&rdquo;, to explain your particular interest
+    and make a formal petition. We're always looking for more helping hands that can extend and improve our ports tree and
+    documentation or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging field.
+    We're eager to hear from you!</p>
 
     <!-- latest available release & cue to install.php -->
     <p><b>Current MacPorts <a href="install.php">release</a>: <?php print $mp_version_latest; ?></b></p>
