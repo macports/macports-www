@@ -19,7 +19,7 @@
     <ul>
         <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
         href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)
-        </a>, containing pkg installers for use with the Mac OS X Installer. By far the simplest intallation procedure
+        </a>, containing pkg installers for use with the Mac OS X Installer. By far the simplest installation procedure
         that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package
