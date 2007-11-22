@@ -59,7 +59,7 @@
     <ul>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-users/">MacPorts Users</a>
         (<a href="http://lists.macosforge.org/pipermail/macports-users/">archives</a>):
-            <p>General discussion of how to install and use MacPorts. A moderate volume list.</p>
+            <p>General discussion of MacPorts installation and usage. A moderate volume list.</p>
         </li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-dev/">MacPorts Developers</a>
         (<a href="http://lists.macosforge.org/pipermail/macports-dev/">archives</a>):
@@ -68,13 +68,17 @@
         </li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a>
         (<a href="http://lists.macosforge.org/pipermail/macports-changes/">archives</a>):
-            <p>Read-only list of changes to our <a href="<?php print $svn_url; ?>">SVN repository</a> for both &rdquo;base&ldquo;
-            code and Portfiles, among others. A low to moderate volume list.</p>
+            <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $svn_url; ?>">SVN repository</a>
+            for both &rdquo;base&ldquo; code and Portfiles, among others.</p>
         </li>
         <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
         (<a href="http://lists.macosforge.org/pipermail/macports-tickets/">archives</a>):
-            <p>Read-only list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker</a>. A moderate
-            volume list.</p>
+            <p>Read-only, moderate volume list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker
+            </a>.</p>
+        </li>
+        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-announce/">MacPorts Announce</a>
+        (<a href="http://lists.macosforge.org/pipermail/macports-announce/">archives</a>):
+            <p>Read-only, low volume list for project related major announcements.</p>
         </li>
     </ul>
 
