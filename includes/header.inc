@@ -77,5 +77,5 @@
 </div>
 
 
-<p class="warning"> Warning: This is just a test installation of a new design for The MacPorts Project page,
-official site is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
+<p class="warning"> Warning: This is a temporary installation of the new &amp; re-designed website for The MacPorts Project.
+Official site is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
