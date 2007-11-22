@@ -60,7 +60,8 @@
                     'Report a Bug' => $trac_url . 'newticket',
                     'Subversion Repository' => $svn_url,
                     'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
-                    'Becoming a Member' => $guide_url . '#project.membership'
+                    'Becoming a Member' => $guide_url . '#project.membership',
+                    'Mac OS Forge' => 'http://www.macosforge.org/'
                 );
                 foreach ($shortcuts as $title => $url) {
                     if (basename($PHP_SELF) == $url) {

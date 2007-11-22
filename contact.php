@@ -121,7 +121,7 @@
     'search'; ?>">Searching</a> the Trac database &amp; mailing list archives (above), and reading our <a href="<?php print
     $trac_url . 'wiki/FAQ'; ?>">FAQ</a> &amp; <a href="<?php print $trac_url . 'wiki/ProblemHotlist'; ?>">problems hotlist</a>
     to see if your report has already been filed is recommended, as well as reading the <a href="<?php print $guide_url .
-    '#project.tickets'; ?>"> ticketing guidelines</a>that will help you create a better report.</p>
+    '#project.tickets'; ?>"> ticketing guidelines</a> that will help you create a better report.</p>
 
     <p>Viewing existing tickets through the facilities offered by predefined and custom <a href="<?php print $trac_url .
     'report'; ?>">ticket reports</a> that allow for detailed queries is also available.</p>
@@ -142,9 +142,9 @@
 
     <h3 class="subhdr" id="Individuals">Individuals</h3>
 
-    <p>To find out what specific individuals are doing, visit the <a href="<?php print $trac_url . 'wiki/MacPortsDevelopers'; ?>">
-    team members page</a> on our Wiki and our <a href="http://cia.vc/stats/project/MacPorts">CIA project page</a>, which
-    also shows SVN commit activity and many other project statistics.</p>
+    <p>To find out who the people behind MacPorts are and what they are up to, visit the <a href="<?php print $trac_url . 
+    'wiki/MacPortsDevelopers'; ?>">team members page</a> on our Wiki and our <a href="http://cia.vc/stats/project/MacPorts">CIA
+    project page</a>, which also shows SVN commit activity and many other project statistics.</p>
 
 </div>
 
