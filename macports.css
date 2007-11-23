@@ -4,13 +4,15 @@ $Id$
 */
 
 body {
-    margin: 30px 40px;
+    margin: 0;
+    padding: 30px 40px;
     background: url(img/top-backdrop.png) repeat-x #EDEDED;
     font: 12px Helvetica, Arial, sans-serif;
     line-height: 1.2em;
 }
 
 .accessibility {
+    margin: 0;
     display: block;
     overflow: hidden;
     width: 0;
