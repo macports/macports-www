@@ -51,14 +51,14 @@
         <li>Or simply come join us for a friendly <a href="contact.php#IRC">IRC chat</a> if you wish for more direct contact
         with the <a href="contact.php#Individuals">people behind</a> it all.</li>
     </ul>
-    
-    <br />
-    
+
     <p>If on the other hand you are interested in joining The MacPorts Project in any way, then don't hesitate to contact the
     project's management team, &ldquo;<a href="contact.php#portmgr">PortMgr</a>&rdquo;, to explain your particular interest
     and present a formal application. We're always looking for more helping hands that can extend and improve our ports tree
     and documentation, or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging
     field. We're eager to hear from you!</p>
+
+    <br />
 
     <p>Browse over to our generous landlord's homepage, <a href="http://www.macosforge.org">Mac OS Forge</a>, for information
     on other related projects.</p>
