@@ -9,8 +9,8 @@
 #####################################################################
 
 # Ports database connection parameters:
-$portsdb = 'macports';
 $portsdb_host = 'localhost';
+$portsdb_name = 'macports';
 $portsdb_user = 'www';
 $portsdb_passwd = '';
 $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
@@ -87,9 +87,9 @@ function print_footer() {
 
 # Total count of currently available ports:
 function ports_count() {
-    global $portsdb;
+    global $portsdb_name;
 
-    $result = mysql_query("SELECT count(name) FROM $portsdb.portfiles") or die("Error: " . mysql_error());
+    $result = mysql_query("SELECT count(name) FROM $portsdb_name.portfiles") or die("Error: " . mysql_error());
     if ($result) {
         $row = mysql_fetch_array($result);
         $count = $row[0];
@@ -104,9 +104,9 @@ function ports_count() {
 
 # Total count of port categories:
 function categories_count() {
-    global $portsdb;
+    global $portsdb_name;
 
-    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb.categories") or die ("Error: " . mysql_error());
+    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb_name.categories") or die ("Error: " . mysql_error());
     if ($result) {
         $row = mysql_fetch_array($result);
         $count = $row[0];
