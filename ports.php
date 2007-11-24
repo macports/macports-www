@@ -123,6 +123,7 @@
                         $primary = 1;
                         while ($nrow = mysql_fetch_array($nresult)) {
                             if ($primary) { echo "<b>"; }
+                            else { echo " "; }
                             $addr = obfuscate_email($nrow[0]);
                             print $addr;
                             if ($primary) { echo "</b>"; }
