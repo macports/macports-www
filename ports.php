@@ -6,7 +6,6 @@
     /* Copyright (c) 2004-2007, The MacPorts Project. */
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
-    include_once("$MPWEB/includes/email.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';

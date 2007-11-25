@@ -179,6 +179,10 @@ a#download:hover {
     margin-top: 0.7em;
 }
 
+.email {
+    width: 1em;
+    height: 1em;
+}
 
 #footer {
     font-size: 90%;

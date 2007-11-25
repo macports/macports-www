@@ -40,7 +40,7 @@ $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd)
 
 ######################################################################
 
-# Page header
+# Page header:
 function print_header($title, $encoding) {
     global $MPWEB, $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
     $PHP_SELF = $_SERVER['PHP_SELF'];
@@ -51,13 +51,14 @@ function print_header($title, $encoding) {
 }
 
 
-###################################################################### 
+######################################################################
 
-# Page footer
-function print_footer() {
-    global $MPWEB;
+# Print some useful warnings:
+function print_warnings() {
+    global $_SERVER, $MPWEB;
+    
+    include("$MPWEB/includes/warnings.inc");
 
-    include("$MPWEB/includes/footer.inc");
 }
 
 
@@ -95,12 +96,19 @@ function categories_count() {
 }
 
 
-###################################################################### 
+######################################################################
 
-# Print some useful warnings:
-function print_warnings() {
-    global $_SERVER, $MPWEB;
-    
-    include("$MPWEB/includes/warnings.inc");
+# Obfuscate e-mail addresses:
+function obfuscate_email($email) {
+    return "<span class='email'>" . str_replace('@', "<img src='img/at.gif' alt='at' />", $email)."</span>";
+}
 
+
+######################################################################
+
+# Page footer:
+function print_footer() {
+    global $MPWEB;
+
+    include("$MPWEB/includes/footer.inc");
 }
