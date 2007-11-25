@@ -42,29 +42,10 @@ $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd)
 
 # Page header
 function print_header($title, $encoding) {
-    global $MPWEB;
+    global $MPWEB, $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
+    $PHP_SELF = $_SERVER['PHP_SELF'];
+    
     header("Content-Type: application/xhtml+xml; charset=$encoding");
-    echo "<?xml version=\"1.0\" encoding=\"$encoding\"?>\n";
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
-
-    <head>
-        <title><?php echo $title; ?></title>
-        <meta http-equiv="Content-type" content="application/xhtml+xml; charset=<?php echo $encoding; ?>" />
-        <meta name="author" content="Jim Mock (mij@macports.org)" />
-        <meta name="author" content="Juan Manuel Palacios (jmpp@macports.org)" />
-        <meta name="author" content="Chris Pickel (sfiera@macports.org)" />
-        <meta name="copyright" content="2003, OpenDarwin" />
-        <meta name="copyright" content="2007, The MacPorts Project" />
-        <meta name="robots" content="all" />
-        <link rel="stylesheet" type="text/css" href="macports.css" />
-        <script type="text/javascript" src="mootools.v1.11.js"></script>
-        <script type="text/javascript" src="language.js"></script>
-    </head>
-
-    <body>
-<?php
     include("$MPWEB/includes/header.inc");
     check_referer();
 }
@@ -77,9 +58,6 @@ function print_footer() {
     global $MPWEB;
 
     include("$MPWEB/includes/footer.inc");
-
-    echo "    </body>\n";
-    echo "</html>\n";
 }
 
 

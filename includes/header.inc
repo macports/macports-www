@@ -3,10 +3,27 @@
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
-    $PHP_SELF = $_SERVER['PHP_SELF'];
-    global $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
+    echo "<?xml version=\"1.0\" encoding=\"$encoding\"?>\n";
 ?>
 
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+    <head>
+        <title><?php echo $title; ?></title>
+        <meta name="author" content="Jim Mock (mij@macports.org)" />
+        <meta name="author" content="Juan Manuel Palacios (jmpp@macports.org)" />
+        <meta name="author" content="Chris Pickel (sfiera@macports.org)" />
+        <meta name="copyright" content="2003, OpenDarwin" />
+        <meta name="copyright" content="2007, The MacPorts Project" />
+        <meta name="robots" content="all" />
+        <link rel="stylesheet" type="text/css" href="macports.css" />
+        <script type="text/javascript" src="mootools.v1.11.js"></script>
+        <script type="text/javascript" src="language.js"></script>
+    </head>
+
+    <body>
 
 <h1><a href="http://www.macports.org/" title="The MacPorts Project"><span class="accessibility">The MacPorts Project</span>
 </a></h1>

@@ -13,3 +13,5 @@
     src="img/vcss.png" alt="Valid CSS!" /></a></p> Copyright &#xA9; 2002&#x2013;<?php print date("Y"); ?>, <a href="http://www.macports.org/">
     The MacPorts Project</a>. Hosted by <a href="http://www.macosforge.org">Mac OS Forge</a>. All rights reserved.
 </div>
+</body>
+</html>
