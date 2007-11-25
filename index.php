@@ -16,13 +16,14 @@
     and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macosx/">
     Mac OS X</a> operating system. To that end we provide the command-line driven MacPorts software package under a <a
     href="http://opensource.org/licenses/bsd-license.php">BSD License</a>, and through it easy access to thousands of ports
-    that <a href="<?php print $guide_url . '#introduction'; ?>"> greatly simplify</a> the task of compiling and installing
-    open-source software on your Mac.</p>
+    that <a href="<?php print $guide_url . '#introduction'; ?>"> greatly simplify</a> the task of <a href="<?php print $guide_url
+    . '#using'; ?>">compiling and installing</a> open-source software on your Mac.</p>
     
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
-    without splitting them into &ldquo;stable&rdquo; Vs. &ldquo;unstable&rdquo; branches. There are currently <a href="ports.php">
-    <b><?php print ports_count(); ?></b> ports</a> in it, distributed among <?php print categories_count(); ?> different categories,
-    and more are being added on a regular basis.</p>
+    without splitting them into &ldquo;stable&rdquo; Vs. &ldquo;unstable&rdquo; branches, targetting mainly the current Mac OS
+    X release (10.5, A.K.A Leopard) and the immediately previous one (10.4, A.K.A. Tiger). There are currently <a href="ports.php">
+    <b><?php print ports_count(); ?></b> ports</a> in our tree, distributed among <?php print categories_count(); ?> different
+    categories, and more are being added on a regular basis.</p>
     
     
     <h3 class="subhdr">Getting started</h3>
