@@ -138,6 +138,15 @@ a#download:hover {
     background: url(img/download-highlight.png);
 }
 
+#warnings {
+    background: #FCC;
+    border: 2px solid #F66;
+    padding: 6px;
+    margin: 7px 7px 7px 198px;
+    min-width: 320px;
+    max-width: 670px;
+}
+
 #content {
     padding: 1px 0 40px 191px;
     min-width: 350px;
@@ -155,15 +164,6 @@ a#download:hover {
 
 #content li ul {
     margin-top: 0.7em;
-}
-
-#warning {
-    background: #FCC;
-    border: 2px solid #F66;
-    padding: 6px;
-    margin: 7px 7px 7px 198px;
-    min-width: 320px;
-    max-width: 670px;
 }
 
 #footer {

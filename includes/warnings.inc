@@ -5,7 +5,7 @@
 ?>
 
 
-<div id="warning">
+<div id="warnings">
 
 <?php
 # Warning against darwinports.com leech!
