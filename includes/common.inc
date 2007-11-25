@@ -6,16 +6,6 @@
 # Copyright (c) 2004-2007, The MacPorts Project.
 
 
-#####################################################################
-
-# Ports database connection parameters:
-$portsdb_host = 'localhost';
-$portsdb_name = 'macports';
-$portsdb_user = 'www';
-$portsdb_passwd = '';
-$portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
-
-
 ######################################################################
 
 # MacPorts version variables:
@@ -36,6 +26,16 @@ $bz2_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $mp_version_major . '.chk.txt';
 $guide_url = 'http://geeklair.net/new_macports_guide/';
+
+
+#####################################################################
+
+# Ports database connection parameters:
+$portsdb_host = 'localhost';
+$portsdb_name = 'macports';
+$portsdb_user = 'www';
+$portsdb_passwd = '';
+$portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
 
 
 ######################################################################
@@ -129,13 +129,12 @@ function check_referer() {
         
             <p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
             
-            <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of
-            the <i>Official MacPorts Web Site</i>. There is <b>no relationship</b> between <i>The MacPorts
-            Project</i> and <i>darwinports.com</i>.</p>
+            <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of the <i>Official MacPorts
+            Web Site</i>. There is <b>no relationship</b> between <i>The MacPorts Project</i> and <i>darwinports.com</i>.</p>
 
-            <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect
-            or outdated and is not endorsed in any way by <i>The MacPorts Project</i>. For the most accurate
-            information about MacPorts, please bookmark this site, <a href="http://www.macports.org">http://www.macports.org</a>.</p>
+            <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is
+            not endorsed in any way by <i>The MacPorts Project</i>. For the most accurate information about MacPorts, please
+            bookmark this site, <a href="http://www.macports.org">http://www.macports.org</a>.</p>
             
         </div>
 <?php
