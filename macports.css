@@ -185,3 +185,9 @@ a#download:hover {
     clear: both;
     text-align: center;
 }
+
+#footer img {
+    border: 0;
+    height: 31px;
+    width: 88px;
+}
