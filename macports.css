@@ -157,7 +157,7 @@ a#download:hover {
     margin-top: 0.7em;
 }
 
-.warning {
+#warning {
     background: #FCC;
     border: 2px solid #F66;
     padding: 6px;
