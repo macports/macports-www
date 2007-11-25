@@ -26,11 +26,11 @@
         in any way.</li>
         <li><a href="#svn">SVN checkout</a> of the unpackaged sources, if you wish to follow MacPorts development.</li>
         <li>The <a href="#selfupdate">selfupdate</a> target of the <kbd>port(1)</kbd> command, for users who already have
-        MacPorts installed and wish to upgrade to a new release.</li>
+        MacPorts installed and wish to upgrade to a newer release.</li>
     </ul>
 
-    <p>Checksums for all our <a href="<?php print $downloads; ?>">downloads</a> are contained in the <a href="<?php print
-    $checksums; ?>">checksums file</a>.</p>
+    <p>Checksums for our packaged <a href="<?php print $downloads; ?>">downloads</a> are contained in the corresponding <a
+    href="<?php print $checksums; ?>">checksums file</a>.</p>
 
 
     <div id="requirements">
@@ -83,7 +83,7 @@
 
     <h3 class="subhdr" id="source">Source Installation</h3>
 
-    <p>If on the other hand you decide to install MacPorts from source there are still a couple of things you will need to do
+    <p>If on the other hand you decide to install MacPorts from source, there are still a couple of things you will need to do
     after downloading the tarball before you can start installing ports, namely compiling and installing MacPorts itself:</p>
 
 
@@ -120,7 +120,8 @@
     <ul>
         <li><kbd>Add ${prefix}/bin</kbd> and <kbd>${prefix}/sbin</kbd> to the start of your <kbd>PATH</kbd> environment variable
         so that MacPorts installed programs take precedence over equally named system provided programs.</li>
-        <li>Add an appropriate X11 <kbd>DISPLAY</kbd> environment variable to run X11 dependent programs.</li>
+        <li>For Tiger and earlier only, add an appropriate X11 <kbd>DISPLAY</kbd> environment variable to run X11 dependent
+        programs, as Leopard takes care of this requirement on its own.</li>
     </ul>
 
     <p>Lastly, you need to synchronize your installation with the MacPorts rsync server:</p>
