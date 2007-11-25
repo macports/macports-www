@@ -47,7 +47,7 @@ function print_header($title, $encoding) {
     
     header("Content-Type: application/xhtml+xml; charset=$encoding");
     include("$MPWEB/includes/header.inc");
-    check_referer();
+    print_warnings();
 }
 
 
@@ -97,25 +97,10 @@ function categories_count() {
 
 ###################################################################### 
 
-# Warning against darwinports.com leach!
-function check_referer() {
-    global $_SERVER;
+# Print some useful warnings:
+function print_warnings() {
+    global $_SERVER, $MPWEB;
+    
+    include("$MPWEB/includes/warnings.inc");
 
-    if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinports.com') !== false) {
-?>
-        <div class="warning">
-        
-            <p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
-            
-            <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of the <i>Official MacPorts
-            Web Site</i>. There is <b>no relationship</b> between <i>The MacPorts Project</i> and <i>darwinports.com</i>.</p>
-
-            <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is
-            not endorsed in any way by <i>The MacPorts Project</i>. For the most accurate information about MacPorts, please
-            bookmark this site, <a href="http://www.macports.org">http://www.macports.org</a>.</p>
-            
-        </div>
-<?php
-    }
 }
-?>

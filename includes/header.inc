@@ -97,7 +97,3 @@
                 </dd>
             </dl>
         </div>
-
-
-        <p class="warning"> Warning: This is a temporary installation of the new &amp; re-designed website for The MacPorts
-        Project. Official site is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
