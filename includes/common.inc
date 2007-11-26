@@ -100,7 +100,9 @@ function categories_count() {
 
 # Obfuscate e-mail addresses:
 function obfuscate_email($email) {
-    return "<span class='email'>" . str_replace('@', "<img src='img/at.gif' alt='at' />", $email)."</span>";
+    $IMGDIR = dirname($_SERVER['SCRIPT_NAME']) . '/img';
+    
+    return "<span class='email'>" . str_replace('@', "<img src='$IMGDIR/at.gif' alt='at' />", $email) . "</span>";
 }
 
 
