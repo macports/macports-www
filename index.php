@@ -54,7 +54,7 @@
     </ul>
 
     <p>If on the other hand you are interested in joining The MacPorts Project in any way, then don't hesitate to contact the
-    project's management team, &ldquo;<a href="contact.php#portmgr">PortMgr</a>&rdquo;, to explain your particular interest
+    project's management team, &ldquo;<a href="contact.php#PortMgr">PortMgr</a>&rdquo;, to explain your particular interest
     and present a formal application. We're always looking for more helping hands that can extend and improve our ports tree
     and documentation, or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging
     field. We're eager to hear from you!</p>

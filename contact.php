@@ -17,7 +17,7 @@
 
     <ul>
         <li><a href="#Lists">Public Mailing Lists</a></li>
-        <li><a href="#portmgr">Administrative Contacts</a></li>
+        <li><a href="#PortMgr">Administrative Contacts</a></li>
         <li><a href="#Bugs">Bug Reports</a></li>
         <li><a href="#IRC">IRC</a></li>
         <li><a href="#Individuals">Individuals</a></li>
@@ -89,12 +89,12 @@
     passing along the paste URL rather than full error messages).</p>
 
 
-    <h3 class="subhdr" id="portmgr">Administrative Contacts</h3>
+    <h3 class="subhdr" id="PortMgr">Administrative Contacts</h3>
 
-    <!-- we need a link down here pointing to some page detailing the portmgr team - guide authors? ;-) -->
+    <!-- we need a link down here pointing to some page detailing the PortMgr team - guide authors? ;-) -->
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
     list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="">
-    management team</a> (A.K.A. &ldquo;portmgr&rdquo;), in case you have any administrative request or if you wish to
+    management team</a> (A.K.A. &ldquo;PortMgr&rdquo;), in case you have any administrative request or if you wish to
     discuss anything you might feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
 
     <p>This is also where you should turn to if you are a developer and/or a contributor interested in joning The MacPorts
