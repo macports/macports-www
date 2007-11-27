@@ -149,6 +149,9 @@ a#download:hover {
     text-decoration: underline;
 }
 
+.selected {
+    font-weight: bold;
+}
 
 #warnings {
     background: #FCC;
