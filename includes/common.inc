@@ -35,7 +35,6 @@ $portsdb_host = 'localhost';
 $portsdb_name = 'macports';
 $portsdb_user = 'www';
 $portsdb_passwd = '';
-$portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
 
 
 ######################################################################

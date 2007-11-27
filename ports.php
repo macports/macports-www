@@ -7,6 +7,7 @@
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
+    $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
