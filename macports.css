@@ -114,12 +114,17 @@ a#download:hover {
 }
 
 #navigation dl {
-    padding: 16px;
+    padding: 16px 0;
     margin: 0;
     background: url(img/nav-footer.png) bottom no-repeat;
 }
 
-#navigation dd, #navigation dt {
+#navigation dt {
+    margin: 0;
+    padding: 0 16px;
+}
+
+#navigation dd {
     margin: 0;
     padding: 0;
 }
@@ -130,14 +135,14 @@ a#download:hover {
 }
 
 #navigation ul {
-    margin: 0 0 1em 1em;
+    margin: 0 0 1em 0;
     padding: 0;
 }
 
 #navigation li {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 0 16px 0 28px;
 }
 
 #navigation a {
@@ -150,6 +155,7 @@ a#download:hover {
 }
 
 .selected {
+    background: #8898ab;
     font-weight: bold;
 }
 
