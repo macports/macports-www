@@ -75,7 +75,7 @@
                                     <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
                                     <?php echo htmlspecialchars($row['category']); ?></a></li>
 <?php
-                                    if ($entries_per_colum == 15) break;
+                                    if ($entries_per_colum == 14) break;
                                     $entries_per_colum++;
                                 }
 ?>
