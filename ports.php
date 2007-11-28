@@ -29,6 +29,7 @@
     different categories and available below for viewing. This form allows you to search the MacPorts software index, last
     updated on <?php echo $date; ?> at <?php echo $time; ?>.</p>
 
+    <br />
 
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
         <p>
@@ -48,7 +49,8 @@
 
     <h3>Port Categories</h3>
 
-    <p>View the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">Ports List</a></p>
+    <p>View the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?> ports)
+    </a></p>
 
 <?php
     if (!$by || (!$substr && $by != "all")) {
