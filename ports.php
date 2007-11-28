@@ -45,8 +45,8 @@
         </p>
     </form>
 
-    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?> ports)
-    </a></p>
+    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?>
+    ports)</a>.</p>
     <br />
 
 
@@ -56,16 +56,41 @@
         $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
         $result = mysql_query($query);
         if ($result) {
-            while ($row = mysql_fetch_assoc($result)) {
+            $columns = 0;
 ?>
-                <div class="port">
+            <div id="categories">
+            
+                <ul>
 
-                    <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
-                    <?php echo htmlspecialchars($row['category']); ?></a>
-
-                </div>
 <?php
-            }
+                    while ($columns < 5) {
+                        $entries_per_colum = 0;
+?>
+
+                        <li>
+                            <ul>
+<?php
+                                while ($row = mysql_fetch_assoc($result)) {
+?>
+                                    <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
+                                    <?php echo htmlspecialchars($row['category']); ?></a></li>
+<?php
+                                    if ($entries_per_colum == 15) break;
+                                    $entries_per_colum++;
+                                }
+?>
+                            </ul>
+                        </li>
+
+<?php
+                        $columns++;
+                    }
+?>
+
+                </ul>
+
+            </div>
+<?php
         }
     }
 ?>
