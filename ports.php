@@ -25,9 +25,9 @@
         $time = date('H:i', $row[0]);
     }
 ?>
-    <p>The MacPorts Project currently distributes <?php print ports_count(); ?> ports, distributed across <?php print categories_count(); ?>
+    <p>The MacPorts Project currently distributes <b><?php print ports_count(); ?></b> ports, distributed across <?php print categories_count(); ?>
     different categories and available below for viewing. This form allows you to search the MacPorts software index, last
-    updated on <?php echo $date; ?> at <?php echo $time; ?>.</p>
+    updated on <b><?php echo $date; ?> at <?php echo $time; ?></b>.</p>
 
     <br />
 
@@ -44,7 +44,6 @@
         <input type="submit" value="Search" />
         </p>
     </form>
-
 
 
     <h3>Port Categories</h3>
@@ -115,7 +114,8 @@
                 <dt><b><a href="<?php print $trac_url . 'browser/trunk/dports/' . $row['path'] . '/Portfile'; ?>"><?php echo
                 htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
                 <dd>
-                    <?php echo htmlspecialchars($row['description']); ?><br />
+                    <?php echo htmlspecialchars($row['description']); ?>
+                    <br />
 <?php
 /* MAINTAINERS */
                     $nquery = "SELECT maintainer FROM $portsdb_name.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) .
@@ -212,10 +212,11 @@
 <?php
                         }
                     }
-
 ?>
                     <br />
+                    <br />
                 </dd>
+
 <?php
             }
 
