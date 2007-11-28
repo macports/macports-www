@@ -195,6 +195,12 @@ a#download:hover {
     margin-top: 0.7em;
 }
 
+div.port {
+    width: 120px;
+    margin: 0.25em;
+    float: left;
+}
+
 .email {
     width: 1em;
     height: 1em;

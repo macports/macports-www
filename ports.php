@@ -17,56 +17,44 @@
 
     <h2 class="hdr">MacPorts Portfiles</h2>
 
-    <p>
-        This form allows you to search the current index of MacPorts software. <br />
-        <i>Index last updated: </i>
 <?php
         $sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb_name.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
         $result = mysql_query($sql);
         if ($result && $row = mysql_fetch_row($result)) {
-            echo date("d-M-Y H:i:s", $row[0]);
+            $date = date('Y-m-d', $row[0]);
+            $time = date('H:i', $row[0]);
         }
 ?>
+    <p>
+        MacPorts currently has <?php print ports_count(); ?> ports of software, across a wide variety of categories. This form allows you to search the current index of MacPorts software, updated <?php echo $date; ?> at <?php echo $time; ?>.
     </p>
 	
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <table>
-            <tr>
-                <th>Search by:</th>
-                <td>
-                    <select name="by">
-                        <option value="name"<?php if ($by == "name") { echo " selected=\"selected\""; } ?>>Software Title</option>
-                        <option value="desc"<?php if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
-                        <option value="cat"<?php if ($by == "cat") { echo " selected=\"selected\""; } ?>>Category</option>
-                        <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
-                    </select>
-                </td>
-                <td><input type="text" name="substr" size="40" /></td>
-                <td><input type="submit" value="Search" /></td>
-            </tr>
-            <tr><td colspan="4"><hr /></td></tr>
-            <tr>
-                <td colspan="4" align="left"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">View All Software Titles (<?php print ports_count(); ?>)</a></td>
-            </tr>
+        <label>Search by:</label>
+        <select name="by">
+            <option value="name"<?php if ($by == "name") { echo " selected=\"selected\""; } ?>>Software Title</option>
+            <option value="desc"<?php if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
+            <option value="cat"<?php if ($by == "cat") { echo " selected=\"selected\""; } ?>>Category</option>
+            <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
+        </select>
+        <input type="text" name="substr" size="40" />
+        <input type="submit" value="Search" />
+    </form>
+    <h3>Port Categories</h3>
+        <p>View the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">Ports List</a></p>
 <?php
             if (!$by || (!$substr && $by != "all")) {
-?>
-                <tr><td colspan="4"><hr /></td></tr>
-                <tr><th colspan="4" align="left">View By Category:</th></tr>
-<?php
                 $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
                 $result = mysql_query($query);
                 if ($result) {
                     while ($row = mysql_fetch_assoc($result)) {
 ?>
-                        <tr><td colspan="4"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>"><?php echo htmlspecialchars($row['category']); ?></a></td></tr>
+                        <div class="port"><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>"><?php echo htmlspecialchars($row['category']); ?></a></div>
 <?php
                     }
                 }
             }
 ?>
-        </table>
-    </form>
 
 <?php
     if ($by && ($substr || $by == "all")) {
