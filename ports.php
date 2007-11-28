@@ -129,7 +129,7 @@
         $result = mysql_query($query);
         if ($result) {
 ?>
-            <h3>Query Result</h3>
+            <h3>Query Results</h3>
 
             <p><i><?php echo mysql_num_rows($result) . ' ' . (mysql_num_rows($result) == 1 ? 'Portfile' : 'Portfiles') . 
             ' Selected'; ?></i></p>
