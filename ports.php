@@ -41,18 +41,18 @@
                 <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
             </select>
             <input type="text" name="substr" size="40" />
-        <input type="submit" value="Search" />
+            <input type="submit" value="Search" />
         </p>
     </form>
 
-
-    <h3>Port Categories</h3>
-
-    <p>View the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?> ports)
+    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?> ports)
     </a></p>
+    <br />
+
 
 <?php
     if (!$by || (!$substr && $by != "all")) {
+        echo "<h3>Port Categories</h3><br />";
         $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
         $result = mysql_query($query);
         if ($result) {
@@ -102,8 +102,10 @@
         }
         $query = "SELECT DISTINCT $fields FROM $tables WHERE $query ORDER BY name";
         $result = mysql_query($query);
-        if($result) {
+        if ($result) {
 ?>
+            <h3>Query Result</h3>
+
             <p><i><?php echo mysql_num_rows($result) . ' ' . (mysql_num_rows($result) == 1 ? 'Portfile' : 'Portfiles') . 
             ' Selected'; ?></i></p>
 
