@@ -195,14 +195,9 @@ a#download:hover {
     margin-top: 0.7em;
 }
 
-/*
-I want to space out the bottom of the containing ul to separate the W3C tags a bit,
-but I can't find the appropriate css rule to achieve that (and I've been playing
-with many combinations for a while already!).
-#categories ul {
-    margin-bottom: 100px; //ridiculously large value to better visualyze the effect (it should obviously be smaller)
+#categories > ul > li {
+    margin-bottom: 40px;
 }
-*/
 
 #categories ul > li  {
     list-style: none;
