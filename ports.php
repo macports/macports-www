@@ -66,7 +66,6 @@
                     while ($columns < 5) {
                         $entries_per_colum = 0;
 ?>
-
                         <li>
                             <ul>
 <?php
@@ -81,7 +80,6 @@
 ?>
                             </ul>
                         </li>
-
 <?php
                         $columns++;
                     }
