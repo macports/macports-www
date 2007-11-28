@@ -25,20 +25,25 @@
         $time = date('H:i', $row[0]);
     }
 ?>
-    <p>MacPorts currently has <?php print ports_count(); ?> ports of software, across a wide variety of categories. This form
-    allows you to search the current index of MacPorts software, updated <?php echo $date; ?> at <?php echo $time; ?>.</p>
-	
+    <p>The MacPorts Project currently distributes <?php print ports_count(); ?> ports, distributed across <?php print categories_count(); ?>
+    different categories and available below for viewing. This form allows you to search the MacPorts software index, last
+    updated on <?php echo $date; ?> at <?php echo $time; ?>.</p>
+
+
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        <label>Search by:</label>
-        <select name="by">
-            <option value="name"<?php if ($by == "name") { echo " selected=\"selected\""; } ?>>Software Title</option>
-            <option value="desc"<?php if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
-            <option value="cat"<?php if ($by == "cat") { echo " selected=\"selected\""; } ?>>Category</option>
-            <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
-        </select>
-        <input type="text" name="substr" size="40" />
+        <p>
+            <label>Search by:</label>
+            <select name="by">
+                <option value="name"<?php if ($by == "name") { echo " selected=\"selected\""; } ?>>Software Title</option>
+                <option value="desc"<?php if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
+                <option value="cat"<?php if ($by == "cat") { echo " selected=\"selected\""; } ?>>Category</option>
+                <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
+            </select>
+            <input type="text" name="substr" size="40" />
         <input type="submit" value="Search" />
+        </p>
     </form>
+
 
 
     <h3>Port Categories</h3>
