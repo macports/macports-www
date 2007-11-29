@@ -52,36 +52,36 @@
 
 <?php
     if (!$by || (!$substr && $by != "all")) {
-        echo "<h3>Port Categories</h3><br />";
         $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
         $result = mysql_query($query);
         if ($result) {
-            $columns = 0;
 ?>
+            <h3>Port Categories</h3>
+
             <div id="categories">
             
                 <ul>
 
 <?php
-                    while ($columns < 5) {
-                        $entries_per_colum = 0;
+                    while ($row = mysql_fetch_assoc($result)) {
 ?>
                         <li>
                             <ul>
 <?php
-                                while ($row = mysql_fetch_assoc($result)) {
+                                $entries_per_colum = 0;
+                                while (1) {
 ?>
                                     <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
                                     <?php echo htmlspecialchars($row['category']); ?></a></li>
 <?php
                                     if ($entries_per_colum == 14) break;
                                     $entries_per_colum++;
+                                    $row = mysql_fetch_assoc($result);
                                 }
 ?>
                             </ul>
                         </li>
 <?php
-                        $columns++;
                     }
 ?>
 
