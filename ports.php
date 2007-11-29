@@ -8,6 +8,7 @@
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
     $portsdb_connect = mysql_pconnect($portsdb_host, $portsdb_user, $portsdb_passwd) or die("Can't connect to the MacPorts database!");
+    $num_categories = categories_count();
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
@@ -25,9 +26,9 @@
         $time = date('H:i', $row[0]);
     }
 ?>
-    <p>The MacPorts Project currently distributes <b><?php print ports_count(); ?></b> ports, distributed across <?php print categories_count(); ?>
-    different categories and available below for viewing. This form allows you to search the MacPorts software index, last
-    updated on <b><?php echo $date; ?> at <?php echo $time; ?></b>.</p>
+    <p>The MacPorts Project currently distributes <b><?php print ports_count(); ?></b> ports, distributed across <?php print
+    $num_categories; ?> different categories and available below for viewing. This form allows you to search the MacPorts software
+    index, last updated on <b><?php echo $date; ?> at <?php echo $time; ?></b>.</p>
 
     <br />
 
@@ -63,25 +64,27 @@
                 <ul>
 
 <?php
-                    while ($row = mysql_fetch_assoc($result)) {
+                    $max_entries_per_column = floor($num_categories/4);
+                    $columns = 0;
+                    while ($columns < 4) {
 ?>
                         <li>
                             <ul>
 <?php
                                 $entries_per_colum = 0;
-                                while (1) {
+                                while ($row = mysql_fetch_assoc($result)) {
 ?>
                                     <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
                                     <?php echo htmlspecialchars($row['category']); ?></a></li>
 <?php
-                                    if ($entries_per_colum == 14) break;
+                                    if ($entries_per_colum == $max_entries_per_column) break;
                                     $entries_per_colum++;
-                                    $row = mysql_fetch_assoc($result);
                                 }
 ?>
                             </ul>
                         </li>
 <?php
+                        $columns++;
                     }
 ?>
 
