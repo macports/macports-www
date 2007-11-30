@@ -60,7 +60,7 @@
                             'Documentation' => $guide_url,
                             'Support &amp; Development' => $trac_url,
                             'Contact Us' => 'contact.php',
-                            'Blog' => 'blog/'
+                            'Blog' => '/blog/'
                         );
                         foreach ($pages as $title => $url) {
                             if (basename($PHP_SELF) == $url) {
