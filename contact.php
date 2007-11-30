@@ -91,11 +91,11 @@
 
     <h3 class="subhdr" id="PortMgr">Administrative Contacts</h3>
 
-    <!-- we need a link down here pointing to some page detailing the PortMgr team - guide authors? ;-) -->
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
-    list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="">
-    management team</a> (A.K.A. &ldquo;PortMgr&rdquo;), in case you have any administrative request or if you wish to
-    discuss anything you might feel is of private nature (like the interaction between MacPorts and NDA'd software).</p>
+    list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="<?php print
+    $guide_url . '#project.portmgr'; ?>">management team</a> (A.K.A. &ldquo;PortMgr&rdquo;), in case you have any administrative
+    request or if you wish to discuss anything you might feel is of private nature (like the interaction between MacPorts and
+    NDA'd software).</p>
 
     <p>This is also where you should turn to if you are a developer and/or a contributor interested in joning The MacPorts
     Project with full write access to our SVN repository and Wiki pages, either to work on MacPorts itself or as a ports
