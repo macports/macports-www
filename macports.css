@@ -159,7 +159,7 @@ a#download:hover {
     font-weight: bold;
 }
 
-#warnings {
+.warnings {
     background: #FCC;
     border: 2px solid #F66;
     padding: 6px;
