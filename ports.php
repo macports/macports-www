@@ -29,7 +29,7 @@
 ?>
     <p>The MacPorts Project currently distributes <b><?php print ports_count(); ?></b> ports, distributed across <?php print
     $num_categories; ?> different categories and available below for viewing. This form allows you to search the MacPorts software
-    index, last updated on <b><?php echo $date; ?> at <?php echo $time; ?></b>.</p>
+    index, last updated on <b><?php echo $date; ?></b> at <b><?php echo $time; ?></b>.</p>
 
     <br />
 
