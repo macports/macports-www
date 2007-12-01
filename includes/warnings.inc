@@ -5,12 +5,12 @@
 ?>
 
 
-<div id="warnings">
-
 <?php
 # Warning against darwinports.com leech!
 if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinports.com') !== false) {
 ?>
+
+    <div class="warnings">
 
     <p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
 
@@ -20,6 +20,8 @@ if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinp
     <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not endorsed
     in any way by <i>The MacPorts Project</i>. For the most accurate information about MacPorts, please bookmark this site,
     <a href="http://www.macports.org">http://www.macports.org</a>.</p>
+    
+    </div>
 
 <?php        
 }
@@ -28,11 +30,13 @@ if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinp
 if (isset($_SERVER['HTTP_HOST']) && !preg_match('%(^|\.)macports\.org$%', $_SERVER['HTTP_HOST'])) {    
 ?>
 
+    <div class="warnings">
+
     <p>Warning: This is a temporary installation of the new &amp; re-designed website for The MacPorts Project. Official site
     is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
+    
+    </div>
 
 <?php
 }
 ?>
-
-</div>
