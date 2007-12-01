@@ -6,7 +6,7 @@
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Home', 'utf-8');
     $portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
-    if ($portsdb_connect !== false) {
+    if ($portsdb_connect === false) {
        $port_count = 'a lot of';
        $cat_count = 'many';
     } else {
