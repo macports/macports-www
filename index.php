@@ -18,7 +18,7 @@
 
 <div id="content">
 
-    <h2 class="hdr">The MacPorts Project official Homepage</h2>
+    <h2 class="hdr">The MacPorts Project Official Homepage</h2>
 
     <p>The MacPorts Project is an open-source community initiative to design an easy-to-use system for compiling, installing,
     and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macosx/">
