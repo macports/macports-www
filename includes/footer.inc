@@ -3,7 +3,7 @@
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
-    $IMGDIR = dirname($_SERVER['SCRIPT_NAME']) . '/img/';
+    $IMGDIR = '/img/';
 ?>
 
 

@@ -33,9 +33,8 @@ $guide_url = 'http://geeklair.net/new_macports_guide/';
 # Ports database connection parameters:
 $portsdb_host = 'localhost';
 $portsdb_name = 'macports';
-$portsdb_user = 'www';
-$portsdb_passwd = '';
-
+$portsdb_user = 'macports';
+$portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/portmgr/script_data'));
 
 ######################################################################
 
@@ -99,7 +98,7 @@ function categories_count() {
 
 # Obfuscate e-mail addresses:
 function obfuscate_email($email) {
-    $IMGDIR = dirname($_SERVER['SCRIPT_NAME']) . '/img';
+    $IMGDIR = '/img';
     
     return "<span class='email'>" . str_replace('@', "<img src='$IMGDIR/at.gif' alt='at' />", $email) . "</span>";
 }
@@ -113,3 +112,17 @@ function print_footer() {
 
     include("$MPWEB/includes/footer.inc");
 }
+
+######################################################################
+
+function print_db_error() {
+       print "
+        <div id='content'>
+          <h2 class='hdr'>MacPorts Portfiles</h2>
+          <p>Our database is currently unavailable. We hope to have it back soon!</p>
+        </div>
+             ";
+       print_footer();
+       die();
+}
+
