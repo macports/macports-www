@@ -26,14 +26,15 @@ if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinp
 <?php        
 }
 
+
 # Warn about us being a valid mirror if we're not being served off htt://www.macports.org itself
 if (isset($_SERVER['HTTP_HOST']) && !preg_match('%(^|\.)macports\.org$%', $_SERVER['HTTP_HOST'])) {    
 ?>
 
     <div class="warnings">
 
-    <p>Warning: This is a temporary installation of the new &amp; re-designed website for The MacPorts Project. Official site
-    is located at <a href="http://www.macports.org">http://www.macports.org</a> as always.</p>
+    <p>Warning: This is a mirror installation of the official site for The MacPorts Project, located at <a href="http://www.macports.org">
+    http://www.macports.org</a> as always. Information here is not guaranteed to be up to date.</p>
     
     </div>
 
