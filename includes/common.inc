@@ -36,12 +36,12 @@ $portsdb_name = 'macports';
 $portsdb_user = 'macports';
 $portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/portmgr/script_data'));
 
+
 ######################################################################
 
 # Page header:
 function print_header($title, $encoding) {
     global $MPWEB, $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
-    $PHP_SELF = $_SERVER['PHP_SELF'];
     
     header("Content-Type: application/xhtml+xml; charset=$encoding");
     include("$MPWEB/includes/header.inc");
@@ -53,7 +53,7 @@ function print_header($title, $encoding) {
 
 # Print some useful warnings:
 function print_warnings() {
-    global $_SERVER, $MPWEB;
+    global $MPWEB;
     
     include("$MPWEB/includes/warnings.inc");
 
@@ -112,6 +112,7 @@ function print_footer() {
 
     include("$MPWEB/includes/footer.inc");
 }
+
 
 ######################################################################
 

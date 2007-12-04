@@ -63,7 +63,7 @@
                             'Blog' => '/blog/'
                         );
                         foreach ($pages as $title => $url) {
-                            if (basename($PHP_SELF) == $url) {
+                            if (basename($_SERVER['PHP_SELF']) == $url) {
                                 echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             } else {
                                 echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
@@ -86,7 +86,7 @@
                             'Mac OS Forge' => 'http://www.macosforge.org/'
                         );
                         foreach ($shortcuts as $title => $url) {
-                            if (basename($PHP_SELF) == $url) {
+                            if (basename($_SERVER['PHP_SELF']) == $url) {
                                 echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             } else {
                                 echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
