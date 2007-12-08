@@ -170,6 +170,8 @@ a#download:hover {
 
 .warnings p {
     margin: 1em 0 0 0;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 .warnings p:first-child {
