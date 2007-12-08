@@ -14,12 +14,12 @@ if (isset($_SERVER['HTTP_REFERER']) && strpos($_SERVER['HTTP_REFERER'], 'darwinp
 
     <p>You have arrived at the <b>Official MacPorts Web Site</b> from <i>darwinports.com</i>.</p>
 
-    <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of the <i>Official MacPorts Web
-    Site</i>. There is <b>no relationship</b> between <i>The MacPorts Project</i> and <i>darwinports.com</i>.</p>
+    <p><i>darwinports.com</i> <b>is not the official MacPorts Web Site</b>, nor is it a mirror of the <i>Official MacPorts
+    Web Site</i>. There is <b>no relationship</b> between <i>The MacPorts Project</i> and <i>darwinports.com</i>.</p>
 
-    <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not endorsed
-    in any way by <i>The MacPorts Project</i>. For the most accurate information about MacPorts, please bookmark this site,
-    <a href="http://www.macports.org">http://www.macports.org</a>.</p>
+    <p>The information you may have been presented with on <i>darwinports.com</i> may be incorrect or outdated and is not
+    endorsed in any way by <i>The MacPorts Project</i>. For the most accurate information about MacPorts, please bookmark
+    this site, <a href="http://www.macports.org">http://www.macports.org</a>.</p>
     
     </div>
 
