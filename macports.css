@@ -122,16 +122,13 @@ a#download:hover {
 #navigation dt {
     margin: 0;
     padding: 0 16px;
+    color: white;
+    font: bold 125% "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 #navigation dd {
     margin: 0;
     padding: 0;
-}
-
-#navigation dt {
-    color: white;
-    font: bold 125% "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 #navigation ul {
@@ -141,7 +138,7 @@ a#download:hover {
 
 #navigation li {
     display: block;
-    margin: 0;
+    margin-bottom: 1px;
     padding: 0 16px 0 28px;
 }
 
