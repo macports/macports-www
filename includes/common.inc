@@ -25,7 +25,7 @@ $panther_dmg = $downloads . 'MacPorts-' . $mp_version_major . '-10.3.dmg';
 $bz2_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $mp_version_major . '.chk.txt';
-$guide_url = 'http://geeklair.net/macports_guide/';
+$guide_url = 'http://guide.macports.org/';
 
 
 #####################################################################
