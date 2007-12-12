@@ -160,7 +160,7 @@
     a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations if any.</p>
     
 
-    <h3 class="subhdr">Other Platforms</h3>
+    <h3 class="subhdr" id="other">Other Platforms</h3>
 
     <p>Running on platforms other than Mac OS X is not the main focus of The MacPorts Project, so remaining cross-platform is
     not an actively pursued development goal. Nevertheless, it is not an actively discouraged goal either and as a result some
