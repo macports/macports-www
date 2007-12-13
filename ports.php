@@ -27,26 +27,26 @@
 ?>
     <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, distributed
     across <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form
-    allows you to search the MacPorts software index, last updated on <b><?php echo $date; ?></b> at <b><?php echo $time; ?>
+    allows you to search the MacPorts software index, last updated on <b><?php print $date; ?></b> at <b><?php print $time; ?>
     </b>.</p>
 
     <br />
 
-    <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form action="<?php print $_SERVER['PHP_SELF']; ?>">
         <p>
             <label>Search by:</label>
             <select name="by">
-                <option value="name"<?php if ($by == "name") { echo " selected=\"selected\""; } ?>>Software Title</option>
-                <option value="desc"<?php if ($by == "desc") { echo " selected=\"selected\""; } ?>>Description</option>
-                <option value="cat"<?php if ($by == "cat") { echo " selected=\"selected\""; } ?>>Category</option>
-                <option value="maintainer"<?php if ($by == "maintainer") { echo " selected=\"selected\""; } ?>>Maintainer</option>
+                <option value="name"<?php if ($by == "name") { print " selected=\"selected\""; } ?>>Software Title</option>
+                <option value="desc"<?php if ($by == "desc") { print " selected=\"selected\""; } ?>>Description</option>
+                <option value="cat"<?php if ($by == "cat") { print " selected=\"selected\""; } ?>>Category</option>
+                <option value="maintainer"<?php if ($by == "maintainer") { print " selected=\"selected\""; } ?>>Maintainer</option>
             </select>
             <input type="text" name="substr" size="40" />
             <input type="submit" value="Search" />
         </p>
     </form>
 
-    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
+    <p>Or view the complete <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
     ports)</a>.</p>
     <br />
 
@@ -74,8 +74,8 @@
                                 $entries_per_colum = 0;
                                 while ($row = mysql_fetch_assoc($result)) {
 ?>
-                                    <li><a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($row['category']); ?>">
-                                    <?php echo htmlspecialchars($row['category']); ?></a></li>
+                                    <li><a href="<?php print $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php print urlencode($row['category']); ?>">
+                                    <?php print htmlspecialchars($row['category']); ?></a></li>
 <?php
                                     if ($entries_per_colum == $max_entries_per_column) break;
                                     $entries_per_colum++;
@@ -132,17 +132,17 @@
 ?>
             <h3>Query Results</h3>
 
-            <p><i><?php echo mysql_num_rows($result) . ' ' . (mysql_num_rows($result) == 1 ? 'Portfile' : 'Portfiles') . 
+            <p><i><?php print mysql_num_rows($result) . ' ' . (mysql_num_rows($result) == 1 ? 'Portfile' : 'Portfiles') . 
             ' Selected'; ?></i></p>
 
             <dl>
 <?php
             while ($row = mysql_fetch_assoc($result)) {
 ?>
-                <dt><b><a href="<?php print $trac_url . 'browser/trunk/dports/' . $row['path'] . '/Portfile'; ?>"><?php echo
-                htmlspecialchars($row['name']); ?></a></b> <?php echo htmlspecialchars($row['version']); ?></dt>
+                <dt><b><a href="<?php print $trac_url . 'browser/trunk/dports/' . $row['path'] . '/Portfile'; ?>"><?php print
+                htmlspecialchars($row['name']); ?></a></b> <?php print htmlspecialchars($row['version']); ?></dt>
                 <dd>
-                    <?php echo htmlspecialchars($row['description']); ?>
+                    <?php print htmlspecialchars($row['description']); ?>
                     <br />
 <?php
 /* MAINTAINERS */
@@ -155,11 +155,11 @@
 <?php
                         $primary = 1;
                         while ($nrow = mysql_fetch_array($nresult)) {
-                            if ($primary) { echo "<b>"; }
-                            else { echo " "; }
+                            if ($primary) { print "<b>"; }
+                            else { print " "; }
                             $addr = obfuscate_email($nrow[0]);
                             print $addr;
-                            if ($primary) { echo "</b>"; }
+                            if ($primary) { print "</b>"; }
                             $primary = 0;
                         }
                     }
@@ -175,12 +175,12 @@
 <?php
                         $primary = 1;
                         while ($nrow = mysql_fetch_assoc($nresult)) {
-                            if ($primary) { echo "<b>"; }
+                            if ($primary) { print "<b>"; }
 ?>
-                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php echo urlencode($nrow['category']); ?>">
-                            <?php echo htmlspecialchars($nrow['category']); ?></a>
+                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php print urlencode($nrow['category']); ?>">
+                            <?php print htmlspecialchars($nrow['category']); ?></a>
 <?php
-                            if ($primary) { echo "</b>"; }
+                            if ($primary) { print "</b>"; }
                             $primary = 0;
                         }
                     }
@@ -197,8 +197,8 @@
                         while ($nrow = mysql_fetch_array($nresult)) {
                             $platform = $nrow[0];
 ?>
-                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=platform&amp;substr=<?php echo urlencode($platform); ?>">
-                            <?php echo htmlspecialchars($platform); ?></a>
+                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=platform&amp;substr=<?php print urlencode($platform); ?>">
+                            <?php print htmlspecialchars($platform); ?></a>
 <?php
                         }
                     }
@@ -217,8 +217,8 @@
                             // might need adapting to the new port: depspec
                             $library = eregi_replace("^([^:]*:[^:]*:|[^:]*:)", "", $nrow[0]);
 ?>
-                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=library&amp;substr=<?php echo urlencode($library); ?>">
-                            <?php echo htmlspecialchars($library); ?></a>
+                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=library&amp;substr=<?php print urlencode($library); ?>">
+                            <?php print htmlspecialchars($library); ?></a>
 <?php
                         }
                     }
@@ -235,8 +235,8 @@
                         while ($nrow = mysql_fetch_array($nresult)) {
                             $variant = $nrow[0];
 ?>
-                            <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php echo urlencode($variant); ?>">
-                            <?php echo htmlspecialchars($variant); ?></a>
+                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=variant&amp;substr=<?php print urlencode($variant); ?>">
+                            <?php print htmlspecialchars($variant); ?></a>
 <?php
                         }
                     }
@@ -249,7 +249,7 @@
             }
 
         } else {
-            echo "An Error Occurred. (501)";
+            print "An Error Occurred. (501)";
         }
 ?>
         </dl>
