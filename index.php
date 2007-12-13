@@ -5,14 +5,7 @@
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Home', 'utf-8');
-    $portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
-    if ($portsdb_connect === false) {
-       $port_count = 'a lot of';
-       $cat_count = 'many';
-    } else {
-       $port_count = ports_count();
-       $cat_count = categories_count();
-    }
+    $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
 ?>
 
 
@@ -30,8 +23,8 @@
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
     without splitting them into &ldquo;stable&rdquo; Vs. &ldquo;unstable&rdquo; branches, targetting mainly the current Mac OS
     X release (10.5, A.K.A Leopard) and the immediately previous one (10.4, A.K.A. Tiger). There are currently <a href="ports.php">
-    <b><?= $port_count ?></b> ports</a> in our tree, distributed among <?= $cat_count ?> different
-    categories, and more are being added on a regular basis.</p>
+    <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
+    different categories, and more are being added on a regular basis.</p>
     
     
     <h3 class="subhdr">Getting started</h3>
@@ -77,5 +70,7 @@
 
 <?php
     print_footer();
-    mysql_close($portsdb_connect);
+    if ($portsdb_info['connection_stream'] !== false) {
+        mysql_close($portsdb_info['connection_stream']);
+    }
 ?>

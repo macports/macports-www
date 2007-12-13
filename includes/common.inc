@@ -62,6 +62,50 @@ function print_warnings() {
 
 ######################################################################
 
+# Connect to the portsdb and gather miscellaneous information:
+function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
+
+    $script = basename($_SERVER['PHP_SELF']);
+    
+    $portsdb_connection = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
+    if ($portsdb_connection === false) {
+        switch ($script) {
+            case "index.php":
+                $portsdb_info = array(
+                    'connection_stream' => false,
+                    'num_ports' => 'a lot of',
+                    'num_categories' => 'many'
+                );
+                break;
+            case "ports.php":
+                print "
+                    <div id='content'>
+                        
+                        <h2 class='hdr'>MacPorts Portfiles</h2>
+                        <p>Our database is currently unavailable. We hope to have it back soon!</p>
+                        
+                    </div>
+                ";
+            default:
+                print_footer();
+                die();
+                break;
+        }
+    } else {
+        $portsdb_info = array(
+            'connection_stream' => $portsdb_connection,
+            'num_ports' => ports_count(),
+            'num_categories' => categories_count()
+        );
+    }
+    
+    return $portsdb_info;
+    
+}
+
+
+######################################################################
+
 # Total count of currently available ports:
 function ports_count() {
     global $portsdb_name;
@@ -112,18 +156,3 @@ function print_footer() {
 
     include("$MPWEB/includes/footer.inc");
 }
-
-
-######################################################################
-
-function print_db_error() {
-       print "
-        <div id='content'>
-          <h2 class='hdr'>MacPorts Portfiles</h2>
-          <p>Our database is currently unavailable. We hope to have it back soon!</p>
-        </div>
-             ";
-       print_footer();
-       die();
-}
-

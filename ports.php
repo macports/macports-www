@@ -7,9 +7,7 @@
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
-    $portsdb_connect = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd) or print_db_error();
-    
-    $num_categories = categories_count();
+    $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
@@ -27,9 +25,10 @@
         $time = date('H:i', $row[0]);
     }
 ?>
-    <p>The MacPorts Project currently distributes <b><?php print ports_count(); ?></b> ports, distributed across <?php print
-    $num_categories; ?> different categories and available below for viewing. This form allows you to search the MacPorts software
-    index, last updated on <b><?php echo $date; ?></b> at <b><?php echo $time; ?></b>.</p>
+    <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, distributed
+    across <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form
+    allows you to search the MacPorts software index, last updated on <b><?php echo $date; ?></b> at <b><?php echo $time; ?>
+    </b>.</p>
 
     <br />
 
@@ -47,7 +46,7 @@
         </p>
     </form>
 
-    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print ports_count(); ?>
+    <p>Or view the complete <a href="<?php echo $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
     ports)</a>.</p>
     <br />
 
@@ -65,7 +64,7 @@
                 <ul>
 
 <?php
-                    $max_entries_per_column = floor($num_categories/4);
+                    $max_entries_per_column = floor($portsdb_info['num_categories']/4);
                     $columns = 0;
                     while ($columns < 4) {
 ?>
@@ -264,5 +263,5 @@
 
 <?php
     print_footer();
-    mysql_close($portsdb_connect);
+    mysql_close($portsdb_info['connection_stream']);
 ?>
