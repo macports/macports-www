@@ -65,8 +65,9 @@
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
-    If needed your shell configuration files will be adapted by the installer to include the necessary settings to run MacPorts
-    and the programs it installs, but you may need to open a new shell for these changes to take effect.</p>
+    If needed your shell configuration files will be <a href="<?php print $guide_url . '#installing.binary.postflight.details'; ?>">
+    adapted by the installer</a> to include the necessary settings to run MacPorts and the programs it installs, but you may need
+    to open a new shell for these changes to take effect.</p>
 
     <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will be run for you by the installer to ensure you have our
     latest available release and the latest revisions to the &ldquo;Portfiles&rdquo; that contain the instructions employed
