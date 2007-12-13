@@ -69,7 +69,7 @@
     adapted by the installer</a> to include the necessary settings to run MacPorts and the programs it installs, but you may need
     to open a new shell for these changes to take effect.</p>
 
-    <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will be run for you by the installer to ensure you have our
+    <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will also be run for you by the installer to ensure you have our
     latest available release and the latest revisions to the &ldquo;Portfiles&rdquo; that contain the instructions employed
     in the building and installation of ports. After installation is done, it is recommended that you run this step manually
     on a regular basis to to keep your MacPorts system always current:</p>
