@@ -121,6 +121,9 @@
     <ul>
         <li><kbd>Add ${prefix}/bin</kbd> and <kbd>${prefix}/sbin</kbd> to the start of your <kbd>PATH</kbd> environment variable
         so that MacPorts installed programs take precedence over equally named system provided programs.</li>
+        <li>If a standard <kbd>MANPATH</kbd> environment variable already exists (that is, one that doesn't contain any empty
+        components), add the <kbd>${prefix}/share/man</kbd> path to it so that MacPorts installed man pages are found by your
+        shell.</li>
         <li>For Tiger and earlier only, add an appropriate X11 <kbd>DISPLAY</kbd> environment variable to run X11 dependent
         programs, as Leopard takes care of this requirement on its own.</li>
     </ul>
