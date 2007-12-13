@@ -130,7 +130,7 @@
 
     <p>Lastly, you need to synchronize your installation with the MacPorts rsync server:</p>
 
-    <pre>sudo port -d selfupdate</pre>
+    <pre>sudo port -v selfupdate</pre>
 
     <p>Upon completion MacPorts will be ready to install ports! </p>
 
