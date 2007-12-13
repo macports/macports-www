@@ -73,7 +73,7 @@
     in the building and installation of ports. After installation is done, it is recommended that you run this step manually
     on a regular basis to to keep your MacPorts system always current:</p>
     
-    <pre>sudo port -d selfupdate</pre>
+    <pre>sudo port -v selfupdate</pre>
 
     <p>At this point you should be ready to enjoy MacPorts!</p>
 
