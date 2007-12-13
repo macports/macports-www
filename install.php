@@ -40,10 +40,10 @@
         components:</p>
 
         <ol>
-            <li>Apple's Developer Tools, found at the <a href="http://developer.apple.com/tools/xcode/"> Apple Developer site</a>
+            <li>Apple's Developer Tools, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer site</a>
             or on your Mac OS X installation CDs/DVD.</li>
             <li>The X11 windowing environment (A.K.A. &ldquo;X11 User&rdquo;) and its related SDK package (&ldquo;X11SDK&rdquo;)
-            for ports that depend on the functioanlity they provide to compile and run.
+            for ports that depend on the functionality they provide to compile and run.
                 <ul>
                     <li>the &ldquo;X11 User&rdquo; package is an optional installation on your system CDs/DVD for Panther and
                     Tiger, enabled through the &ldquo;Customize&rdquo; button of the installer, whereas it is included by default
@@ -61,10 +61,10 @@
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $leopard_dmg;
     ?>">Leopard (Universal)</a>, <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> or <a href="<?php print $panther_dmg;
-    ?>">Panther (PowerPC)</a>, respectively, and running the system's Installer by double clicking on the pkg contained therein,
+    ?>">Panther (PowerPC)</a>, respectively, and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
-    <p>This procedure will place a fully functional and default MacPorts installation on your host system, ready for usage.
+    <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
     If needed your shell configuration files will be adapted by the installer to include the necessary settings to run MacPorts
     and the programs it installs, but you may need to open a new shell for these changes to take effect.</p>
 
@@ -120,11 +120,11 @@
 
     <ul>
         <li><kbd>Add ${prefix}/bin</kbd> and <kbd>${prefix}/sbin</kbd> to the start of your <kbd>PATH</kbd> environment variable
-        so that MacPorts installed programs take precedence over equally named system provided programs.</li>
+        so that MacPorts-installed programs take precedence over system-provided programs of the same name.</li>
         <li>If a standard <kbd>MANPATH</kbd> environment variable already exists (that is, one that doesn't contain any empty
-        components), add the <kbd>${prefix}/share/man</kbd> path to it so that MacPorts installed man pages are found by your
+        components), add the <kbd>${prefix}/share/man</kbd> path to it so that MacPorts-installed man pages are found by your
         shell.</li>
-        <li>For Tiger and earlier only, add an appropriate X11 <kbd>DISPLAY</kbd> environment variable to run X11 dependent
+        <li>For Tiger and earlier only, add an appropriate X11 <kbd>DISPLAY</kbd> environment variable to run X11-dependent
         programs, as Leopard takes care of this requirement on its own.</li>
     </ul>
 
@@ -132,7 +132,7 @@
 
     <pre>sudo port -v selfupdate</pre>
 
-    <p>Upon completion MacPorts will be ready to install ports! </p>
+    <p>Upon completion MacPorts will be ready to install ports!</p>
 
     <p>It is recommended to run the above command on a regular basis to keep your installation current. Type &ldquo;<kbd>man
     port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print $guide_url; ?>">Guide</a> to
@@ -149,7 +149,7 @@
 
     <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
 
-    <p>Purpose specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
+    <p>Purpose-specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
 
     <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
     href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
@@ -166,8 +166,8 @@
     <h3 class="subhdr" id="other">Other Platforms</h3>
 
     <p>Running on platforms other than Mac OS X is not the main focus of The MacPorts Project, so remaining cross-platform is
-    not an actively pursued development goal. Nevertheless, it is not an actively discouraged goal either and as a result some
-    experimental support does exist for other POSIX compliant platforms such as *BSD and GNU/Linux.</p>
+    not an actively-pursued development goal. Nevertheless, it is not an actively-discouraged goal either and as a result some
+    experimental support does exist for other POSIX-compliant platforms such as *BSD and GNU/Linux.</p>
 
     <p>The full list of requirements to run MacPorts on these other platforms is as follows (we assume you have the basics such
     as GCC and X11):</p>
@@ -190,8 +190,8 @@
     through our <a href="<?php print $trac_url; ?>">Trac portal</a> should you run into any problems installing and/or using
     MacPorts. Of particular relevance are the <a href="<?php print $guide_url . '#installing'; ?>">installation</a> &amp;
     <a href="<?php print $guide_url . '#using'; ?>">usage</a> sections of the former and the <a href="<?php print $trac_url .
-    'wiki/FAQ'; ?>">FAQ</a> section of the <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a>, where track of quesitons that
-    are fielded often on our <a href="contact.php#lists">mailing lists</a> is kept.</p>
+    'wiki/FAQ'; ?>">FAQ</a> section of the <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a>, where we keep track of questions
+    frequently fielded on our <a href="contact.php#lists">mailing lists</a>.</p>
 
     <p>If any of these resources do not answer your questions or if you need any kind of extended support, there are many ways
     to <a href="contact.php">contact us</a>!</p>
