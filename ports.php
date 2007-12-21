@@ -25,11 +25,11 @@
         $time = date('H:i', $row[0]);
     }
 ?>
-    <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, distributed
-    across <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form
-    allows you to search the MacPorts software index, last updated on <b><?php print $date; ?></b> at <b><?php print $time; ?>
-    </b>.</p>
-
+    <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, organized across
+    <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form allows
+    you to search the MacPorts software index, last updated on <b><?php print $date; ?></b> at <b><?php print $time; ?></b>.
+    </p>
+    
     <br />
 
     <form action="<?php print $_SERVER['PHP_SELF']; ?>">
