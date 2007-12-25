@@ -40,15 +40,17 @@
         components:</p>
 
         <ol>
-            <li>Apple's Developer Tools, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer site</a>
-            or on your Mac OS X installation CDs/DVD.</li>
+            <li>Apple's <a href="https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19897">
+            Xcode 3.0</a> developer tools for the Leopard platform or <a href="https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19907">
+            2.5</a> for Tiger, found at the <a href="http://developer.apple.com/tools/xcode/">Apple Developer Connection</a>
+            site or on your Mac OS X installation CDs/DVD.</li>
             <li>The X11 windowing environment (A.K.A. &ldquo;X11 User&rdquo;) and its related SDK package (&ldquo;X11SDK&rdquo;)
             for ports that depend on the functionality they provide to compile and run.
                 <ul>
                     <li>the &ldquo;X11 User&rdquo; package is an optional installation on your system CDs/DVD for Panther and
                     Tiger, enabled through the &ldquo;Customize&rdquo; button of the installer, whereas it is included by default
                     on Leopard.</li>
-                    <li>the &ldquo;X11 SDK&rdquo; package from the Developer Tools will be automatically installed if &ldquo;X11
+                    <li>the &ldquo;X11 SDK&rdquo; package from the Xcode installer will be automatically selected if &ldquo;X11
                     User&rdquo; is already installed, so be sure to install that first.</li>
                 </ul>
             </li>
