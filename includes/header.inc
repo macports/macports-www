@@ -20,6 +20,7 @@
         <meta name="description" content="The MacPorts Project is an open-source community initiative to design an easy-to-use
         system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac
         OS X operating system." />
+        <meta name="verify-v1" content="/aylCprlQpTgk6J7bm51erICmpcEK5kcXH7FMFr0WsI=" />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
         <script type="text/javascript" src="mootools.v1.11.js"></script>
