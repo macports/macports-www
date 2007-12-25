@@ -17,6 +17,9 @@
         <meta name="author" content="Chris Pickel (sfiera@macports.org)" />
         <meta name="copyright" content="2003, OpenDarwin" />
         <meta name="copyright" content="2007, The MacPorts Project" />
+        <meta name="description" content="The MacPorts Project is an open-source community initiative to design an easy-to-use
+        system for compiling, installing, and upgrading either command-line, X11 or Aqua based open-source software on the Mac
+        OS X operating system." />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
         <script type="text/javascript" src="mootools.v1.11.js"></script>
