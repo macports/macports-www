@@ -17,10 +17,11 @@
     </p>
 
     <ul>
-        <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a> and <a
-        href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a>, containing pkg installers for use with the Mac OS X Installer.
-        By far the simplest installation procedure that most users should <a href="#pkg">follow</a> after meeting the requirements
-        listed <a href="#requirements"> below</a>.</li>
+        <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
+        href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)
+        </a> as a legacy platform, containing pkg installers for use with the Mac OS X Installer. By far the simplest installation
+        procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
+        below</a>.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
         in any way.</li>
@@ -60,8 +61,9 @@
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $leopard_dmg;
-    ?>">Leopard (Universal)</a> or <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a>, respectively, and running the
-    system's Installer by double-clicking on the pkg contained therein, following the on-screen instructions until completion.</p>
+    ?>">Leopard (Universal)</a>, <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> or <a href="<?php print $panther_dmg;
+    ?>">Panther (PowerPC)</a>, respectively, and running the system's Installer by double-clicking on the pkg contained therein,
+    following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
     If needed your shell configuration files will be <a href="<?php print $guide_url . '#installing.binary.postflight.details'; ?>">
