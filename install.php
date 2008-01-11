@@ -162,7 +162,7 @@
     <p>If you already have MacPorts installed and have no restrictions to use the rsync networking protocol (tcp port 873 by
     default), the easiest way to upgrade to our latest available release, <b><?php print $macports_version_latest; ?></b>, is
     by using the <kbd>selfupdate</kbd> target of the <kbd>port(1)</kbd> command. This will both update your ports tree (by
-    performing a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations
+    performing a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations,
     if any.</p>
     
 
