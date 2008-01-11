@@ -13,7 +13,7 @@
 
     <h2 class="hdr">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $mp_version_major; ?> is available in various formats for download and installation:
+    <p>MacPorts version <?php print $macports_version_major; ?> is available in various formats for download and installation:
     </p>
 
     <ul>
@@ -92,18 +92,18 @@
 
     <ol>
         <li>&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package and run &ldquo;<kbd>tar xjvf
-        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.bz2</a></kbd>&rdquo; or
-        &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $mp_version_major; ?>.tar.gz</a></kbd>&rdquo;,
+        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.bz2</a></kbd>&rdquo; or
+        &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.gz</a></kbd>&rdquo;,
         depending on whether you downloaded the bz2 tarball or the gz one, respectively.</li>
         <li>Build and install the recently unpacked sources:
             <ul>
-                <li><kbd>cd MacPorts-<?php print $mp_version_major; ?></kbd></li>
+                <li><kbd>cd MacPorts-<?php print $macports_version_major; ?></kbd></li>
                 <li><kbd>./configure &amp;&amp; make &amp;&amp; sudo make install</kbd></li>
             </ul>
             Optionally:
             <ul>
                 <li><kbd>cd ../</kbd></li>
-                <li><kbd>rm -rf MacPorts-<?php print $mp_version_major; ?>*</kbd></li>
+                <li><kbd>rm -rf MacPorts-<?php print $macports_version_major; ?>*</kbd></li>
             </ul>
             
         </li>
@@ -111,7 +111,7 @@
 
     <p>These steps need to be perfomed from an administrator account, for which &ldquo;<kbd>sudo</kbd>&rdquo; will ask the
     password upon installation. This procedure will install a pristine MacPorts system and, if the optional steps are taken,
-    remove the as of now unnecessary MacPorts-<?php print $mp_version_major; ?> source directory and corresponding tarball.</p>
+    remove the as of now unnecessary MacPorts-<?php print $macports_version_major; ?> source directory and corresponding tarball.</p>
 
     <p>To customize your installation you should read the output of &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and
     pass the appropriate options for the settings you wish to tweak to the configuration script in the steps detailed above.</p>
@@ -160,9 +160,10 @@
     <h3 class="subhdr" id="selfupdate">Selfupdate</h3>
 
     <p>If you already have MacPorts installed and have no restrictions to use the rsync networking protocol (tcp port 873 by
-    default), the easiest way to upgrade to our latest available release, <b><?php print $mp_version_latest; ?></b>, is by using
-    the <kbd>selfupdate</kbd> target of the <kbd>port(1)</kbd> command. This will both update your ports tree (by performing
-    a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations if any.</p>
+    default), the easiest way to upgrade to our latest available release, <b><?php print $macports_version_latest; ?></b>, is
+    by using the <kbd>selfupdate</kbd> target of the <kbd>port(1)</kbd> command. This will both update your ports tree (by
+    performing a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations
+    if any.</p>
     
 
     <h3 class="subhdr" id="other">Other Platforms</h3>

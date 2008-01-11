@@ -37,7 +37,7 @@
     A.K.A <a href="<?php print $guide_url; ?>"> The MacPorts Guide</a>, and our Trac <a href="<?php print $trac_url; ?>">Wiki
     server &amp; bug tracker</a>.</p>
             
-    <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $mp_version_latest; ?></b></p>
+    <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
     
     <h3 class="subhdr">Getting involved</h3>

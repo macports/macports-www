@@ -9,8 +9,8 @@
 ######################################################################
 
 # MacPorts version variables:
-$mp_version_major = '1.6.0';
-$mp_version_latest = '1.6.0';
+$macports_version_major = '1.6.0';
+$macports_version_latest = '1.6.0';
 
 
 ######################################################################
@@ -18,13 +18,13 @@ $mp_version_latest = '1.6.0';
 # Some useful URL abstractions:
 $trac_url = 'http://trac.macports.org/projects/macports/';
 $svn_url = 'http://svn.macports.org/repository/macports/';
-$downloads = $svn_url . 'downloads/MacPorts-' . $mp_version_major . '/';
-$leopard_dmg = $downloads . 'MacPorts-' . $mp_version_major . '-10.5-Leopard.dmg';
-$tiger_dmg = $downloads . 'MacPorts-' . $mp_version_major . '-10.4-Tiger.dmg';
-$panther_dmg = $downloads . 'MacPorts-' . $mp_version_major . '-10.3-Panther.dmg';
-$bz2_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.bz2';
-$gz_tarball = $downloads . 'MacPorts-' . $mp_version_major . '.tar.gz';
-$checksums = $downloads .  'MacPorts-' . $mp_version_major . '.chk.txt';
+$downloads = $svn_url . 'downloads/MacPorts-' . $macports_version_major . '/';
+$leopard_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.5-Leopard.dmg';
+$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.4-Tiger.dmg';
+$panther_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.3-Panther.dmg';
+$bz2_tarball = $downloads . 'MacPorts-' . $macports_version_major . '.tar.bz2';
+$gz_tarball = $downloads . 'MacPorts-' . $macports_version_major . '.tar.gz';
+$checksums = $downloads .  'MacPorts-' . $macports_version_major . '.chk.txt';
 $guide_url = 'http://guide.macports.org/';
 
 
@@ -41,7 +41,7 @@ $portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/po
 
 # Page header:
 function print_header($title, $encoding) {
-    global $MPWEB, $mp_version_major, $trac_url, $svn_url, $downloads, $guide_url;
+    global $MPWEB, $macports_version_major, $trac_url, $svn_url, $downloads, $guide_url;
     
     header("Content-Type: application/xhtml+xml; charset=$encoding");
     include("$MPWEB/includes/header.inc");
