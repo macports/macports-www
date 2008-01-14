@@ -13,12 +13,12 @@
     <h2 class="hdr">Getting in Touch With Us</h2>
 
     <p>There are a number of ways in which you can get in contact with people involved with The MacPorts Project, depending
-    on who you need to contact and the type of support you're looking for:</p>
+    on who you need to contact and the type of support and/or feedback you're looking for:</p>
 
     <ul>
         <li><a href="#Lists">Public Mailing Lists</a></li>
         <li><a href="#PortMgr">Administrative Contacts</a></li>
-        <li><a href="#Bugs">Bug Reports</a></li>
+        <li><a href="#Bugs">Bug Reports &amp; Contributions</a></li>
         <li><a href="#IRC">IRC</a></li>
         <li><a href="#Individuals">Individuals</a></li>
     </ul>
