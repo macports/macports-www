@@ -113,14 +113,15 @@
     to <a href="http://www.macosforge.org/wp-register.php">register</a> with Mac OS Forge for a Wordpress/Trac combined
     account.</p>
 
-    <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself,
-    feel free to <a href="<?php print $trac_url . 'newticket'; ?>">open a ticket</a> to help us look into the problem.
-    Please keep in mind that we usually get a fairly high number of duplicate reports for common problems and therefore
-    appreciate any help we can get in the process of streamlining our ticket dutties. <a href="<?php print $trac_url .
-    'search'; ?>">Searching</a> the Trac database &amp; mailing list archives (above), and reading our <a href="<?php print
-    $trac_url . 'wiki/FAQ'; ?>">FAQ</a> &amp; <a href="<?php print $trac_url . 'wiki/ProblemHotlist'; ?>">problems hotlist</a>
-    to see if your report has already been filed is recommended, as well as reading the <a href="<?php print $guide_url .
-    '#project.tickets'; ?>"> ticketing guidelines</a> that will help you create a better report.</p>
+    <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself, or
+    on the other hand if you'd like to make a contribution of any kind to the project, feel free to <a href="<?php print $trac_url
+    . 'newticket'; ?>">open a ticket</a> to help us look into the problem and/or submission. Please keep in mind that we
+    usually get a fairly high number of duplicate reports for common problems and therefore appreciate any help we can get in
+    the process of streamlining our ticket dutties. <a href="<?php print $trac_url . 'search'; ?>">Searching</a> the Trac database
+    &amp; mailing list archives (above), and reading our <a href="<?php print $trac_url . 'wiki/FAQ'; ?>">FAQ</a> &amp;
+    <a href="<?php print $trac_url . 'wiki/ProblemHotlist'; ?>">problems hotlist</a> to see if your report has already been filed
+    is recommended, as well as reading the <a href="<?php print $guide_url . '#project.tickets'; ?>"> ticketing guidelines</a>
+    that will help you create a better report.</p>
 
     <p>Viewing existing tickets through the facilities offered by predefined and custom <a href="<?php print $trac_url .
     'report'; ?>">ticket reports</a> that allow for detailed queries is also available.</p>
