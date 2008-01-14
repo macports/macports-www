@@ -48,7 +48,7 @@
     <ul>
         <li>Explore our <a href="contact.php#Lists">mailing lists</a>, either if it is for some general user support or to 
         keep on top of the latest MacPorts developments and commits to our software repository.</li>
-        <li>Check out our <a href="contact.php#Bugs">Support &amp; Development</a> portal for some bug reporting and live
+        <li>Check out our <a href="contact.php#Tracker">Support &amp; Development</a> portal for some bug reporting and live
         tutorials through the integrated Wiki server.</li>
         <li>Or simply come join us for a friendly <a href="contact.php#IRC">IRC chat</a> if you wish for more direct contact
         with the <a href="contact.php#Individuals">people behind</a> it all.</li>

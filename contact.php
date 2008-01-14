@@ -18,7 +18,7 @@
     <ul>
         <li><a href="#Lists">Public Mailing Lists</a></li>
         <li><a href="#PortMgr">Administrative Contacts</a></li>
-        <li><a href="#Bugs">Bug Reports &amp; Contributions</a></li>
+        <li><a href="#Tracker">Bug Reports &amp; Contributions</a></li>
         <li><a href="#IRC">IRC</a></li>
         <li><a href="#Individuals">Individuals</a></li>
     </ul>
@@ -103,7 +103,7 @@
     on joining for more information.</p>
 
 
-    <h3 class="subhdr" id="Bugs">Bug Tracker</h3>
+    <h3 class="subhdr" id="Tracker">Bug Tracker</h3>
 
     <p>We use the popular <a href="http://trac.edgewall.org/">Trac</a> web-based tool for our <a href="<?php print $trac_url .
     'roadmap'; ?>">bug tracking</a> and <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a> needs, thus buying ourselves
