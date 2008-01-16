@@ -17,7 +17,7 @@
 
     <ul>
         <li><a href="#Lists">Public Mailing Lists</a></li>
-        <li><a href="#PortMgr">Administrative Contacts</a></li>
+        <li><a href="#PortMgr">Administrative Contact</a></li>
         <li><a href="#Tracker">Bug Reports &amp; Contributions</a></li>
         <li><a href="#IRC">IRC</a></li>
         <li><a href="#Individuals">Individuals</a></li>
@@ -89,7 +89,7 @@
     passing along the paste URL rather than full error messages).</p>
 
 
-    <h3 class="subhdr" id="PortMgr">Administrative Contacts</h3>
+    <h3 class="subhdr" id="PortMgr">Administrative Contact</h3>
 
     <p>The private and read-only &ldquo;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&rdquo; mailing
     list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="<?php print
