@@ -41,7 +41,7 @@ $portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/po
 
 # Page header:
 function print_header($title, $encoding) {
-    global $MPWEB, $macports_version_major, $trac_url, $svn_url, $downloads, $guide_url;
+    global $MPWEB, $trac_url, $svn_url, $downloads, $guide_url;
     
     header("Content-Type: application/xhtml+xml; charset=$encoding");
     include("$MPWEB/includes/header.inc");
