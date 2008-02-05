@@ -178,9 +178,11 @@
     <ul>
         <li><a href="http://www.tcl.tk/">Tcl</a> (8.3 or 8.4), with threads.</li>
         <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation.</li>
+        <li><b>mtree</b> for directory hierarchy.</li>
         <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports.</li>
         <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles.</li>
         <li><a href="http://www.openssl.org/">OpenSSL</a> or <a href="http://martin.hinner.info/libmd/">libmd</a> for checksums.</li>
+        <li><a href="http://www.sqlite.org/">SQLite</a> (3) for the registry database.</li>
     </ul>
 
     <p>Normally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts
