@@ -186,7 +186,8 @@
     </ul>
 
     <p>Normally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts
-    on any of these platforms. Experimental packaging is available for the FreeBSD, Fedora and Ubuntu operating systems.</p>
+    on any of these platforms. Experimental packaging is available for the FreeBSD (.tbz package), Fedora (.rpm package) and
+    Ubuntu (.deb package) operating systems.</p>
 
 
     <h3 class="subhdr" id="help">Help</h3>
