@@ -22,7 +22,7 @@
     $result = mysql_query($sql);
     if ($result && $row = mysql_fetch_row($result)) {
         $date = date('Y-m-d', $row[0]);
-        $time = date('H:i', $row[0]);
+        $time = date('H:i:s e', $row[0]);
     }
 ?>
     <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, organized across
