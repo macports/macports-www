@@ -32,7 +32,7 @@
     
     <br />
 
-    <form action="<?php print $_SERVER['PHP_SELF']; ?>">
+    <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="get">
         <p>
             <label>Search by:</label>
             <select name="by">
