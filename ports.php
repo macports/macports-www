@@ -80,31 +80,30 @@
 
     if ($by && ($substr || $by == "all")) {
         $fields = "name, path, version, description";
-        $query = "1";
         $tables = "$portsdb_name.portfiles p";
         if ($by == "name") {
-            $query .= " AND p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
+            $criteria = "p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         if ($by == "category") {
             $tables .= ", $portsdb_name.categories c";
-            $query .= " AND c.portfile=p.name AND c.category='" . mysql_real_escape_string($substr) . "'";
+            $criteria = "c.portfile = p.name AND c.category = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "maintainer") {
             $tables .= ", $portsdb_name.maintainers m";
-            $query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
+            $criteria = "m.portfile = p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         if ($by == "library") {
-            $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
+            $criteria = "p.name = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "variant") {
             $tables .= ", $portsdb_name.variants v";
-            $query .= " AND v.portfile=p.name AND v.variant='" . mysql_real_escape_string($substr) . "'";
+            $criteria = "v.portfile = p.name AND v.variant = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "platform") {
             $tables .= ", $portsdb_name.platforms pl";
-            $query .= " AND pl.portfile=p.name AND pl.platform ='" . mysql_real_escape_string($substr) . "'";
+            $criteria = "pl.portfile = p.name AND pl.platform = '" . mysql_real_escape_string($substr) . "'";
         }
-        $query = "SELECT DISTINCT $fields FROM $tables WHERE $query ORDER BY name";
+        $query = "SELECT DISTINCT $fields FROM $tables WHERE $criteria ORDER BY name";
         $result = mysql_query($query);
         if ($result) {
 ?>
