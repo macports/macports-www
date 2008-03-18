@@ -4,30 +4,32 @@
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
+    
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
     $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
-?>
 
-
-<div id="content">
-
-    <h2 class="hdr">MacPorts Portfiles</h2>
-
-<?php
     $sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb_name.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
     $result = mysql_query($sql);
     if ($result && $row = mysql_fetch_row($result)) {
         $date = date('Y-m-d', $row[0]);
         $time = date('H:i:s e', $row[0]);
+    } else {
+        $date = '(unknown)';
+        $time = '(unknown)';
     }
 ?>
+
+<div id="content">
+
+    <h2 class="hdr">MacPorts Portfiles</h2>
+
     <p>The MacPorts Project currently distributes <b><?php print $portsdb_info['num_ports']; ?></b> ports, organized across
     <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form allows
-    you to search the MacPorts software index, last updated on <b><?php print $date; ?></b> at <b><?php print $time; ?></b>.
+    you to search the MacPorts software index, last updated on <?php print '<b>' . $date . '</b> at <b>' . $time . '</b>'; ?>.
     </p>
     
     <br />
@@ -49,7 +51,6 @@
     <p>Or view the complete <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
     ports)</a>.</p>
     <br />
-
 
 <?php
     if (!$by || (!$substr && $by != "all")) {
