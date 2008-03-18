@@ -56,47 +56,25 @@
         $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
         $result = mysql_query($query);
         if ($result) {
-?>
-            <h3>Port Categories</h3>
-
-            <div id="categories">
-            
-                <ul>
-
-<?php
-                    $max_entries_per_column = floor($portsdb_info['num_categories']/4);
-                    $columns = 0;
-                    while ($columns < 4) {
-?>
-                        <li>
-                            <ul>
-<?php
-                                $entries_per_colum = 0;
-                                while ($row = mysql_fetch_assoc($result)) {
-?>
-                                    <li><a href="<?php print $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php print urlencode($row['category']); ?>">
-                                    <?php print htmlspecialchars($row['category']); ?></a></li>
-<?php
-                                    if ($entries_per_colum == $max_entries_per_column) break;
-                                    $entries_per_colum++;
-                                }
-?>
-                            </ul>
-                        </li>
-<?php
-                        $columns++;
-                    }
-?>
-
-                </ul>
-
-            </div>
-<?php
+            print "<h3>Port Categories</h3>\n<div id=\"categories\">\n<ul>";
+            $max_entries_per_column = floor($portsdb_info['num_categories']/4);
+            $columns = 0;
+            while ($columns < 4) {
+                print "<li>\n<ul>\n";
+                $entries_per_colum = 0;
+                while ($row = mysql_fetch_assoc($result)) {
+                    print '<li><a href="' . $_SERVER['PHP_SELF'] . '?by=cat&amp;substr=' . urlencode($row['category']) . '">'
+                    . htmlspecialchars($row['category']) . '</a></li>';
+                    if ($entries_per_colum == $max_entries_per_column) break;
+                    $entries_per_colum++;
+                }
+                print "</ul>\n</li>";
+                $columns++;
+            }
+            print "</ul>\n\n</div>";
         }
     }
-?>
 
-<?php
     if ($by && ($substr || $by == "all")) {
         $fields = "name, path, version, description";
         $query = "1";
