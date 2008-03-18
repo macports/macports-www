@@ -39,9 +39,9 @@
             <label>Search by:</label>
             <select name="by">
                 <option value="name"<?php if ($by == "name") { print " selected=\"selected\""; } ?>>Software Title</option>
-                <option value="desc"<?php if ($by == "desc") { print " selected=\"selected\""; } ?>>Description</option>
                 <option value="cat"<?php if ($by == "cat") { print " selected=\"selected\""; } ?>>Category</option>
                 <option value="maintainer"<?php if ($by == "maintainer") { print " selected=\"selected\""; } ?>>Maintainer</option>
+                <option value="dep"<?php if ($by == "dep") { print " selected=\"selected\""; } ?>>Dependency</option>
             </select>
             <input type="text" name="substr" size="40" />
             <input type="submit" value="Search" />
@@ -83,11 +83,8 @@
         if ($by == "name") {
             $query .= " AND p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
-        if ($by == "library") {
+        if ($by == "dependency") {
             $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
-        }
-        if ($by == "desc") {
-            $query .= " AND p.description LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         if ($by == "cat") {
             $tables .= ", $portsdb_name.categories c";
