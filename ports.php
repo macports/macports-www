@@ -41,7 +41,9 @@
                 <option value="name"<?php if ($by == "name") { print " selected=\"selected\""; } ?>>Software Title</option>
                 <option value="category"<?php if ($by == "category") { print " selected=\"selected\""; } ?>>Category</option>
                 <option value="maintainer"<?php if ($by == "maintainer") { print " selected=\"selected\""; } ?>>Maintainer</option>
-                <option value="dep"<?php if ($by == "dep") { print " selected=\"selected\""; } ?>>Dependency</option>
+                <option value="dependency"<?php if ($by == "dependency") { print " selected=\"selected\""; } ?>>Dependency</option>
+                <option value="variant"<?php if ($by == "variant") { print " selected=\"selected\""; } ?>>Variant</option>
+                <option value="platform"<?php if ($by == "platform") { print " selected=\"selected\""; } ?>>Platform</option>
             </select>
             <input type="text" name="substr" size="40" />
             <input type="submit" value="Search" />
@@ -83,12 +85,16 @@
         if ($by == "name") {
             $query .= " AND p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
-        if ($by == "dependency") {
-            $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
-        }
         if ($by == "category") {
             $tables .= ", $portsdb_name.categories c";
             $query .= " AND c.portfile=p.name AND c.category='" . mysql_real_escape_string($substr) . "'";
+        }
+        if ($by == "maintainer") {
+            $tables .= ", $portsdb_name.maintainers m";
+            $query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
+        }
+        if ($by == "dependency") {
+            $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "variant") {
             $tables .= ", $portsdb_name.variants v";
@@ -97,10 +103,6 @@
         if ($by == "platform") {
             $tables .= ", $portsdb_name.platforms pl";
             $query .= " AND pl.portfile=p.name AND pl.platform ='" . mysql_real_escape_string($substr) . "'";
-        }
-        if ($by == "maintainer") {
-            $tables .= ", $portsdb_name.maintainers m";
-            $query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         $query = "SELECT DISTINCT $fields FROM $tables WHERE $query ORDER BY name";
         $result = mysql_query($query);
