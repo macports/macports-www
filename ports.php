@@ -41,7 +41,7 @@
                 <option value="name"<?php if ($by == "name") { print " selected=\"selected\""; } ?>>Software Title</option>
                 <option value="category"<?php if ($by == "category") { print " selected=\"selected\""; } ?>>Category</option>
                 <option value="maintainer"<?php if ($by == "maintainer") { print " selected=\"selected\""; } ?>>Maintainer</option>
-                <option value="dependency"<?php if ($by == "dependency") { print " selected=\"selected\""; } ?>>Dependency</option>
+<!--                <option value="library"<?php if ($by == "dependency") { print " selected=\"selected\""; } ?>>Dependency</option> -->
                 <option value="variant"<?php if ($by == "variant") { print " selected=\"selected\""; } ?>>Variant</option>
                 <option value="platform"<?php if ($by == "platform") { print " selected=\"selected\""; } ?>>Platform</option>
             </select>
@@ -93,7 +93,7 @@
             $tables .= ", $portsdb_name.maintainers m";
             $query .= " AND m.portfile=p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
-        if ($by == "dependency") {
+        if ($by == "library") {
             $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "variant") {
