@@ -39,7 +39,7 @@
             <label>Search by:</label>
             <select name="by">
                 <option value="name"<?php if ($by == "name") { print " selected=\"selected\""; } ?>>Software Title</option>
-                <option value="cat"<?php if ($by == "cat") { print " selected=\"selected\""; } ?>>Category</option>
+                <option value="category"<?php if ($by == "category") { print " selected=\"selected\""; } ?>>Category</option>
                 <option value="maintainer"<?php if ($by == "maintainer") { print " selected=\"selected\""; } ?>>Maintainer</option>
                 <option value="dep"<?php if ($by == "dep") { print " selected=\"selected\""; } ?>>Dependency</option>
             </select>
@@ -64,7 +64,7 @@
                 print "<li>\n<ul>\n";
                 $entries_per_colum = 0;
                 while ($row = mysql_fetch_assoc($result)) {
-                    print '<li><a href="' . $_SERVER['PHP_SELF'] . '?by=cat&amp;substr=' . urlencode($row['category']) . '">'
+                    print '<li><a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($row['category']) . '">'
                     . htmlspecialchars($row['category']) . '</a></li>';
                     if ($entries_per_colum == $max_entries_per_column) break;
                     $entries_per_colum++;
@@ -86,7 +86,7 @@
         if ($by == "dependency") {
             $query .= " AND p.name='" . mysql_real_escape_string($substr) . "'";
         }
-        if ($by == "cat") {
+        if ($by == "category") {
             $tables .= ", $portsdb_name.categories c";
             $query .= " AND c.portfile=p.name AND c.category='" . mysql_real_escape_string($substr) . "'";
         }
@@ -153,7 +153,7 @@
                         while ($nrow = mysql_fetch_assoc($nresult)) {
                             if ($primary) { print "<b>"; }
 ?>
-                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=cat&amp;substr=<?php print urlencode($nrow['category']); ?>">
+                            <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=category&amp;substr=<?php print urlencode($nrow['category']); ?>">
                             <?php print htmlspecialchars($nrow['category']); ?></a>
 <?php
                             if ($primary) { print "</b>"; }
