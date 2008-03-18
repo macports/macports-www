@@ -80,27 +80,27 @@
 
     if ($by && ($substr || $by == "all")) {
         $fields = "name, path, version, description";
-        $tables = "$portsdb_name.portfiles p";
+        $tables = "$portsdb_name.portfiles AS p";
         if ($by == "name") {
             $criteria = "p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         if ($by == "category") {
-            $tables .= ", $portsdb_name.categories c";
+            $tables .= ", $portsdb_name.categories AS c";
             $criteria = "c.portfile = p.name AND c.category = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "maintainer") {
-            $tables .= ", $portsdb_name.maintainers m";
+            $tables .= ", $portsdb_name.maintainers AS m";
             $criteria = "m.portfile = p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
         }
         if ($by == "library") {
             $criteria = "p.name = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "variant") {
-            $tables .= ", $portsdb_name.variants v";
+            $tables .= ", $portsdb_name.variants AS v";
             $criteria = "v.portfile = p.name AND v.variant = '" . mysql_real_escape_string($substr) . "'";
         }
         if ($by == "platform") {
-            $tables .= ", $portsdb_name.platforms pl";
+            $tables .= ", $portsdb_name.platforms AS pl";
             $criteria = "pl.portfile = p.name AND pl.platform = '" . mysql_real_escape_string($substr) . "'";
         }
         $query = "SELECT DISTINCT $fields FROM $tables WHERE $criteria ORDER BY name";
