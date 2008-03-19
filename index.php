@@ -70,7 +70,7 @@
 
 <?php
     print_footer();
-    if ($portsdb_info['connection_stream'] !== false) {
-        mysql_close($portsdb_info['connection_stream']);
+    if ($portsdb_info['connection_handler'] !== false) {
+        mysql_close($portsdb_info['connection_handler']);
     }
 ?>

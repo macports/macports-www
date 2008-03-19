@@ -8,10 +8,8 @@
     $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
     include_once("$MPWEB/includes/common.inc");
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
+    
     $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
-    $by = isset($_GET['by']) ? $_GET['by'] : '';
-    $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
-
     $sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb_name.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
     $result = mysql_query($sql);
     if ($result && $row = mysql_fetch_row($result)) {
@@ -21,6 +19,8 @@
         $date = '(unknown)';
         $time = '(unknown)';
     }
+    $by = isset($_GET['by']) ? $_GET['by'] : '';
+    $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
 
 <div id="content">
@@ -59,12 +59,12 @@
         $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
         $result = mysql_query($query);
         if ($result) {
-            print "<h3>Port Categories</h3>\n<div id=\"categories\">\n<ul>";
             $max_entries_per_column = floor($portsdb_info['num_categories']/4);
             $columns = 0;
+            print "<h3>Port Categories</h3>\n<div id=\"categories\">\n<ul>";
             while ($columns < 4) {
-                print "<li>\n<ul>\n";
                 $entries_per_colum = 0;
+                print "<li>\n<ul>\n";
                 while ($row = mysql_fetch_assoc($result)) {
                     print '<li><a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($row['category']) . '">'
                     . htmlspecialchars($row['category']) . '</a></li>';
@@ -226,7 +226,7 @@
             }
 
         } else {
-            print "An Error Occurred. (501)";
+            print '<p>An Error Occurred: '. mysql_error($portsdb_info['connection_handler']) . '</p>';
         }
 ?>
         </dl>
@@ -240,5 +240,5 @@
 
 <?php
     print_footer();
-    mysql_close($portsdb_info['connection_stream']);
+    mysql_close($portsdb_info['connection_handler']);
 ?>
