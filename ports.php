@@ -103,7 +103,12 @@
             $tables .= ", $portsdb_name.platforms AS pl";
             $criteria = "pl.portfile = p.name AND pl.platform = '" . mysql_real_escape_string($substr) . "'";
         }
-        $query = "SELECT DISTINCT $fields FROM $tables WHERE $criteria ORDER BY name";
+        if ($criteria == "") {
+            $where = "";
+        } else {
+            $where = "WHERE $criteria";
+        }
+        $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
         $result = mysql_query($query);
         if ($result) {
 ?>
