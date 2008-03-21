@@ -112,7 +112,6 @@
             break;
         case 'all':
             $criteria = '';
-            $paging = true;
             break;
         default:
             $criteria = '0';
@@ -120,46 +119,49 @@
         }
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
-        if ($paging) {
-            $offset = $pagesize * ($page-1);
-            $query .= " LIMIT $pagesize OFFSET $offset";
-            # get the total count
-            $countquery = "SELECT COUNT(*) FROM $tables $where ORDER By name";
-            $result = mysql_query($countquery);
-            $row = mysql_fetch_array($result); # only 1 row
-            $totalcount = $row[0];
-            $pagecount = ceil($totalcount / $pagesize);
-            # generate a paging control and cache it so we can show it twice
-            $pagecontrol = "<p>Page ";
-            for ($i = 1; $i <= $pagecount; $i++) {
-                if ($i != 1) {
-                    $pagecontrol .= " | ";
-                }
-                if ($i == $page) {
-                    $pagecontrol .= "<b>$i</b>";
-                } else {
-                    $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=$substr&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
-                }
-            }
-            $pagecontrol .= "</p>";
-        }
         $result = mysql_query($query);
         
         /* Main query sent to the DB */
         if ($result) {
+            $numrows = mysql_num_rows($result);
+            if ($numrows > $pagesize) {
+                $paging = true;
+                $pagecount = ceil($numrows / $pagesize);
+                $page = min($page, $pagecount);
+                $offset = $pagesize * ($page-1);
+                $curpagesize = min($pagesize, $numrows - $offset);
+                # generate a paging control and cache it so we can show it twice
+                $pagecontrol = "<p>Page ";
+                for ($i = 1; $i <= $pagecount; $i++) {
+                    if ($i != 1) {
+                        $pagecontrol .= " | ";
+                    }
+                    if ($i == $page) {
+                        $pagecontrol .= "<b>$i</b>";
+                    } else {
+                        $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=$substr&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
+                    }
+                }
+                $pagecontrol .= "</p>";
+
+                # seek the data pointer
+                mysql_data_seek($result, $offset);
+            }
+
             print '<h3>Query Results</h3>';
-            $resultrows = mysql_num_rows($result);
             if ($paging) {
                 print $pagecontrol;
-                $numrows = ($offset+1) . "-" . ($offset + $resultrows) . " of $totalcount Portfile" . ($totalcount == 1 ? '' : 's');
+                $numrowtext = ($offset+1) . "-" . ($offset + $curpagesize) . " of $numrows Portfile" . ($curpagesize == 1 ? '' : 's');
             } else {
-                $numrows = "$resultrows Portfile" . ($resultrows == 1 ? '' : 's');
+                $numrowtext = "$numrows Portfile" . ($numrows == 1 ? '' : 's');
             }
-            print "<p><i>$numrows Selected</i></p>";
+            print "<p><i>$numrowtext Selected</i></p>";
 
             print '<dl>';
             /* Iterate over the entire set of returned ports */
-            while ($row = mysql_fetch_assoc($result)) {
+            for ($row = mysql_fetch_assoc($result), $i = 0;
+                 $row && (!$paging || $i < $curpagesize);
+                 $row = mysql_fetch_assoc($result), $i++) {
 
                 /* Port name and Portfile URL */
                 print "<dt><b><a href=\"${trac_url}browser/trunk/dports/$row[path]/Portfile\">" . htmlspecialchars($row['name'])
