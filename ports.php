@@ -20,6 +20,8 @@
     }
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
+    $page = isset($_GET['page']) ? max($_GET['page'], 0) : '';
+    $pagesize = isset($_GET['pagesize']) ? max($_GET['pagesize'], 0) : 50; # arbitrary setting
 
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
 ?>
@@ -110,6 +112,7 @@
             break;
         case 'all':
             $criteria = '';
+            $paging = true;
             break;
         default:
             $criteria = '0';
@@ -117,12 +120,42 @@
         }
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
+        if ($paging) {
+            $offset = $pagesize * $page;
+            $query .= " LIMIT $pagesize OFFSET $offset";
+            # get the total count
+            $countquery = "SELECT COUNT(*) FROM $tables $where ORDER By name";
+            $result = mysql_query($countquery);
+            $row = mysql_fetch_array($result); # only 1 row
+            $totalcount = $row[0];
+            $pagecount = ceil($totalcount / $pagesize);
+            # generate a paging control and cache it so we can show it twice
+            $pagecontrol = "<p>Page ";
+            for ($i = 0; $i < $pagecount; $i++) {
+                if ($i != 0) {
+                    $pagecontrol .= " | ";
+                }
+                if ($i == $page) {
+                    $pagecontrol .= "<b>$i</b>";
+                } else {
+                    $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=$substr&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
+                }
+            }
+            $pagecontrol .= "</p>";
+        }
         $result = mysql_query($query);
         
         /* Main query sent to the DB */
         if ($result) {
-            print '<h3>Query Results</h3><p><i>' . mysql_num_rows($result) . ' ' . (mysql_num_rows($result) == 1 ? 'Portfile' : 'Portfiles')
-            . ' Selected</i></p>';
+            print '<h3>Query Results</h3>';
+            $resultrows = mysql_num_rows($result);
+            if ($paging) {
+                print $pagecontrol;
+                $numrows = ($offset+1) . "-" . ($offset + $resultrows) . " of $totalcount Portfile" . ($totalcount == 1 ? '' : 's');
+            } else {
+                $numrows = "$resultrows Portfile" . ($resultrows == 1 ? '' : 's');
+            }
+            print "<p><i>$numrows Selected</i></p>";
 
             print '<dl>';
             /* Iterate over the entire set of returned ports */
@@ -209,6 +242,10 @@
                 
             } /* while (listing of macthing ports) */
             print '</dl>';
+
+            if ($paging) {
+                print $pagecontrol;
+            }
 
         /* When we hit this else, the query failed for some reason */
         } else {
