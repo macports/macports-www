@@ -110,6 +110,9 @@
         case 'all':
             $criteria = '';
             break;
+        default:
+            $criteria = '0';
+            break;
         }
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
