@@ -168,7 +168,7 @@
                 $nquery = 'SELECT platform FROM ' . $portsdb_name . '.platforms WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
                 '\' ORDER BY platform';
                 $nresult = mysql_query($nquery);
-                if ($nresult && mysql_num_rows($nresult) > 0) {
+                if ($nresult) {
                     print '<br /><i>Platforms:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
                         print '<a href="' . $_SERVER['PHP_SELF'] . '?by=platform&amp;substr=' . urlencode($nrow[0]) . '">'
