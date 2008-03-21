@@ -83,35 +83,36 @@
     /* If valid criteria is specified (by set and a valid substring, or by set to all) we poll the db and display the results */
     if ($by && ($substr || $by == 'all')) {
         $fields = 'name, path, version, description';
-        $tables = $portsdb_name . '.portfiles AS p';
-        if ($by == 'name') {
+        $tables = "$portsdb_name.portfiles AS p";
+        switch ($by) {
+        case 'name':
             $criteria = 'p.name LIKE \'%' . mysql_real_escape_string($substr) . '%\'';
-        }
-        if ($by == 'category') {
-            $tables .= ', ' . $portsdb_name . '.categories AS c';
+            break;
+        case 'category':
+            $tables .= ", $portsdb_name.categories AS c";
             $criteria = 'c.portfile = p.name AND c.category = \'' . mysql_real_escape_string($substr) . '\'';
-        }
-        if ($by == 'maintainer') {
-            $tables .= ', ' . $portsdb_name . '.maintainers AS m';
+            break;
+        case 'maintainer':
+            $tables .= ", $portsdb_name.maintainers AS m";
             $criteria = 'm.portfile = p.name AND m.maintainer LIKE \'%' . mysql_real_escape_string($substr) . '%\'';
-        }
-        if ($by == 'library') {
+            break;
+        case 'library':
             $criteria = 'p.name = \'' . mysql_real_escape_string($substr) . '\'';
-        }
-        if ($by == 'variant') {
-            $tables .= ', ' . $portsdb_name . '.variants AS v';
+            break;
+        case 'variant':
+            $tables .= ", $portsdb_name.variants AS v";
             $criteria = 'v.portfile = p.name AND v.variant = \'' . mysql_real_escape_string($substr) . '\'';
-        }
-        if ($by == 'platform') {
-            $tables .= ', ' . $portsdb_name . '.platforms AS pl';
+            break;
+        case 'platform':
+            $tables .= ", $portsdb_name.platforms AS pl";
             $criteria = 'pl.portfile = p.name AND pl.platform = \'' . mysql_real_escape_string($substr) . '\'';
+            break;
+        case 'all':
+            $criteria = '';
+            break;
         }
-        if ($criteria == '') {
-            $where = '';
-        } else {
-            $where = 'WHERE ' . $criteria;
-        }
-        $query = 'SELECT DISTINCT ' . $fields . ' FROM ' . $tables . ' ' . $where . 'ORDER BY name';
+        $where = ($criteria == '' ? '' : "WHERE $criteria");
+        $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
         $result = mysql_query($query);
         
         /* Main query sent to the DB */
