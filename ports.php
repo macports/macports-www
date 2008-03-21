@@ -138,7 +138,7 @@
                 if ($nresult) {
                     $primary = 1;
                     print '<i>Maintained by:</i>';
-                    while ($nrow = mysql_fetch_array($nresult)) {
+                    while ($nrow = mysql_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
                         print obfuscate_email($nrow[0]);;
@@ -154,11 +154,11 @@
                 if ($nresult) {
                     $primary = 1;
                     print '<br /><i>Categories:</i>';
-                    while ($nrow = mysql_fetch_assoc($nresult)) {
+                    while ($nrow = mysql_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
-                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($nrow['category']) . '">'
-                        . htmlspecialchars($nrow['category']) . '</a>';
+                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($nrow[0]) . '">'
+                        . htmlspecialchars($nrow[0]) . '</a>';
                         if ($primary) { print '</b>'; }
                         $primary = 0;
                     }
@@ -170,7 +170,7 @@
                 $nresult = mysql_query($nquery);
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<br /><i>Platforms:</i> ';
-                    while ($nrow = mysql_fetch_array($nresult)) {
+                    while ($nrow = mysql_fetch_row($nresult)) {
                         print '<a href="' . $_SERVER['PHP_SELF'] . '?by=platform&amp;substr=' . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
@@ -182,7 +182,7 @@
                 $nresult = mysql_query($nquery);
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<br /><i>Dependencies:</i> ';
-                    while ($nrow = mysql_fetch_array($nresult)) {
+                    while ($nrow = mysql_fetch_row($nresult)) {
                         // lib:libpng.3:libpng -> libpng
                         // might need adapting to the new port: depspec
                         $library = eregi_replace('^([^:]*:[^:]*:|[^:]*:)', '', $nrow[0]);
@@ -197,7 +197,7 @@
                 $nresult = mysql_query($nquery);
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<br /><i>Variants:</i> ';
-                    while ($nrow = mysql_fetch_array($nresult)) {
+                    while ($nrow = mysql_fetch_row($nresult)) {
                         print '<a href="' . $_SERVER['PHP_SELF'] . '?by=variant&amp;substr=' . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
