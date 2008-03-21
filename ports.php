@@ -183,8 +183,6 @@
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<br /><i>Dependencies:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
-                        // lib:libpng.3:libpng -> libpng
-                        // might need adapting to the new port: depspec
                         $library = eregi_replace('^([^:]*:[^:]*:|[^:]*:)', '', $nrow[0]);
                         print '<a href="' . $_SERVER['PHP_SELF'] . '?by=library&amp;substr=' . urlencode($library) . '">'
                         . htmlspecialchars($library) . '</a> ';
