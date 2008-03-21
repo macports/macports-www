@@ -133,76 +133,76 @@
                 
                 /* Maintainers */
                 $nquery = 'SELECT maintainer FROM ' . $portsdb_name . '.maintainers WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
-                    '\' ORDER BY is_primary DESC, maintainer';
-                    $nresult = mysql_query($nquery);
-                    if ($nresult) {
-                        $primary = 1;
-                        print '<i>Maintained by:</i>';
-                        while ($nrow = mysql_fetch_array($nresult)) {
-                            if ($primary) { print ' <b>'; }
-                            else { print ' '; }
-                            print obfuscate_email($nrow[0]);;
-                            if ($primary) { print '</b>'; }
-                            $primary = 0;
-                        }
+                '\' ORDER BY is_primary DESC, maintainer';
+                $nresult = mysql_query($nquery);
+                if ($nresult) {
+                    $primary = 1;
+                    print '<i>Maintained by:</i>';
+                    while ($nrow = mysql_fetch_array($nresult)) {
+                        if ($primary) { print ' <b>'; }
+                        else { print ' '; }
+                        print obfuscate_email($nrow[0]);;
+                        if ($primary) { print '</b>'; }
+                        $primary = 0;
                     }
+                }
 
-                    /* Categories */
-                    $nquery = 'SELECT category FROM ' . $portsdb_name . '.categories WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
-                    '\' ORDER BY is_primary DESC, category';
-                    $nresult = mysql_query($nquery);
-                    if ($nresult) {
-                        $primary = 1;
-                        print '<br /><i>Categories:</i>';
-                        while ($nrow = mysql_fetch_assoc($nresult)) {
-                            if ($primary) { print ' <b>'; }
-                            else { print ' '; }
-                            print '<a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($nrow['category']) . '">'
-                            . htmlspecialchars($nrow['category']) . '</a>';
-                            if ($primary) { print '</b>'; }
-                            $primary = 0;
-                        }
+                /* Categories */
+                $nquery = 'SELECT category FROM ' . $portsdb_name . '.categories WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
+                '\' ORDER BY is_primary DESC, category';
+                $nresult = mysql_query($nquery);
+                if ($nresult) {
+                    $primary = 1;
+                    print '<br /><i>Categories:</i>';
+                    while ($nrow = mysql_fetch_assoc($nresult)) {
+                        if ($primary) { print ' <b>'; }
+                        else { print ' '; }
+                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=category&amp;substr=' . urlencode($nrow['category']) . '">'
+                        . htmlspecialchars($nrow['category']) . '</a>';
+                        if ($primary) { print '</b>'; }
+                        $primary = 0;
                     }
+                }
 
-                    /* Platforms */
-                    $nquery = 'SELECT platform FROM ' . $portsdb_name . '.platforms WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
-                    '\' ORDER BY platform';
-                    $nresult = mysql_query($nquery);
-                    if ($nresult && mysql_num_rows($nresult) > 0) {
-                        print '<br /><i>Platforms:</i> ';
-                        while ($nrow = mysql_fetch_array($nresult)) {
-                            print '<a href="' . $_SERVER['PHP_SELF'] . '?by=platform&amp;substr=' . urlencode($nrow[0]) . '">'
-                            . htmlspecialchars($nrow[0]) . '</a> ';
-                        }
+                /* Platforms */
+                $nquery = 'SELECT platform FROM ' . $portsdb_name . '.platforms WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
+                '\' ORDER BY platform';
+                $nresult = mysql_query($nquery);
+                if ($nresult && mysql_num_rows($nresult) > 0) {
+                    print '<br /><i>Platforms:</i> ';
+                    while ($nrow = mysql_fetch_array($nresult)) {
+                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=platform&amp;substr=' . urlencode($nrow[0]) . '">'
+                        . htmlspecialchars($nrow[0]) . '</a> ';
                     }
+                }
 
-                    /* Dependencies */
-                    $nquery = 'SELECT library FROM ' . $portsdb_name . '.dependencies WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
-                    '\' ORDER BY library';
-                    $nresult = mysql_query($nquery);
-                    if ($nresult && mysql_num_rows($nresult) > 0) {
-                        print '<br /><i>Dependencies:</i> ';
-                        while ($nrow = mysql_fetch_array($nresult)) {
-                            // lib:libpng.3:libpng -> libpng
-                            // might need adapting to the new port: depspec
-                            $library = eregi_replace('^([^:]*:[^:]*:|[^:]*:)', '', $nrow[0]);
-                            print '<a href="' . $_SERVER['PHP_SELF'] . '?by=library&amp;substr=' . urlencode($library) . '">'
-                            . htmlspecialchars($library) . '</a> ';
-                        }
+                /* Dependencies */
+                $nquery = 'SELECT library FROM ' . $portsdb_name . '.dependencies WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
+                '\' ORDER BY library';
+                $nresult = mysql_query($nquery);
+                if ($nresult && mysql_num_rows($nresult) > 0) {
+                    print '<br /><i>Dependencies:</i> ';
+                    while ($nrow = mysql_fetch_array($nresult)) {
+                        // lib:libpng.3:libpng -> libpng
+                        // might need adapting to the new port: depspec
+                        $library = eregi_replace('^([^:]*:[^:]*:|[^:]*:)', '', $nrow[0]);
+                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=library&amp;substr=' . urlencode($library) . '">'
+                        . htmlspecialchars($library) . '</a> ';
                     }
+                }
 
-                    /* Variants */
-                    $nquery = 'SELECT variant FROM ' . $portsdb_name . '.variants WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
-                    '\' ORDER BY variant';
-                    $nresult = mysql_query($nquery);
-                    if ($nresult && mysql_num_rows($nresult) > 0) {
-                        print '<br /><i>Variants:</i> ';
-                        while ($nrow = mysql_fetch_array($nresult)) {
-                            print '<a href="' . $_SERVER['PHP_SELF'] . '?by=variant&amp;substr=' . urlencode($nrow[0]) . '">'
-                            . htmlspecialchars($nrow[0]) . '</a> ';
-                        }
+                /* Variants */
+                $nquery = 'SELECT variant FROM ' . $portsdb_name . '.variants WHERE portfile=\'' . mysql_real_escape_string($row['name']) .
+                '\' ORDER BY variant';
+                $nresult = mysql_query($nquery);
+                if ($nresult && mysql_num_rows($nresult) > 0) {
+                    print '<br /><i>Variants:</i> ';
+                    while ($nrow = mysql_fetch_array($nresult)) {
+                        print '<a href="' . $_SERVER['PHP_SELF'] . '?by=variant&amp;substr=' . urlencode($nrow[0]) . '">'
+                        . htmlspecialchars($nrow[0]) . '</a> ';
                     }
-                    print '<br /><br /></dd>';
+                }
+                print '<br /><br /></dd>';
                 
             } /* while (listing of macthing ports) */
             print '</dl>';
