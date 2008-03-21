@@ -20,8 +20,8 @@
     }
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
-    $page = isset($_GET['page']) ? max($_GET['page'], 0) : '';
-    $pagesize = isset($_GET['pagesize']) ? max($_GET['pagesize'], 0) : 50; # arbitrary setting
+    $page = isset($_GET['page']) ? max($_GET['page'], 1) : '1';
+    $pagesize = isset($_GET['pagesize']) ? max($_GET['pagesize'], 1) : 50; # arbitrary setting
 
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
 ?>
@@ -121,7 +121,7 @@
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
         if ($paging) {
-            $offset = $pagesize * $page;
+            $offset = $pagesize * ($page-1);
             $query .= " LIMIT $pagesize OFFSET $offset";
             # get the total count
             $countquery = "SELECT COUNT(*) FROM $tables $where ORDER By name";
@@ -131,8 +131,8 @@
             $pagecount = ceil($totalcount / $pagesize);
             # generate a paging control and cache it so we can show it twice
             $pagecontrol = "<p>Page ";
-            for ($i = 0; $i < $pagecount; $i++) {
-                if ($i != 0) {
+            for ($i = 1; $i <= $pagecount; $i++) {
+                if ($i != 1) {
                     $pagecontrol .= " | ";
                 }
                 if ($i == $page) {
