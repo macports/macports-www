@@ -128,7 +128,7 @@ function print_add_headline() {
   if(!$_POST['submit']) {
     echo "<p>Use the form below to add project news.</p>\n\n";
     echo "<form action=\"$PHP_SELF\" method=\"post\">\n";
-    echo "<p>Title:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
+    echo "<p>Title:&#160;&#160;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
     echo "<p>News:</p>\n";
     echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\"></textarea></p>\n";
     echo "<p><input type=\"submit\" name=\"submit\" value=\"Submit\" /></p>\n";
@@ -184,7 +184,7 @@ function print_edit_headline($id) {
       $row = mysql_fetch_object($result);
       echo "<p>Use the form below to edit project news.</p>\n\n";
       echo "<form action=\"$PHP_SELF?id=$id\" method=\"post\">\n";
-      echo "<p>Title:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
+      echo "<p>Title:&#160;&#160;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
       echo "<p>News:</p>\n";
       echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\">";
       echo htmlentities($row->news);
@@ -245,7 +245,7 @@ function print_all_headlines() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
+      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&#160;&#160;$row->f_timestamp&#160;&#160;|&#160;&#160;<a href=\"edit.php?id=$row->id\">edit</a></p>\n\n";
     }
   }
   else {
@@ -267,7 +267,7 @@ function print_all_headlines_nonadmin() {
   }
   if(mysql_num_rows($result) > 0) {
     while($row = mysql_fetch_object($result)) {
-      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+      echo "<p><a href=\"/it/archives.php?id=$row->id\">$row->title</a><br />&#160;&#160;$row->f_timestamp</p>\n\n";
     }
   }
   else {

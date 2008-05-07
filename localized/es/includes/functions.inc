@@ -130,7 +130,7 @@ mysql_select_db($db);
 			if (!$_POST['submit']) {
 				echo "<p>Utilice el formulario que se presenta abajo para agregar noticias del proyecto.</p>\n\n";
 				echo "<form action=\"$PHP_SELF\" method=\"post\">\n";
-				echo "<p>Título:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
+				echo "<p>Título:&#160;&#160;<input type=\"text\" name=\"title\" size=\"40\" /></p>\n";
 				echo "<p>Noticias:</p>\n";
 				echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\"></textarea></p>\n";
 				echo "<p><input type=\"submit\" name=\"submit\" value=\"Remitir\" /></p>\n";
@@ -185,7 +185,7 @@ mysql_select_db($db);
 					$row = mysql_fetch_object($result);
 					echo "<p>Use el formulario abajo mostrado para editar las noticias del proyecto.</p>\n\n";
 					echo "<form action=\"$PHP_SELF?id=$id\" method=\"post\">\n";
-					echo "<p>Título:&nbsp;&nbsp;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
+					echo "<p>Título:&#160;&#160;<input type=\"text\" name=\"title\" size=\"40\" value=\"$row->title\" /></p>\n";
 					echo "<p>Noticias:</p>\n";
 					echo "<p><textarea name=\"news\" cols=\"70\" rows=\"20\">";
 					echo htmlentities($row->news);
@@ -242,7 +242,7 @@ mysql_select_db($db);
 			}
 			if (mysql_num_rows($result) > 0) {
 				while ($row = mysql_fetch_object($result)) {
-					echo "<p><a href=\"/es/archives.php?id=$row->id.php\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp&nbsp;&nbsp;|&nbsp;&nbsp;<a href=\"edit.php?id=$row->id\">editar</a></p>\n\n";
+					echo "<p><a href=\"/es/archives.php?id=$row->id.php\">$row->title</a><br />&#160;&#160;$row->f_timestamp&#160;&#160;|&#160;&#160;<a href=\"edit.php?id=$row->id\">editar</a></p>\n\n";
 				}
 			} else {
 				echo "<p>No hay titulares disponibles.</p>\n\n";
@@ -264,7 +264,7 @@ function print_all_headlines_nonadmin() {
 	 }
 	 if (mysql_num_rows($result)>0) {
 	    while ($row = mysql_fetch_object($result)) {
-		  echo "<p><a href=\"/es/archives.php?id=$row->id\">$row->title</a><br />&nbsp&nbsp;$row->f_timestamp</p>\n\n";
+		  echo "<p><a href=\"/es/archives.php?id=$row->id\">$row->title</a><br />&#160;&#160;$row->f_timestamp</p>\n\n";
 		}
 	} else {
 		  echo "<p>No hay titulares disponibles.</p>\n\n";

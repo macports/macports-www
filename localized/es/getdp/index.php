@@ -45,7 +45,7 @@
 
 		<p>Aunque no es estrictamente necesario, se recomienda de todas formas sincronizar la reciente
 		instalación de DarwinPorts con nuestro servidor de rsync para asegurar la disponibilidad de
-		la última versión de la infraestructura de DarwinPorts y de los &ldquo;Portfiles&rdquo; que
+		la última versión de la infraestructura de DarwinPorts y de los &#8220;Portfiles&#8221; que
 		que contienen las instrucciones empleadas en la compilación e instalación de portes.
 		Para lograr esto, simplemente ejecute:</p>
 
@@ -58,9 +58,9 @@
 
 		<p>Si en cambio Ud. desea instalar DarwinPorts a partir de su código fuente, hay todavía un par de
 		cosas que deberá hacer después de bajar el paquete tar antes de poder instalar un porte a través de DarwinPorts,
-		compilar e instalar DarwinPorts en sí. &ldquo;<kbd>cd</kbd>&rdquo; al directorio al cual bajó el tar y corra
-		&ldquo;<kbd>tar xjvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">DarwinPorts-<? print "$dp_version"; ?>.tar.bz2</a></kbd>&rdquo;
-		o &ldquo;<kbd>tar xzvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">DarwinPorts-<? print "$dp_version"; ?>.tar.gz</a></kbd>&rdquo;,
+		compilar e instalar DarwinPorts en sí. &#8220;<kbd>cd</kbd>&#8221; al directorio al cual bajó el tar y corra
+		&#8220;<kbd>tar xjvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.bz2">DarwinPorts-<? print "$dp_version"; ?>.tar.bz2</a></kbd>&#8221;
+		o &#8220;<kbd>tar xzvf <a href="/downloads/DarwinPorts-<? print "$dp_version"; ?>.tar.gz">DarwinPorts-<? print "$dp_version"; ?>.tar.gz</a></kbd>&#8221;,
 		dependiendo de si bajó el tar bz2 o el gz, respectivamente. Esto desempaquetará las fuentes de DarwinPorts
 		que procederá a compilar e instalar. Para esto, ejecute lo siguiente:</p>
 
@@ -73,11 +73,11 @@
 		<pre>cd ../
 rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
 
-		<p>Estos pasos deben ser ejecutados desde una cuenta administradora, de la cual &ldquo;<kbd>sudo</kbd>&rdquo;
+		<p>Estos pasos deben ser ejecutados desde una cuenta administradora, de la cual &#8220;<kbd>sudo</kbd>&#8221;
 		pedirá el password al momento de instalar. Este procedimiento creará una instalación standard de DarwinPorts
 		en su sistema y, si los pasos opcionales son ejecutados también, removerá las ahora innecesarias fuentes de
 		DarwinPorts y el correspondiente paquete tar. Para personalizar su instalación debe leer el output de
-		&ldquo;<kbd>./configure --help | more</kbd>&rdquo; y pasar las opciones apropiadas al script de configuración
+		&#8220;<kbd>./configure --help | more</kbd>&#8221; y pasar las opciones apropiadas al script de configuración
 		en los pasos arriba detallados.</p>
 
 		<p>Deberá adaptar los documentos de configuración de su shell para encontrar los programas instalados por
@@ -88,7 +88,7 @@ rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
 		<p>Al completar, DarwinPorts estará listo para instalar portes. Nuevamente, es recomendado ejecutar el comando
 		anterior regularmente para mantener su instalación siempre al día.</p>
 
-		<p>También puede referirse al documento &ldquo;<tt>README_RELEASE1.es</tt>&rdquo; contenido en los paquetes tar de las fuentes
+		<p>También puede referirse al documento &#8220;<tt>README_RELEASE1.es</tt>&#8221; contenido en los paquetes tar de las fuentes
 		<? print "$dp_version"; ?> de DarwinPorts para instrucciones básicas de instalación y uso.</p>
 
 		<h5 class="subhdr">Ayuda</h5>
@@ -100,7 +100,7 @@ rm -rf DarwinPorts-<? print "$dp_version"; ?>*</pre>
 		<p>Si Ud. es un programador o un usuario que desea mantenerse siempre al día con los últimos cambios y adiciones
 		a DarwinPorts, puede adquirir las fuentes del proyecto a través de CVS.</p>
 
-		<p>Use los siguientes comandos para realizar el &ldquo;checkout&rdquo; del proyecto del
+		<p>Use los siguientes comandos para realizar el &#8220;checkout&#8221; del proyecto del
 		repositorio anónimo CVS de OpenDarwin:</p>
 		
 		<pre>cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od login
@@ -111,9 +111,9 @@ cvs -d :pserver:anonymous@anoncvs.opendarwin.org:/Volumes/src/cvs/od co -P darwi
 		
 		<p>Si no se quiere molestar con CVS para obtener las fuentes en primera instancia, puede bajar el <a href="/downloads/darwinports-nightly-cvs-snapshot.tar.gz">
 		snapshot nocturno</a> de éstas y, una vez extraído, mantenerlo actualizado con los comandos de CVS de costumbre,
-		&ldquo;<kbd>cvs update</kbd>&rdquo;.</p>
+		&#8220;<kbd>cvs update</kbd>&#8221;.</p>
 		
-		<p>Si desea simplemente ver el repositorio CVS sin realizar un &ldquo;checkout&rdquo;,
+		<p>Si desea simplemente ver el repositorio CVS sin realizar un &#8220;checkout&#8221;,
 		lo puede hacer vía <a href="http://www.opendarwin.org/cgi-bin/cvsweb.cgi/proj/darwinports/">CVSweb</a>.</p>
 	
 	</div>

@@ -21,7 +21,7 @@
     . '#using'; ?>">compiling and installing</a> open-source software on your Mac.</p>
     
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
-    without splitting them into &ldquo;stable&rdquo; Vs. &ldquo;unstable&rdquo; branches, targetting mainly the current Mac OS
+    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targetting mainly the current Mac OS
     X release (10.5, A.K.A Leopard) and the immediately previous one (10.4, A.K.A. Tiger). There are currently <a href="ports.php">
     <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
     different categories, and more are being added on a regular basis.</p>
@@ -43,7 +43,7 @@
     <h3 class="subhdr">Getting involved</h3>
     
     <p>There are many ways you can get involved with MacPorts and peer users, system administrators &amp; developers alike.
-    Browse over to the &ldquo;<a href="contact.php">Contact Us</a>&rdquo; section of our site and:</p>
+    Browse over to the &#8220;<a href="contact.php">Contact Us</a>&#8221; section of our site and:</p>
     
     <ul>
         <li>Explore our <a href="contact.php#Lists">mailing lists</a>, either if it is for some general user support or to 
@@ -55,7 +55,7 @@
     </ul>
 
     <p>If on the other hand you are interested in joining The MacPorts Project in any way, then don't hesitate to contact the
-    project's management team, &ldquo;<a href="contact.php#PortMgr">PortMgr</a>&rdquo;, to explain your particular interest
+    project's management team, &#8220;<a href="contact.php#PortMgr">PortMgr</a>&#8221;, to explain your particular interest
     and present a formal application. We're always looking for more helping hands that can extend and improve our ports tree
     and documentation, or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging
     field. We're eager to hear from you!</p>

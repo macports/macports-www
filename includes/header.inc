@@ -44,7 +44,7 @@
             <span id="languages">
                 <a href="#"><img src="img/fr-disabled.png" alt="Fran&#xE7;ais" /></a>
                 <a href="#"><img src="img/es-disabled.png" alt="Espa&#xF1;ol" /></a>
-                <a href="#"><img src="img/ru-disabled.png" alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&nbsp;(Russkij)"/></a>
+                <a href="#"><img src="img/ru-disabled.png" alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&#160;(Russkij)"/></a>
                 <a href="#"><img src="img/it-disabled.png" alt="Italiano" /></a>
             </span>
         </div>

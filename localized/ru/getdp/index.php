@@ -8,7 +8,7 @@
       <h2 class="hdr">Получить DarwinPorts</h2>
 
       <p>Для того, что-бы получить дистрибутив DarwinPorts, сначала необходимо
-      сделать &ldquo;checked out&rdquo; из CVS репозитария проекта OpenDarwin.</p>
+      сделать &#8220;checked out&#8221; из CVS репозитария проекта OpenDarwin.</p>
 
       <p>Пожалуйста, имейте ввиду, что для получения и установки DarwinPorts на
       систему Mac OS X, у Вас должны быть установлены Mac OS X Developer Tools (

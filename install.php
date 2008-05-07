@@ -17,7 +17,7 @@
     </p>
 
     <ul>
-        <li>&ldquo;dmg&rdquo; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
+        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
         href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)
         </a> as a legacy platform, containing pkg installers for use with the Mac OS X Installer. By far the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
@@ -43,14 +43,14 @@
             <li>Apple's <a href="https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=19897">
             Xcode 3.0</a> Developer Tools for the Leopard platform or 2.4.1 for Tiger, found at the <a href="http://developer.apple.com/tools/xcode/">
             Apple Developer Connection</a> site or on your Mac OS X installation CDs/DVD.</li>
-            <li>The X11 windowing environment (A.K.A. &ldquo;X11 User&rdquo;) and its related SDK package (&ldquo;X11SDK&rdquo;)
+            <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;) and its related SDK package (&#8220;X11SDK&#8221;)
             for ports that depend on the functionality they provide to compile and run.
                 <ul>
-                    <li>the &ldquo;X11 User&rdquo; package is an optional installation on your system CDs/DVD for Panther and
-                    Tiger, enabled through the &ldquo;Customize&rdquo; button of the installer, whereas it is included by default
+                    <li>the &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for Panther and
+                    Tiger, enabled through the &#8220;Customize&#8221; button of the installer, whereas it is included by default
                     on Leopard.</li>
-                    <li>the &ldquo;X11 SDK&rdquo; package from the Xcode installer will be automatically selected if &ldquo;X11
-                    User&rdquo; is already installed, so be sure to install that first.</li>
+                    <li>the &#8220;X11 SDK&#8221; package from the Xcode installer will be automatically selected if &#8220;X11
+                    User&#8221; is already installed, so be sure to install that first.</li>
                 </ul>
             </li>
         </ol>
@@ -70,8 +70,8 @@
     the installer</a> to include the necessary settings to run MacPorts and the programs it installs, but you may need to
     open a new shell for these changes to take effect.</p>
 
-    <p>The MacPorts &ldquo;<kbd>selfupdate</kbd>&rdquo; command will also be run for you by the installer to ensure you have our
-    latest available release and the latest revisions to the &ldquo;Portfiles&rdquo; that contain the instructions employed
+    <p>The MacPorts &#8220;<kbd>selfupdate</kbd>&#8221; command will also be run for you by the installer to ensure you have our
+    latest available release and the latest revisions to the &#8220;Portfiles&#8221; that contain the instructions employed
     in the building and installation of ports. After installation is done, it is recommended that you run this step manually
     on a regular basis to to keep your MacPorts system always current:</p>
     
@@ -79,7 +79,7 @@
 
     <p>At this point you should be ready to enjoy MacPorts!</p>
 
-    <p>Type &ldquo;<kbd>man port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print
+    <p>Type &#8220;<kbd>man port</kbd>&#8221; at the command line prompt and/or browse over to our <a href="<?php print
     $guide_url; ?>">Guide</a> to find out more information about using MacPorts. <a href="#help">Help</a> is also available.
     </p>
 
@@ -91,9 +91,9 @@
 
 
     <ol>
-        <li>&ldquo;<kbd>cd</kbd>&rdquo; into the directory where you downloaded the package and run &ldquo;<kbd>tar xjvf
-        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.bz2</a></kbd>&rdquo; or
-        &ldquo;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.gz</a></kbd>&rdquo;,
+        <li>&#8220;<kbd>cd</kbd>&#8221; into the directory where you downloaded the package and run &#8220;<kbd>tar xjvf
+        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.bz2</a></kbd>&#8221; or
+        &#8220;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.gz</a></kbd>&#8221;,
         depending on whether you downloaded the bz2 tarball or the gz one, respectively.</li>
         <li>Build and install the recently unpacked sources:
             <ul>
@@ -109,11 +109,11 @@
         </li>
     </ol>
 
-    <p>These steps need to be perfomed from an administrator account, for which &ldquo;<kbd>sudo</kbd>&rdquo; will ask the
+    <p>These steps need to be perfomed from an administrator account, for which &#8220;<kbd>sudo</kbd>&#8221; will ask the
     password upon installation. This procedure will install a pristine MacPorts system and, if the optional steps are taken,
     remove the as of now unnecessary MacPorts-<?php print $macports_version_major; ?> source directory and corresponding tarball.</p>
 
-    <p>To customize your installation you should read the output of &ldquo;<kbd>./configure --help | more</kbd>&rdquo; and
+    <p>To customize your installation you should read the output of &#8220;<kbd>./configure --help | more</kbd>&#8221; and
     pass the appropriate options for the settings you wish to tweak to the configuration script in the steps detailed above.</p>
 	
     <p>You will need to manually adapt your shell's environment to work with MacPorts and your chosen installation <kbd>
@@ -136,8 +136,8 @@
 
     <p>Upon completion MacPorts will be ready to install ports!</p>
 
-    <p>It is recommended to run the above command on a regular basis to keep your installation current. Type &ldquo;<kbd>man
-    port</kbd>&rdquo; at the command line prompt and/or browse over to our <a href="<?php print $guide_url; ?>">Guide</a> to
+    <p>It is recommended to run the above command on a regular basis to keep your installation current. Type &#8220;<kbd>man
+    port</kbd>&#8221; at the command line prompt and/or browse over to our <a href="<?php print $guide_url; ?>">Guide</a> to
     find out more information about using MacPorts. <a href="#help">Help</a> is also available.</p>
 
 
@@ -146,8 +146,8 @@
     <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes and feature additions,
     you may acquire the MacPorts sources through SVN.</p>
 
-    <p>Use the following command to check the project's &ldquo;trunk&rdquo; out of the MacPorts anonymous subversion repository,
-    containing all of our source modules (MacPorts' &ldquo;base&rdquo;, the ports tree and all of documentation in raw form):</p>
+    <p>Use the following command to check the project's &#8220;trunk&#8221; out of the MacPorts anonymous subversion repository,
+    containing all of our source modules (MacPorts' &#8220;base&#8221;, the ports tree and all of documentation in raw form):</p>
 
     <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
 
