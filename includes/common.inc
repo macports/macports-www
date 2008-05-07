@@ -16,7 +16,7 @@ $macports_version_latest = '1.6.0';
 ######################################################################
 
 # Some useful URL abstractions:
-$trac_url = 'http://trac.macports.org/projects/macports/';
+$trac_url = 'http://trac.macports.org/';
 $svn_url = 'http://svn.macports.org/repository/macports/';
 $downloads = $svn_url . 'downloads/MacPorts-' . $macports_version_major . '/';
 $leopard_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.5-Leopard.dmg';
