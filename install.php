@@ -154,7 +154,7 @@
     <p>Purpose-specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
 
     <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
-    href="http://trac.macports.org/projects/macports/browser">Trac source browser</a>.</p>
+    href="http://trac.macports.org/browser">Trac source browser</a>.</p>
     
     
     <h3 class="subhdr" id="selfupdate">Selfupdate</h3>
