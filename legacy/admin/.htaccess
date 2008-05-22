@@ -1,4 +1,0 @@
-AuthName "MacPorts Site Administration"
-AuthType Basic
-AuthUserFile /var/db/macports/mpadmin-htpasswd
-require valid-user
