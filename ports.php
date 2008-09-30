@@ -164,7 +164,7 @@
                  $row = mysql_fetch_assoc($result), $i++) {
 
                 /* Port name and Portfile URL */
-                print "<dt><b><a href=\"${trac_url}browser/trunk/dports/" . urlencode($row['path']) . "/Portfile\">" . htmlspecialchars($row['name'])
+                print "<dt><b><a href=\"${trac_url}browser/trunk/dports/" . $row['path'] . "/Portfile\">" . htmlspecialchars($row['name'])
                 . '</a></b> ' . htmlspecialchars($row['version']) . '</dt>';
                 
                 print '<dd>';
@@ -181,7 +181,7 @@
                     while ($nrow = mysql_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
-                        print htmlspecialchars(obfuscate_email($nrow[0]));
+                        print obfuscate_email($nrow[0]);
                         if ($primary) { print '</b>'; }
                         $primary = 0;
                     }
