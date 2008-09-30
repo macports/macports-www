@@ -78,14 +78,14 @@ function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
                 );
                 break;
             case "ports.php":
-                print "
-                    <div id='content'>
+                print '
+                    <div id="content">
                         
-                        <h2 class='hdr'>MacPorts Portfiles</h2>
+                        <h2 class="hdr">MacPorts Portfiles</h2>
                         <p>Our database is currently unavailable. We hope to have it back soon!</p>
                         
                     </div>
-                ";
+                ';
             default:
                 print_footer();
                 die();
@@ -143,8 +143,7 @@ function categories_count() {
 # Obfuscate e-mail addresses:
 function obfuscate_email($email) {
     $IMGDIR = '/img';
-    
-    return "<span class='email'>" . str_replace('@', "<img src='$IMGDIR/at.gif' alt='at' />", $email) . "</span>";
+    return '<span class="email">' . str_replace('@', "<img src=\"$IMGDIR/at.gif\" alt=\"at\" />", $email) . '</span>';
 }
 
 
