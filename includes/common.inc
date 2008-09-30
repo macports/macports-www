@@ -141,9 +141,11 @@ function categories_count() {
 ######################################################################
 
 # Obfuscate e-mail addresses:
+# Input: e-mail address in plain text
+# Output: obfuscated e-mail address in HTML
 function obfuscate_email($email) {
     $IMGDIR = '/img';
-    return '<span class="email">' . str_replace('@', "<img src=\"$IMGDIR/at.gif\" alt=\"at\" />", $email) . '</span>';
+    return '<span class="email">' . str_replace('@', "<img src=\"$IMGDIR/at.gif\" alt=\"at\" />", htmlspecialchars($email)) . '</span>';
 }
 
 
