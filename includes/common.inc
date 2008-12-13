@@ -42,8 +42,15 @@ $portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/po
 # Page header:
 function print_header($title, $encoding) {
     global $MPWEB, $trac_url, $svn_url, $downloads, $guide_url;
-    
-    header("Content-Type: application/xhtml+xml; charset=$encoding");
+
+    require_once 'AcceptMime.class.php';
+    $accept_mime = new AcceptMime();
+    $mime_type = "text/html";
+    if ($accept_mime->acceptable("application/xhtml+xml")) {
+        $mime_type = "application/xhtml+xml";
+    }
+    header("Content-Type: $mime_type; charset=$encoding");
+
     include("$MPWEB/includes/header.inc");
     print_warnings();
 }
