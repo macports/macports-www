@@ -2,8 +2,7 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
     /* $Id$ */
     /* Copyright (c) 2007, The MacPorts Project. */
-    $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
-    include_once("$MPWEB/includes/common.inc");
+    include_once("includes/common.inc");
     print_header('The MacPorts Project -- Contact Us', 'utf-8');
 ?>
 

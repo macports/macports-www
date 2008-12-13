@@ -3,8 +3,7 @@
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
-    $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
-    include_once("$MPWEB/includes/common.inc");
+    include_once("includes/common.inc");
     print_header('The MacPorts Project -- Download &amp; Installation', 'utf-8');
 ?>
 

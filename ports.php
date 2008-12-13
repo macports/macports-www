@@ -5,8 +5,7 @@
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
     
-    $MPWEB = $_SERVER['DOCUMENT_ROOT'] . dirname($_SERVER['SCRIPT_NAME']);
-    include_once("$MPWEB/includes/common.inc");
+    include_once("includes/common.inc");
     
     $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
     $sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb_name.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";

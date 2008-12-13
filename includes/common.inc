@@ -41,7 +41,7 @@ $portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/po
 
 # Page header:
 function print_header($title, $encoding) {
-    global $MPWEB, $trac_url, $svn_url, $downloads, $guide_url;
+    global $trac_url, $svn_url, $downloads, $guide_url;
 
     require_once 'AcceptMime.class.php';
     $accept_mime = new AcceptMime();
@@ -51,7 +51,7 @@ function print_header($title, $encoding) {
     }
     header("Content-Type: $mime_type; charset=$encoding");
 
-    include("$MPWEB/includes/header.inc");
+    include("header.inc");
     print_warnings();
 }
 
@@ -60,9 +60,7 @@ function print_header($title, $encoding) {
 
 # Print some useful warnings:
 function print_warnings() {
-    global $MPWEB;
-    
-    include("$MPWEB/includes/warnings.inc");
+    include("warnings.inc");
 
 }
 
@@ -160,7 +158,5 @@ function obfuscate_email($email) {
 
 # Page footer:
 function print_footer() {
-    global $MPWEB;
-
-    include("$MPWEB/includes/footer.inc");
+    include("footer.inc");
 }
