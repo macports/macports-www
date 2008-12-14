@@ -9,8 +9,8 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_major = '1.6.0';
-$macports_version_latest = '1.6.0';
+$macports_version_major = '1.7.0';
+$macports_version_latest = '1.7.0';
 
 
 ######################################################################
