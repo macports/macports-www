@@ -109,7 +109,7 @@
     seamless read-only integration with our SVN repository through its <a href="<?php print $trac_url . 'browser'; ?>">
     source browser</a> and the project <a href="<?php print $trac_url . 'timeline'; ?>">timeline</a> (where ticket activity
     can also be viewed). Note that in order to interact with Trac for anything other than read only operations, you need
-    to <a href="https://www.macosforge.org/auth/register/">register</a> with Mac OS Forge for a Wordpress/Trac combined
+    to <a href="<?php print $trac_url . 'auth/register/'; ?>">register</a> with Mac OS Forge for a Wordpress/Trac combined
     account.</p>
 
     <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself, or
