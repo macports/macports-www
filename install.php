@@ -39,7 +39,7 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.0 or later for
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.1 or later for
             Leopard, or 2.4.1 or later for Tiger), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
             site or on your Mac OS X installation CDs/DVD.</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;) and its related SDK package (&#8220;X11SDK&#8221;)
