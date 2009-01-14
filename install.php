@@ -143,12 +143,7 @@
     <h3 class="subhdr" id="svn">SVN Sources</h3>
 
     <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes and feature additions,
-    you may acquire the MacPorts sources through SVN.</p>
-
-    <p>Use the following command to check the project's &#8220;trunk&#8221; out of the MacPorts anonymous subversion repository,
-    containing all of our source modules (MacPorts' &#8220;base&#8221;, the ports tree and all of documentation in raw form):</p>
-
-    <pre>svn co <?php print $svn_url . 'trunk'; ?></pre>
+    you may acquire the MacPorts sources through subversion. See the Guide section on <a href="<?php print $guide_url; ?>#installing.macports.subversion">installing from subversion</a></p>
 
     <p>Purpose-specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
 
