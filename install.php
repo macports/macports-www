@@ -143,7 +143,7 @@
     <h3 class="subhdr" id="svn">SVN Sources</h3>
 
     <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes and feature additions,
-    you may acquire the MacPorts sources through subversion. See the Guide section on <a href="<?php print $guide_url; ?>#installing.macports.subversion">installing from subversion</a></p>
+    you may acquire the MacPorts sources through subversion. See the Guide section on <a href="<?php print $guide_url; ?>#installing.macports.subversion">installing from subversion</a>.</p>
 
     <p>Purpose-specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
 
