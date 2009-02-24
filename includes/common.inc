@@ -72,7 +72,10 @@ function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
 
     $script = basename($_SERVER['PHP_SELF']);
     
-    $portsdb_connection = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
+    $portsdb_connection = FALSE;
+    if (function_exists('mysql_connect')) {
+        $portsdb_connection = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
+    }
     if ($portsdb_connection === FALSE) {
         switch ($script) {
             case "index.php":
