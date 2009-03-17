@@ -1,5 +1,5 @@
 <?php
-    /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=php:et:sw=4:ts=4:sts=4 */
+    /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* Web client to the PortIndex2MySQL script located in MacPorts base/portmgr/jobs svn directory. */
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
