@@ -39,6 +39,7 @@
         <div id="header">
 
             <a id="download" href="install.php"><span class="accessibility">Download MacPorts</span></a>
+<!--
             <span class="accessibility">View site in</span>
             <span><a href="#" id="language"><img src="img/en-enabled.png" alt="English" /></a></span>
             <span id="languages">
@@ -47,6 +48,7 @@
                 <a href="#"><img src="img/ru-disabled.png" alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&#160;(Russkij)"/></a>
                 <a href="#"><img src="img/it-disabled.png" alt="Italiano" /></a>
             </span>
+-->
         </div>
 
 
