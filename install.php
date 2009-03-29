@@ -12,7 +12,7 @@
 
     <h2 class="hdr">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $macports_version_major; ?> is available in various formats for download and installation:
+    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation:
     </p>
 
     <ul>
@@ -91,18 +91,18 @@
 
     <ol>
         <li>&#8220;<kbd>cd</kbd>&#8221; into the directory where you downloaded the package and run &#8220;<kbd>tar xjvf
-        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.bz2</a></kbd>&#8221; or
-        &#8220;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $macports_version_major; ?>.tar.gz</a></kbd>&#8221;,
+        <a href="<?php print $bz2_tarball; ?>">MacPorts-<?php print $macports_version_latest; ?>.tar.bz2</a></kbd>&#8221; or
+        &#8220;<kbd>tar xzvf <a href="<?php print $gz_tarball; ?>">MacPorts-<?php print $macports_version_latest; ?>.tar.gz</a></kbd>&#8221;,
         depending on whether you downloaded the bz2 tarball or the gz one, respectively.</li>
         <li>Build and install the recently unpacked sources:
             <ul>
-                <li><kbd>cd MacPorts-<?php print $macports_version_major; ?></kbd></li>
+                <li><kbd>cd MacPorts-<?php print $macports_version_latest; ?></kbd></li>
                 <li><kbd>./configure &amp;&amp; make &amp;&amp; sudo make install</kbd></li>
             </ul>
             Optionally:
             <ul>
                 <li><kbd>cd ../</kbd></li>
-                <li><kbd>rm -rf MacPorts-<?php print $macports_version_major; ?>*</kbd></li>
+                <li><kbd>rm -rf MacPorts-<?php print $macports_version_latest; ?>*</kbd></li>
             </ul>
             
         </li>
@@ -110,7 +110,7 @@
 
     <p>These steps need to be perfomed from an administrator account, for which &#8220;<kbd>sudo</kbd>&#8221; will ask the
     password upon installation. This procedure will install a pristine MacPorts system and, if the optional steps are taken,
-    remove the as of now unnecessary MacPorts-<?php print $macports_version_major; ?> source directory and corresponding tarball.</p>
+    remove the as of now unnecessary MacPorts-<?php print $macports_version_latest; ?> source directory and corresponding tarball.</p>
 
     <p>To customize your installation you should read the output of &#8220;<kbd>./configure --help | more</kbd>&#8221; and
     pass the appropriate options for the settings you wish to tweak to the configuration script in the steps detailed above.</p>

@@ -9,8 +9,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_major = '1.7.0';
-$macports_version_latest = '1.7.0';
+$macports_version_latest = '1.7.1';
 
 
 ######################################################################
@@ -18,13 +17,13 @@ $macports_version_latest = '1.7.0';
 # Some useful URL abstractions:
 $trac_url = 'http://trac.macports.org/';
 $svn_url = 'http://svn.macports.org/repository/macports/';
-$downloads = $svn_url . 'downloads/MacPorts-' . $macports_version_major . '/';
-$leopard_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.5-Leopard.dmg';
-$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.4-Tiger.dmg';
-$panther_dmg = $downloads . 'MacPorts-' . $macports_version_major . '-10.3-Panther.dmg';
-$bz2_tarball = $downloads . 'MacPorts-' . $macports_version_major . '.tar.bz2';
-$gz_tarball = $downloads . 'MacPorts-' . $macports_version_major . '.tar.gz';
-$checksums = $downloads .  'MacPorts-' . $macports_version_major . '.chk.txt';
+$downloads = $svn_url . 'downloads/MacPorts-' . $macports_version_latest . '/';
+$leopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.5-Leopard.dmg';
+$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
+$panther_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.3-Panther.dmg';
+$bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
+$gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
+$checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
 $guide_url = 'http://guide.macports.org/';
 
 
