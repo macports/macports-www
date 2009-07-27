@@ -117,7 +117,7 @@ function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
 function ports_count() {
     global $portsdb_name;
 
-    $result = mysql_query("SELECT COUNT(DISTINCT name) FROM $portsdb_name.portfiles") or die("Error: " . mysql_error());
+    $result = mysql_query("SELECT COUNT(DISTINCT name) FROM $portsdb_name.portfiles");
     if ($result) {
         $row = mysql_fetch_array($result);
         $count = $row[0];
@@ -134,7 +134,7 @@ function ports_count() {
 function categories_count() {
     global $portsdb_name;
 
-    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb_name.categories") or die ("Error: " . mysql_error());
+    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb_name.categories");
     if ($result) {
         $row = mysql_fetch_array($result);
         $count = $row[0];
