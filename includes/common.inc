@@ -85,14 +85,16 @@ function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
                 );
                 break;
             case "ports.php":
+		print_header("The MacPorts Project", "utf-8");
                 print '
                     <div id="content">
-                        
                         <h2 class="hdr">MacPorts Portfiles</h2>
                         <p>Our database is currently unavailable. We hope to have it back soon!</p>
-                        
                     </div>
                 ';
+		print_footer();
+		die();
+		break;
             default:
                 print_footer();
                 die();
