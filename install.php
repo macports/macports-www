@@ -39,18 +39,17 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.2 for Snow Leopard,
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.2 or later for Snow Leopard,
             3.1 or later for
             Leopard, or 2.4.1 or later for Tiger), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
             site or on your Mac OS X installation CDs/DVD.</li>
-            <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;) and its related SDK package (&#8220;X11SDK&#8221;)
-            for ports that depend on the functionality they provide to compile and run.
+            <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
+            for ports that depend on the functionality it provides to run.
                 <ul>
-                    <li>the &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for Panther and
+                    <li>The &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for
                     Tiger, enabled through the &#8220;Customize&#8221; button of the installer, whereas it is included by default
-                    on Leopard.</li>
-                    <li>the &#8220;X11 SDK&#8221; package from the Xcode installer will be automatically selected if &#8220;X11
-                    User&#8221; is already installed, so be sure to install that first.</li>
+                    on Leopard and Snow Leopard.</li>
+                    <li>You can use the xorg-server port instead of installing Apple's X11 package if you wish.</li>
                 </ul>
             </li>
         </ol>
@@ -171,7 +170,7 @@
     as GCC and X11):</p>
 
     <ul>
-        <li><a href="http://www.tcl.tk/">Tcl</a> (8.3 or 8.4), with threads.</li>
+        <li><a href="http://www.tcl.tk/">Tcl</a> (8.4 or 8.5), with threads.</li>
         <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation.</li>
         <li><b>mtree</b> for directory hierarchy.</li>
         <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports.</li>
