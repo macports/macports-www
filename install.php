@@ -16,8 +16,8 @@
     </p>
 
     <ul>
-        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $leopard_dmg; ?>">Leopard (Universal)</a>, <a
-        href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> and <a href="<?php print $panther_dmg; ?>">Panther (PowerPC)
+        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>, <a
+        href="<?php print $leopard_dmg; ?>">Leopard</a> and <a href="<?php print $tiger_dmg; ?>">Tiger
         </a> as a legacy platform, containing pkg installers for use with the Mac OS X Installer. By far the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>.</li>
@@ -39,7 +39,8 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.1 or later for
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.2 for Snow Leopard,
+            3.1 or later for
             Leopard, or 2.4.1 or later for Tiger), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
             site or on your Mac OS X installation CDs/DVD.</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;) and its related SDK package (&#8220;X11SDK&#8221;)
@@ -59,9 +60,9 @@
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $leopard_dmg;
-    ?>">Leopard (Universal)</a>, <a href="<?php print $tiger_dmg; ?>">Tiger (Universal)</a> or <a href="<?php print $panther_dmg;
-    ?>">Panther (PowerPC)</a>, respectively, and running the system's Installer by double-clicking on the pkg contained therein,
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $snowleopard_dmg;
+    ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a> or <a href="<?php print $tiger_dmg;
+    ?>">Tiger</a>, respectively, and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
