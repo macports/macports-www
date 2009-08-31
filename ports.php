@@ -46,6 +46,7 @@
 <!--                <option value="library"<?php if ($by == 'dependency') { print ' selected="selected"'; } ?>>Dependency</option> -->
                 <option value="variant"<?php if ($by == 'variant') { print ' selected="selected"'; } ?>>Variant</option>
                 <option value="platform"<?php if ($by == 'platform') { print ' selected="selected"'; } ?>>Platform</option>
+<!--                <option value="license"<?php if ($by == 'license') { print ' selected="selected"'; } ?>>License</option> -->
             </select>
             <input type="text" name="substr" size="40" />
             <input type="submit" value="Search" />
@@ -109,6 +110,12 @@
             $tables .= ", $portsdb_name.platforms AS pl";
             $criteria = "pl.portfile = p.name AND pl.platform = '" . mysql_real_escape_string($substr) . "'";
             break;
+/*
+        case 'license':
+            $tables .= ", $portsdb_name.licenses AS lc";
+            $criteria = "lc.portfile = p.name AND lc.license = '" . mysql_real_escape_string($substr) . "'";
+            break;
+*/
         case 'all':
             $criteria = '';
             break;
@@ -170,6 +177,19 @@
                 /* Port short description */
                 print htmlspecialchars($row['description']) . '<br />';
                 
+                /* Licenses */
+                $nquery = "SELECT license FROM $portsdb_name.licenses WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                "' ORDER BY license";
+                $nresult = mysql_query($nquery);
+                if ($nresult && mysql_num_rows($nresult) > 0) {
+                    print '<i>Licenses:</i> ';
+                    while ($nrow = mysql_fetch_row($nresult)) {
+                        print "<a href=\"$_SERVER[PHP_SELF]?by=license&amp;substr=" . urlencode($nrow[0]) . '">'
+                        . htmlspecialchars($nrow[0]) . '</a> ';
+                    }
+                    print "<br />";
+                }
+
                 /* Maintainers */
                 $nquery = "SELECT maintainer FROM $portsdb_name.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) .
                 "' ORDER BY is_primary DESC, maintainer";
@@ -239,8 +259,8 @@
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
                 }
+
                 print '<br /><br /></dd>';
-                
             } /* while (listing of macthing ports) */
             print '</dl>';
 
