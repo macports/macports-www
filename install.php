@@ -42,14 +42,15 @@
             <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.2 or later for Snow Leopard,
             3.1 or later for
             Leopard, or 2.4.1 or later for Tiger), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
-            site or on your Mac OS X installation CDs/DVD.</li>
+            site or on your Mac OS X installation CDs/DVD. Ensure that the optional components for command line development are installed
+            ("Unix Development" in the Xcode 3.x installer).</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
             for ports that depend on the functionality it provides to run.
                 <ul>
                     <li>The &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for
                     Tiger, enabled through the &#8220;Customize&#8221; button of the installer, whereas it is included by default
                     on Leopard and Snow Leopard.</li>
-                    <li>You can use the xorg-server port instead of installing Apple's X11 package if you wish.</li>
+                    <li>You can use the xorg-server port instead of Apple's X11.app if you wish.</li>
                 </ul>
             </li>
         </ol>
