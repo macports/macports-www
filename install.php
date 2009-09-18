@@ -12,7 +12,7 @@
 
     <h2 class="hdr">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation:
+    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="http://trac.macports.org/wiki/Migration">migration info page</a>):
     </p>
 
     <ul>
