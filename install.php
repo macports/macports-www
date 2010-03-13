@@ -62,7 +62,7 @@
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $snowleopard_dmg;
     ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a> or <a href="<?php print $tiger_dmg;
-    ?>">Tiger</a>, respectively, and running the system's Installer by double-clicking on the pkg contained therein,
+    ?>">Tiger</a> and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
