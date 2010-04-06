@@ -129,6 +129,7 @@
         
         /* Main query sent to the DB */
         if ($result) {
+            $paging = false;
             $numrows = mysql_num_rows($result);
             if ($numrows > $pagesize) {
                 $paging = true;
