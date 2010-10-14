@@ -176,6 +176,7 @@
         <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports.</li>
         <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles.</li>
         <li><a href="http://martin.hinner.info/libmd/">libmd</a> for checksums.</li>
+        <li><a href="http://www.sqlite.org/">SQLite</a> for the port registry.</li>
         <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation (optional, can be disabled via configure args).</li>
         <li><a href="http://www.openssl.org/">OpenSSL</a> for signature verification (currently trunk only).</li>
     </ul>
