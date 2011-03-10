@@ -15,7 +15,7 @@ $macports_version_latest = '1.9.2';
 ######################################################################
 
 # Some useful URL abstractions:
-$trac_url = 'http://trac.macports.org/';
+$trac_url = 'https://trac.macports.org/';
 $svn_url = 'http://svn.macports.org/repository/macports/';
 $downloads = 'http://distfiles.macports.org/MacPorts/';
 $snowleopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.6-SnowLeopard.dmg';
