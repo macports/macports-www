@@ -12,8 +12,11 @@
 
     <h2 class="hdr">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="http://trac.macports.org/wiki/Migration">migration info page</a>):
+    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="https://trac.macports.org/wiki/Migration">migration info page</a>):
     </p>
+
+    <p>Note for Lion users: There is no official release supporting Mac OS X 10.7 yet, but you can test the
+    <a href="<?php print $downloads; ?>testing/">MacPorts 2.0.0 release candidate</a> if you like.</p>
 
     <ul>
         <li>&#8220;dmg&#8221; disk images for <a href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>, <a
