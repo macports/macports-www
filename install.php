@@ -2,7 +2,7 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
-    /* Copyright (c) 2004-2007, The MacPorts Project. */
+    /* Copyright (c) 2004-2011, The MacPorts Project. */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Download &amp; Installation', 'utf-8');
 ?>
@@ -15,15 +15,12 @@
     <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="https://trac.macports.org/wiki/Migration">migration info page</a>):
     </p>
 
-    <p>Note for Lion users: There is no official release supporting Mac OS X 10.7 yet, but you can test the
-    <a href="<?php print $downloads; ?>testing/">MacPorts 2.0.0 release candidate</a> if you like.</p>
-
     <ul>
-        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>, <a
-        href="<?php print $leopard_dmg; ?>">Leopard</a> and <a href="<?php print $tiger_dmg; ?>">Tiger
-        </a> as a legacy platform, containing pkg installers for use with the Mac OS X Installer. By far the simplest installation
+        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $lion_dmg; ?>">Lion</a> and <a
+        href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>. These contain pkg installers for use with the Mac OS X Installer.
+        This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>.</li>
+        below</a>. An installer for <a href="<?php print $leopard_dmg; ?>">Leopard</a>, as a legacy platform, is also available.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
         in any way.</li>
@@ -42,10 +39,11 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 3.2 or later for Snow Leopard,
-            3.1 or later for
-            Leopard, or 2.4.1 or later for Tiger), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
-            site or on your Mac OS X installation CDs/DVD. Using the latest available version that will run on your OS is highly recommended.
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.1 or later for Lion,
+            3.2 or later for
+            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
+            site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
+            OS is highly recommended.
             Ensure that the optional components for command line development are installed
             ("Unix Development" in the Xcode 3.x installer).</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
@@ -64,9 +62,9 @@
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $snowleopard_dmg;
-    ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a> or <a href="<?php print $tiger_dmg;
-    ?>">Tiger</a> and running the system's Installer by double-clicking on the pkg contained therein,
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $lion_dmg;
+    ?>">Lion</a>, <a href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
+    ?>">Leopard</a> and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
@@ -179,10 +177,10 @@
         <li><b>mtree</b> for directory hierarchy.</li>
         <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports.</li>
         <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles.</li>
-        <li><a href="http://martin.hinner.info/libmd/">libmd</a> for checksums.</li>
         <li><a href="http://www.sqlite.org/">SQLite</a> for the port registry.</li>
         <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation (optional, can be disabled via configure args).</li>
-        <li><a href="http://www.openssl.org/">OpenSSL</a> for signature verification (currently trunk only).</li>
+        <li><a href="http://www.openssl.org/">OpenSSL</a> for signature verification, and optionally for checksums. <b>libmd</b> may
+            be used instead for checksums.</li>
     </ul>
 
     <p>Normally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts

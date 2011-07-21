@@ -9,7 +9,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '1.9.2';
+$macports_version_latest = '2.0.0';
 
 
 ######################################################################
@@ -18,11 +18,9 @@ $macports_version_latest = '1.9.2';
 $trac_url = 'https://trac.macports.org/';
 $svn_url = 'http://svn.macports.org/repository/macports/';
 $downloads = 'https://distfiles.macports.org/MacPorts/';
+$lion_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.7-Lion.dmg';
 $snowleopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.6-SnowLeopard.dmg';
 $leopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.5-Leopard.dmg';
-# no tiger dmg for 1.9.2 yet
-$tiger_dmg = $downloads . 'MacPorts-' . '1.9.1' . '-10.4-Tiger.dmg';
-#$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
 $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
