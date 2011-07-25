@@ -45,13 +45,13 @@
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended.
             Ensure that the optional components for command line development are installed
-            ("Unix Development" in the Xcode 3.x installer).</li>
+            ("UNIX Development", plus "System Tools" in newer versions, or "Command Line Support" in older ones).</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
             for ports that depend on the functionality it provides to run.
                 <ul>
                     <li>The &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for
                     Tiger, enabled through the &#8220;Customize&#8221; button of the installer, whereas it is included by default
-                    on Leopard and Snow Leopard.</li>
+                    on Leopard and newer.</li>
                     <li>You can use the xorg-server port instead of Apple's X11.app if you wish.</li>
                 </ul>
             </li>
