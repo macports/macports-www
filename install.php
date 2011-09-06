@@ -20,7 +20,7 @@
         href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>. These contain pkg installers for use with the Mac OS X Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. An installer for <a href="<?php print $leopard_dmg; ?>">Leopard</a>, as a legacy platform, is also available.</li>
+        below</a>. Installers for legacy platforms <a href="<?php print $leopard_dmg; ?>">Leopard</a> and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are also available.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
         in any way.</li>

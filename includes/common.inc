@@ -21,6 +21,7 @@ $downloads = 'https://distfiles.macports.org/MacPorts/';
 $lion_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.7-Lion.dmg';
 $snowleopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.6-SnowLeopard.dmg';
 $leopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.5-Leopard.dmg';
+$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
 $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
