@@ -39,11 +39,11 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.1 or 4.2 for Lion,
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.1 or later for Lion,
             3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
-            OS is highly recommended. <b>Note however that Xcode 4.3 cannot be used by MacPorts at present.</b>
+            OS is highly recommended.
             Ensure that the optional components for command line development are installed
             ("UNIX Development", plus "System Tools" in newer versions, or "Command Line Support" in older ones).</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
