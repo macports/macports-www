@@ -16,11 +16,11 @@
     </p>
 
     <ul>
-        <li>&#8220;dmg&#8221; disk images for <a href="<?php print $lion_dmg; ?>">Lion</a> and <a
-        href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a>. These contain pkg installers for use with the Mac OS X Installer.
+        <li>&#8220;pkg&#8221; installers for <a href="<?php print $lion_pkg; ?>">Lion</a> and <a
+        href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, for use with the Mac OS X Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. Installers for legacy platforms <a href="<?php print $leopard_dmg; ?>">Leopard</a> and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are also available.</li>
+        below</a>. Installer for legacy platform <a href="<?php print $leopard_dmg; ?>">Leopard</a> /*and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are*/ also available.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
         in any way.</li>
@@ -45,7 +45,7 @@
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended.
             Ensure that the optional components for command line development are installed
-            ("UNIX Development", plus "System Tools" in newer versions, or "Command Line Support" in older ones).</li>
+            ("UNIX Development", plus "System Tools", or "Command Line Tools" in newer versions, or "Command Line Support" in older ones).</li>
             <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
             for ports that depend on the functionality it provides to run.
                 <ul>
@@ -62,8 +62,8 @@
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $lion_dmg;
-    ?>">Lion</a>, <a href="<?php print $snowleopard_dmg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $lion_pkg;
+    ?>">Lion</a>, <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
     ?>">Leopard</a> and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
