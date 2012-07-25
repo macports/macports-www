@@ -2,7 +2,7 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
-    /* Copyright (c) 2004-2011, The MacPorts Project. */
+    /* Copyright (c) 2004-2012, The MacPorts Project. */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Download &amp; Installation', 'utf-8');
 ?>
@@ -16,7 +16,8 @@
     </p>
 
     <ul>
-        <li>&#8220;pkg&#8221; installers for <a href="<?php print $lion_pkg; ?>">Lion</a> and <a
+        <li>&#8220;pkg&#8221; installers for <!--<a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>--> Mountain Lion (coming soon),
+        <a href="<?php print $lion_pkg; ?>">Lion</a> and <a
         href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, for use with the Mac OS X Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
@@ -64,8 +65,10 @@
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for <a href="<?php print $lion_pkg;
-    ?>">Lion</a>, <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for 
+    <!--<a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>--> Mountain Lion (coming soon),
+    <a href="<?php print $lion_pkg; ?>">Lion</a>,
+    <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
     ?>">Leopard</a> and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
