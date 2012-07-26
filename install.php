@@ -16,7 +16,7 @@
     </p>
 
     <ul>
-        <li>&#8220;pkg&#8221; installers for <!--<a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>--> Mountain Lion (coming soon),
+        <li>&#8220;pkg&#8221; installers for <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
         <a href="<?php print $lion_pkg; ?>">Lion</a> and <a
         href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, for use with the Mac OS X Installer.
         This is the simplest installation
@@ -66,7 +66,7 @@
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for 
-    <!--<a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>--> Mountain Lion (coming soon),
+    <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
     <a href="<?php print $lion_pkg; ?>">Lion</a>,
     <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a> or <a href="<?php print $leopard_dmg;
     ?>">Leopard</a> and running the system's Installer by double-clicking on the pkg contained therein,
