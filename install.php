@@ -42,20 +42,25 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.1 or later for Lion,
-            3.2 or later for
+            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.4 or later for Mountain Lion,
+            4.3 or later for Lion, 3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
-            OS is highly recommended.
-            Ensure that the optional components for command line development are installed
-            ("UNIX Development", plus "System Tools", or "Command Line Tools" in newer versions, or "Command Line Support" in older ones).</li>
-            <li>The X11 windowing environment (A.K.A. &#8220;X11 User&#8221;)
-            for ports that depend on the functionality it provides to run.
+            OS is highly recommended.</li>
+            <li>Apple's Command Line Developer Tools are found at the <a href="http://connect.apple.com/">Apple Developer Connection</a> site,
+            or they can be installed from within XCode 4.  Users of XCode 3 or earlier can install this by ensuring that the appropriate
+            option(s) are selected at the time of XCode's install ("UNIX Development", "System Tools", "Command Line Tools", or
+            "Command Line Support").</li>
+            <li>XCode 4 and later users need to first accept the XCode EULA by either launching XCode or running:
+            <pre>xcodebuild -license</pre>
+            </li>
+            <li>(Optional) The X11 windowing environment for ports that depend on the functionality it provides to run.  You have
+            multiple choices for an X11 server:
                 <ul>
-                    <li>The &#8220;X11 User&#8221; package is an optional installation on your system CDs/DVD for
-                    Tiger, enabled through the &#8220;Customize&#8221; button of the installer, whereas it is included by default
-                    on Leopard and newer.</li>
-                    <li>You can use the xorg-server port instead of Apple's X11.app if you wish.</li>
+                    <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package (an optional installation on your system CDs/DVD for
+                    older OS Versions and provided unconditionally on Lion).</li>
+                    <li>Install the xorg-server port from MacPorts.</li>
+                    <li>The <a href="http://xquartz.macosforge.org">XQuartz Project</a> provides a complete X11 release for OS X including server and client libraries and applications.</li>
                 </ul>
             </li>
         </ol>
