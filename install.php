@@ -48,10 +48,10 @@
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended.</li>
             <li>Apple's Command Line Developer Tools are found at the <a href="http://connect.apple.com/">Apple Developer Connection</a> site,
-            or they can be installed from within XCode 4.  Users of XCode 3 or earlier can install this by ensuring that the appropriate
-            option(s) are selected at the time of XCode's install ("UNIX Development", "System Tools", "Command Line Tools", or
+            or they can be installed from within Xcode 4.  Users of Xcode 3 or earlier can install this by ensuring that the appropriate
+            option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
             "Command Line Support").</li>
-            <li>XCode 4 and later users need to first accept the XCode EULA by either launching XCode or running:
+            <li>Xcode 4 and later users need to first accept the Xcode EULA by either launching Xcode or running:
             <pre>xcodebuild -license</pre>
             </li>
             <li>(Optional) The X11 windowing environment for ports that depend on the functionality it provides to run.  You have
