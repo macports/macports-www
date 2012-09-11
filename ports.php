@@ -19,8 +19,8 @@
     }
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
-    $page = isset($_GET['page']) ? max($_GET['page'], 1) : '1';
-    $pagesize = isset($_GET['pagesize']) ? max($_GET['pagesize'], 1) : 50; # arbitrary setting
+    $page = isset($_GET['page']) ? max(intval($_GET['page']), 1) : '1';
+    $pagesize = isset($_GET['pagesize']) ? max(intval($_GET['pagesize']), 1) : 50; # arbitrary setting
 
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
 ?>
