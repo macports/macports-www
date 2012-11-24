@@ -68,13 +68,13 @@
             $columns = 0;
             print '<h3>Port Categories</h3><div id="categories"><ul>';
             while ($columns < 4) {
-                $entries_per_colum = 0;
+                $entries_per_column = 0;
                 print '<li><ul>';
                 while ($row = mysql_fetch_assoc($result)) {
                     print "<li><a href=\"$_SERVER[PHP_SELF]?by=category&amp;substr=" . urlencode($row['category']) . '">'
                     . htmlspecialchars($row['category']) . '</a></li>';
-                    if ($entries_per_colum == $max_entries_per_column) break;
-                    $entries_per_colum++;
+                    if ($entries_per_column == $max_entries_per_column) break;
+                    $entries_per_column++;
                 }
                 print '</ul></li>';
                 $columns++;
@@ -262,7 +262,7 @@
                 }
 
                 print '<br /><br /></dd>';
-            } /* while (listing of macthing ports) */
+            } /* while (listing of matching ports) */
             print '</dl>';
 
             if ($paging) {
