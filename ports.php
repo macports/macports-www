@@ -146,7 +146,7 @@
                     if ($i == $page) {
                         $pagecontrol .= "<b>$i</b>";
                     } else {
-                        $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=" . htmlspecialchars($substr) . "&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
+                        $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=" . urlencode($substr) . "&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
                     }
                 }
                 $pagecontrol .= "</p>";
