@@ -179,7 +179,7 @@
 <?
 					while ( $nrow = mysql_fetch_array($nresult) ) {
 						// lib:libpng.3:libpng -> libpng
-						$library = eregi_replace("^([^:]*:[^:]*:|[^:]*:)", "", $nrow[0]);
+						$library = preg_replace("/^(?:[^:]*:){1,2}/", "", $nrow[0]);
 					?>
 						<a href="<?= $PHP_SELF; ?>?by=library&substr=<?= $library; ?>"><?= $library; ?></a>
 					<?
