@@ -48,7 +48,7 @@
                 <option value="platform"<?php if ($by == 'platform') { print ' selected="selected"'; } ?>>Platform</option>
 <!--                <option value="license"<?php if ($by == 'license') { print ' selected="selected"'; } ?>>License</option> -->
             </select>
-            <input type="text" name="substr" size="40" />
+            <input type="text" name="substr" value="<?php print htmlspecialchars($substr); ?>" size="40" />
             <input type="submit" value="Search" />
         </p>
     </form>
