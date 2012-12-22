@@ -81,7 +81,7 @@
     </ul>
 
     <p>Note that due to spam control policies you must subscribe to our non read-only lists in order to post to any of them.
-    Members are expected to abide by the very simple <a href="http://www.dtcc.edu/cs/rfc1855.html">Netiquette guidelines</a>
+    Members are expected to abide by the very simple <a href="http://tools.ietf.org/html/rfc1855">Netiquette guidelines</a>
     that are common to most open forums when posting; of particular relevance is sticking to plain text messages, our language
     of choice (English), and reducing the number and size of attachments in any way possible (e.g, by using paste bins such
     as <a href="http://paste.lisp.org/new/macports">lisppaste</a> or <a href="http://pastie.caboo.se">pastie</a> and
