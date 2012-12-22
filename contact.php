@@ -142,8 +142,7 @@
     <h3 class="subhdr" id="Individuals">Individuals</h3>
 
     <p>To find out who the people behind MacPorts are and what they are up to, visit the <a href="<?php print $trac_url . 
-    'wiki/MacPortsDevelopers'; ?>">team members page</a> on our Wiki and our <a href="http://cia.vc/stats/project/MacPorts">CIA
-    project page</a>, which also shows SVN commit activity and many other project statistics.</p>
+    'wiki/MacPortsDevelopers'; ?>">team members page</a> on our Wiki.</p>
 
 </div>
 
