@@ -22,6 +22,9 @@
     $page = isset($_GET['page']) ? max(intval($_GET['page']), 1) : '1';
     $pagesize = isset($_GET['pagesize']) ? max(intval($_GET['pagesize']), 1) : 50; # arbitrary setting
 
+    # protect against XSS
+    $phpself = htmlspecialchars($_SERVER['PHP_SELF']);
+
     print_header('The MacPorts Project -- Available Ports', 'utf-8');
 ?>
 
@@ -36,7 +39,7 @@
     
     <br />
 
-    <form action="<?php print $_SERVER['PHP_SELF']; ?>" method="get">
+    <form action="<?php print $phpself; ?>" method="get">
         <p>
             <label>Search by:</label>
             <select name="by">
@@ -53,7 +56,7 @@
         </p>
     </form>
 
-    <p>Or view the complete <a href="<?php print $_SERVER['PHP_SELF']; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
+    <p>Or view the complete <a href="<?php print $phpself; ?>?by=all">ports list (<?php print $portsdb_info['num_ports']; ?>
     ports)</a>.</p>
     <br />
 
@@ -71,7 +74,7 @@
                 $entries_per_column = 0;
                 print '<li><ul>';
                 while ($row = mysql_fetch_assoc($result)) {
-                    print "<li><a href=\"$_SERVER[PHP_SELF]?by=category&amp;substr=" . urlencode($row['category']) . '">'
+                    print "<li><a href=\"$phpself?by=category&amp;substr=" . urlencode($row['category']) . '">'
                     . htmlspecialchars($row['category']) . '</a></li>';
                     if ($entries_per_column == $max_entries_per_column) break;
                     $entries_per_column++;
@@ -146,7 +149,7 @@
                     if ($i == $page) {
                         $pagecontrol .= "<b>$i</b>";
                     } else {
-                        $pagecontrol .= "<a href=\"$_SERVER[PHP_SELF]?by=$by&amp;substr=" . urlencode($substr) . "&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
+                        $pagecontrol .= "<a href=\"$phpself?by=$by&amp;substr=" . urlencode($substr) . "&amp;page=$i&amp;pagesize=$pagesize\">$i</a>";
                     }
                 }
                 $pagecontrol .= "</p>";
@@ -185,7 +188,7 @@
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<i>Licenses:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
-                        print "<a href=\"$_SERVER[PHP_SELF]?by=license&amp;substr=" . urlencode($nrow[0]) . '">'
+                        print "<a href=\"$phpself?by=license&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
                     print "<br />";
@@ -217,7 +220,7 @@
                     while ($nrow = mysql_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
-                        print "<a href=\"$_SERVER[PHP_SELF]?by=category&amp;substr=" . urlencode($nrow[0]) . '">'
+                        print "<a href=\"$phpself?by=category&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a>';
                         if ($primary) { print '</b>'; }
                         $primary = 0;
@@ -231,7 +234,7 @@
                 if ($nresult) {
                     print '<br /><i>Platforms:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
-                        print "<a href=\"$_SERVER[PHP_SELF]?by=platform&amp;substr=" . urlencode($nrow[0]) . '">'
+                        print "<a href=\"$phpself?by=platform&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
                 }
@@ -244,7 +247,7 @@
                     print '<br /><i>Dependencies:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
                         $library = preg_replace('/^(?:[^:]*:){1,2}/', '', $nrow[0]);
-                        print "<a href=\"$_SERVER[PHP_SELF]?by=library&amp;substr=" . urlencode($library) . '">'
+                        print "<a href=\"$phpself?by=library&amp;substr=" . urlencode($library) . '">'
                         . htmlspecialchars($library) . '</a> ';
                     }
                 }
@@ -256,7 +259,7 @@
                 if ($nresult && mysql_num_rows($nresult) > 0) {
                     print '<br /><i>Variants:</i> ';
                     while ($nrow = mysql_fetch_row($nresult)) {
-                        print "<a href=\"$_SERVER[PHP_SELF]?by=variant&amp;substr=" . urlencode($nrow[0]) . '">'
+                        print "<a href=\"$phpself?by=variant&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
                 }
