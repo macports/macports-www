@@ -7,7 +7,6 @@ body {
     margin: 0;
     padding: 30px 40px;
     background: url(img/top-backdrop.png) repeat-x #EDEDED;
-    background-size: 183px 73px;
     font: 12px Helvetica, Arial, sans-serif;
     line-height: 1.2em;
 }
@@ -49,6 +48,7 @@ h1 a {
     width: 183px;
     height: 70px;
     background: url(img/macports-logo-top.png);
+    background-size: 183px 73px;
 }
 
 h2, h3 {
