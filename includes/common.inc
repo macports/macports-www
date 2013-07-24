@@ -9,7 +9,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.1.3';
+$macports_version_latest = '2.2.0';
 
 
 ######################################################################
@@ -22,8 +22,8 @@ $mountainlion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.8
 $lion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.7-Lion.pkg';
 $snowleopard_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.6-SnowLeopard.pkg';
 $leopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.5-Leopard.dmg';
-$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
-#$tiger_dmg = $downloads . 'MacPorts-' . '2.0.3' . '-10.4-Tiger.dmg';
+#$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
+$tiger_dmg = $downloads . 'MacPorts-' . '2.1.3' . '-10.4-Tiger.dmg';
 $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
