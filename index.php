@@ -13,7 +13,7 @@
     <h2 class="hdr">The MacPorts Project Official Homepage</h2>
 
     <p>The MacPorts Project is an open-source community initiative to design an easy-to-use system for compiling, installing,
-    and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macosx/">
+    and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/osx/">
     Mac OS X</a> operating system. To that end we provide the command-line driven MacPorts software package under a <a
     href="http://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a>, and through it easy access to thousands of ports
     that <a href="<?php print $guide_url . '#introduction'; ?>"> greatly simplify</a> the task of <a href="<?php print $guide_url
