@@ -42,12 +42,12 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.4 or later for Mountain Lion,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
-            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/">Apple Developer</a>
+            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended.</li>
-            <li>Apple's Command Line Developer Tools are found at the <a href="https://developer.apple.com/">Apple Developer</a> site,
+            <li>Apple's Command Line Developer Tools are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
             or they can be installed from within Xcode 4.  Users of Xcode 3 or earlier can install this by ensuring that the appropriate
             option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
             "Command Line Support").</li>
