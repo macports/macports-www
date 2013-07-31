@@ -44,7 +44,7 @@
         <ol>
             <li>Apple's <a href="http://developer.apple.com/tools/xcode/">Xcode</a> Developer Tools (version 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
-            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="http://connect.apple.com/">Apple Developer Connection</a>
+            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/xcode/">Apple Developer Connection</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended.</li>
             <li>Apple's Command Line Developer Tools are found at the <a href="http://connect.apple.com/">Apple Developer Connection</a> site,
