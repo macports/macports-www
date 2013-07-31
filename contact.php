@@ -84,7 +84,7 @@
     Members are expected to abide by the very simple <a href="http://tools.ietf.org/html/rfc1855">Netiquette guidelines</a>
     that are common to most open forums when posting; of particular relevance is sticking to plain text messages, our language
     of choice (English), and reducing the number and size of attachments in any way possible (e.g, by using paste bins such
-    as <a href="http://paste.lisp.org/new/macports">lisppaste</a> or <a href="http://pastie.caboo.se">pastie</a> and
+    as <a href="http://paste.lisp.org/new/macports">lisppaste</a> or <a href="http://pastie.org">Pastie</a> and
     passing along the paste URL rather than full error messages).</p>
 
 
