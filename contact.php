@@ -55,27 +55,27 @@
     <p>The MacPorts Project hosts a number of specialized mailing lists you can freely subscribe to:</p>
 
     <ul>
-        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-users/">MacPorts Users</a>
-        (<a href="http://lists.macosforge.org/pipermail/macports-users/">archives</a>):
+        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-users/">MacPorts Users</a>
+        (<a href="https://lists.macosforge.org/pipermail/macports-users/">archives</a>):
             <p>General discussion of MacPorts installation and usage. A moderate volume list.</p>
         </li>
-        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-dev/">MacPorts Developers</a>
-        (<a href="http://lists.macosforge.org/pipermail/macports-dev/">archives</a>):
+        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-dev/">MacPorts Developers</a>
+        (<a href="https://lists.macosforge.org/pipermail/macports-dev/">archives</a>):
             <p>Where project members and contributors discuss the MacPorts &#8220;base&#8221; system itself and future
             development plans, and related &#8220;Portfile&#8221; writing best practices. A low volume list.</p>
         </li>
-        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a>
-        (<a href="http://lists.macosforge.org/pipermail/macports-changes/">archives</a>):
+        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a>
+        (<a href="https://lists.macosforge.org/pipermail/macports-changes/">archives</a>):
             <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $svn_url; ?>">SVN repository</a>
             for both &#8220;base&#8221; code and Portfiles, among others.</p>
         </li>
-        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
-        (<a href="http://lists.macosforge.org/pipermail/macports-tickets/">archives</a>):
+        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
+        (<a href="https://lists.macosforge.org/pipermail/macports-tickets/">archives</a>):
             <p>Read-only, moderate volume list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker
             </a>.</p>
         </li>
-        <li><a href="http://lists.macosforge.org/mailman/listinfo/macports-announce/">MacPorts Announce</a>
-        (<a href="http://lists.macosforge.org/pipermail/macports-announce/">archives</a>):
+        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-announce/">MacPorts Announce</a>
+        (<a href="https://lists.macosforge.org/pipermail/macports-announce/">archives</a>):
             <p>Read-only, low volume list for project related major announcements.</p>
         </li>
     </ul>
