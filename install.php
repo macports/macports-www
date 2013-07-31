@@ -206,7 +206,7 @@
     MacPorts. Of particular relevance are the <a href="<?php print $guide_url . '#installing'; ?>">installation</a> &amp;
     <a href="<?php print $guide_url . '#using'; ?>">usage</a> sections of the former and the <a href="<?php print $trac_url .
     'wiki/FAQ'; ?>">FAQ</a> section of the <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a>, where we keep track of questions
-    frequently fielded on our <a href="contact.php#lists">mailing lists</a>.</p>
+    frequently fielded on our <a href="contact.php#Lists">mailing lists</a>.</p>
 
     <p>If any of these resources do not answer your questions or if you need any kind of extended support, there are many ways
     to <a href="contact.php">contact us</a>!</p>
