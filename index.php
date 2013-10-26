@@ -21,7 +21,7 @@
     
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
     without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly the current OS
-    X release (OS X 10.8 Mountain Lion) and the immediately previous two (OS X 10.7 Lion and Mac OS X 10.6 Snow Leopard).
+    X release (OS X 10.9 Mavericks) and the immediately previous two (OS X 10.8 Mountain Lion and Mac OS X 10.7 Lion).
     There are currently <a href="ports.php">
     <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
     different categories, and more are being added on a regular basis.</p>

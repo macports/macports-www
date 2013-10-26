@@ -16,12 +16,13 @@
     </p>
 
     <ul>
-        <li>&#8220;pkg&#8221; installers for <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
-        <a href="<?php print $lion_pkg; ?>">Lion</a> and <a
-        href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, for use with the Mac OS X Installer.
+        <li>&#8220;pkg&#8221; installers for <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
+        <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a> and
+        <a href="<?php print $lion_pkg; ?>">Lion</a>, for use with the Mac OS X Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. Installers for legacy platforms <a href="<?php print $leopard_dmg; ?>">Leopard</a>
+        below</a>. Installers for legacy platforms <a
+        href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a>
         and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are
         also available.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
@@ -42,7 +43,8 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 4.4 or later for Mountain Lion,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 5.0.1 or later
+            for Mavericks, 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
@@ -70,7 +72,8 @@
 
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for 
+    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for
+    <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
     <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
     <a href="<?php print $lion_pkg; ?>">Lion</a>,
     <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg;
