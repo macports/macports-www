@@ -10,7 +10,7 @@
 
 <div id="content">
 
-    <h2 class="hdr">Quickstart</h2>
+    <h2 class="hdr" id="quickstart">Quickstart</h2>
 
     <ol>
         <li>Install <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
@@ -19,13 +19,13 @@
                 <li><a href="<?php echo $mavericks_pkg; ?>"    >OS X 10.9 Mavericks</a></li>
                 <li><a href="<?php echo $mountainlion_pkg; ?>" >OS X 10.8 Mountain Lion</a></li>
                 <li><a href="<?php echo $lion_pkg; ?>"         >OS X 10.7 Lion</a></li>
-                <li><a href="#requirements">Older OS? See here.</a></li>
+                <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
         <li>That's it!</li>
     </ol>
 
-    <h2 class="hdr">Installing MacPorts</h2>
+    <h2 class="hdr" id="installing">Installing MacPorts</h2>
 
     <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="https://trac.macports.org/wiki/Migration">migration info page</a>):
     </p>
