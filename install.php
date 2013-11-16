@@ -2,13 +2,28 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* $Id$ */
     /* Copyright (c) 2004, OpenDarwin. */
-    /* Copyright (c) 2004-2012, The MacPorts Project. */
+    /* Copyright (c) 2004-2013, The MacPorts Project. */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Download &amp; Installation', 'utf-8');
 ?>
 
 
 <div id="content">
+
+    <h2 class="hdr">Quickstart</h2>
+
+    <ol>
+        <li>Install <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
+        <li>Install MacPorts for your version of OS X:
+            <ul>
+                <li><a href="<?php echo $mavericks_pkg; ?>"    >OS X 10.9 Mavericks</a></li>
+                <li><a href="<?php echo $mountainlion_pkg; ?>" >OS X 10.8 Mountain Lion</a></li>
+                <li><a href="<?php echo $lion_pkg; ?>"         >OS X 10.7 Lion</a></li>
+                <li><a href="#requirements">Older OS? See here.</a></li>
+            </ul>
+        </li>
+        <li>That's it!</li>
+    </ol>
 
     <h2 class="hdr">Installing MacPorts</h2>
 
