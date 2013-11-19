@@ -13,12 +13,7 @@
     <h2 class="hdr" id="quickstart">Quickstart</h2>
 
     <ol>
-        <li>Install Xcode
-            <ul>
-                <li>Mavericks: In Terminal, use <code>xcode-select --install</code></li>
-                <li>Others see <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
-            </ul>
-        </li>
+        <li>Install <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild --license</code></li>
         <li>Install MacPorts for your version of OS X:
             <ul>
