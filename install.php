@@ -14,7 +14,7 @@
 
     <ol>
         <li>Install <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
-        <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild --license</code></li>
+        <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of OS X:
             <ul>
                 <li><a href="<?php echo $mavericks_pkg; ?>"    >OS X 10.9 Mavericks</a></li>
