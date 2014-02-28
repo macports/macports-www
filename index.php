@@ -1,6 +1,6 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
-    /* Copyright (c) 2007, The MacPorts Project. */
+    /* Copyright (c) 2007, 2014, The MacPorts Project. */
     /* $Id$ */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Home', 'utf-8');
@@ -42,6 +42,10 @@
     
     <h3 class="subhdr">Getting involved</h3>
     
+    <p>We are participating in <b>Google Summer of Code 2014</b>: MacPorts-weilding students of higher education can be paid
+    to work on open source software. <a href="//trac.macports.org/wiki/SummerOfCode">Head over to our ideas page</a> to see
+    if MacPorts is an interesting project for you.
+
     <p>There are many ways you can get involved with MacPorts and peer users, system administrators &amp; developers alike.
     Browse over to the &#8220;<a href="contact.php">Contact Us</a>&#8221; section of our site and:</p>
     
