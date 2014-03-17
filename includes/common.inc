@@ -16,7 +16,7 @@ $macports_version_latest = '2.2.1';
 
 # Some useful URL abstractions:
 $trac_url = 'https://trac.macports.org/';
-$svn_url = 'http://svn.macports.org/repository/macports/';
+$svn_url = 'https://svn.macports.org/repository/macports/';
 $downloads = 'https://distfiles.macports.org/MacPorts/';
 $mavericks_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.9-Mavericks.pkg';
 $mountainlion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.8-MountainLion.pkg';
@@ -28,7 +28,7 @@ $tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.
 $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
-$guide_url = 'http://guide.macports.org/';
+$guide_url = 'https://guide.macports.org/';
 
 
 #####################################################################
