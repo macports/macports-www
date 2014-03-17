@@ -34,10 +34,10 @@ $guide_url = 'https://guide.macports.org/';
 #####################################################################
 
 # Ports database connection parameters:
-$portsdb_host = 'localhost';
+$portsdb_host = 'data.macports.org';
 $portsdb_name = 'macports';
 $portsdb_user = 'macports';
-$portsdb_passwd = trim(file_get_contents('/opt/local/share/macports/resources/portmgr/script_data'));
+$portsdb_passwd = trim(file_get_contents('/var/www/script_data'));
 
 
 ######################################################################
