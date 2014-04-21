@@ -42,11 +42,13 @@
     
     <h3 class="subhdr">Getting involved</h3>
     
-    <!--
-    <p>We are participating in <b>Google Summer of Code 2014</b>: MacPorts-wielding students of higher education can be paid
+    <?php
+    /*
+    <p>We are participating in <b>Google Summer of Code <?php print date('Y'); ?></b>: MacPorts-wielding students of higher education can be paid
     to work on open source software. <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">Head over to our ideas page</a> to see
     if MacPorts is an interesting project for you.</p>
-    -->
+    */
+    ?>
 
     <p>There are many ways you can get involved with MacPorts and peer users, system administrators &amp; developers alike.
     Browse over to the &#8220;<a href="contact.php">Contact Us</a>&#8221; section of our site and:</p>
