@@ -53,11 +53,15 @@ h1 a {
 
 h2, h3 {
     background: #8695B3;
-    padding: 0.2em;
+    padding: 0.2em 0.5em;
 }
 
 h2 {
     font: bold 24px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    padding: 0.4em 0.5em 0.2em;
 }
 
 img {
