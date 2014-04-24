@@ -11,7 +11,6 @@ body {
     line-height: 1.2em;
 }
 
-
 .accessibility {
     margin: 0;
     display: block;
@@ -19,7 +18,6 @@ body {
     width: 0;
     height: 0;
 }
-
 
 a:link {
     color: #0155CD;
@@ -69,7 +67,6 @@ img {
     border: 0;
 }
 
-
 #header {
     margin: 21px 0 17px 191px;
     min-width: 350px;
@@ -85,7 +82,6 @@ img {
     margin-left: 5px;
 }
 
-
 #download {
     display: block;
     float: right;
@@ -99,7 +95,6 @@ a#download:hover {
     background: url(img/download-highlight.png);
 }
 
-
 #languages {
     width: 150px;
 }
@@ -108,7 +103,6 @@ a#download:hover {
     width: 30px;
     height: 48px;    
 }
-
 
 #navigation {
     width: 183px;
