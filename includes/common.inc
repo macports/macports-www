@@ -9,7 +9,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.3.1';
+$macports_version_latest = '2.3.2';
 
 
 ######################################################################
@@ -18,6 +18,7 @@ $macports_version_latest = '2.3.1';
 $trac_url = 'https://trac.macports.org/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
 $downloads = 'https://distfiles.macports.org/MacPorts/';
+$yosemite_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.10-Yosemite.pkg';
 $mavericks_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.9-Mavericks.pkg';
 $mountainlion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.8-MountainLion.pkg';
 $lion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.7-Lion.pkg';
