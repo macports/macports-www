@@ -38,15 +38,6 @@
             
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
-    <h3 class="subhdr" style="background: #8b1a1a">Outage Notice: trac.macports.org</h3>
-    <p>
-        We are experiencing difficulties with our bug tracker and wiki hosted at <code style="color: #8b1a1a">trac.macports.org</code>.
-        We are aware of the issues and are trying to get them resolved in cooperation with our administrators. Unfortunately, we can
-        currently not give an estimate on how long it will take to bring the service online.
-    </p>
-    <p>
-        We would like to apologize for any inconvenience this may cause.
-    </p>
     
     <h3 class="subhdr">Getting involved</h3>
     
