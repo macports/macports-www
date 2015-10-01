@@ -17,9 +17,9 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of OS X:
             <ul>
+                <li><a href="<?php echo $elcapitan_pkg; ?>"    >OS X 10.11 El Capitan</a></li>
                 <li><a href="<?php echo $yosemite_pkg; ?>"    >OS X 10.10 Yosemite</a></li>
                 <li><a href="<?php echo $mavericks_pkg; ?>"    >OS X 10.9 Mavericks</a></li>
-                <li><a href="<?php echo $mountainlion_pkg; ?>" >OS X 10.8 Mountain Lion</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -32,13 +32,14 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
-        <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
-        <a href="<?php print $mavericks_pkg; ?>">Mavericks</a> and
-        <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
+        <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
+        <a href="<?php print $yosemite_pkg; ?>">Yosemite</a> and
+        <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
         for use with the Mac OS X Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. Installers for legacy platforms <a href="<?php print $lion_pkg; ?>">Lion</a>, <a
+        below</a>. Installers for legacy platforms <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>, 
+        <a href="<?php print $lion_pkg; ?>">Lion</a>, <a
         href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a>
         and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are
         also available.</li>
@@ -60,8 +61,8 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 6.1 or later for Yosemite,
-            5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 7.0 or later for El Capitan,
+            6.1 or later for Yosemite, 5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
             site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
@@ -90,6 +91,7 @@
     <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for
+    <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
     <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
     <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
     <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,

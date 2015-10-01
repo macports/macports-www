@@ -9,7 +9,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.3.3';
+$macports_version_latest = '2.3.4';
 
 
 ######################################################################
@@ -17,15 +17,17 @@ $macports_version_latest = '2.3.3';
 # Some useful URL abstractions:
 $trac_url = 'https://trac.macports.org/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
-$downloads = 'https://distfiles.macports.org/MacPorts/';
+#$downloads = 'https://distfiles.macports.org/MacPorts/';
+$downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/2.3.4/';
+$elcapitan_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.11-ElCapitan.pkg';
 $yosemite_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.10-Yosemite.pkg';
 $mavericks_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.9-Mavericks.pkg';
 $mountainlion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.8-MountainLion.pkg';
 $lion_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.7-Lion.pkg';
 $snowleopard_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.6-SnowLeopard.pkg';
 $leopard_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.5-Leopard.dmg';
-$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
-#$tiger_dmg = $downloads . 'MacPorts-' . '2.2.1' . '-10.4-Tiger.dmg';
+#$tiger_dmg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.4-Tiger.dmg';
+$tiger_dmg = $downloads . 'MacPorts-' . '2.3.3' . '-10.4-Tiger.dmg';
 $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
