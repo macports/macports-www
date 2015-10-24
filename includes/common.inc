@@ -17,9 +17,9 @@ $macports_version_latest = '2.3.4';
 # Some useful URL abstractions:
 $trac_url = 'https://trac.macports.org/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
-#$downloads = 'https://distfiles.macports.org/MacPorts/';
 $normal_downloads = 'https://distfiles.macports.org/MacPorts/';
-$downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/2.3.4/';
+$sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';
+$downloads = $normal_downloads;
 $elcapitan_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.11-ElCapitan.pkg';
 $yosemite_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.10-Yosemite.pkg';
 $mavericks_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.9-Mavericks.pkg';
