@@ -42,7 +42,7 @@
 
     <p>Between the <b>12<sup>th</sup> &ndash; 17<sup>th</sup> of March 2016</b> we are organizing a
     <a href="<?php print $trac_url . 'wiki/Meetings/MacPortsMeeting2016'; ?>">MacPorts Meeting</a>
-    for MacPort developers and advanced users to brainstorm ideas together, agree about priorities of
+    for MacPorts developers and advanced users to brainstorm ideas together, agree about priorities of
     future development, decrease the number of open tickets, put your heads together and finally code
     (or force someone to code) those hacks that you never had time to or knew how to implement.</p>
 
