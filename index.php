@@ -80,7 +80,7 @@
 
     <br />
 
-    <p>Browse over to our generous landlord's homepage, <a href="http://www.macosforge.org">Mac OS Forge</a>, for information
+    <p>Browse over to our generous landlord's homepage, <a href="https://www.macosforge.org">Mac OS Forge</a>, for information
     on other related projects.</p>
 
 </div>
