@@ -80,7 +80,7 @@
                     <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package (an optional installation on your system CDs/DVD for
                     older OS Versions and provided unconditionally on Lion).</li>
                     <li>Install the xorg-server port from MacPorts.</li>
-                    <li>The <a href="http://xquartz.macosforge.org">XQuartz Project</a> provides a complete X11 release for OS X including server and client libraries and applications.</li>
+                    <li>The <a href="http://www.xquartz.org">XQuartz Project</a> provides a complete X11 release for OS X including server and client libraries and applications.</li>
                 </ul>
             </li>
         </ol>
