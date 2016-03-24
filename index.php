@@ -38,18 +38,6 @@
             
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
-    <h3 class="subhdr">MacPorts Meeting</h3>
-
-    <p>Between the <b>12<sup>th</sup> &ndash; 17<sup>th</sup> of March 2016</b> we are organizing a
-    <a href="<?php print $trac_url . 'wiki/Meetings/MacPortsMeeting2016'; ?>">MacPorts Meeting</a>
-    for MacPorts developers and advanced users to brainstorm ideas together, agree about priorities of
-    future development, decrease the number of open tickets, put your heads together and finally code
-    (or force someone to code) those hacks that you never had time to or knew how to implement.</p>
-
-    <p>You are welcome to <a target="_blank"
-    href="https://docs.google.com/forms/d/1bZSY0bHtJPvYNq1gjm8QhkA7EhoBjVqKr_l7RQfGjlQ/viewform">join us</a>
-    in Slovenia for a few days and make a change to the community.</p>
-
     <h3 class="subhdr">Getting involved</h3>
     
     <?php
