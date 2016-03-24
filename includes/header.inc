@@ -30,7 +30,7 @@
 
     <body>
 
-        <h1><a href="http://www.macports.org/" title="The MacPorts Project"><span class="accessibility">The MacPorts Project
+        <h1><a href="https://www.macports.org" title="The MacPorts Project"><span class="accessibility">The MacPorts Project
         </span></a></h1>
 
         <p class="accessibility"><a href="#content">Skip to Content</a></p>
