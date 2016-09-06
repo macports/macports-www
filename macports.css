@@ -49,6 +49,15 @@ h1 a {
     background-size: 183px 73px;
 }
 
+h2 small, h3 small {
+    float: right;
+}
+h2::after, h3::after {
+    content: '';
+    display: block;
+    clear: right;
+}
+
 h2, h3 {
     background: #8695B3;
     padding: 0.2em 0.5em;
@@ -60,6 +69,18 @@ h2 {
 
 h3 {
     padding: 0.4em 0.5em 0.2em;
+}
+
+h3 a:link {
+    color: white;
+}
+
+h3 a:visited {
+    color: #EDEDED;
+}
+
+h3 a:hover {
+    color: #CDCDCD;
 }
 
 img {
