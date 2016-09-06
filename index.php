@@ -66,11 +66,6 @@
     and documentation, or take MacPorts itself beyond its current limitations and into new areas of the vast software packaging
     field. We're eager to hear from you!</p>
 
-    <br />
-
-    <p>Browse over to our generous landlord's homepage, <a href="https://www.macosforge.org">Mac OS Forge</a>, for information
-    on other related projects.</p>
-
 </div>
 
 
