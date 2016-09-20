@@ -13,15 +13,15 @@
     <h2 class="hdr">The MacPorts Project Official Homepage</h2>
 
     <p>The MacPorts Project is an open-source community initiative to design an easy-to-use system for compiling, installing,
-    and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/osx/">
-    OS X</a> operating system. To that end we provide the command-line driven MacPorts software package under a <a
+    and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macos/">Mac
+    operating system</a>. To that end we provide the command-line driven MacPorts software package under a <a
     href="http://opensource.org/licenses/BSD-3-Clause">BSD 3-Clause License</a>, and through it easy access to thousands of ports
     that <a href="<?php print $guide_url . '#introduction'; ?>"> greatly simplify</a> the task of <a href="<?php print $guide_url
     . '#using'; ?>">compiling and installing</a> open-source software on your Mac.</p>
     
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
-    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly the current OS
-    X release (OS X 10.11 El Capitan) and the immediately previous two (OS X 10.10 Yosemite and OS X 10.9 Mavericks).
+    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly OS X Mavericks v10.9 and later
+    (including macOS Sierra v10.12).
     There are currently <a href="ports.php">
     <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
     different categories, and more are being added on a regular basis.</p>

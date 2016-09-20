@@ -13,13 +13,14 @@
     <h2 class="hdr" id="quickstart">Quickstart</h2>
 
     <ol>
-        <li>Install <a href="http://guide.macports.org/#installing.xcode">Xcode and the Xcode Command Line Tools</a></li>
+        <li>Install <a href="<?php print $guide_url . '#installing.xcode'; ?>">Xcode and the Xcode Command Line Tools</a></li>
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
-        <li>Install MacPorts for your version of OS X:
+        <li>Install MacPorts for your version of the Mac operating system:
             <ul>
-                <li><a href="<?php echo $elcapitan_pkg; ?>"    >OS X 10.11 El Capitan</a></li>
-                <li><a href="<?php echo $yosemite_pkg; ?>"    >OS X 10.10 Yosemite</a></li>
-                <li><a href="<?php echo $mavericks_pkg; ?>"    >OS X 10.9 Mavericks</a></li>
+                <li><a href="<?php echo $sierra_pkg; ?>">macOS Sierra v10.12</a></li>
+                <li><a href="<?php echo $elcapitan_pkg; ?>">OS X El Capitan v10.11</a></li>
+                <li><a href="<?php echo $yosemite_pkg; ?>">OS X Yosemite v10.10</a></li>
+                <li><a href="<?php echo $mavericks_pkg; ?>">OS X Mavericks v10.9</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -27,15 +28,16 @@
 
     <h2 class="hdr" id="installing">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading your Mac OS X to a new major release, see the <a href="https://trac.macports.org/wiki/Migration">migration info page</a>):
+    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading to a new major release of macOS, see the <a href="<?php print $trac_url . 'wiki/Migration'; ?>">migration info page</a>):
     </p>
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
         <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
         <a href="<?php print $yosemite_pkg; ?>">Yosemite</a> and
         <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
-        for use with the Mac OS X Installer.
+        for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>. Installers for legacy platforms <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>, 
@@ -57,16 +59,17 @@
 
     <div id="requirements">
 
-        <p>Please note that in order to install and run MacPorts on Mac OS X, your system must have installations of the following
+        <p>Please note that in order to install and run MacPorts on macOS, your system must have installations of the following
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 7.0 or later for El Capitan,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 8.0 or later for Sierra,
+            7.0 or later for El Capitan,
             6.1 or later for Yosemite, 5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
-            site, on your Mac OS X installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
-            OS is highly recommended.</li>
+            site, on your Mac operating system installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
+            OS is highly recommended, except for Snow Leopard where the last free version, 3.2.6, is recommended.</li>
             <li>Apple's Command Line Developer Tools are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
             or they can be installed from within Xcode 4.  Users of Xcode 3 or earlier can install this by ensuring that the appropriate
             option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
@@ -78,9 +81,9 @@
             multiple choices for an X11 server:
                 <ul>
                     <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package (an optional installation on your system CDs/DVD for
-                    older OS Versions and provided unconditionally on Lion).</li>
+                    older OS versions and provided unconditionally on Lion).</li>
                     <li>Install the xorg-server port from MacPorts.</li>
-                    <li>The <a href="http://www.xquartz.org">XQuartz Project</a> provides a complete X11 release for OS X including server and client libraries and applications.</li>
+                    <li>The <a href="https://www.xquartz.org">XQuartz Project</a> provides a complete X11 release for macOS including server and client libraries and applications.</li>
                 </ul>
             </li>
         </ol>
@@ -88,9 +91,10 @@
     </div>
 
 
-    <h3 class="subhdr" id="pkg">Mac OS X Package (.pkg) Installer</h3>
+    <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac OS X system is by downloading the dmg for
+    <p>The easiest way to install MacPorts on a Mac is by downloading the dmg for
+    <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
     <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
     <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
     <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
@@ -199,7 +203,7 @@
 
     <h3 class="subhdr" id="other">Other Platforms</h3>
 
-    <p>Running on platforms other than Mac OS X is not the main focus of The MacPorts Project, so remaining cross-platform is
+    <p>Running on platforms other than macOS is not the main focus of The MacPorts Project, so remaining cross-platform is
     not an actively-pursued development goal. Nevertheless, it is not an actively-discouraged goal either and as a result some
     experimental support does exist for other POSIX-compliant platforms such as *BSD and GNU/Linux.</p>
 
