@@ -38,15 +38,6 @@ $guide_url = 'https://guide.macports.org/';
 
 #####################################################################
 
-# Ports database connection parameters:
-$portsdb_host = 'data.macports.org';
-$portsdb_name = 'macports';
-$portsdb_user = 'macports';
-$portsdb_passwd = trim(file_get_contents('/var/www/script_data'));
-
-
-######################################################################
-
 # Page header:
 function print_header($title, $encoding) {
     global $trac_url, $svn_url, $downloads, $guide_url;
@@ -76,13 +67,12 @@ function print_warnings() {
 ######################################################################
 
 # Connect to the portsdb and gather miscellaneous information:
-function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
-
+function portsdb_connect() {
     $script = basename($_SERVER['PHP_SELF']);
     
     $portsdb_connection = FALSE;
-    if (function_exists('mysql_connect')) {
-        $portsdb_connection = mysql_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
+    if (function_exists('pg_connect')) {
+        $portsdb_connection = pg_connect("");
     }
     if ($portsdb_connection === FALSE) {
         switch ($script) {
@@ -126,11 +116,9 @@ function portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd) {
 
 # Total count of currently available ports:
 function ports_count() {
-    global $portsdb_name;
-
-    $result = mysql_query("SELECT COUNT(DISTINCT name) FROM $portsdb_name.portfiles");
+    $result = pg_query("SELECT COUNT(DISTINCT name) FROM portfiles");
     if ($result) {
-        $row = mysql_fetch_array($result);
+        $row = pg_fetch_array($result);
         $count = $row[0];
     } else {
         $count = 0;
@@ -143,11 +131,9 @@ function ports_count() {
 
 # Total count of port categories:
 function categories_count() {
-    global $portsdb_name;
-
-    $result = mysql_query("SELECT COUNT(DISTINCT category) FROM $portsdb_name.categories");
+    $result = pg_query("SELECT COUNT(DISTINCT category) FROM categories");
     if ($result) {
-        $row = mysql_fetch_array($result);
+        $row = pg_fetch_array($result);
         $count = $row[0];
     } else {
         $count = 0;
