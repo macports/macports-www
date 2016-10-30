@@ -7,10 +7,10 @@
     
     include_once("includes/common.inc");
     
-    $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
-    $sql = "SELECT UNIX_TIMESTAMP(activity_time) FROM $portsdb_name.log ORDER BY UNIX_TIMESTAMP(activity_time) DESC";
-    $result = mysql_query($sql);
-    if ($result && $row = mysql_fetch_row($result)) {
+    $portsdb_info = portsdb_connect();
+    $sql = "SELECT ceil(extract( epoch from activity_time)) as tim FROM log ORDER BY tim DESC";
+    $result = pg_query($sql);
+    if ($result && $row = pg_fetch_row($result)) {
         $date = date('Y-m-d', $row[0]);
         $time = date('H:i:s e', $row[0]);
     } else {
@@ -64,8 +64,8 @@
     /* If no valid search criteria is specified (by set and not equal to all and a valid substring) we output port categories
      as possible searches */
     if (!$by || ($by != 'all' && !$substr)) {
-        $query = "SELECT DISTINCT category FROM $portsdb_name.categories ORDER BY category";
-        $result = mysql_query($query);
+        $query = "SELECT DISTINCT category FROM categories ORDER BY category";
+        $result = pg_query($query);
         if ($result) {
             $max_entries_per_column = floor($portsdb_info['num_categories']/4);
             $columns = 0;
@@ -73,7 +73,7 @@
             while ($columns < 4) {
                 $entries_per_column = 0;
                 print '<li><ul>';
-                while ($row = mysql_fetch_assoc($result)) {
+                while ($row = pg_fetch_assoc($result)) {
                     print "<li><a href=\"$phpself?by=category&amp;substr=" . urlencode($row['category']) . '">'
                     . htmlspecialchars($row['category']) . '</a></li>';
                     if ($entries_per_column == $max_entries_per_column) break;
@@ -89,34 +89,35 @@
     /* If valid criteria is specified (by set and a valid substring, or by set to all) we poll the db and display the results */
     if ($by && ($substr || $by == 'all')) {
         $fields = 'name, path, version, description';
-        $tables = "$portsdb_name.portfiles AS p";
+        $tables = "portfiles AS p";
         switch ($by) {
         case 'name':
-            $criteria = "p.name LIKE '%" . mysql_real_escape_string($substr) . "%'";
+            #TODO: was pg_escape_string. Current charset taken into account ?
+            $criteria = "p.name LIKE '%" . pg_escape_string($substr) . "%'";
             break;
         case 'category':
-            $tables .= ", $portsdb_name.categories AS c";
-            $criteria = "c.portfile = p.name AND c.category = '" . mysql_real_escape_string($substr) . "'";
+            $tables .= ", categories AS c";
+            $criteria = "c.portfile = p.name AND c.category = '" . pg_escape_string($substr) . "'";
             break;
         case 'maintainer':
-            $tables .= ", $portsdb_name.maintainers AS m";
-            $criteria = "m.portfile = p.name AND m.maintainer LIKE '%" . mysql_real_escape_string($substr) . "%'";
+            $tables .= ", maintainers AS m";
+            $criteria = "m.portfile = p.name AND m.maintainer LIKE '%" . pg_escape_string($substr) . "%'";
             break;
         case 'library':
-            $criteria = "p.name = '" . mysql_real_escape_string($substr) . "'";
+            $criteria = "p.name = '" . pg_escape_string($substr) . "'";
             break;
         case 'variant':
-            $tables .= ", $portsdb_name.variants AS v";
-            $criteria = "v.portfile = p.name AND v.variant = '" . mysql_real_escape_string($substr) . "'";
+            $tables .= ", variants AS v";
+            $criteria = "v.portfile = p.name AND v.variant = '" . pg_escape_string($substr) . "'";
             break;
         case 'platform':
-            $tables .= ", $portsdb_name.platforms AS pl";
-            $criteria = "pl.portfile = p.name AND pl.platform = '" . mysql_real_escape_string($substr) . "'";
+            $tables .= ", platforms AS pl";
+            $criteria = "pl.portfile = p.name AND pl.platform = '" . pg_escape_string($substr) . "'";
             break;
 /*
         case 'license':
             $tables .= ", $portsdb_name.licenses AS lc";
-            $criteria = "lc.portfile = p.name AND lc.license = '" . mysql_real_escape_string($substr) . "'";
+            $criteria = "lc.portfile = p.name AND lc.license = '" . pg_escape_string($substr) . "'";
             break;
 */
         case 'all':
@@ -128,12 +129,12 @@
         }
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
-        $result = mysql_query($query);
+        $result = pg_query($query);
         
         /* Main query sent to the DB */
         if ($result) {
             $paging = false;
-            $numrows = mysql_num_rows($result);
+            $numrows = pg_num_rows($result);
             if ($numrows > $pagesize) {
                 $paging = true;
                 $pagecount = ceil($numrows / $pagesize);
@@ -154,8 +155,11 @@
                 }
                 $pagecontrol .= "</p>";
 
-                # seek the data pointer
-                mysql_data_seek($result, $offset);
+                # seek the data pointer by fetching the row before the interesting one
+                # FIXME: maybe should be offset - 1
+                if($offset > 0){
+                	pg_fetch_row($result, $offset);
+                }
             }
 
             print '<h3>Query Results</h3>';
@@ -169,9 +173,9 @@
 
             print '<dl>';
             /* Iterate over the entire set of returned ports */
-            for ($row = mysql_fetch_assoc($result), $i = 0;
+            for ($row = pg_fetch_assoc($result), $i = 0;
                  $row && (!$paging || $i < $curpagesize);
-                 $row = mysql_fetch_assoc($result), $i++) {
+                 $row = pg_fetch_assoc($result), $i++) {
 
                 /* Port name and Portfile URL */
                 print "<dt><b><a href=\"${trac_url}browser/trunk/dports/" . $row['path'] . "/Portfile\">" . htmlspecialchars($row['name'])
@@ -182,12 +186,12 @@
                 print htmlspecialchars($row['description']) . '<br />';
                 
                 /* Licenses */
-                $nquery = "SELECT license FROM $portsdb_name.licenses WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT license FROM licenses WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY license";
-                $nresult = mysql_query($nquery);
-                if ($nresult && mysql_num_rows($nresult) > 0) {
+                $nresult = pg_query($nquery);
+                if ($nresult && pg_num_rows($nresult) > 0) {
                     print '<i>Licenses:</i> ';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         print "<a href=\"$phpself?by=license&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
@@ -195,13 +199,13 @@
                 }
 
                 /* Maintainers */
-                $nquery = "SELECT maintainer FROM $portsdb_name.maintainers WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT maintainer FROM maintainers WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY is_primary DESC, maintainer";
-                $nresult = mysql_query($nquery);
+                $nresult = pg_query($nquery);
                 if ($nresult) {
                     $primary = 1;
                     print '<i>Maintained by:</i>';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
                         print obfuscate_email($nrow[0]);
@@ -211,13 +215,13 @@
                 }
 
                 /* Categories */
-                $nquery = "SELECT category FROM $portsdb_name.categories WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT category FROM categories WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY is_primary DESC, category";
-                $nresult = mysql_query($nquery);
+                $nresult = pg_query($nquery);
                 if ($nresult) {
                     $primary = 1;
                     print '<br /><i>Categories:</i>';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         if ($primary) { print ' <b>'; }
                         else { print ' '; }
                         print "<a href=\"$phpself?by=category&amp;substr=" . urlencode($nrow[0]) . '">'
@@ -228,24 +232,24 @@
                 }
 
                 /* Platforms */
-                $nquery = "SELECT platform FROM $portsdb_name.platforms WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT platform FROM platforms WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY platform";
-                $nresult = mysql_query($nquery);
+                $nresult = pg_query($nquery);
                 if ($nresult) {
                     print '<br /><i>Platforms:</i> ';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         print "<a href=\"$phpself?by=platform&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
                 }
 
                 /* Dependencies */
-                $nquery = "SELECT library FROM $portsdb_name.dependencies WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT library FROM dependencies WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY library";
-                $nresult = mysql_query($nquery);
-                if ($nresult && mysql_num_rows($nresult) > 0) {
+                $nresult = pg_query($nquery);
+                if ($nresult && pg_num_rows($nresult) > 0) {
                     print '<br /><i>Dependencies:</i> ';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         $library = preg_replace('/^(?:[^:]*:){1,2}/', '', $nrow[0]);
                         print "<a href=\"$phpself?by=library&amp;substr=" . urlencode($library) . '">'
                         . htmlspecialchars($library) . '</a> ';
@@ -253,12 +257,12 @@
                 }
 
                 /* Variants */
-                $nquery = "SELECT variant FROM $portsdb_name.variants WHERE portfile='" . mysql_real_escape_string($row['name']) .
+                $nquery = "SELECT variant FROM variants WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY variant";
-                $nresult = mysql_query($nquery);
-                if ($nresult && mysql_num_rows($nresult) > 0) {
+                $nresult = pg_query($nquery);
+                if ($nresult && pg_num_rows($nresult) > 0) {
                     print '<br /><i>Variants:</i> ';
-                    while ($nrow = mysql_fetch_row($nresult)) {
+                    while ($nrow = pg_fetch_row($nresult)) {
                         print "<a href=\"$phpself?by=variant&amp;substr=" . urlencode($nrow[0]) . '">'
                         . htmlspecialchars($nrow[0]) . '</a> ';
                     }
@@ -274,7 +278,7 @@
 
         /* When we hit this else, the query failed for some reason */
         } else {
-            print '<p>An Error Occurred: '. mysql_error($portsdb_info['connection_handler']) . '</p>';
+            print '<p>An Error Occurred: '. pg_last_error($portsdb_info['connection_handler']) . '</p>';
         }
         
     } /* if (main query sent to the DB) */
@@ -285,5 +289,5 @@
 
 <?php
     print_footer();
-    mysql_close($portsdb_info['connection_handler']);
+    pg_close($portsdb_info['connection_handler']);
 ?>

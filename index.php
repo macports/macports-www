@@ -72,6 +72,6 @@
 <?php
     print_footer();
     if ($portsdb_info['connection_handler'] !== false) {
-        mysql_close($portsdb_info['connection_handler']);
+        pg_close($portsdb_info['connection_handler']);
     }
 ?>
