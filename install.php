@@ -39,7 +39,7 @@
         for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. Installers for legacy platforms <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>, 
+        below</a>. Installers for legacy platforms <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
         <a href="<?php print $lion_pkg; ?>">Lion</a>, <a
         href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a>
         and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are
@@ -113,7 +113,7 @@
     latest available release and the latest revisions to the &#8220;Portfiles&#8221; that contain the instructions employed
     in the building and installation of ports. After installation is done, it is recommended that you run this step manually
     on a regular basis to to keep your MacPorts system always current:</p>
-    
+
     <pre>sudo port -v selfupdate</pre>
 
     <p>At this point you should be ready to enjoy MacPorts!</p>
@@ -144,7 +144,7 @@
                 <li><kbd>cd ../</kbd></li>
                 <li><kbd>rm -rf MacPorts-<?php print $macports_version_latest; ?>*</kbd></li>
             </ul>
-            
+
         </li>
     </ol>
 
@@ -154,7 +154,7 @@
 
     <p>To customize your installation you should read the output of &#8220;<kbd>./configure --help | more</kbd>&#8221; and
     pass the appropriate options for the settings you wish to tweak to the configuration script in the steps detailed above.</p>
-	
+
     <p>You will need to manually adapt your shell's environment to work with MacPorts and your chosen installation <kbd>
     prefix</kbd> (the value passed to <kbd>configure</kbd>'s <kbd>--prefix</kbd> flag, defaulting to <kbd>/opt/local</kbd>):
     </p>
@@ -189,8 +189,8 @@
 
     <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
     href="<?php print $trac_url . 'browser'; ?>">Trac source browser</a>.</p>
-    
-    
+
+
     <h3 class="subhdr" id="selfupdate">Selfupdate</h3>
 
     <p>If you already have MacPorts installed and have no restrictions to use the rsync networking protocol (tcp port 873 by
@@ -198,7 +198,7 @@
     by using the <kbd>selfupdate</kbd> target of the <kbd>port(1)</kbd> command. This will both update your ports tree (by
     performing a <kbd>sync</kbd> operation) and rebuild your current installation if it's outdated, preserving your customizations,
     if any.</p>
-    
+
 
     <h3 class="subhdr" id="other">Other Platforms</h3>
 
@@ -235,11 +235,11 @@
 
     <p>If any of these resources do not answer your questions or if you need any kind of extended support, there are many ways
     to <a href="contact.php">contact us</a>!</p>
-    
+
 
 </div>
 
 
 <?php
-  print_footer();
+    print_footer();
 ?>

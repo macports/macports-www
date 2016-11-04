@@ -3,9 +3,9 @@
     /* Web client to the PortIndex2MySQL script located in MacPorts base/portmgr/jobs svn directory. */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
-    
+
     include_once("includes/common.inc");
-    
+
     $portsdb_info = portsdb_connect();
     $sql = "SELECT ceil(extract( epoch from activity_time)) as tim FROM log ORDER BY tim DESC";
     $result = pg_query($sql);
@@ -35,7 +35,7 @@
     <?php print $portsdb_info['num_categories']; ?> different categories and available below for viewing. This form allows
     you to search the MacPorts software index, last updated on <?php print '<b>' . $date . '</b> at <b>' . $time . '</b>'; ?>.
     </p>
-    
+
     <br />
 
     <form action="<?php print $phpself; ?>" method="get">
@@ -129,7 +129,7 @@
         $where = ($criteria == '' ? '' : "WHERE $criteria");
         $query = "SELECT DISTINCT $fields FROM $tables $where ORDER BY name";
         $result = pg_query($query);
-        
+
         /* Main query sent to the DB */
         if ($result) {
             $paging = false;
@@ -157,7 +157,7 @@
                 # seek the data pointer by fetching the row before the interesting one
                 # FIXME: maybe should be offset - 1
                 if($offset > 0){
-                	pg_fetch_row($result, $offset);
+                    pg_fetch_row($result, $offset);
                 }
             }
 
@@ -180,11 +180,11 @@
                 print '<dt><b>' . htmlspecialchars($row['name']) . '</b> ' . htmlspecialchars($row['version'])
                 . ' <i>(<a href="' . htmlspecialchars($github_url_ports . 'blob/master' . $row['path'] . '/Portfile')
                 . '">source</a>)</i></dt>';
-                
+
                 print '<dd>';
                 /* Port short description */
                 print htmlspecialchars($row['description']) . '<br />';
-                
+
                 /* Licenses */
                 $nquery = "SELECT license FROM licenses WHERE portfile='" . pg_escape_string($row['name']) .
                 "' ORDER BY license";
@@ -280,7 +280,7 @@
         } else {
             print '<p>An Error Occurred: '. pg_last_error($portsdb_info['connection_handler']) . '</p>';
         }
-        
+
     } /* if (main query sent to the DB) */
 ?>
 

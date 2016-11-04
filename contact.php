@@ -140,7 +140,7 @@
 
     <h3 class="subhdr" id="Individuals">Individuals</h3>
 
-    <p>To find out who the people behind MacPorts are and what they are up to, visit the <a href="<?php print $trac_url . 
+    <p>To find out who the people behind MacPorts are and what they are up to, visit the <a href="<?php print $trac_url .
     'wiki/MacPortsDevelopers'; ?>">team members page</a> on our Wiki.</p>
 
 </div>

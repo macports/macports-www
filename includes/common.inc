@@ -70,7 +70,7 @@ function print_warnings() {
 # Connect to the portsdb and gather miscellaneous information:
 function portsdb_connect() {
     $script = basename($_SERVER['PHP_SELF']);
-    
+
     $portsdb_connection = FALSE;
     if (function_exists('pg_connect')) {
         $portsdb_connection = pg_connect("");
@@ -85,16 +85,16 @@ function portsdb_connect() {
                 );
                 break;
             case "ports.php":
-		print_header("The MacPorts Project", "utf-8");
+                print_header("The MacPorts Project", "utf-8");
                 print '
                     <div id="content">
                         <h2 class="hdr">MacPorts Portfiles</h2>
                         <p>Our database is currently unavailable. We hope to have it back soon!</p>
                     </div>
                 ';
-		print_footer();
-		die();
-		break;
+                print_footer();
+                die();
+                break;
             default:
                 print_footer();
                 die();
@@ -107,9 +107,9 @@ function portsdb_connect() {
             'num_categories' => categories_count()
         );
     }
-    
+
     return $portsdb_info;
-    
+
 }
 
 
