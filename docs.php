@@ -1,6 +1,5 @@
 <?php
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
-    /* $Id:$ */
     /* Copyright (c) 2008, The MacPorts Project. */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Documentation', 'utf-8');
