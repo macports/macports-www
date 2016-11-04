@@ -178,8 +178,9 @@
                  $row = pg_fetch_assoc($result), $i++) {
 
                 /* Port name and Portfile URL */
-                print "<dt><b><a href=\"${trac_url}browser/trunk/dports/" . $row['path'] . "/Portfile\">" . htmlspecialchars($row['name'])
-                . '</a></b> ' . htmlspecialchars($row['version']) . '</dt>';
+                print '<dt><b>' . htmlspecialchars($row['name']) . '</b> ' . htmlspecialchars($row['version'])
+                . ' <i>(<a href="' . htmlspecialchars($github_url_ports . 'blob/master' . $row['path'] . '/Portfile')
+                . '">source</a>)</i></dt>';
                 
                 print '<dd>';
                 /* Port short description */
