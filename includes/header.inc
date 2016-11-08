@@ -86,7 +86,7 @@
                             'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
                             'Report a Bug' => $trac_url . 'newticket',
                             'Bug reporting Guidelines' =>  $guide_url . '#project.tickets',
-                            'Subversion Repository' => $svn_url,
+                            'Git Repository' => $github_url,
                             'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
                             'Becoming a Member' => $guide_url . '#project.membership',
                         );

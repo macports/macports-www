@@ -15,8 +15,9 @@ $macports_version_latest = '2.3.4';
 
 # Some useful URL abstractions:
 $trac_url = 'https://trac.macports.org/';
+$mailman_url = 'https://lists.macports.org/mailman/listinfo/',
+$pipermail_url = 'https://lists.macports.org/pipermail/',
 $github_url = 'https://github.com/macports/';
-$github_url_ports = $github_url . 'macports-ports/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
 $normal_downloads = 'https://distfiles.macports.org/MacPorts/';
 $sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';

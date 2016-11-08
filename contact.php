@@ -54,27 +54,27 @@
     <p>The MacPorts Project hosts a number of specialized mailing lists you can freely subscribe to:</p>
 
     <ul>
-        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-users/">MacPorts Users</a>
-        (<a href="https://lists.macosforge.org/pipermail/macports-users/">archives</a>):
+        <li><a href="<?php print $mailman_url . 'macports-users/' ?>">MacPorts Users</a>
+        (<a href="<?php print $pipermail_url . 'macports-users/' ?>">archives</a>):
             <p>General discussion of MacPorts installation and usage. A moderate volume list.</p>
         </li>
-        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-dev/">MacPorts Developers</a>
-        (<a href="https://lists.macosforge.org/pipermail/macports-dev/">archives</a>):
+        <li><a href="<?php print $mailman_url . 'macports-dev/' ?>">MacPorts Developers</a>
+        (<a href="<?php print $pipermail_url . 'macports-dev/' ?>">archives</a>):
             <p>Where project members and contributors discuss the MacPorts &#8220;base&#8221; system itself and future
             development plans, and related &#8220;Portfile&#8221; writing best practices. A low volume list.</p>
         </li>
-        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a>
-        (<a href="https://lists.macosforge.org/pipermail/macports-changes/">archives</a>):
+        <li><a href="<?php print $mailman_url . 'macports-changes/' ?>">MacPorts Changes</a>
+        (<a href="<?php print $pipermail_url . 'macports-changes/' ?>">archives</a>):
             <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $github_url; ?>">git repository on GitHub</a>
             for both &#8220;base&#8221; code and Portfiles, among others.</p>
         </li>
-        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
-        (<a href="https://lists.macosforge.org/pipermail/macports-tickets/">archives</a>):
+        <li><a href="<?php print $mailman_url . 'macports-tickets/' ?>">MacPorts Tickets</a>
+        (<a href="<?php print $pipermail_url . 'macports-tickets/' ?>">archives</a>):
             <p>Read-only, moderate volume list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker
             </a>.</p>
         </li>
-        <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-announce/">MacPorts Announce</a>
-        (<a href="https://lists.macosforge.org/pipermail/macports-announce/">archives</a>):
+        <li><a href="<?php print $mailman_url . 'macports-announce/' ?>">MacPorts Announce</a>
+        (<a href="<?php print $pipermail_url . 'macports-announce/' ?>">archives</a>):
             <p>Read-only, low volume list for project related major announcements.</p>
         </li>
     </ul>
@@ -96,7 +96,7 @@
     NDA'd software).</p>
 
     <p>This is also where you should turn to if you are a developer and/or a contributor interested in joning The MacPorts
-    Project with full write access to our SVN repository and Wiki pages, either to work on MacPorts itself or as a ports
+    Project with full write access to our git repository and Wiki pages, either to work on MacPorts itself or as a ports
     maintainer. Please read the <a href="<?php print $guide_url . '#project.membership'; ?>">documentation available</a>
     on joining for more information.</p>
 
@@ -105,11 +105,10 @@
 
     <p>We use the popular <a href="http://trac.edgewall.org/">Trac</a> web-based tool for our <a href="<?php print $trac_url .
     'roadmap'; ?>">bug tracking</a> and <a href="<?php print $trac_url . 'wiki'; ?>">Wiki</a> needs, thus buying ourselves
-    seamless read-only integration with our SVN repository through its <a href="<?php print $trac_url . 'browser'; ?>">
+    seamless read-only integration with our git repository through its <a href="<?php print $trac_url . 'browser'; ?>">
     source browser</a> and the project <a href="<?php print $trac_url . 'timeline'; ?>">timeline</a> (where ticket activity
     can also be viewed). Note that in order to interact with Trac for anything other than read only operations, you need
-    to <a href="<?php print $trac_url . 'auth/register/'; ?>">register</a> with Mac OS Forge for a Wordpress/Trac combined
-    account.</p>
+    to <a href="<?php print $trac_url . 'auth/register/'; ?>">register</a> with GitHub for an account.</p>
 
     <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself, or
     on the other hand if you'd like to make a contribution of any kind to the project, feel free to <a href="<?php print $trac_url

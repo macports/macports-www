@@ -47,7 +47,7 @@
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
         in any way.</li>
-        <li><a href="#svn">SVN checkout</a> of the unpackaged sources, if you wish to follow MacPorts development.</li>
+        <li><a href="#git">Git clone</a> of the unpackaged sources, if you wish to follow MacPorts development.</li>
         <li>The <a href="#selfupdate">selfupdate</a> target of the <kbd>port(1)</kbd> command, for users who already have
         MacPorts installed and wish to upgrade to a newer release.</li>
     </ul>
@@ -180,15 +180,15 @@
     find out more information about using MacPorts. <a href="#help">Help</a> is also available.</p>
 
 
-    <h3 class="subhdr" id="svn">SVN Sources</h3>
+    <h3 class="subhdr" id="git">Git Sources</h3>
 
     <p>If you are developer or a user with a taste for the bleeding edge and wish for the latest changes and feature additions,
-    you may acquire the MacPorts sources through subversion. See the Guide section on <a href="<?php print $guide_url; ?>#installing.macports.subversion">installing from subversion</a>.</p>
+    you may acquire the MacPorts sources through git. See the Guide section on <a href="<?php print $guide_url; ?>#installing.macports.subversion">installing from git</a>.</p>
 
-    <p>Purpose-specific branches are also available at the <kbd><?php print $svn_url . 'branches'; ?></kbd> url.</p>
+    <p>Purpose-specific branches are also available at the <kbd><?php print $github_url . 'macports-base/branches'; ?></kbd> url.</p>
 
-    <p>Alternatively, if you'd simply like to view the SVN repository without checking it out, you can do so via the <a
-    href="<?php print $trac_url . 'browser'; ?>">Trac source browser</a>.</p>
+    <p>Alternatively, if you'd simply like to view the git repository without checking it out, you can do so via the <a
+    href="<?php print $github_url . 'macports-base/'; ?>">GitHub web interface</a>.</p>
 
 
     <h3 class="subhdr" id="selfupdate">Selfupdate</h3>
@@ -220,7 +220,7 @@
             be used instead for checksums.</li>
     </ul>
 
-    <p>Normally you must install from <a href="#source">source</a> or from an <a href="#svn">SVN checkout</a> to run MacPorts
+    <p>Normally you must install from <a href="#source">source</a> or from an <a href="#git">git checkout</a> to run MacPorts
     on any of these platforms.</p>
 
 

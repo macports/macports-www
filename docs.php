@@ -17,7 +17,7 @@
             <li><a href="https://www.macports.org/install.php">Installation</a></li>
             <li><a href="https://guide.macports.org/#installing">Guide to Installation</a></li>
             <li><a href="https://trac.macports.org/wiki/InstallingMacPorts">Installation Wiki</a></li>
-            <li><a href="https://trac.macports.org/wiki/howto/RunningTrunk">Installing from SVN Trunk</a></li>
+            <li><a href="https://trac.macports.org/wiki/howto/RunningTrunk">Installing from git master</a></li>
             <li><a href="https://trac.macports.org/wiki/GetMacPortsSource">Get the Source</a></li>
         </ul>
 
