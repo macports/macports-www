@@ -65,7 +65,7 @@
         </li>
         <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-changes/">MacPorts Changes</a>
         (<a href="https://lists.macosforge.org/pipermail/macports-changes/">archives</a>):
-            <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $svn_url; ?>">SVN repository</a>
+            <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $github_url; ?>">git repository on GitHub</a>
             for both &#8220;base&#8221; code and Portfiles, among others.</p>
         </li>
         <li><a href="https://lists.macosforge.org/mailman/listinfo/macports-tickets/">MacPorts Tickets</a>
