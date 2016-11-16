@@ -178,7 +178,7 @@
 
                 /* Port name and Portfile URL */
                 print '<dt><b>' . htmlspecialchars($row['name']) . '</b> ' . htmlspecialchars($row['version'])
-                . ' <i>(<a href="' . htmlspecialchars($github_url . 'macports-ports/blob/master' . $row['path'] . '/Portfile')
+                . ' <i>(<a href="' . htmlspecialchars($github_url . 'macports-ports/blob/master/' . $row['path'] . '/Portfile')
                 . '">source</a>)</i></dt>';
 
                 print '<dd>';
