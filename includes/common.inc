@@ -8,7 +8,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.3.4';
+$macports_version_latest = '2.3.5';
 
 
 ######################################################################
@@ -21,7 +21,8 @@ $github_url = 'https://github.com/macports/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
 $normal_downloads = 'https://distfiles.macports.org/MacPorts/';
 $sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';
-$downloads = $normal_downloads;
+$gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
+$downloads = $gh_downloads;
 $sierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.12-Sierra.pkg';
 $elcapitan_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.11-ElCapitan.pkg';
 $yosemite_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.10-Yosemite.pkg';
