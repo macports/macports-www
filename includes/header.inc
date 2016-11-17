@@ -82,7 +82,7 @@
                     <ul>
 <?php
                         $shortcuts = array (
-                            'Available Downloads' => $downloads,
+                            'Available Downloads' => $downloads_overview,
                             'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
                             'Report a Bug' => $trac_url . 'newticket',
                             'Bug reporting Guidelines' =>  $guide_url . '#project.tickets',
