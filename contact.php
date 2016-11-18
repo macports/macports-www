@@ -68,6 +68,11 @@
             <p>Read-only, low to moderate volume list of changes to our <a href="<?php print $github_url; ?>">git repository on GitHub</a>
             for both &#8220;base&#8221; code and Portfiles, among others.</p>
         </li>
+        <li><a href="<?php print $mailman_url . 'macports-builds/' ?>">MacPorts Builds</a>
+        (<a href="<?php print $pipermail_url . 'macports-builds/' ?>">archives</a>):
+            <p>Read-only, moderate volume list with build notifications from our <a href="<?php print $build_url; ?>">Buildbot
+            </a>.</p>
+        </li>
         <li><a href="<?php print $mailman_url . 'macports-tickets/' ?>">MacPorts Tickets</a>
         (<a href="<?php print $pipermail_url . 'macports-tickets/' ?>">archives</a>):
             <p>Read-only, moderate volume list of ticket activity on our <a href="<?php print $trac_url; ?>">Trac bug tracker

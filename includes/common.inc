@@ -19,6 +19,7 @@ $mailman_url = 'https://lists.macports.org/mailman/listinfo/';
 $pipermail_url = 'https://lists.macports.org/pipermail/';
 $github_url = 'https://github.com/macports/';
 $svn_url = 'https://svn.macports.org/repository/macports/';
+$build_url = 'https://build.macports.org/';
 $normal_downloads = 'https://distfiles.macports.org/MacPorts/';
 $sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';
 $gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
