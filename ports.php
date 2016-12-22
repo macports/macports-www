@@ -123,7 +123,7 @@
             $criteria = '';
             break;
         default:
-            $criteria = '0';
+            $criteria = 'FALSE';
             break;
         }
         $where = ($criteria == '' ? '' : "WHERE $criteria");
