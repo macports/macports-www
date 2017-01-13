@@ -11,8 +11,8 @@
             <a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="img/vcss.png" alt="Valid CSS!" /></a></p>
 
             <p>Copyright &#xA9; 2002&#x2013;<?php print date("Y"); ?>, <a href="https://www.macports.org">The MacPorts Project</a>.
-            Content delivery accelerated by <a href="https://www.maxcdn.com">MaxCDN</a>.
-            All rights reserved.</p>
+            All rights reserved.
+            Content delivery accelerated by <a href="https://www.stackpath.com/">StackPath</a>.</p>
 
         </div>
 
