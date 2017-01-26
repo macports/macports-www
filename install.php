@@ -69,20 +69,22 @@
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
             site, on your Mac operating system installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
             OS is highly recommended, except for Snow Leopard where the last free version, 3.2.6, is recommended.</li>
-            <li>Apple's Command Line Developer Tools are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
-            or they can be installed from within Xcode 4.  Users of Xcode 3 or earlier can install this by ensuring that the appropriate
+            <li><p>Apple's Command Line Developer Tools can be installed on recent OS versions by running this command in the Terminal:</p>
+            <pre>xcode-select --install</pre>
+            <p>Older versions are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
+            or they can be installed from within Xcode back to version 4.  Users of Xcode 3 or earlier can install them by ensuring that the appropriate
             option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
-            "Command Line Support").</li>
+            "Command Line Support").</p></li>
             <li>Xcode 4 and later users need to first accept the Xcode EULA by either launching Xcode or running:
             <pre>xcodebuild -license</pre>
             </li>
             <li>(Optional) The X11 windowing environment for ports that depend on the functionality it provides to run.  You have
             multiple choices for an X11 server:
                 <ul>
-                    <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package (an optional installation on your system CDs/DVD for
-                    older OS versions and provided unconditionally on Lion).</li>
                     <li>Install the xorg-server port from MacPorts.</li>
                     <li>The <a href="https://www.xquartz.org">XQuartz Project</a> provides a complete X11 release for macOS including server and client libraries and applications.</li>
+                    <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package on older OS versions. It is always installed on Lion, and
+                    is an optional installation on your system CDs/DVD with previous OS versions.</li>
                 </ul>
             </li>
         </ol>
@@ -92,7 +94,7 @@
 
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
-    <p>The easiest way to install MacPorts on a Mac is by downloading the dmg for
+    <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
     <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
     <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
     <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
