@@ -94,7 +94,7 @@
 
     <h3 class="subhdr" id="PortMgr">Administrative Contact</h3>
 
-    <p>The private and read-only &#8220;<?php print obfuscate_email("macports-mgr@lists.macosforge.org"); ?>&#8221; mailing
+    <p>The private and read-only &#8220;<?php print obfuscate_email("macports-mgr@lists.macports.org"); ?>&#8221; mailing
     list is where you should send mail to in case you need to get in touch with the The MacPorts Project's <a href="<?php print
     $guide_url . '#project.portmgr'; ?>">management team</a> (A.K.A. &#8220;PortMgr&#8221;), in case you have any administrative
     request or if you wish to discuss anything you might feel is of private nature (like the interaction between MacPorts and
