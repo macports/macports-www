@@ -92,28 +92,28 @@
         switch ($by) {
         case 'name':
             #TODO: was pg_escape_string. Current charset taken into account ?
-            $criteria = "p.name LIKE '%" . pg_escape_string($substr) . "%'";
+            $criteria = "p.name ILIKE '%" . pg_escape_string($substr) . "%'";
             break;
         case 'category':
             $tables .= ", categories AS c";
-            $criteria = "c.portfile = p.name AND c.category = '" . pg_escape_string($substr) . "'";
+            $criteria = "c.portfile = p.name AND c.category ILIKE '" . pg_escape_string($substr) . "'";
             break;
         case 'maintainer':
             $tables .= ", maintainers AS m";
-            $criteria = "m.portfile = p.name AND m.maintainer LIKE '%" . pg_escape_string($substr) . "%'";
+            $criteria = "m.portfile = p.name AND m.maintainer ILIKE '%" . pg_escape_string($substr) . "%'";
             break;
         case 'variant':
             $tables .= ", variants AS v";
-            $criteria = "v.portfile = p.name AND v.variant = '" . pg_escape_string($substr) . "'";
+            $criteria = "v.portfile = p.name AND v.variant ILIKE '" . pg_escape_string($substr) . "'";
             break;
         case 'platform':
             $tables .= ", platforms AS pl";
-            $criteria = "pl.portfile = p.name AND pl.platform = '" . pg_escape_string($substr) . "'";
+            $criteria = "pl.portfile = p.name AND pl.platform ILIKE '" . pg_escape_string($substr) . "'";
             break;
 /*
         case 'license':
             $tables .= ", $portsdb_name.licenses AS lc";
-            $criteria = "lc.portfile = p.name AND lc.license = '" . pg_escape_string($substr) . "'";
+            $criteria = "lc.portfile = p.name AND lc.license ILIKE '" . pg_escape_string($substr) . "'";
             break;
 */
         case 'all':
