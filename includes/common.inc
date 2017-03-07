@@ -45,7 +45,7 @@ $guide_url = 'https://guide.macports.org/';
 
 # Page header:
 function print_header($title, $encoding) {
-    global $trac_url, $svn_url, $downloads, $downloads_overview, $github_url, $guide_url;
+    global $trac_url, $downloads_overview, $github_url, $guide_url;
 
     require_once 'AcceptMime.class.php';
     $accept_mime = new AcceptMime();
