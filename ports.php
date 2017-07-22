@@ -102,6 +102,9 @@
             $tables .= ", maintainers AS m";
             $criteria = "m.portfile = p.name AND m.maintainer ILIKE '%" . pg_escape_string($substr) . "%'";
             break;
+        case 'library':
+            $criteria = "p.name = '" . pg_escape_string($substr) . "'";
+            break;
         case 'variant':
             $tables .= ", variants AS v";
             $criteria = "v.portfile = p.name AND v.variant ILIKE '" . pg_escape_string($substr) . "'";
