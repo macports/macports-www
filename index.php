@@ -19,8 +19,8 @@
     . '#using'; ?>">compiling and installing</a> open-source software on your Mac.</p>
 
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
-    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly OS X Mavericks v10.9 and later
-    (including macOS Sierra v10.12).
+    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly OS X El Capitan v10.11 and later
+    (including macOS High Sierra v10.13).
     There are currently <a href="ports.php">
     <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
     different categories, and more are being added on a regular basis.</p>

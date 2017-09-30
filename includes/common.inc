@@ -25,6 +25,7 @@ $mp_downloads = 'https://distfiles.macports.org/MacPorts/';
 //$gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
 $downloads = $mp_downloads;
 $downloads_overview = 'https://github.com/macports/macports-base/releases/tag/v' . $macports_version_latest;
+$highsierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.13-HighSierra.pkg';
 $sierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.12-Sierra.pkg';
 $elcapitan_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.11-ElCapitan.pkg';
 $yosemite_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.10-Yosemite.pkg';
