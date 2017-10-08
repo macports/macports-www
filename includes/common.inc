@@ -8,7 +8,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.4.1';
+$macports_version_latest = '2.4.2';
 
 
 ######################################################################
@@ -22,8 +22,8 @@ $svn_url = 'https://svn.macports.org/repository/macports/';
 $build_url = 'https://build.macports.org/';
 $mp_downloads = 'https://distfiles.macports.org/MacPorts/';
 //$sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';
-//$gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
-$downloads = $mp_downloads;
+$gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
+$downloads = $gh_downloads;
 $downloads_overview = 'https://github.com/macports/macports-base/releases/tag/v' . $macports_version_latest;
 $highsierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.13-HighSierra.pkg';
 $sierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.12-Sierra.pkg';
