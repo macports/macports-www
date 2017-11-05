@@ -6,7 +6,7 @@
 require_once 'AcceptAbstract.class.php';
 
 class AcceptMime extends AcceptAbstract {
-    function AcceptMime() {
-        parent::AcceptAbstract(isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '*');
+    function __construct() {
+        parent::__construct(isset($_SERVER['HTTP_ACCEPT']) ? $_SERVER['HTTP_ACCEPT'] : '*');
     }
 }
