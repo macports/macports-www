@@ -5,7 +5,7 @@
 
 class AcceptAbstract {
 
-    function AcceptAbstract($accept_header) {
+    function __construct($accept_header) {
         $this->accept = array();
 
         if (empty($accept_header)) {
