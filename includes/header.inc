@@ -21,7 +21,7 @@
         <meta name="verify-v1" content="Gx4BI7CyPR+VN1q1Ckc6dcbuLF5NQGUaKEcm1Y/TFlY=" />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
-        <script src="mootools.v1.11.js"></script>
+        <script src="mootools.js"></script>
         <script src="language.js"></script>
     </head>
 
