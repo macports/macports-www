@@ -2,12 +2,11 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* Copyright (c) 2004, OpenDarwin. */
     /* Copyright (c) 2004-2007, The MacPorts Project. */
-    echo "<?xml version=\"1.0\" encoding=\"$encoding\"?>\n";
 ?>
 
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!DOCTYPE html>
+<html>
 
     <head>
         <title><?php print $title; ?></title>
@@ -22,8 +21,8 @@
         <meta name="verify-v1" content="Gx4BI7CyPR+VN1q1Ckc6dcbuLF5NQGUaKEcm1Y/TFlY=" />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
-        <script type="text/javascript" src="mootools.v1.11.js"></script>
-        <script type="text/javascript" src="language.js"></script>
+        <script src="mootools.v1.11.js"></script>
+        <script src="language.js"></script>
     </head>
 
 
