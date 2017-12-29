@@ -40,8 +40,8 @@
 
     <form action="<?php print $phpself; ?>" method="get">
         <p>
-            <label>Search by:</label>
-            <select name="by">
+            <label for="by">Search by:</label>
+            <select name="by" id="by">
                 <option value="name"<?php if ($by == 'name') { print ' selected="selected"'; } ?>>Software Title</option>
                 <option value="category"<?php if ($by == 'category') { print ' selected="selected"'; } ?>>Category</option>
                 <option value="maintainer"<?php if ($by == 'maintainer') { print ' selected="selected"'; } ?>>Maintainer</option>
