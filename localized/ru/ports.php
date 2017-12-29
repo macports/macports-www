@@ -7,9 +7,9 @@
     $by = isset($_GET['by']) ? $_GET['by'] : '';
     $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 ?>
-	<center>
+	<div style="text-align: center;">
 	<h1>Текущая база портов DarwinPorts</h1>
-	</center>
+	</div>
 
 	<p>С помощью этой формы Вы можете осуществлять поиск по текущей базе данных проекта DarwinPorts<br />
 	<i>Последний раз данные обновлены: </i>
