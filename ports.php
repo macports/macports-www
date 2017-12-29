@@ -6,7 +6,7 @@
 
     include_once("includes/common.inc");
 
-    $portsdb_info = portsdb_connect();
+    $portsdb_info = portsdb_gather_information();
     $sql = "SELECT ceil(extract( epoch from activity_time)) as tim FROM log ORDER BY tim DESC";
     $result = pg_query($sql);
     if ($result && $row = pg_fetch_row($result)) {

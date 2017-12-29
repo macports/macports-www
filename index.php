@@ -3,7 +3,7 @@
     /* Copyright (c) 2007, 2014, The MacPorts Project. */
     include_once("includes/common.inc");
     print_header('The MacPorts Project -- Home', 'utf-8');
-    $portsdb_info = portsdb_connect($portsdb_host, $portsdb_user, $portsdb_passwd);
+    $portsdb_info = portsdb_gather_information();
 ?>
 
 
