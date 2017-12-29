@@ -72,7 +72,7 @@ function print_warnings() {
 ######################################################################
 
 # Connect to the portsdb and gather miscellaneous information:
-function portsdb_connect() {
+function portsdb_gather_information() {
     $script = basename($_SERVER['PHP_SELF']);
 
     $portsdb_connection = FALSE;
