@@ -50,9 +50,6 @@ function print_header($title, $encoding) {
     require_once 'AcceptMime.class.php';
     $accept_mime = new AcceptMime();
     $mime_type = "text/html";
-    if ($accept_mime->acceptable("application/xhtml+xml")) {
-        $mime_type = "application/xhtml+xml";
-    }
     header("Content-Type: $mime_type; charset=$encoding");
 
     include("header.inc");
