@@ -37,15 +37,23 @@
 
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
+    <h3 class="subhdr">Getting involved: Students</h3>
+
+    <div class="row">
+        <div class="column">
+            <p> <b>Google Summer of Code</b> is a program to encourage students' participation in Open Source development and offers a stipend to work on the project with an organization for three months. MacPorts has been participating in the program since 2007! </p>
+
+            <p>We are looking for students to join us in making <?php print date('Y'); ?> the best Summer of Code yet. Applicants will be paired with The MacPorts Project mentors to guide them through the coding tasks. This is a great opportunity to gain exposure to real-world software development scenarios. You don't have to be a proven developer, we'd like to have students who are committed to helping MacPorts. </p>
+
+            <p> We have a list of ideas with possible tasks for MacPorts and additional information about the process at <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">wiki/SummerOfCode</a>. We are always open to new ideas. Research on the idea, draft an initial proposal and get it reviewed. </p>
+        </div>
+        <div class="column" style="text-align: center;padding-top: 20px">
+            <a> <img src="img/gsoc.png"> </a>
+        </div>
+    </div>
+
     <h3 class="subhdr">Getting involved</h3>
 
-    <?php
-    /*
-    <p>We are participating in <b>Google Summer of Code <?php print date('Y'); ?></b>: MacPorts-wielding students of higher education can be paid
-    to work on open source software. <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">Head over to our ideas page</a> to see
-    if MacPorts is an interesting project for you.</p>
-    */
-    ?>
 
     <p>There are many ways you can get involved with MacPorts and peer users, system administrators &amp; developers alike.
     Browse over to the &#8220;<a href="contact.php">Contact Us</a>&#8221; section of our site and:</p>

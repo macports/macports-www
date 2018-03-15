@@ -232,6 +232,17 @@ a#download:hover {
     height: 1em;
 }
 
+.column {
+    float: left;
+    width: 50%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 #footer {
     font-size: 90%;
     clear: both;
