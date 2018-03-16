@@ -48,7 +48,7 @@
             <p> We have a list of ideas with possible tasks for MacPorts and additional information about the process at <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">wiki/SummerOfCode</a>. We are always open to new ideas. Research on the idea, draft an initial proposal and get it reviewed. </p>
         </div>
         <div class="column" style="text-align: center;padding-top: 20px">
-            <a> <img src="img/gsoc.png"> </a>
+            <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>"> <img src="img/gsoc.png"> </a>
         </div>
     </div>
 
