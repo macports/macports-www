@@ -37,6 +37,7 @@
 
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
+<?php /*
     <h3 class="subhdr">Getting involved: Students</h3>
 
     <div class="row">
@@ -51,6 +52,7 @@
             <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>"> <img src="img/gsoc.png"> </a>
         </div>
     </div>
+*/ ?>
 
     <h3 class="subhdr">Getting involved</h3>
 
