@@ -16,6 +16,7 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
+                <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
                 <li><a href="<?php echo $highsierra_pkg; ?>">macOS High Sierra v10.13</a></li>
                 <li><a href="<?php echo $sierra_pkg; ?>">macOS Sierra v10.12</a></li>
                 <li><a href="<?php echo $elcapitan_pkg; ?>">OS X El Capitan v10.11</a></li>
@@ -31,6 +32,7 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
         <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
         <a href="<?php print $sierra_pkg; ?>">Sierra</a> and
         <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
@@ -62,7 +64,8 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 9.0 or later for High Sierra,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 10.0 or later for Mojave,
+            9.0 or later for High Sierra,
             8.0 or later for Sierra, 7.0 or later for El Capitan,
             6.1 or later for Yosemite, 5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
             4.1 or later for Lion, 3.2 or later for
@@ -95,6 +98,7 @@
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
+    <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
     <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
     <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
     <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
