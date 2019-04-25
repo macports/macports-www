@@ -49,15 +49,10 @@
 -->
         </div>
 
-
-        <div id="navigation">
-
-            <dl>
-                <dt>Getting Started</dt>
-                <dd>
-                    <ul>
+        <div id='primary-navigation'>
+            <ul>
 <?php
-                        $pages = array (
+                $pages = array (
                             'Home' => 'index.php',
                             'Installing MacPorts' => 'install.php',
                             'Available Ports' => 'ports.php',
@@ -68,14 +63,22 @@
                         );
                         foreach ($pages as $title => $url) {
                             if (basename($_SERVER['PHP_SELF']) == $url) {
-                                echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+                                echo "<li class=\"active\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             } else {
                                 echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             }
                         }
 ?>
-                    </ul>
-                </dd>
+            </ul>
+        </div>
+
+        <div class="full-width-border">
+        </div>
+        <br>
+
+        <div id="side-navigation">
+
+            <dl>
                 <dt>Shortcuts</dt>
                 <dd>
                     <ul>
