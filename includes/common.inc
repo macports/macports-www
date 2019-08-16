@@ -47,7 +47,7 @@ $portdb_url = 'https://ports.macports.org/';
 
 # Page header:
 function print_header($title, $encoding) {
-    global $trac_url, $downloads_overview, $github_url, $guide_url;
+    global $trac_url, $downloads_overview, $github_url, $guide_url, $portdb_url;
 
     require_once 'AcceptMime.class.php';
     $accept_mime = new AcceptMime();
