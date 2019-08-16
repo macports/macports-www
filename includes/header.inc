@@ -55,7 +55,7 @@
                 $pages = array (
                             'Home' => 'index.php',
                             'Installing MacPorts' => 'install.php',
-                            'Available Ports' => 'ports.php',
+                            'Available Ports' => $portdb_url,
                             'Documentation' => $guide_url,
                             'Support &amp; Development' => $trac_url,
                             'Contact Us' => 'contact.php',

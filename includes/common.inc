@@ -40,6 +40,7 @@ $bz2_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.bz2';
 $gz_tarball = $downloads . 'MacPorts-' . $macports_version_latest . '.tar.gz';
 $checksums = $downloads .  'MacPorts-' . $macports_version_latest . '.chk.txt';
 $guide_url = 'https://guide.macports.org/';
+$portdb_url = 'https://ports.macports.org/';
 
 
 #####################################################################
