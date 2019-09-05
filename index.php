@@ -37,18 +37,32 @@
 
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
+    <h3 class="subhdr">MacPorts Meeting 2019</h3>
+
+    <div class="row">
+        <p>We are organising the 3<high>rd</high> international MacPorts Meeting in Slovenia from 11<high>th</high>-16<high>th</high> October. Interested developers and users can follow our <a href="<?php print $trac_url . 'wiki/Meetings/MacPortsMeeting2019'; ?>">wiki page</a> for more information.</p>
+    </div>
+
     <h3 class="subhdr">Getting involved: Students</h3>
 
     <div class="row">
         <div class="column">
-            <p> <b>Google Summer of Code</b> is a program to encourage students' participation in Open Source development and offers a stipend to work on the project with an organization for three months. MacPorts has been participating in the program since 2007! </p>
-
-            <p>We are looking for students to join us in making <?php print date('Y'); ?> the best Summer of Code yet. Applicants will be paired with The MacPorts Project mentors to guide them through the coding tasks. This is a great opportunity to gain exposure to real-world software development scenarios. You don't have to be a proven developer, we'd like to have students who are committed to helping MacPorts. </p>
-
-            <p> We have a list of ideas with possible tasks for MacPorts and additional information about the process at <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">wiki/SummerOfCode</a>. We are always open to new ideas. Research on the idea, draft an initial proposal and get it reviewed. </p>
+            <p>A good way for students to get involved is through the <a href="https://summerofcode.withgoogle.com">Google Summer of Code</a>. GSoC is a program to encourage students' participation in Open Source development and offers a stipend to work on the project with an organization for three months. MacPorts has been participating in the program since 2007! We shall participate next year as well. You may find <a href="<?php print $trac_url . 'wiki/SummerOfCodeArchive'; ?>">past GSoC projects here</a>.</p>
         </div>
         <div class="column" style="text-align: center;padding-top: 20px">
-            <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>"> <img src="img/gsoc.png"> </a>
+            <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>"> <img src="img/gsoc.png" width="110" height="110"> </a>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="column">
+
+<!-- Comment GSoC participation for now
+            <p>We are looking for students to join us in making <?php print date('Y'); ?> the best Summer of Code yet. Applicants will be paired with The MacPorts Project mentors to guide them through the coding tasks. This is a great opportunity to gain exposure to real-world software development scenarios. You don't have to be a proven developer, we'd like to have students who are committed to helping MacPorts. </p>
+-->
+
+            <p> We have a list of ideas with possible tasks for MacPorts and additional information about the process at <a href="<?php print $trac_url . 'wiki/SummerOfCode'; ?>">wiki/SummerOfCode</a>. We are always open to new ideas. Research on the idea, draft an initial proposal and get it reviewed. </p>
         </div>
     </div>
 
