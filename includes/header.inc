@@ -94,9 +94,9 @@
                         );
                         foreach ($shortcuts as $title => $url) {
                             if (basename($_SERVER['PHP_SELF']) == $url) {
-                                echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+                                echo "<li class=\"selected\"><hr align=\"left\" width=\"50%\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             } else {
-                                echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+                                echo "<li><hr align=\"left\" width=\"50%\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                             }
                         }
 ?>
