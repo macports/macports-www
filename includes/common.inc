@@ -8,7 +8,7 @@
 ######################################################################
 
 # MacPorts version variables:
-$macports_version_latest = '2.6.0';
+$macports_version_latest = '2.6.1';
 
 
 ######################################################################
@@ -23,7 +23,7 @@ $build_url = 'https://build.macports.org/';
 $mp_downloads = 'https://distfiles.macports.org/MacPorts/';
 //$sf_downloads = 'http://downloads.sourceforge.net/project/macports/MacPorts/' . $macports_version_latest . '/';
 $gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
-$downloads = $mp_downloads;
+$downloads = $gh_downloads;
 $downloads_overview = 'https://github.com/macports/macports-base/releases/tag/v' . $macports_version_latest;
 $mojave_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.14-Mojave.pkg';
 $highsierra_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.13-HighSierra.pkg';
