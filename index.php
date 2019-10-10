@@ -21,7 +21,7 @@
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
     without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly macOS Sierra v10.12 and later
     (including macOS Catalina v10.15).
-    There are currently <a href="ports.php">
+    There are currently <a href="<?php print $portdb_url; ?>">
     <b><?php print $portsdb_info['num_ports']; ?></b> ports</a> in our tree, distributed among <?php print $portsdb_info['num_categories']; ?>
     different categories, and more are being added on a regular basis.</p>
 

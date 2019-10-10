@@ -114,7 +114,7 @@
     can also be viewed). Note that in order to interact with Trac for anything other than read only operations, you need
     to <a href="<?php print $trac_url . 'auth/register/'; ?>">register</a> with GitHub for an account.</p>
 
-    <p>If you think you've found a bug either in one of our <a href="ports.php">available ports</a> or in MacPorts itself, or
+    <p>If you think you've found a bug either in one of our <a href="<?php print $portdb_url; ?>">available ports</a> or in MacPorts itself, or
     on the other hand if you'd like to make a contribution of any kind to the project, feel free to <a href="<?php print $trac_url
     . 'newticket'; ?>">open a ticket</a> to help us look into the problem and/or submission. Please keep in mind that we
     usually get a fairly high number of duplicate reports for common problems and therefore appreciate any help we can get in
