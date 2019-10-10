@@ -16,10 +16,10 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
+                <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
                 <li><a href="<?php echo $highsierra_pkg; ?>">macOS High Sierra v10.13</a></li>
                 <li><a href="<?php echo $sierra_pkg; ?>">macOS Sierra v10.12</a></li>
-                <li><a href="<?php echo $elcapitan_pkg; ?>">OS X El Capitan v10.11</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -32,14 +32,15 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
         <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
-        <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
-        <a href="<?php print $sierra_pkg; ?>">Sierra</a> and
-        <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
+        <a href="<?php print $highsierra_pkg; ?>">High Sierra</a> and
+        <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
         for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
-        below</a>. Installers for legacy platforms <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
+        below</a>. Installers for legacy platforms <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
+        <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
         <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
         <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
         <a href="<?php print $lion_pkg; ?>">Lion</a>, <a
@@ -64,7 +65,8 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 10.0 or later for Mojave,
+            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 11.0 or later for Catalina,
+            10.0 or later for Mojave,
             9.0 or later for High Sierra,
             8.0 or later for Sierra, 7.0 or later for El Capitan,
             6.1 or later for Yosemite, 5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
@@ -84,8 +86,10 @@
             <li>(Optional) The X11 windowing environment for ports that depend on the functionality it provides to run.  You have
             multiple choices for an X11 server:
                 <ul>
-                    <li>Install the xorg-server port from MacPorts.</li>
-                    <li>The <a href="https://www.xquartz.org">XQuartz Project</a> provides a complete X11 release for macOS including server and client libraries and applications.</li>
+                    <li>Install the xorg-server port from MacPorts (recommended).</li>
+                    <li>The <a href="https://www.xquartz.org">XQuartz Project</a> provides a complete X11 release
+                    for macOS including server and client libraries and applications. It has however not been updated since
+                    2016.</li>
                     <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package on older OS versions. It is always installed on Lion, and
                     is an optional installation on your system CDs/DVD with previous OS versions.</li>
                 </ul>
@@ -98,6 +102,7 @@
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
+    <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
     <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
     <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
     <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
