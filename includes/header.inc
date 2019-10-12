@@ -78,29 +78,24 @@
 
         <div id="side-navigation">
 
-            <dl>
-                <dt>Shortcuts</dt>
-                <dd>
-                    <ul>
+            <ul>
 <?php
-                        $shortcuts = array (
-                            'Available Downloads' => $downloads_overview,
-                            'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
-                            'Report a Bug' => $trac_url . 'newticket',
-                            'Bug reporting Guidelines' =>  $guide_url . '#project.tickets',
-                            'Git Repository' => $github_url,
-                            'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
-                            'Becoming a Member' => $guide_url . '#project.membership',
-                        );
-                        foreach ($shortcuts as $title => $url) {
-                            if (basename($_SERVER['PHP_SELF']) == $url) {
-                                echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
-                            } else {
-                                echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
-                            }
+                    $shortcuts = array (
+                        'Available Downloads' => $downloads_overview,
+                        'MacPorts FAQ' => $trac_url . 'wiki/FAQ',
+                        'Report a Bug' => $trac_url . 'newticket',
+                        'Bug reporting Guidelines' =>  $guide_url . '#project.tickets',
+                        'Git Repository' => $github_url,
+                        'MacPorts Team' => $trac_url . 'wiki/MacPortsDevelopers',
+                        'Becoming a Member' => $guide_url . '#project.membership',
+                    );
+                    foreach ($shortcuts as $title => $url) {
+                        if (basename($_SERVER['PHP_SELF']) == $url) {
+                            echo "<li class=\"selected\"><a href=\"$url\" title=\"$title\">$title</a></li>\n";
+                        } else {
+                            echo "<li><a href=\"$url\" title=\"$title\">$title</a></li>\n";
                         }
+                    }
 ?>
-                    </ul>
-                </dd>
-            </dl>
+            </ul>
         </div>

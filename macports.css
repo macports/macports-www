@@ -128,7 +128,7 @@ a#download:hover {
 
 #language img, #languages img {
     width: 30px;
-    height: 48px;    
+    height: 48px;
 }
 
 #side-navigation {
@@ -140,24 +140,6 @@ a#download:hover {
     /*! margin-top: -6px; */
 }
 
-#side-navigation dl {
-    padding: 16px 0;
-    margin: 0;
-    /*! background: url(img/nav-footer.png) bottom no-repeat; */
-}
-
-#side-navigation dt {
-    margin: 0;
-    /*! padding: 0 16px; */
-    /*! color: white; */
-    /*! font: bold 125% "Lucida Grande", Helvetica, Arial, sans-serif; */
-}
-
-#side-navigation dd {
-    margin: 0;
-    padding: 0;
-}
-
 #side-navigation ul {
     margin: 0 0 1em 0;
     padding: 0;
@@ -166,16 +148,18 @@ a#download:hover {
 #side-navigation li {
     display: block;
     margin-bottom: 1px;
-    padding: 0 16px 0 28px;
+    border-bottom: 1px solid #CDCDCD
 }
 
 #side-navigation a {
     text-decoration: none;
     color: #242933;
+    padding: 6px 16px 6px 6px;
+    display: block;
 }
 
 #side-navigation a:hover {
-    text-decoration: underline;
+    background: #CDCDCD
 }
 
 .selected {
