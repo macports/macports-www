@@ -18,8 +18,6 @@
             <ul>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
-                <li><a href="<?php echo $highsierra_pkg; ?>">macOS High Sierra v10.13</a></li>
-                <li><a href="<?php echo $sierra_pkg; ?>">macOS Sierra v10.12</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
