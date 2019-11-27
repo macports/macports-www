@@ -57,6 +57,8 @@
 
     <p>Checksums for our packaged <a href="<?php print $downloads; ?>">downloads</a> are contained in the corresponding <a
     href="<?php print $checksums; ?>">checksums file</a>.</p>
+    
+    <p>The public key to verify package signatures can be found <a href="https://trac.macports.org/wiki/jmr#no1">under the attachments section on the jmr's wiki page</a>. (<a href="https://trac.macports.org/attachment/wiki/jmr/jmr_at_macports_org-2013.pubkey">Direct Link</a>).</p>
 
 
     <div id="requirements">
