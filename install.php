@@ -57,6 +57,8 @@
 
     <p>Checksums for our packaged <a href="<?php print $downloads; ?>">downloads</a> are contained in the corresponding <a
     href="<?php print $checksums; ?>">checksums file</a>.</p>
+    
+    <p>The public key to verify the detached GPG signatures can be found under the <a href="https://trac.macports.org/wiki/jmr#no1">attachments section on jmr's wiki page</a>. (<a href="https://trac.macports.org/attachment/wiki/jmr/jmr_at_macports_org-2013.pubkey">Direct Link</a>).</p>
 
 
     <div id="requirements">
