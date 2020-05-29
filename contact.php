@@ -140,6 +140,11 @@
     <p>The language of choice for the IRC channel is also English, for obvious reasons of universality, so sticking to it
     is appreciated.</p>
 
+    <p>An alternative real-time discussion platform is <a href="https://chat.macports.org">chat.macports.org</a>, a
+    <a href="https://rocket.chat">Rocket.Chat</a> instance. It is bridged to the IRC channel with the bot account
+    <code>mpbridge</code>. It preserves chatting history, so users without an IRC bouncer might prefer this over directly
+    using IRC. A GitHub account is required to use this chatting Service.</p>
+
 
     <h3 class="subhdr" id="Individuals">Individuals</h3>
 
