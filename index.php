@@ -2,13 +2,41 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* Copyright (c) 2007, 2014, The MacPorts Project. */
     include_once("includes/common.inc");
-    print_header('The MacPorts Project -- Home', 'utf-8');
+    print_header('The MacPorts Package Manager for macOS', 'utf-8');
 ?>
 
 
 <div id="content">
+   <h2 class="hdr">MacPorts</h2>
+    <p>MacPorts is an open-source package management for macOS.</p>
+    <p>Latest MacPorts <a href="install.php">release: <b><?php print $macports_version_latest; ?></a></b></p>
+    
+    <h3 class="subhdr">Install MacPort</h3>
+     <ol>
+        <li>Install <a href="<?php print $guide_url . '#installing.xcode'; ?>">Xcode and the Xcode Command Line Tools</a></li>
+        <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
+         <li>Download and Run the MacPorts installer <a href="<?php echo $catalina_pkg; ?>">MacPorts-Catalina.pkg</a> (<a href="install.php#installing">other OS version</a>).
+        </li>
+    </ol>
+    
+    <p>For more info and options see <a href="install.php">installation</a>.</p>
+    
+    <h3 class="subhdr">Install a Package</h3>
+    <p><code>sudo port install packagename</code></p>
+    
+    <p>Everything installed by MacPorts is located in <code>/opt/local</code> and keep macOS clean.</p>
+    
+    <h3 class="subhdr">Update instealled Packages</h3>
+    <p><code>sudo port upgrade outdated</code></p>
+    
+    <h3 class="subhdr">Help and Documentation</h3>
 
-    <h2 class="hdr">The MacPorts Project Official Homepage</h2>
+    <p>Check our documentation, A.K.A <a href="<?php print $guide_url; ?>"> The MacPorts Guide</a>, and our Trac 
+        <a href="<?php print $trac_url; ?>">Wiki server &amp; bug tracker</a>.</p>
+    <p>Feel free to <a href="contact.php">get in touch with us</a> if you run into problem using MacPort.</p>
+
+
+    <h2 class="hdr">The MacPorts Project</h2>
 
     <p>The MacPorts Project is an open-source community initiative to design an easy-to-use system for compiling, installing,
     and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macos/">Mac
@@ -23,17 +51,7 @@
     There are <a href="<?php print $portdb_url; ?>">
     <b>thousands</b> of ports</a> in our tree, distributed among different categories, and more are being added on a regular basis.</p>
 
-    <h3 class="subhdr">Getting started</h3>
 
-    <p>For information on installing MacPorts please see the <a href="install.php">installation</a> section of this site and
-    explore the myriad of download options we provide and our base system requirements.</p>
-
-    <p>If you run into any problems installing and/or using MacPorts we also have many options to help you, depending on how
-    you wish to get <a href="contact.php">get in touch with us</a>. Other important help resources are our online documentation,
-    A.K.A <a href="<?php print $guide_url; ?>"> The MacPorts Guide</a>, and our Trac <a href="<?php print $trac_url; ?>">Wiki
-    server &amp; bug tracker</a>.</p>
-
-    <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 
     <h3 class="subhdr">MacPorts Meeting 2019</h3>
 
