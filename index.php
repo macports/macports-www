@@ -34,13 +34,13 @@
     server &amp; bug tracker</a>.</p>
 
     <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
-
+<!-- Meeting info hidden until the next one is planned
     <h3 class="subhdr">MacPorts Meeting 2019</h3>
 
     <div class="row">
         <p>We are organising the 3<sup>rd</sup> international MacPorts Meeting in Slovenia from 11<sup>th</sup>-16<sup>th</sup> October. Interested developers and users can follow our <a href="<?php print $trac_url . 'wiki/Meetings/MacPortsMeeting2019'; ?>">wiki page</a> for more information.</p>
     </div>
-
+-->
     <h3 class="subhdr">Getting involved: Students</h3>
 
     <div class="row">
