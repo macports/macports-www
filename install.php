@@ -16,7 +16,7 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
-                <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11.0</a></li>
+                <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
                 <li><a href="<?php echo $highsierra_pkg; ?>">macOS High Sierra v10.13</a></li>

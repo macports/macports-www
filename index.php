@@ -19,7 +19,7 @@
 
     <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
     without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly macOS High Sierra v10.13 and later
-    (including macOS Big Sur v11.0).
+    (including macOS Big Sur v11).
     There are <a href="<?php print $portdb_url; ?>">
     <b>thousands</b> of ports</a> in our tree, distributed among different categories, and more are being added on a regular basis.</p>
 
