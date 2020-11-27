@@ -90,7 +90,4 @@
 
 <?php
     print_footer();
-    if ($portsdb_info['connection_handler'] !== false) {
-        pg_close($portsdb_info['connection_handler']);
-    }
 ?>
