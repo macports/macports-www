@@ -8,8 +8,7 @@
         <div id="footer">
 
             <p>Copyright &#xA9; 2002&#x2013;<?php print date("Y"); ?>, <a href="https://www.macports.org">The MacPorts Project</a>.
-            All rights reserved.
-            Content delivery accelerated by <a href="https://www.stackpath.com/">StackPath</a>.</p>
+            All rights reserved.</p>
 
         </div>
 
