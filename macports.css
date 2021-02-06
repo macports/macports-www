@@ -43,22 +43,19 @@ h1, h2, h3 {
     /*! color: white; */
 }
 
-h1 {
-    float: left;
-}
-
-h1 a {
+.logo a {
     display: block;
+    float: left;
     width: 183px;
     height: 49px;
     background: url(img/macports-logo-top.png);
     background-size: 183px 73px;
 }
 
-h2 small, h3 small {
+h1 small, h2 small, h3 small {
     float: right;
 }
-h2::after, h3::after {
+h1::after, h2::after, h3::after {
     content: '';
     display: block;
     clear: right;

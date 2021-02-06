@@ -2,38 +2,30 @@
     /* -*- coding: utf-8; mode: php; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:set fenc=utf-8 filetype=php et sw=4 ts=4 sts=4: */
     /* Copyright (c) 2007, 2014, The MacPorts Project. */
     include_once("includes/common.inc");
-    print_header('The MacPorts Project -- Home', 'utf-8');
+    print_header('The MacPorts Package Manager for macOS', 'utf-8');
 ?>
 
 
 <div id="content">
 
-    <h2 class="hdr">The MacPorts Project Official Homepage</h2>
+    <h2 class="hdr">MacPorts</h2>
 
-    <p>The MacPorts Project is an open-source community initiative to design an easy-to-use system for compiling, installing,
-    and upgrading either command-line, X11 or Aqua based open-source software on the <a href="http://www.apple.com/macos/">Mac
-    operating system</a>. To that end we provide the command-line driven MacPorts software package under a <a
-    href="http://opensource.org/licenses/BSD-3-Clause">3-Clause BSD License</a>, and through it easy access to thousands of ports
-    that <a href="<?php print $guide_url . '#introduction'; ?>"> greatly simplify</a> the task of <a href="<?php print $guide_url
-    . '#using'; ?>">compiling and installing</a> open-source software on your Mac.</p>
+    <p>MacPorts is a package manager for macOS designed for stability and simplicity.</p>
 
-    <p>We provide a single software tree that attempts to track the latest release of every software title (port) we distribute,
-    without splitting them into &#8220;stable&#8221; Vs. &#8220;unstable&#8221; branches, targeting mainly macOS High Sierra v10.13 and later
-    (including macOS Big Sur v11).
+    <p><strong><a href="install.php">Install MacPorts</a></strong> (lastest version <?php print $macports_version_latest; ?>).</p>
+
+
+    <h2 class="hdr">Avaible ports</h2>
+
     There are <a href="<?php print $portdb_url; ?>">
     <b>thousands</b> of ports</a> in our tree, distributed among different categories, and more are being added on a regular basis.</p>
 
-    <h3 class="subhdr">Getting started</h3>
+    <h3 class="subhdr">Getting Help</h3>
 
-    <p>For information on installing MacPorts please see the <a href="install.php">installation</a> section of this site and
-    explore the myriad of download options we provide and our base system requirements.</p>
-
-    <p>If you run into any problems installing and/or using MacPorts we also have many options to help you, depending on how
-    you wish to get <a href="contact.php">get in touch with us</a>. Other important help resources are our online documentation,
+    <p>If you run into any problems <a href="contact.php">get in touch with us</a>. Other important help resources are our online documentation,
     A.K.A <a href="<?php print $guide_url; ?>"> The MacPorts Guide</a>, and our Trac <a href="<?php print $trac_url; ?>">Wiki
     server &amp; bug tracker</a>.</p>
 
-    <p><b>Latest MacPorts <a href="install.php">release</a>: <?php print $macports_version_latest; ?></b></p>
 <!-- Meeting info hidden until the next one is planned
     <h3 class="subhdr">MacPorts Meeting 2019</h3>
 
