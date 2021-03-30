@@ -93,8 +93,7 @@
                 <ul>
                     <li>Install the xorg-server port from MacPorts (recommended).</li>
                     <li>The <a href="https://www.xquartz.org">XQuartz Project</a> provides a complete X11 release
-                    for macOS including server and client libraries and applications. It has however not been updated since
-                    2016.</li>
+                    for macOS including server and client libraries and applications.</li>
                     <li>Apple's X11.app is provided by the &#8220;X11 User&#8221; package on older OS versions. It is always installed on Lion, and
                     is an optional installation on your system CDs/DVD with previous OS versions.</li>
                 </ul>
