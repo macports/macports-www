@@ -19,7 +19,6 @@
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
-                <li><a href="<?php echo $highsierra_pkg; ?>">macOS High Sierra v10.13</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -33,13 +32,13 @@
     <ul>
         <li>&#8220;pkg&#8221; installers for
         <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
-        <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
-        <a href="<?php print $mojave_pkg; ?>">Mojave</a>, and
-        <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
+        <a href="<?php print $catalina_pkg; ?>">Catalina</a>, and
+        <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
         for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>. Installers for legacy platforms
+        <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
         <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
         <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
         <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
@@ -69,7 +68,7 @@
         components:</p>
 
         <ol>
-            <li>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 12.2 or later for Big Sur,
+            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 12.2 or later for Big Sur,
             11.3 or later for Catalina,
             10.0 or later for Mojave,
             9.0 or later for High Sierra,
@@ -78,17 +77,17 @@
             4.1 or later for Lion, 3.2 or later for
             Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
             site, on your Mac operating system installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
-            OS is highly recommended, except for Snow Leopard where the last free version, 3.2.6, is recommended.</li>
-            <li><p>Apple's Command Line Developer Tools can be installed on recent OS versions by running this command in the Terminal:</p>
+            OS is highly recommended, except for Snow Leopard where the last free version, 3.2.6, is recommended.</p>
+            <p>With Xcode 4 and later, users need to accept the Xcode EULA by either launching Xcode or running:</p>
+            <pre>xcodebuild -license</pre>
+            </li>
+            <li><p>Apple's Command Line Developer Tools, which can be installed on recent OS versions by running this command in the Terminal:</p>
             <pre>xcode-select --install</pre>
             <p>Older versions are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
             or they can be installed from within Xcode back to version 4.  Users of Xcode 3 or earlier can install them by ensuring that the appropriate
             option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
             "Command Line Support").</p></li>
-            <li>Xcode 4 and later users need to first accept the Xcode EULA by either launching Xcode or running:
-            <pre>xcodebuild -license</pre>
-            </li>
-            <li>(Optional) The X11 windowing environment for ports that depend on the functionality it provides to run.  You have
+            <li>(Optional) The X11 windowing environment, for ports that depend on the functionality it provides to run.  You have
             multiple choices for an X11 server:
                 <ul>
                     <li>Install the xorg-server port from MacPorts (recommended).</li>
