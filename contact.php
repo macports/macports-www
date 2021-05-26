@@ -130,15 +130,21 @@
 
     <h3 class="subhdr" id="IRC">IRC</h3>
 
-    <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://chat.freenode.net/#MacPorts">
-    #MacPorts</a> channel on the <a href="http://freenode.net/">Freenode network</a> is where some of us usually hang out,
-    MacPorts developers and community members alike. Everyone is free and welcomed to join us, even if it is for a random
+    <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://irc.libera.chat/#MacPorts">
+    #MacPorts</a> channel on <a href="https://libera.chat/">Libera Chat</a> is where some of us usually hang out,
+    MacPorts developers and community members alike. Everyone is free and welcomed to join us, whether for a random
     fun conversation or a productive troubleshooting session, but please keep in mind that no one is guaranteed to be
     around at any particular moment and that channel members are not obligated to answer your questions. If you fail to
-    get any traction at time, do not take it personally and simply direct your questions to the mailing lists instead.</p>
+    get traction at any time, do not take it personally and simply direct your questions to the mailing lists instead.</p>
 
     <p>The language of choice for the IRC channel is also English, for obvious reasons of universality, so sticking to it
     is appreciated.</p>
+
+    <p>If you would like a web-based interface to the IRC channel, one option is
+    <a href="https://kiwiirc.com/nextclient/irc.libera.chat/">KiwiIRC</a>. Note that it is operated by a third party.</p>
+
+    <p>We also have a <a href="irc://chat.freenode.net/#MacPorts">
+    #MacPorts</a> channel on the <a href="http://freenode.net/">Freenode network</a>.</p>
 
     <p>An alternative real-time discussion platform is <a href="https://chat.macports.org">chat.macports.org</a>, a
     <a href="https://rocket.chat">Rocket.Chat</a> instance. It is bridged to the IRC channel with the bot account
