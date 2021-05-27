@@ -13,7 +13,9 @@
 
     <ol>
         <li>Install <a href="<?php print $guide_url . '#installing.xcode'; ?>">Xcode and the Xcode Command Line Tools</a></li>
-        <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
+        <li>Open the Terminal app and agree to the Xcode license: 
+            <pre>sudo xcodebuild -license</pre>
+        </li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
@@ -21,6 +23,13 @@
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
+        </li>
+        <li>Add the following to your <code>.zprofile</code> or <code>.bash_profile</code> file:
+            <pre>export PATH=/opt/local/bin:$PATH</pre>
+        </li>
+        <li>Open a new Terminal window (so the changes to your <code>$PATH</code> take effect) and type
+            <pre>port help</pre>
+            to get started.
         </li>
     </ol>
 
