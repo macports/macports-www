@@ -143,14 +143,13 @@
     <p>If you would like a web-based interface to the IRC channel, one option is
     <a href="https://kiwiirc.com/nextclient/irc.libera.chat/">KiwiIRC</a>. Note that it is operated by a third party.</p>
 
-    <p>We also have a <a href="irc://chat.freenode.net/#MacPorts">
-    #MacPorts</a> channel on the <a href="http://freenode.net/">Freenode network</a>.</p>
-
     <p>An alternative real-time discussion platform is <a href="https://chat.macports.org">chat.macports.org</a>, a
     <a href="https://rocket.chat">Rocket.Chat</a> instance. It is bridged to the IRC channel with the bot account
     <code>mpbridge</code>. It preserves chatting history, so users without an IRC bouncer might prefer this over directly
     using IRC. A GitHub account is required to use this chatting Service.</p>
 
+    <p>We formerly had a #MacPorts channel on the Freenode network. While the channel may still exist there, it is no
+    longer an official channel for the MacPorts project.</p>
 
     <h3 class="subhdr" id="Individuals">Individuals</h3>
 
