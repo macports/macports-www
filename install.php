@@ -16,6 +16,7 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
+                <li><a href="<?php echo $monterey_pkg; ?>">macOS Monterey v12</a></li>
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
@@ -31,6 +32,7 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
         <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
         <a href="<?php print $catalina_pkg; ?>">Catalina</a>, and
         <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
@@ -68,7 +70,8 @@
         components:</p>
 
         <ol>
-            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 12.2 or later for Big Sur,
+            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 13.1 or later for Monterey,
+            12.2 or later for Big Sur,
             11.3 or later for Catalina,
             10.0 or later for Mojave,
             9.0 or later for High Sierra,
@@ -105,6 +108,7 @@
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
+    <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
     <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
     <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
     <a href="<?php print $mojave_pkg; ?>">Mojave</a>,

@@ -25,6 +25,7 @@ $mp_downloads = 'https://distfiles.macports.org/MacPorts/';
 $gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
 $downloads = $gh_downloads;
 $downloads_overview = 'https://github.com/macports/macports-base/releases/tag/v' . $macports_version_latest;
+$monterey_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-12-Monterey.pkg';
 $bigsur_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-11-BigSur.pkg';
 $catalina_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.15-Catalina.pkg';
 $mojave_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-10.14-Mojave.pkg';
