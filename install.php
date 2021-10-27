@@ -23,11 +23,20 @@
             </ul>
         </li>
     </ol>
-
+    
+    <h2 class="hdr" id="quickstart">Upgrading to a new major release of macOS</h2>
+    
+    <ol>
+        <li>Install the latest version of <a href="<?php print $guide_url . '#installing.xcode'; ?>">Xcode and the Xcode Command Line Tools</a></li>
+        <li><a href="<?php print $trac_url . 'wiki/Migration#config'; ?>">Review <code>macports.conf</code> settings</a> (if not default)</li>
+        <li>Run <a href="<?php print $trac_url . 'wiki/Migration#portmigrate'; ?>"><code>sudo port migrate</code></a></li>
+    </ol>
+    
+    <p>More info can be found on the <a href="<?php print $trac_url . 'wiki/Migration'; ?>">migration wiki page</a>.</p>
+    
     <h2 class="hdr" id="installing">Installing MacPorts</h2>
 
-    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation (note, if you are upgrading to a new major release of macOS, see the <a href="<?php print $trac_url . 'wiki/Migration'; ?>">migration info page</a>):
-    </p>
+    <p>MacPorts version <?php print $macports_version_latest; ?> is available in various formats for download and installation:</p>
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
