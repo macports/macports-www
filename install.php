@@ -19,7 +19,6 @@
                 <li><a href="<?php echo $monterey_pkg; ?>">macOS Monterey v12</a></li>
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
-                <li><a href="<?php echo $mojave_pkg; ?>">macOS Mojave v10.14</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -33,13 +32,13 @@
     <ul>
         <li>&#8220;pkg&#8221; installers for
         <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
-        <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
-        <a href="<?php print $catalina_pkg; ?>">Catalina</a>, and
-        <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
+        <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>, and
+        <a href="<?php print $catalina_pkg; ?>">Catalina</a>
         for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>. Installers for legacy platforms
+        <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
         <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
         <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
         <a href="<?php print $elcapitan_pkg; ?>">El Capitan</a>,
