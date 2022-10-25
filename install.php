@@ -16,6 +16,7 @@
         <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
+                <li><a href="<?php echo $ventura_pkg; ?>">macOS Ventura v13</a></li>
                 <li><a href="<?php echo $monterey_pkg; ?>">macOS Monterey v12</a></li>
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
                 <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
@@ -31,6 +32,7 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $ventura_pkg; ?>">Ventura</a>,
         <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
         <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>, and
         <a href="<?php print $catalina_pkg; ?>">Catalina</a>
@@ -69,7 +71,9 @@
         components:</p>
 
         <ol>
-            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version 13.1 or later for Monterey,
+            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version
+            14.1 or later for Ventura,
+            13.1 or later for Monterey,
             12.2 or later for Big Sur,
             11.3 or later for Catalina,
             10.0 or later for Mojave,
@@ -107,6 +111,7 @@
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
+    <a href="<?php print $ventura_pkg; ?>">Ventura</a>,
     <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
     <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
     <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
