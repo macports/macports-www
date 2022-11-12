@@ -12,8 +12,7 @@
     <h2 class="hdr" id="quickstart">Quickstart</h2>
 
     <ol>
-        <li>Install <a href="<?php print $guide_url . '#installing.xcode'; ?>">Xcode and the Xcode Command Line Tools</a></li>
-        <li>Agree to Xcode license in Terminal: <code>sudo xcodebuild -license</code></li>
+        <li>Install Apple's Command Line Developer Tools: <code>xcode-select --install</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
                 <li><a href="<?php echo $ventura_pkg; ?>">macOS Ventura v13</a></li>
@@ -67,32 +66,42 @@
 
     <div id="requirements">
 
-        <p>Please note that in order to install and run MacPorts on macOS, your system must have installations of the following
-        components:</p>
+        <p>For some ports, your system might require installations of the following components:</p>
 
         <ol>
-            <li><p>Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools (version
-            14.1 or later for Ventura,
-            13.1 or later for Monterey,
-            12.2 or later for Big Sur,
-            11.3 or later for Catalina,
-            10.0 or later for Mojave,
-            9.0 or later for High Sierra,
-            8.0 or later for Sierra, 7.0 or later for El Capitan,
-            6.1 or later for Yosemite, 5.0.1 or later for Mavericks, 4.4 or later for Mountain Lion,
-            4.1 or later for Lion, 3.2 or later for
-            Snow Leopard, or 3.1 or later for Leopard), found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
-            site, on your Mac operating system installation CDs/DVD, or in the Mac App Store. Using the latest available version that will run on your
-            OS is highly recommended, except for Snow Leopard where the last free version, 3.2.6, is recommended.</p>
-            <p>With Xcode 4 and later, users need to accept the Xcode EULA by either launching Xcode or running:</p>
-            <pre>xcodebuild -license</pre>
-            </li>
-            <li><p>Apple's Command Line Developer Tools, which can be installed on recent OS versions by running this command in the Terminal:</p>
+            <li><p>Apple's Command Line Developer Tools, in case a port you're installing or one of its dependencies
+            are not available as binaries.</p>
+            <p>It can be installed on recent OS versions by running this command in the Terminal:</p>
             <pre>xcode-select --install</pre>
             <p>Older versions are found at the <a href="https://developer.apple.com/downloads/">Apple Developer</a> site,
             or they can be installed from within Xcode back to version 4.  Users of Xcode 3 or earlier can install them by ensuring that the appropriate
             option(s) are selected at the time of Xcode's install ("UNIX Development", "System Tools", "Command Line Tools", or
             "Command Line Support").</p></li>
+            <li><p>(Optional) Apple's <a href="https://developer.apple.com/technologies/tools/">Xcode</a> Developer Tools, when building some ports from source.
+            MacPorts will let you know if this is the case.</p>
+            <p>Using the latest available version that will run on your OS is highly recommended, except for Snow Leopard where the last free version,
+            3.2.6, is recommended:</p>
+            <ul>
+                <li>14.1 or later for Ventura</li>
+                <li>13.1 or later for Monterey</li>
+                <li>12.2 or later for Big Sur</li>
+                <li>11.3 or later for Catalina</li>
+                <li>10.0 or later for Mojave</li>
+                <li>9.0 or later for High Sierra</li>
+                <li>8.0 or later for Sierra</li>
+                <li>7.0 or later for El Capitan</li>
+                <li>6.1 or later for Yosemite</li>
+                <li>5.0.1 or later for Mavericks</li>
+                <li>4.4 or later for Mountain Lion</li>
+                <li>4.1 or later for Lion</li>
+                <li>3.2 or later for Snow Leopard</li>
+                <li>3.1 or later for Leopard</li>
+            </ul>
+            <p>It can be found on the <a href="https://developer.apple.com/downloads/">Apple Developer</a>
+            site, on your Mac operating system installation CDs/DVD, or in the Mac App Store.</p>
+            <p>With Xcode 4 and later, users need to accept the Xcode EULA by either launching Xcode or running:</p>
+            <pre>xcodebuild -license</pre>
+            </li>
             <li>(Optional) The X11 windowing environment, for ports that depend on the functionality it provides to run.  You have
             multiple choices for an X11 server:
                 <ul>
