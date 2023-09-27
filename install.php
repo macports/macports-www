@@ -15,10 +15,10 @@
         <li>Install Apple's Command Line Developer Tools: <code>xcode-select --install</code></li>
         <li>Install MacPorts for your version of the Mac operating system:
             <ul>
+                <li><a href="<?php echo $sonoma_pkg; ?>">macOS Sonoma v14</a></li>
                 <li><a href="<?php echo $ventura_pkg; ?>">macOS Ventura v13</a></li>
                 <li><a href="<?php echo $monterey_pkg; ?>">macOS Monterey v12</a></li>
                 <li><a href="<?php echo $bigsur_pkg; ?>">macOS Big Sur v11</a></li>
-                <li><a href="<?php echo $catalina_pkg; ?>">macOS Catalina v10.15</a></li>
                 <li><a href="#installing">Older OS? See here.</a></li>
             </ul>
         </li>
@@ -31,14 +31,15 @@
 
     <ul>
         <li>&#8220;pkg&#8221; installers for
+        <a href="<?php print $sonoma_pkg; ?>">Sonoma</a>,
         <a href="<?php print $ventura_pkg; ?>">Ventura</a>,
-        <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
-        <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>, and
-        <a href="<?php print $catalina_pkg; ?>">Catalina</a>
+        <a href="<?php print $monterey_pkg; ?>">Monterey</a>, and
+        <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>
         for use with the macOS Installer.
         This is the simplest installation
         procedure that most users should <a href="#pkg">follow</a> after meeting the requirements listed <a href="#requirements">
         below</a>. Installers for legacy platforms
+        <a href="<?php print $catalina_pkg; ?>">Catalina</a>,
         <a href="<?php print $mojave_pkg; ?>">Mojave</a>,
         <a href="<?php print $highsierra_pkg; ?>">High Sierra</a>,
         <a href="<?php print $sierra_pkg; ?>">Sierra</a>,
@@ -82,6 +83,7 @@
             <p>Using the latest available version that will run on your OS is highly recommended, except for Snow Leopard where the last free version,
             3.2.6, is recommended:</p>
             <ul>
+                <li>15.0 or later for Sonoma</li>
                 <li>14.1 or later for Ventura</li>
                 <li>13.1 or later for Monterey</li>
                 <li>12.2 or later for Big Sur</li>
@@ -120,6 +122,7 @@
     <h3 class="subhdr" id="pkg">macOS Package (.pkg) Installer</h3>
 
     <p>The easiest way to install MacPorts on a Mac is by downloading the pkg or dmg for
+    <a href="<?php print $sonoma_pkg; ?>">Sonoma</a>,
     <a href="<?php print $ventura_pkg; ?>">Ventura</a>,
     <a href="<?php print $monterey_pkg; ?>">Monterey</a>,
     <a href="<?php print $bigsur_pkg; ?>">Big Sur</a>,
