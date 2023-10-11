@@ -6,14 +6,15 @@ $by = isset($_GET['by']) ? $_GET['by'] : '';
 $substr = isset($_GET['substr']) ? $_GET['substr'] : '';
 
 $seeother = false;
-$newurl = $portdb_url;
+// URL for "All Ports" page [ports.macports.org/search/]
+$newurl = $portdb_url . 'search/';
 switch ($by) {
     case 'name':
     case 'library':
-        $newurl .= '?search=' . rawurlencode($substr) . '&search_by=name';
+        $newurl .= '?q=' . rawurlencode($substr) . '&name=on';
         break;
     case 'category':
-        $newurl .= 'ports/category/' . rawurlencode($substr);
+        $newurl .= '?selected_facets=categories_exact:' . rawurlencode($substr);
         break;
     case 'maintainer':
         /* ports.macports.org only groups by GitHub user, probably not worth
@@ -21,7 +22,7 @@ switch ($by) {
         $seeother = true;
         break;
     case 'variant':
-        $newurl .= 'ports/variant/' . rawurlencode($substr);
+        $newurl .= '?selected_facets=variants_exact:' . rawurlencode($substr);
         break;
     case 'platform':
         /* ports.macports.org does not allow searching by platform. */
