@@ -248,7 +248,7 @@
         <li><b>mtree</b> for directory hierarchy.</li>
         <li><a href="http://rsync.samba.org/">rsync</a> for syncing the ports.</li>
         <li><a href="http://curl.haxx.se/">cURL</a> for downloading distfiles.</li>
-        <li><a href="http://gnustep.org/">GNUstep</a> (Base), for Foundation (optional, can be disabled via configure args).</li>
+        <li><a href="https://gnustep.github.io/">GNUstep</a> (Base), for Foundation (optional, can be disabled via configure args).</li>
         <li><a href="http://www.openssl.org/">OpenSSL</a> for signature verification, and optionally for checksums. <b>libmd</b> may
             be used instead for checksums.</li>
     </ul>
