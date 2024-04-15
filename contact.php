@@ -130,25 +130,27 @@
 
     <h3 class="subhdr" id="IRC">IRC</h3>
 
-    <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://irc.libera.chat/#MacPorts">
-    #MacPorts</a> channel on <a href="https://libera.chat/">Libera Chat</a> is where some of us usually hang out,
+    <p>For a more real-time discussion of any MacPorts related topic, the <a href="irc://irc.libera.chat/#MacPorts"><code>
+    #MacPorts</code></a> channel on <a href="https://libera.chat/">Libera Chat</a> is where some of us usually hang out,
     MacPorts developers and community members alike. Everyone is free and welcomed to join us, whether for a random
     fun conversation or a productive troubleshooting session, but please keep in mind that no one is guaranteed to be
     around at any particular moment and that channel members are not obligated to answer your questions. If you fail to
     get traction at any time, do not take it personally and simply direct your questions to the mailing lists instead.</p>
 
     <p>The language of choice for the IRC channel is also English, for obvious reasons of universality, so sticking to it
-    is appreciated.</p>
+    is appreciated. The IRC channel also receives a message for every commit made in the MacPorts project from a user
+    called <code>mplog</code>. Feel free to ignore those messages.</p>
 
     <p>If you would like a web-based interface to the IRC channel, one option is
     <a href="https://kiwiirc.com/nextclient/irc.libera.chat/">KiwiIRC</a>. Note that it is operated by a third party.</p>
 
-    <p>An alternative real-time discussion platform is <a href="https://chat.macports.org">chat.macports.org</a>, a
-    <a href="https://rocket.chat">Rocket.Chat</a> instance. It is bridged to the IRC channel with the bot account
-    <code>mpbridge</code>. It preserves chatting history, so users without an IRC bouncer might prefer this over directly
-    using IRC. A GitHub account is required to use this chatting Service.</p>
+    <p>An alternative real-time discussion platform is Matrix. MacPorts' channel on the Matrix network is <a
+    href="https://matrix.to/#/#macports:matrix.org"><code>#macports:matrix.org</code></a>. It preserves chatting
+    history, so users without an IRC bouncer might prefer this. Matrix is a globally federated protocol, an account on
+    a Matrix homeserver is required to join. See the Matrix Foundation's <a href="https://matrix.org/try-matrix/">Try
+    Matrix</a> page for an introduction on how to get one.</p>
 
-    <p>We formerly had a #MacPorts channel on the Freenode network. While the channel may still exist there, it is no
+    <p>We formerly had a <code>#MacPorts</code> channel on the Freenode IRC network. While the channel may still exist there, it is no
     longer an official channel for the MacPorts project.</p>
 
     <h3 class="subhdr" id="Individuals">Individuals</h3>
