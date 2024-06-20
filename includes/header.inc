@@ -59,7 +59,8 @@
                             'Documentation' => $guide_url,
                             'Support &amp; Development' => $trac_url,
                             'Contact Us' => 'contact.php',
-                            'News' => '/news/'
+                            'News' => '/news/',
+                            'Donate' => $donate_url
                         );
                         foreach ($pages as $title => $url) {
                             if (basename($_SERVER['PHP_SELF']) == $url) {
