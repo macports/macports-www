@@ -46,9 +46,9 @@
         <a href="<?php print $yosemite_pkg; ?>">Yosemite</a>,
         <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
         <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
-        <a href="<?php print $lion_pkg; ?>">Lion</a>, <a
-        href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg; ?>">Leopard</a>
-        and <a href="<?php print $tiger_dmg; ?>">Tiger</a> are
+        <a href="<?php print $lion_pkg; ?>">Lion</a>,
+        <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>,
+        and <a href="<?php print $leopard_dmg; ?>">Leopard</a> are
         also available.</li>
         <li>In <a href="#source">source form</a> as either a <a href="<?php print $bz2_tarball ?>">tar.bz2</a> package or a
         <a href="<?php print $gz_tarball; ?>">tar.gz</a> one for manual compilation, if you intend to customize your installation
@@ -134,9 +134,9 @@
     <a href="<?php print $mavericks_pkg; ?>">Mavericks</a>,
     <a href="<?php print $mountainlion_pkg; ?>">Mountain Lion</a>,
     <a href="<?php print $lion_pkg; ?>">Lion</a>,
-    <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>, <a href="<?php print $leopard_dmg;
-    ?>">Leopard</a> or <a href="<?php print $tiger_dmg;
-    ?>">Tiger</a> and running the system's Installer by double-clicking on the pkg contained therein,
+    <a href="<?php print $snowleopard_pkg; ?>">Snow Leopard</a>,
+    or <a href="<?php print $leopard_dmg; ?>">Leopard</a>
+    and running the system's Installer by double-clicking on the pkg contained therein,
     following the on-screen instructions until completion.</p>
 
     <p>This procedure will place a fully-functional and default MacPorts installation on your host system, ready for usage.
