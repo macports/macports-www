@@ -25,6 +25,7 @@ $mp_downloads = 'https://distfiles.macports.org/MacPorts/';
 $gh_downloads = 'https://github.com/macports/macports-base/releases/download/v' . $macports_version_latest . '/';
 $downloads = $gh_downloads;
 $downloads_overview = 'https://github.com/macports/macports-base/releases/tag/v' . $macports_version_latest;
+$sequoia_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-15-Sequoia.pkg';
 $sonoma_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-14-Sonoma.pkg';
 $ventura_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-13-Ventura.pkg';
 $monterey_pkg = $downloads . 'MacPorts-' . $macports_version_latest . '-12-Monterey.pkg';
