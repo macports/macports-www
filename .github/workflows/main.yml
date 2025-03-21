@@ -33,7 +33,7 @@ jobs:
           make -C www lint
 
       - name: Deploy www
-        env:
+        #env:
           #WWW_SSH_HOST: ${{ secrets.WWW_SSH_HOST }}
           #WWW_SSH_HOSTKEY: ${{ secrets.WWW_SSH_HOSTKEY }}
           #WWW_SSH_USER: ${{ secrets.WWW_SSH_USER }}
