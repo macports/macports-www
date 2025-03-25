@@ -13,7 +13,7 @@ jobs:
     name: Build and deploy www
     concurrency:
       group: www-${{ github.ref }}
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout macports-www
@@ -34,7 +34,7 @@ jobs:
         env:
           WWW_SSH_HOST: ${{ secrets.WWW_SSH_HOST }}
           WWW_SSH_HOSTKEY: ${{ secrets.WWW_SSH_HOSTKEY }}
-          WWW_SSH_USER: ${{ secrets.WWW_SSH_USER }}
+          WWW_SSH_USER: ${{ vars.WWW_SSH_USER }}
           WWW_SSH_KEY: ${{ secrets.WWW_SSH_KEY }}
           
         run: |
