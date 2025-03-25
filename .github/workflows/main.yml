@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-      - '.github/**'
 
 permissions:
   contents: read
@@ -33,22 +31,21 @@ jobs:
           make -C www lint
 
       - name: Deploy www
-        #env:
-          #WWW_SSH_HOST: ${{ secrets.WWW_SSH_HOST }}
-          #WWW_SSH_HOSTKEY: ${{ secrets.WWW_SSH_HOSTKEY }}
-          #WWW_SSH_USER: ${{ secrets.WWW_SSH_USER }}
-          #WWW_SSH_KEY: ${{ secrets.WWW_SSH_KEY }}
+        env:
+          WWW_SSH_HOST: ${{ secrets.WWW_SSH_HOST }}
+          WWW_SSH_HOSTKEY: ${{ secrets.WWW_SSH_HOSTKEY }}
+          WWW_SSH_USER: ${{ secrets.WWW_SSH_USER }}
+          WWW_SSH_KEY: ${{ secrets.WWW_SSH_KEY }}
           
         run: |
           set -eu
 
-          #echo "$WWW_SSH_KEY" > ssh_key
-          #chmod 0600 ssh_key
-          #echo "$WWW_SSH_HOSTKEY" > ssh_known_hosts
+          touch ssh_key
+          chmod 0600 ssh_key
+          echo "$WWW_SSH_KEY" > ssh_key
+          echo "$WWW_SSH_HOSTKEY" > ssh_known_hosts
 
-          #export RSYNC_RSH="ssh -l $WWW_SSH_USER -i ssh_key -oUserKnownHostsFile=ssh_known_hosts"
-          #echo "Uploading www files"
-          echo "Placeholder for uploading www files"
-          ls -R www
-          #rsync -avzhC --progress ./www/ "${WWW_SSH_HOST}:www/"
-          #rm -f ssh_key ssh_known_hosts
+          export RSYNC_RSH="ssh -l $WWW_SSH_USER -i ssh_key -oUserKnownHostsFile=ssh_known_hosts"
+          echo "Uploading www files"
+          rsync -avzhC --progress ./www/ "${WWW_SSH_HOST}:./"
+          rm -f ssh_key ssh_known_hosts
