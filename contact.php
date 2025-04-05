@@ -85,7 +85,10 @@
     </ul>
 
     <p>Note that due to spam control policies you must subscribe to our non read-only lists in order to post to any of them.
-    Members are expected to abide by the very simple <a href="http://tools.ietf.org/html/rfc1855">Netiquette guidelines</a>
+    This does not mean that you have to receive all messages from the list, as you can turn off mail delivery
+    in your settings after subscribing.</p>
+
+    <p>Members are expected to abide by the very simple <a href="http://tools.ietf.org/html/rfc1855">Netiquette guidelines</a>
     that are common to most open forums when posting; of particular relevance is sticking to plain text messages, our language
     of choice (English), and reducing the number and size of attachments in any way possible (e.g, by using paste bins such
     as <a href="https://gist.github.com/">GitHub Gist</a> and passing along the paste URL rather than full error messages).</p>
