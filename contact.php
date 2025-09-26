@@ -145,7 +145,7 @@
     called <code>mplog</code>. Feel free to ignore those messages.</p>
 
     <p>If you would like a web-based interface to the IRC channel, one option is
-    <a href="https://kiwiirc.com/nextclient/irc.libera.chat/">KiwiIRC</a>. Note that it is operated by a third party.</p>
+    <a href="https://web.libera.chat/#macports">Libra Chat's web interface</a>.</p>
 
     <p>An alternative real-time discussion platform is Matrix. MacPorts' channel on the Matrix network is <a
     href="https://matrix.to/#/#macports:matrix.org"><code>#macports:matrix.org</code></a>. It preserves chatting
