@@ -1,5 +1,6 @@
 all: lint
 
+SHELL = bash
 PHP ?= php
 DESTDIR ?= output/
 
