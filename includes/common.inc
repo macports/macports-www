@@ -57,10 +57,7 @@ $donate_url = 'https://opencollective.com/macports/donate';
 function print_header($title, $encoding) {
     global $trac_url, $downloads_overview, $github_url, $guide_url, $portdb_url, $donate_url;
 
-    require_once 'AcceptMime.class.php';
-    $accept_mime = new AcceptMime();
-    $mime_type = "text/html";
-    header("Content-Type: $mime_type; charset=$encoding");
+    header("Content-Type: text/html; charset=$encoding");
 
     include("header.inc");
     print_warnings();
