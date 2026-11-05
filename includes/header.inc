@@ -21,8 +21,6 @@
         <meta name="verify-v1" content="Gx4BI7CyPR+VN1q1Ckc6dcbuLF5NQGUaKEcm1Y/TFlY=" />
         <meta name="robots" content="all" />
         <link rel="stylesheet" type="text/css" href="macports.css" />
-        <script src="mootools.js"></script>
-        <script src="language.js"></script>
     </head>
 
 
@@ -37,16 +35,7 @@
         <div id="header">
 
             <a id="download" href="install.php"><span class="accessibility">Download MacPorts</span></a>
-<!--
-            <span class="accessibility">View site in</span>
-            <span><a href="#" id="language"><img src="img/en-enabled.png" alt="English" /></a></span>
-            <span id="languages">
-                <a href="#"><img src="img/fr-disabled.png" alt="Fran&#xE7;ais" /></a>
-                <a href="#"><img src="img/es-disabled.png" alt="Espa&#xF1;ol" /></a>
-                <a href="#"><img src="img/ru-disabled.png" alt="&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;&#160;(Russkij)"/></a>
-                <a href="#"><img src="img/it-disabled.png" alt="Italiano" /></a>
-            </span>
--->
+
         </div>
 
         <div id='primary-navigation'>

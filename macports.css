@@ -122,15 +122,6 @@ a#download:hover {
     background: url(img/download-highlight.png);
 }
 
-#languages {
-    width: 150px;
-}
-
-#language img, #languages img {
-    width: 30px;
-    height: 48px;
-}
-
 #side-navigation {
     width: 176px;
     float: left;
